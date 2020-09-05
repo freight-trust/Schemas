@@ -1,0 +1,30 @@
+<!-- (C) 2020 - FreightTrust and Clearing Corporation
+   - SPDX-License-Identifier: MPL-2.0
+   - SPDXVersion: SPDX-2.2
+   - SPDX-FileCopyrightText
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
+<xs:schema targetNamespace="http://www.freighttrust.com/Schemas/Universal/2020/09" version="1.1" elementFormDefault="qualified" xmlns="http://www.freighttrust.com/Schemas/Universal/2020/09" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="UniversalResponse" type="UniversalResponseData" />
+  <xs:complexType name="UniversalResponseData">
+    <xs:all>
+      <xs:element name="Status" minOccurs="1">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="3" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Data">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:any minOccurs="0" maxOccurs="1" processContents="skip" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProcessingLog" minOccurs="0" type="xs:string" />
+    </xs:all>
+    <xs:attribute name="version" type="xs:token" />
+  </xs:complexType>
+</xs:schema>

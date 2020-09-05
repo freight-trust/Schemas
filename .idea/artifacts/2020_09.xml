@@ -1,0 +1,13 @@
+<!-- (C) 2020 - FreightTrust and Clearing Corporation
+   - SPDX-License-Identifier: MPL-2.0
+   - SPDXVersion: SPDX-2.2
+   - SPDX-FileCopyrightText
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="2020_09">
+    <output-path>$PROJECT_DIR$/out/artifacts/2020_09</output-path>
+    <root id="root" />
+  </artifact>
+</component>

@@ -1,0 +1,16 @@
+<!-- (C) 2020 - FreightTrust and Clearing Corporation
+   - SPDX-License-Identifier: MPL-2.0
+   - SPDXVersion: SPDX-2.2
+   - SPDX-FileCopyrightText
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FreightTrustSchemas.iml" filepath="$PROJECT_DIR$/FreightTrustSchemas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/schemas_primitives/schemas_primitives.iml" filepath="$PROJECT_DIR$/schemas_primitives/schemas_primitives.iml" />
+    </modules>
+  </component>
+</project>
