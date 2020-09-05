@@ -7,6 +7,6 @@ before_install:
 
 script:
   # Check info.xml schema validity
-  - xmllint NativeWorkflowTemplate.xsd.xml --schema NativeWorkflowTemplate.xsd --noout
-  - xmllint UniversalActivity.xsd.xml --schema UniversalActivity.xsd --noout
-  - xmllint UniversalShipment.xsd.xml --schema UniversalShipment.xsd --noout
+  - xmllint tests/NativeWorkflowTemplate.xsd.xml --schema src/NativeWorkflowTemplate.xsd --noout
+  - xmllint tests/UniversalActivity.xsd.xml --schema src/UniversalActivity.xsd --noout
+  - xmllint tests/UniversalShipment.xsd.xml --schema src/UniversalShipment.xsd --noout
