@@ -5,7 +5,13 @@
    - This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
-<xs:schema targetNamespace="http://www.freighttrust.com/Schemas/Native/2020/09" version="2.0" elementFormDefault="qualified" xmlns="http://www.freighttrust.com/Schemas/Native/2020/09" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema
+  targetNamespace="http://www.freighttrust.com/Schemas/Native/2020/09"
+  version="2.0"
+  elementFormDefault="qualified"
+  xmlns="http://www.freighttrust.com/Schemas/Native/2020/09"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
   <xs:include schemaLocation="Native.xsd" />
   <xs:element name="Company" type="CompanyData" />
   <xs:complexType name="CompanyData">
@@ -386,7 +392,11 @@
                                   </xs:restriction>
                                 </xs:simpleType>
                               </xs:element>
-                              <xs:element name="PK" minOccurs="0" type="xs:string" />
+                              <xs:element
+                                name="PK"
+                                minOccurs="0"
+                                type="xs:string"
+                              />
                             </xs:all>
                             <xs:attribute name="Action" type="Action" />
                           </xs:complexType>
@@ -413,13 +423,24 @@
                       <xs:attribute name="TableName" type="xs:string" />
                     </xs:complexType>
                   </xs:element>
-                  <xs:element name="AccCFXUpliftConfigurationViewCollection" minOccurs="0">
+                  <xs:element
+                    name="AccCFXUpliftConfigurationViewCollection"
+                    minOccurs="0"
+                  >
                     <xs:complexType>
                       <xs:sequence>
-                        <xs:element name="AccCFXUpliftConfigurationView" minOccurs="0" maxOccurs="unbounded">
+                        <xs:element
+                          name="AccCFXUpliftConfigurationView"
+                          minOccurs="0"
+                          maxOccurs="unbounded"
+                        >
                           <xs:complexType>
                             <xs:all>
-                              <xs:element name="PK" minOccurs="0" type="xs:string" />
+                              <xs:element
+                                name="PK"
+                                minOccurs="0"
+                                type="xs:string"
+                              />
                               <xs:element name="ConfigType" minOccurs="0">
                                 <xs:simpleType>
                                   <xs:restriction base="xs:string">
@@ -455,8 +476,16 @@
                                   </xs:restriction>
                                 </xs:simpleType>
                               </xs:element>
-                              <xs:element name="CFXPercentage" minOccurs="0" type="xs:decimal" />
-                              <xs:element name="CFXMinimum" minOccurs="0" type="xs:decimal" />
+                              <xs:element
+                                name="CFXPercentage"
+                                minOccurs="0"
+                                type="xs:decimal"
+                              />
+                              <xs:element
+                                name="CFXMinimum"
+                                minOccurs="0"
+                                type="xs:decimal"
+                              />
                               <xs:element name="GlbCompany" minOccurs="0">
                                 <xs:complexType>
                                   <xs:all>
@@ -468,7 +497,11 @@
                                         </xs:restriction>
                                       </xs:simpleType>
                                     </xs:element>
-                                    <xs:element name="PK" minOccurs="0" type="xs:string" />
+                                    <xs:element
+                                      name="PK"
+                                      minOccurs="0"
+                                      type="xs:string"
+                                    />
                                   </xs:all>
                                   <xs:attribute name="Action" type="Action" />
                                 </xs:complexType>
@@ -484,10 +517,17 @@
                                         </xs:restriction>
                                       </xs:simpleType>
                                     </xs:element>
-                                    <xs:element name="PK" minOccurs="0" type="xs:string" />
+                                    <xs:element
+                                      name="PK"
+                                      minOccurs="0"
+                                      type="xs:string"
+                                    />
                                   </xs:all>
                                   <xs:attribute name="Action" type="Action" />
-                                  <xs:attribute name="TableName" type="xs:string" />
+                                  <xs:attribute
+                                    name="TableName"
+                                    type="xs:string"
+                                  />
                                 </xs:complexType>
                               </xs:element>
                             </xs:all>
@@ -507,7 +547,11 @@
       <xs:element name="AccCFXUpliftConfigurationViewCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="AccCFXUpliftConfigurationView" minOccurs="0" maxOccurs="unbounded">
+            <xs:element
+              name="AccCFXUpliftConfigurationView"
+              minOccurs="0"
+              maxOccurs="unbounded"
+            >
               <xs:complexType>
                 <xs:all>
                   <xs:element name="PK" minOccurs="0" type="xs:string" />
@@ -546,8 +590,16 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="CFXPercentage" minOccurs="0" type="xs:decimal" />
-                  <xs:element name="CFXMinimum" minOccurs="0" type="xs:decimal" />
+                  <xs:element
+                    name="CFXPercentage"
+                    minOccurs="0"
+                    type="xs:decimal"
+                  />
+                  <xs:element
+                    name="CFXMinimum"
+                    minOccurs="0"
+                    type="xs:decimal"
+                  />
                   <xs:element name="Currency" minOccurs="0">
                     <xs:complexType>
                       <xs:all>
@@ -572,10 +624,17 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-      <xs:element name="AccExchangeRateConfigurationViewCollection" minOccurs="0">
+      <xs:element
+        name="AccExchangeRateConfigurationViewCollection"
+        minOccurs="0"
+      >
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="AccExchangeRateConfigurationView" minOccurs="0" maxOccurs="unbounded">
+            <xs:element
+              name="AccExchangeRateConfigurationView"
+              minOccurs="0"
+              maxOccurs="unbounded"
+            >
               <xs:complexType>
                 <xs:all>
                   <xs:element name="PK" minOccurs="0" type="xs:string" />

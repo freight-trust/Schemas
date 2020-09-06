@@ -5,14 +5,20 @@
    - This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
-<xs:schema targetNamespace="http://www.freighttrust.com/Schemas/Universal/2020/09" version="1.1" elementFormDefault="qualified" xmlns="http://www.freighttrust.com/Schemas/Universal/2020/09" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema
+  targetNamespace="http://www.freighttrust.com/Schemas/Universal/2020/09"
+  version="1.1"
+  elementFormDefault="qualified"
+  xmlns="http://www.freighttrust.com/Schemas/Universal/2020/09"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
   <xs:include schemaLocation="UniversalCommon.xsd" />
 
   <xs:element name="UniversalSchedule" type="UniversalScheduleData" />
 
   <xs:complexType name="UniversalScheduleData">
     <xs:all>
-      <xs:element name="Schedule" type="Schedule"/>
+      <xs:element name="Schedule" type="Schedule" />
     </xs:all>
     <xs:attribute name="version" type="xs:token" />
   </xs:complexType>
@@ -43,7 +49,11 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="IsCargoOnly" minOccurs="0" type="xs:boolean" />
+                  <xs:element
+                    name="IsCargoOnly"
+                    minOccurs="0"
+                    type="xs:boolean"
+                  />
                 </xs:all>
               </xs:complexType>
             </xs:element>
@@ -117,7 +127,11 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="VoyageType" minOccurs="0" type="CodeDescriptionPair" />
+                  <xs:element
+                    name="VoyageType"
+                    minOccurs="0"
+                    type="CodeDescriptionPair"
+                  />
                 </xs:all>
               </xs:complexType>
             </xs:element>
@@ -132,7 +146,11 @@
               <xs:complexType>
                 <xs:all>
                   <xs:element name="Port" minOccurs="1" type="UNLOCO" />
-                  <xs:element name="ActualArrival" minOccurs="0" type="emptiable_dateTime" />
+                  <xs:element
+                    name="ActualArrival"
+                    minOccurs="0"
+                    type="emptiable_dateTime"
+                  />
                   <xs:element name="ArrivalBerth" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -140,7 +158,11 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="ArrivalCTO" minOccurs="0" type="OrganizationAddress" />
+                  <xs:element
+                    name="ArrivalCTO"
+                    minOccurs="0"
+                    type="OrganizationAddress"
+                  />
                   <xs:element name="ArrivalReference" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -148,9 +170,21 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="EstimatedArrival" minOccurs="0" type="emptiable_dateTime" />
-                  <xs:element name="FCLAvailability" minOccurs="0" type="emptiable_dateTime" />
-                  <xs:element name="FCLStorage" minOccurs="0" type="emptiable_dateTime" />
+                  <xs:element
+                    name="EstimatedArrival"
+                    minOccurs="0"
+                    type="emptiable_dateTime"
+                  />
+                  <xs:element
+                    name="FCLAvailability"
+                    minOccurs="0"
+                    type="emptiable_dateTime"
+                  />
+                  <xs:element
+                    name="FCLStorage"
+                    minOccurs="0"
+                    type="emptiable_dateTime"
+                  />
                 </xs:all>
               </xs:complexType>
             </xs:element>
@@ -165,8 +199,16 @@
               <xs:complexType>
                 <xs:all>
                   <xs:element name="Port" minOccurs="1" type="UNLOCO" />
-                  <xs:element name="ActualArrival" minOccurs="0" type="emptiable_dateTime" />
-                  <xs:element name="ActualDeparture" minOccurs="0" type="emptiable_dateTime" />
+                  <xs:element
+                    name="ActualArrival"
+                    minOccurs="0"
+                    type="emptiable_dateTime"
+                  />
+                  <xs:element
+                    name="ActualDeparture"
+                    minOccurs="0"
+                    type="emptiable_dateTime"
+                  />
                   <xs:element name="DepartureBerth" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -174,7 +216,11 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="DepartureCTO" minOccurs="0" type="OrganizationAddress" />
+                  <xs:element
+                    name="DepartureCTO"
+                    minOccurs="0"
+                    type="OrganizationAddress"
+                  />
                   <xs:element name="DepartureReference" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -182,13 +228,41 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="DocumentCutOff" minOccurs="0" type="emptiable_dateTime" />
-                  <xs:element name="EstimatedArrival" minOccurs="0" type="emptiable_dateTime" />
-                  <xs:element name="EstimatedDeparture" minOccurs="0" type="emptiable_dateTime" />
-                  <xs:element name="FCLCutOff" minOccurs="0" type="emptiable_dateTime" />
-                  <xs:element name="FCLReceivalCommences" minOccurs="0" type="emptiable_dateTime" />
-                  <xs:element name="HazzardCutOffDate" minOccurs="0" type="emptiable_dateTime" />
-                  <xs:element name="HazzardReceivalCommences" minOccurs="0" type="emptiable_dateTime" />
+                  <xs:element
+                    name="DocumentCutOff"
+                    minOccurs="0"
+                    type="emptiable_dateTime"
+                  />
+                  <xs:element
+                    name="EstimatedArrival"
+                    minOccurs="0"
+                    type="emptiable_dateTime"
+                  />
+                  <xs:element
+                    name="EstimatedDeparture"
+                    minOccurs="0"
+                    type="emptiable_dateTime"
+                  />
+                  <xs:element
+                    name="FCLCutOff"
+                    minOccurs="0"
+                    type="emptiable_dateTime"
+                  />
+                  <xs:element
+                    name="FCLReceivalCommences"
+                    minOccurs="0"
+                    type="emptiable_dateTime"
+                  />
+                  <xs:element
+                    name="HazzardCutOffDate"
+                    minOccurs="0"
+                    type="emptiable_dateTime"
+                  />
+                  <xs:element
+                    name="HazzardReceivalCommences"
+                    minOccurs="0"
+                    type="emptiable_dateTime"
+                  />
                   <xs:element name="TerminalCode" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">

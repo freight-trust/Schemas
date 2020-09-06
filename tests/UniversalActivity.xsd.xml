@@ -5,7 +5,10 @@
    - This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
-<ns:UniversalActivity version="token" xmlns:ns="http://www.freighttrust.com/Schemas/Universal/2020/09">
+<ns:UniversalActivity
+  version="token"
+  xmlns:ns="http://www.freighttrust.com/Schemas/Universal/2020/09"
+>
   <ns:Activity>
     <!--Optional:-->
     <ns:DataContext>
@@ -108,7 +111,8 @@
           <ns:Owner>
             <ns:AddressType>string</ns:AddressType>
             <!--Optional:-->
-            <ns:AdditionalAddressInformation>string</ns:AdditionalAddressInformation>
+            <ns:AdditionalAddressInformation
+            >string</ns:AdditionalAddressInformation>
             <!--Optional:-->
             <ns:Address1>string</ns:Address1>
             <!--Optional:-->
@@ -166,7 +170,8 @@
             <!--Optional:-->
             <ns:State>string</ns:State>
             <!--Optional:-->
-            <ns:SuppressAddressValidationError>false</ns:SuppressAddressValidationError>
+            <ns:SuppressAddressValidationError
+            >false</ns:SuppressAddressValidationError>
             <!--Optional:-->
             <ns:UniversalNettingCode>string</ns:UniversalNettingCode>
             <!--Optional:-->
@@ -258,7 +263,7 @@
           <ns:ParticipantName>string</ns:ParticipantName>
           <ns:Text>string</ns:Text>
           <!--Optional:-->
-          <ns:CreatedTime/>
+          <ns:CreatedTime />
           <!--Optional:-->
           <ns:IsInternal>true</ns:IsInternal>
           <!--Optional:-->
@@ -293,7 +298,8 @@
           <ns:Party>
             <ns:AddressType>string</ns:AddressType>
             <!--Optional:-->
-            <ns:AdditionalAddressInformation>string</ns:AdditionalAddressInformation>
+            <ns:AdditionalAddressInformation
+            >string</ns:AdditionalAddressInformation>
             <!--Optional:-->
             <ns:Address1>string</ns:Address1>
             <!--Optional:-->
@@ -351,7 +357,8 @@
             <!--Optional:-->
             <ns:State>string</ns:State>
             <!--Optional:-->
-            <ns:SuppressAddressValidationError>true</ns:SuppressAddressValidationError>
+            <ns:SuppressAddressValidationError
+            >true</ns:SuppressAddressValidationError>
             <!--Optional:-->
             <ns:UniversalNettingCode>string</ns:UniversalNettingCode>
             <!--Optional:-->
@@ -571,7 +578,7 @@
             </ns:TaxType>
           </ns:CostGSTVATID>
           <!--Optional:-->
-          <ns:CostInvoiceDate/>
+          <ns:CostInvoiceDate />
           <!--Optional:-->
           <ns:CostIsPosted>false</ns:CostIsPosted>
           <!--Optional:-->
@@ -628,9 +635,11 @@
           <!--Optional:-->
           <ns:ExternalDebtorCode>string</ns:ExternalDebtorCode>
           <!--Optional:-->
-          <ns:GovernmentReportingCostChargeCode>string</ns:GovernmentReportingCostChargeCode>
+          <ns:GovernmentReportingCostChargeCode
+          >string</ns:GovernmentReportingCostChargeCode>
           <!--Optional:-->
-          <ns:GovernmentReportingSellChargeCode>string</ns:GovernmentReportingSellChargeCode>
+          <ns:GovernmentReportingSellChargeCode
+          >string</ns:GovernmentReportingSellChargeCode>
           <!--Optional:-->
           <ns:ImportMetaData>
             <ns:Instruction>UpdateAndInsertIfNotFound</ns:Instruction>
@@ -701,7 +710,8 @@
             </ns:LocationType>
           </ns:SellPlaceOfSupply>
           <!--Optional:-->
-          <ns:SellPostedTransactionNumber>string</ns:SellPostedTransactionNumber>
+          <ns:SellPostedTransactionNumber
+          >string</ns:SellPostedTransactionNumber>
           <!--Optional:-->
           <ns:SellPostedTransactionType>str</ns:SellPostedTransactionType>
           <!--Optional:-->
@@ -728,7 +738,8 @@
               <!--Optional:-->
               <ns:MinimumRate>1000.00</ns:MinimumRate>
               <!--Optional:-->
-              <ns:OriginAdditionalReference>string</ns:OriginAdditionalReference>
+              <ns:OriginAdditionalReference
+              >string</ns:OriginAdditionalReference>
               <!--Optional:-->
               <ns:OriginKey>string</ns:OriginKey>
               <!--Optional:-->
@@ -771,7 +782,8 @@
               <!--Optional:-->
               <ns:MinimumRate>1000.00</ns:MinimumRate>
               <!--Optional:-->
-              <ns:OriginAdditionalReference>string</ns:OriginAdditionalReference>
+              <ns:OriginAdditionalReference
+              >string</ns:OriginAdditionalReference>
               <!--Optional:-->
               <ns:OriginKey>string</ns:OriginKey>
               <!--Optional:-->
@@ -862,7 +874,7 @@
         <ns:EventCode>str</ns:EventCode>
         <ns:Sequence>3</ns:Sequence>
         <!--Optional:-->
-        <ns:ActualDate/>
+        <ns:ActualDate />
         <!--Optional:-->
         <ns:ConditionReference>string</ns:ConditionReference>
         <!--Optional:-->
@@ -904,7 +916,8 @@
       <ns:OrganizationAddress>
         <ns:AddressType>string</ns:AddressType>
         <!--Optional:-->
-        <ns:AdditionalAddressInformation>string</ns:AdditionalAddressInformation>
+        <ns:AdditionalAddressInformation
+        >string</ns:AdditionalAddressInformation>
         <!--Optional:-->
         <ns:Address1>string</ns:Address1>
         <!--Optional:-->
@@ -962,7 +975,8 @@
         <!--Optional:-->
         <ns:State>string</ns:State>
         <!--Optional:-->
-        <ns:SuppressAddressValidationError>false</ns:SuppressAddressValidationError>
+        <ns:SuppressAddressValidationError
+        >false</ns:SuppressAddressValidationError>
         <!--Optional:-->
         <ns:UniversalNettingCode>string</ns:UniversalNettingCode>
         <!--Optional:-->
@@ -1014,7 +1028,7 @@
     <!--Optional:-->
     <ns:RelatedActivityCollection>
       <!--Zero or more repetitions:-->
-      <ns:RelatedActivity/>
+      <ns:RelatedActivity />
     </ns:RelatedActivityCollection>
     <!--Optional:-->
     <ns:TaskSetCollection>
@@ -1037,7 +1051,8 @@
           <ns:Description>string</ns:Description>
         </ns:DateAcceptability>
         <!--Optional:-->
-        <ns:EarliestStartDateUTC>2015-10-10T03:07:56-07:00</ns:EarliestStartDateUTC>
+        <ns:EarliestStartDateUTC
+        >2015-10-10T03:07:56-07:00</ns:EarliestStartDateUTC>
         <!--Optional:-->
         <ns:IsActive>false</ns:IsActive>
         <!--Optional:-->
@@ -1100,7 +1115,8 @@
             <!--Optional:-->
             <ns:EstimatedDuration>P1Y2M2DT18H5M8S</ns:EstimatedDuration>
             <!--Optional:-->
-            <ns:EstimatedStartTimeUTC>2019-03-01T22:02:08</ns:EstimatedStartTimeUTC>
+            <ns:EstimatedStartTimeUTC
+            >2019-03-01T22:02:08</ns:EstimatedStartTimeUTC>
             <!--Optional:-->
             <ns:EstimateVariationFactor>1000.00</ns:EstimateVariationFactor>
             <!--Optional:-->
@@ -1110,7 +1126,7 @@
         <!--Optional:-->
         <ns:TaskSetCollection>
           <!--Zero or more repetitions:-->
-          <ns:TaskSet/>
+          <ns:TaskSet />
         </ns:TaskSetCollection>
       </ns:TaskSet>
     </ns:TaskSetCollection>

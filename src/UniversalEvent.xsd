@@ -5,14 +5,20 @@
    - This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
-<xs:schema targetNamespace="http://www.freighttrust.com/Schemas/Universal/2020/09" version="1.1" elementFormDefault="qualified" xmlns="http://www.freighttrust.com/Schemas/Universal/2020/09" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema
+  targetNamespace="http://www.freighttrust.com/Schemas/Universal/2020/09"
+  version="1.1"
+  elementFormDefault="qualified"
+  xmlns="http://www.freighttrust.com/Schemas/Universal/2020/09"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
   <xs:include schemaLocation="UniversalCommon.xsd" />
 
   <xs:element name="UniversalEvent" type="UniversalEventData" />
 
   <xs:complexType name="UniversalEventData">
     <xs:all>
-      <xs:element name="Event" type="Event"/>
+      <xs:element name="Event" type="Event" />
     </xs:all>
     <xs:attribute name="version" type="xs:token" />
   </xs:complexType>
@@ -68,7 +74,11 @@
                 </xs:restriction>
               </xs:simpleType>
             </xs:element>
-            <xs:element name="FlightDate" minOccurs="0" type="emptiable_dateTime" />
+            <xs:element
+              name="FlightDate"
+              minOccurs="0"
+              type="emptiable_dateTime"
+            />
             <xs:element name="Location" minOccurs="0">
               <xs:simpleType>
                 <xs:restriction base="xs:string">
@@ -178,16 +188,29 @@
       <xs:element name="AdditionalContextCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="AdditionalContext" minOccurs="0" maxOccurs="unbounded">
+            <xs:element
+              name="AdditionalContext"
+              minOccurs="0"
+              maxOccurs="unbounded"
+            >
               <xs:complexType>
                 <xs:all>
-                  <xs:element name="DataContext" minOccurs="0" type="DataContext" />
+                  <xs:element
+                    name="DataContext"
+                    minOccurs="0"
+                    type="DataContext"
+                  />
 
 
                   <xs:element name="ContextCollection" minOccurs="0">
                     <xs:complexType>
                       <xs:sequence>
-                        <xs:element name="Context" minOccurs="0" maxOccurs="unbounded" type="Context" />
+                        <xs:element
+                          name="Context"
+                          minOccurs="0"
+                          maxOccurs="unbounded"
+                          type="Context"
+                        />
                       </xs:sequence>
                     </xs:complexType>
                   </xs:element>
@@ -201,7 +224,11 @@
       <xs:element name="AdditionalFieldsToUpdateCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="AdditionalFieldsToUpdate" minOccurs="0" maxOccurs="unbounded">
+            <xs:element
+              name="AdditionalFieldsToUpdate"
+              minOccurs="0"
+              maxOccurs="unbounded"
+            >
               <xs:complexType>
                 <xs:all>
                   <xs:element name="Type" minOccurs="1">
@@ -228,7 +255,12 @@
       <xs:element name="AttachedDocumentCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="AttachedDocument" minOccurs="0" maxOccurs="unbounded" type="AttachedDocument" />
+            <xs:element
+              name="AttachedDocument"
+              minOccurs="0"
+              maxOccurs="unbounded"
+              type="AttachedDocument"
+            />
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -236,7 +268,12 @@
       <xs:element name="ContextCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="Context" minOccurs="0" maxOccurs="unbounded" type="Context" />
+            <xs:element
+              name="Context"
+              minOccurs="0"
+              maxOccurs="unbounded"
+              type="Context"
+            />
           </xs:sequence>
         </xs:complexType>
       </xs:element>

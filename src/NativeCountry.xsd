@@ -5,7 +5,13 @@
    - This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
-<xs:schema targetNamespace="http://www.freighttrust.com/Schemas/Native/2020/09" version="2.0" elementFormDefault="qualified" xmlns="http://www.freighttrust.com/Schemas/Native/2020/09" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema
+  targetNamespace="http://www.freighttrust.com/Schemas/Native/2020/09"
+  version="2.0"
+  elementFormDefault="qualified"
+  xmlns="http://www.freighttrust.com/Schemas/Native/2020/09"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
   <xs:include schemaLocation="Native.xsd" />
   <xs:element name="Country" type="CountryData" />
   <xs:complexType name="CountryData">
@@ -124,10 +130,17 @@
           <xs:attribute name="TableName" type="xs:string" />
         </xs:complexType>
       </xs:element>
-      <xs:element name="RefCountryRequiredDocument_OriginCollection" minOccurs="0">
+      <xs:element
+        name="RefCountryRequiredDocument_OriginCollection"
+        minOccurs="0"
+      >
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="RefCountryRequiredDocument_Origin" minOccurs="0" maxOccurs="unbounded">
+            <xs:element
+              name="RefCountryRequiredDocument_Origin"
+              minOccurs="0"
+              maxOccurs="unbounded"
+            >
               <xs:complexType>
                 <xs:all>
                   <xs:element name="PK" minOccurs="0" type="xs:string" />
@@ -153,9 +166,17 @@
                     </xs:simpleType>
                   </xs:element>
                   <xs:element name="OnConsol" minOccurs="0" type="xs:boolean" />
-                  <xs:element name="OnShipment" minOccurs="0" type="xs:boolean" />
+                  <xs:element
+                    name="OnShipment"
+                    minOccurs="0"
+                    type="xs:boolean"
+                  />
                   <xs:element name="OnOrder" minOccurs="0" type="xs:boolean" />
-                  <xs:element name="OnBrokerage" minOccurs="0" type="xs:boolean" />
+                  <xs:element
+                    name="OnBrokerage"
+                    minOccurs="0"
+                    type="xs:boolean"
+                  />
                   <xs:element name="Destination" minOccurs="0">
                     <xs:complexType>
                       <xs:all>
@@ -181,10 +202,17 @@
           <xs:attribute name="TableName" type="xs:string" />
         </xs:complexType>
       </xs:element>
-      <xs:element name="RefCountryRequiredDocument_DestinationCollection" minOccurs="0">
+      <xs:element
+        name="RefCountryRequiredDocument_DestinationCollection"
+        minOccurs="0"
+      >
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="RefCountryRequiredDocument_Destination" minOccurs="0" maxOccurs="unbounded">
+            <xs:element
+              name="RefCountryRequiredDocument_Destination"
+              minOccurs="0"
+              maxOccurs="unbounded"
+            >
               <xs:complexType>
                 <xs:all>
                   <xs:element name="PK" minOccurs="0" type="xs:string" />
@@ -210,9 +238,17 @@
                     </xs:simpleType>
                   </xs:element>
                   <xs:element name="OnConsol" minOccurs="0" type="xs:boolean" />
-                  <xs:element name="OnShipment" minOccurs="0" type="xs:boolean" />
+                  <xs:element
+                    name="OnShipment"
+                    minOccurs="0"
+                    type="xs:boolean"
+                  />
                   <xs:element name="OnOrder" minOccurs="0" type="xs:boolean" />
-                  <xs:element name="OnBrokerage" minOccurs="0" type="xs:boolean" />
+                  <xs:element
+                    name="OnBrokerage"
+                    minOccurs="0"
+                    type="xs:boolean"
+                  />
                   <xs:element name="Origin" minOccurs="0">
                     <xs:complexType>
                       <xs:all>
@@ -241,7 +277,11 @@
       <xs:element name="RefCountryRules_OriginCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="RefCountryRules_Origin" minOccurs="0" maxOccurs="unbounded">
+            <xs:element
+              name="RefCountryRules_Origin"
+              minOccurs="0"
+              maxOccurs="unbounded"
+            >
               <xs:complexType>
                 <xs:all>
                   <xs:element name="PK" minOccurs="0" type="xs:string" />
@@ -257,9 +297,17 @@
                       <xs:restriction base="xs:string" />
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="IsClientVisible" minOccurs="0" type="xs:boolean" />
+                  <xs:element
+                    name="IsClientVisible"
+                    minOccurs="0"
+                    type="xs:boolean"
+                  />
                   <xs:element name="IsError" minOccurs="0" type="xs:boolean" />
-                  <xs:element name="IsValidationRule" minOccurs="0" type="xs:boolean" />
+                  <xs:element
+                    name="IsValidationRule"
+                    minOccurs="0"
+                    type="xs:boolean"
+                  />
                   <xs:element name="Destination" minOccurs="0">
                     <xs:complexType>
                       <xs:all>
@@ -304,7 +352,11 @@
       <xs:element name="RefCountryRules_DestinationCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="RefCountryRules_Destination" minOccurs="0" maxOccurs="unbounded">
+            <xs:element
+              name="RefCountryRules_Destination"
+              minOccurs="0"
+              maxOccurs="unbounded"
+            >
               <xs:complexType>
                 <xs:all>
                   <xs:element name="PK" minOccurs="0" type="xs:string" />
@@ -320,9 +372,17 @@
                       <xs:restriction base="xs:string" />
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="IsClientVisible" minOccurs="0" type="xs:boolean" />
+                  <xs:element
+                    name="IsClientVisible"
+                    minOccurs="0"
+                    type="xs:boolean"
+                  />
                   <xs:element name="IsError" minOccurs="0" type="xs:boolean" />
-                  <xs:element name="IsValidationRule" minOccurs="0" type="xs:boolean" />
+                  <xs:element
+                    name="IsValidationRule"
+                    minOccurs="0"
+                    type="xs:boolean"
+                  />
                   <xs:element name="Origin" minOccurs="0">
                     <xs:complexType>
                       <xs:all>
@@ -367,7 +427,11 @@
       <xs:element name="RefCountryStatesCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="RefCountryStates" minOccurs="0" maxOccurs="unbounded">
+            <xs:element
+              name="RefCountryStates"
+              minOccurs="0"
+              maxOccurs="unbounded"
+            >
               <xs:complexType>
                 <xs:all>
                   <!-- Candidate Key: RefCountry.Code + Code -->
@@ -398,32 +462,57 @@
                   <xs:element name="RefCityTownCollection" minOccurs="0">
                     <xs:complexType>
                       <xs:sequence>
-                        <xs:element name="RefCityTown" minOccurs="0" maxOccurs="unbounded">
+                        <xs:element
+                          name="RefCityTown"
+                          minOccurs="0"
+                          maxOccurs="unbounded"
+                        >
                           <xs:complexType>
                             <xs:all>
                               <!-- Candidate Key: RefCountryStates.Code + RefCountryStates.Code + InternationalName -->
-                              <xs:element name="PK" minOccurs="0" type="xs:string" />
-                              <xs:element name="InternationalName" minOccurs="0">
+                              <xs:element
+                                name="PK"
+                                minOccurs="0"
+                                type="xs:string"
+                              />
+                              <xs:element
+                                name="InternationalName"
+                                minOccurs="0"
+                              >
                                 <xs:simpleType>
                                   <xs:restriction base="xs:string">
                                     <xs:maxLength value="50" />
                                   </xs:restriction>
                                 </xs:simpleType>
                               </xs:element>
-                              <xs:element name="LocalLanguageName" minOccurs="0">
+                              <xs:element
+                                name="LocalLanguageName"
+                                minOccurs="0"
+                              >
                                 <xs:simpleType>
                                   <xs:restriction base="xs:string">
                                     <xs:maxLength value="50" />
                                   </xs:restriction>
                                 </xs:simpleType>
                               </xs:element>
-                              <xs:element name="IsActive" minOccurs="0" type="xs:boolean" />
-                              <xs:element name="IsSystem" minOccurs="0" type="xs:boolean" />
+                              <xs:element
+                                name="IsActive"
+                                minOccurs="0"
+                                type="xs:boolean"
+                              />
+                              <xs:element
+                                name="IsSystem"
+                                minOccurs="0"
+                                type="xs:boolean"
+                              />
                               <xs:element name="Country" minOccurs="0">
                                 <xs:complexType>
                                   <xs:all>
                                     <!-- Candidate Key: RefCountry.Code + Code -->
-                                    <xs:element name="CountryCode" minOccurs="0">
+                                    <xs:element
+                                      name="CountryCode"
+                                      minOccurs="0"
+                                    >
                                       <xs:simpleType>
                                         <xs:restriction base="xs:string" />
                                       </xs:simpleType>
@@ -435,8 +524,15 @@
                                         </xs:restriction>
                                       </xs:simpleType>
                                     </xs:element>
-                                    <xs:element name="PK" minOccurs="0" type="xs:string" />
-                                    <xs:element name="CountryCodeExternal" minOccurs="0">
+                                    <xs:element
+                                      name="PK"
+                                      minOccurs="0"
+                                      type="xs:string"
+                                    />
+                                    <xs:element
+                                      name="CountryCodeExternal"
+                                      minOccurs="0"
+                                    >
                                       <xs:complexType>
                                         <xs:all>
                                           <!-- Candidate Key: Code -->
@@ -447,89 +543,189 @@
                                               </xs:restriction>
                                             </xs:simpleType>
                                           </xs:element>
-                                          <xs:element name="PK" minOccurs="0" type="xs:string" />
+                                          <xs:element
+                                            name="PK"
+                                            minOccurs="0"
+                                            type="xs:string"
+                                          />
                                         </xs:all>
-                                        <xs:attribute name="Action" type="Action" />
-                                        <xs:attribute name="TableName" type="xs:string" />
+                                        <xs:attribute
+                                          name="Action"
+                                          type="Action"
+                                        />
+                                        <xs:attribute
+                                          name="TableName"
+                                          type="xs:string"
+                                        />
                                       </xs:complexType>
                                     </xs:element>
                                   </xs:all>
                                   <xs:attribute name="Action" type="Action" />
-                                  <xs:attribute name="TableName" type="xs:string" />
+                                  <xs:attribute
+                                    name="TableName"
+                                    type="xs:string"
+                                  />
                                 </xs:complexType>
                               </xs:element>
                               <xs:element name="TimeZone" minOccurs="0">
                                 <xs:complexType>
                                   <xs:all>
                                     <!-- Candidate Key: RefTimeZone.PK + RefTimeZone.PK + TimeZoneSetName -->
-                                    <xs:element name="TimeZoneSetName" minOccurs="0">
+                                    <xs:element
+                                      name="TimeZoneSetName"
+                                      minOccurs="0"
+                                    >
                                       <xs:simpleType>
                                         <xs:restriction base="xs:string">
                                           <xs:maxLength value="35" />
                                         </xs:restriction>
                                       </xs:simpleType>
                                     </xs:element>
-                                    <xs:element name="PK" minOccurs="0" type="xs:string" />
-                                    <xs:element name="StandardZone" minOccurs="0">
+                                    <xs:element
+                                      name="PK"
+                                      minOccurs="0"
+                                      type="xs:string"
+                                    />
+                                    <xs:element
+                                      name="StandardZone"
+                                      minOccurs="0"
+                                    >
                                       <xs:complexType>
                                         <xs:all>
-                                          <xs:element name="PK" minOccurs="0" type="xs:string" />
+                                          <xs:element
+                                            name="PK"
+                                            minOccurs="0"
+                                            type="xs:string"
+                                          />
                                         </xs:all>
-                                        <xs:attribute name="Action" type="Action" />
-                                        <xs:attribute name="TableName" type="xs:string" />
+                                        <xs:attribute
+                                          name="Action"
+                                          type="Action"
+                                        />
+                                        <xs:attribute
+                                          name="TableName"
+                                          type="xs:string"
+                                        />
                                       </xs:complexType>
                                     </xs:element>
-                                    <xs:element name="DaylightSavingZone" minOccurs="0">
+                                    <xs:element
+                                      name="DaylightSavingZone"
+                                      minOccurs="0"
+                                    >
                                       <xs:complexType>
                                         <xs:all>
-                                          <xs:element name="PK" minOccurs="0" type="xs:string" />
+                                          <xs:element
+                                            name="PK"
+                                            minOccurs="0"
+                                            type="xs:string"
+                                          />
                                         </xs:all>
-                                        <xs:attribute name="Action" type="Action" />
-                                        <xs:attribute name="TableName" type="xs:string" />
+                                        <xs:attribute
+                                          name="Action"
+                                          type="Action"
+                                        />
+                                        <xs:attribute
+                                          name="TableName"
+                                          type="xs:string"
+                                        />
                                       </xs:complexType>
                                     </xs:element>
                                   </xs:all>
                                   <xs:attribute name="Action" type="Action" />
-                                  <xs:attribute name="TableName" type="xs:string" />
+                                  <xs:attribute
+                                    name="TableName"
+                                    type="xs:string"
+                                  />
                                 </xs:complexType>
                               </xs:element>
-                              <xs:element name="RefPostCodeCollection" minOccurs="0">
+                              <xs:element
+                                name="RefPostCodeCollection"
+                                minOccurs="0"
+                              >
                                 <xs:complexType>
                                   <xs:sequence>
-                                    <xs:element name="RefPostCode" minOccurs="0" maxOccurs="unbounded">
+                                    <xs:element
+                                      name="RefPostCode"
+                                      minOccurs="0"
+                                      maxOccurs="unbounded"
+                                    >
                                       <xs:complexType>
                                         <xs:all>
-                                          <xs:element name="PK" minOccurs="0" type="xs:string" />
-                                          <xs:element name="CityTownPostCode" minOccurs="0">
+                                          <xs:element
+                                            name="PK"
+                                            minOccurs="0"
+                                            type="xs:string"
+                                          />
+                                          <xs:element
+                                            name="CityTownPostCode"
+                                            minOccurs="0"
+                                          >
                                             <xs:simpleType>
                                               <xs:restriction base="xs:string">
                                                 <xs:maxLength value="10" />
                                               </xs:restriction>
                                             </xs:simpleType>
                                           </xs:element>
-                                          <xs:element name="Lattitude" minOccurs="0" type="xs:decimal" />
-                                          <xs:element name="Longitude" minOccurs="0" type="xs:decimal" />
-                                          <xs:element name="IsActive" minOccurs="0" type="xs:boolean" />
-                                          <xs:element name="IsSystem" minOccurs="0" type="xs:boolean" />
-                                          <xs:element name="Country" minOccurs="0">
+                                          <xs:element
+                                            name="Lattitude"
+                                            minOccurs="0"
+                                            type="xs:decimal"
+                                          />
+                                          <xs:element
+                                            name="Longitude"
+                                            minOccurs="0"
+                                            type="xs:decimal"
+                                          />
+                                          <xs:element
+                                            name="IsActive"
+                                            minOccurs="0"
+                                            type="xs:boolean"
+                                          />
+                                          <xs:element
+                                            name="IsSystem"
+                                            minOccurs="0"
+                                            type="xs:boolean"
+                                          />
+                                          <xs:element
+                                            name="Country"
+                                            minOccurs="0"
+                                          >
                                             <xs:complexType>
                                               <xs:all>
                                                 <!-- Candidate Key: Code -->
-                                                <xs:element name="Code" minOccurs="0">
+                                                <xs:element
+                                                  name="Code"
+                                                  minOccurs="0"
+                                                >
                                                   <xs:simpleType>
-                                                    <xs:restriction base="xs:string">
+                                                    <xs:restriction
+                                                      base="xs:string"
+                                                    >
                                                       <xs:maxLength value="2" />
                                                     </xs:restriction>
                                                   </xs:simpleType>
                                                 </xs:element>
-                                                <xs:element name="PK" minOccurs="0" type="xs:string" />
+                                                <xs:element
+                                                  name="PK"
+                                                  minOccurs="0"
+                                                  type="xs:string"
+                                                />
                                               </xs:all>
-                                              <xs:attribute name="Action" type="Action" />
-                                              <xs:attribute name="TableName" type="xs:string" />
+                                              <xs:attribute
+                                                name="Action"
+                                                type="Action"
+                                              />
+                                              <xs:attribute
+                                                name="TableName"
+                                                type="xs:string"
+                                              />
                                             </xs:complexType>
                                           </xs:element>
                                         </xs:all>
-                                        <xs:attribute name="Action" type="Action" />
+                                        <xs:attribute
+                                          name="Action"
+                                          type="Action"
+                                        />
                                       </xs:complexType>
                                     </xs:element>
                                   </xs:sequence>
@@ -545,10 +741,18 @@
                   <xs:element name="RefLatLongPostcodeCollection" minOccurs="0">
                     <xs:complexType>
                       <xs:sequence>
-                        <xs:element name="RefLatLongPostcode" minOccurs="0" maxOccurs="unbounded">
+                        <xs:element
+                          name="RefLatLongPostcode"
+                          minOccurs="0"
+                          maxOccurs="unbounded"
+                        >
                           <xs:complexType>
                             <xs:all>
-                              <xs:element name="PK" minOccurs="0" type="xs:string" />
+                              <xs:element
+                                name="PK"
+                                minOccurs="0"
+                                type="xs:string"
+                              />
                               <xs:element name="Postcode" minOccurs="0">
                                 <xs:simpleType>
                                   <xs:restriction base="xs:string">
@@ -556,8 +760,16 @@
                                   </xs:restriction>
                                 </xs:simpleType>
                               </xs:element>
-                              <xs:element name="Longitude" minOccurs="0" type="xs:decimal" />
-                              <xs:element name="Lattitude" minOccurs="0" type="xs:decimal" />
+                              <xs:element
+                                name="Longitude"
+                                minOccurs="0"
+                                type="xs:decimal"
+                              />
+                              <xs:element
+                                name="Lattitude"
+                                minOccurs="0"
+                                type="xs:decimal"
+                              />
                               <xs:element name="CitySuburb" minOccurs="0">
                                 <xs:simpleType>
                                   <xs:restriction base="xs:string">
@@ -565,14 +777,20 @@
                                   </xs:restriction>
                                 </xs:simpleType>
                               </xs:element>
-                              <xs:element name="InternationalName" minOccurs="0">
+                              <xs:element
+                                name="InternationalName"
+                                minOccurs="0"
+                              >
                                 <xs:simpleType>
                                   <xs:restriction base="xs:string">
                                     <xs:maxLength value="50" />
                                   </xs:restriction>
                                 </xs:simpleType>
                               </xs:element>
-                              <xs:element name="LocalLanguageName" minOccurs="0">
+                              <xs:element
+                                name="LocalLanguageName"
+                                minOccurs="0"
+                              >
                                 <xs:simpleType>
                                   <xs:restriction base="xs:string">
                                     <xs:maxLength value="50" />
@@ -590,10 +808,17 @@
                                         </xs:restriction>
                                       </xs:simpleType>
                                     </xs:element>
-                                    <xs:element name="PK" minOccurs="0" type="xs:string" />
+                                    <xs:element
+                                      name="PK"
+                                      minOccurs="0"
+                                      type="xs:string"
+                                    />
                                   </xs:all>
                                   <xs:attribute name="Action" type="Action" />
-                                  <xs:attribute name="TableName" type="xs:string" />
+                                  <xs:attribute
+                                    name="TableName"
+                                    type="xs:string"
+                                  />
                                 </xs:complexType>
                               </xs:element>
                             </xs:all>
@@ -603,14 +828,25 @@
                       </xs:sequence>
                     </xs:complexType>
                   </xs:element>
-                  <xs:element name="RefDomesticCartageZoneCollection" minOccurs="0">
+                  <xs:element
+                    name="RefDomesticCartageZoneCollection"
+                    minOccurs="0"
+                  >
                     <xs:complexType>
                       <xs:sequence>
-                        <xs:element name="RefDomesticCartageZone" minOccurs="0" maxOccurs="unbounded">
+                        <xs:element
+                          name="RefDomesticCartageZone"
+                          minOccurs="0"
+                          maxOccurs="unbounded"
+                        >
                           <xs:complexType>
                             <xs:all>
                               <!-- Candidate Key: CityTownPostCode + RefUNLOCO.Code + CityTown -->
-                              <xs:element name="PK" minOccurs="0" type="xs:string" />
+                              <xs:element
+                                name="PK"
+                                minOccurs="0"
+                                type="xs:string"
+                              />
                               <xs:element name="DataSource" minOccurs="0">
                                 <xs:simpleType>
                                   <xs:restriction base="xs:string">
@@ -653,8 +889,15 @@
                                   </xs:restriction>
                                 </xs:simpleType>
                               </xs:element>
-                              <xs:element name="Distance" minOccurs="0" type="xs:decimal" />
-                              <xs:element name="DirectionToAirport" minOccurs="0">
+                              <xs:element
+                                name="Distance"
+                                minOccurs="0"
+                                type="xs:decimal"
+                              />
+                              <xs:element
+                                name="DirectionToAirport"
+                                minOccurs="0"
+                              >
                                 <xs:simpleType>
                                   <xs:restriction base="xs:string">
                                     <xs:maxLength value="10" />
@@ -675,7 +918,11 @@
                                   </xs:restriction>
                                 </xs:simpleType>
                               </xs:element>
-                              <xs:element name="IsBeyond" minOccurs="0" type="xs:boolean" />
+                              <xs:element
+                                name="IsBeyond"
+                                minOccurs="0"
+                                type="xs:boolean"
+                              />
                               <xs:element name="Loco" minOccurs="0">
                                 <xs:complexType>
                                   <xs:all>
@@ -687,10 +934,17 @@
                                         </xs:restriction>
                                       </xs:simpleType>
                                     </xs:element>
-                                    <xs:element name="PK" minOccurs="0" type="xs:string" />
+                                    <xs:element
+                                      name="PK"
+                                      minOccurs="0"
+                                      type="xs:string"
+                                    />
                                   </xs:all>
                                   <xs:attribute name="Action" type="Action" />
-                                  <xs:attribute name="TableName" type="xs:string" />
+                                  <xs:attribute
+                                    name="TableName"
+                                    type="xs:string"
+                                  />
                                 </xs:complexType>
                               </xs:element>
                             </xs:all>
@@ -757,7 +1011,11 @@
       <xs:element name="RefZoneHeaderCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="RefZoneHeader" minOccurs="0" maxOccurs="unbounded">
+            <xs:element
+              name="RefZoneHeader"
+              minOccurs="0"
+              maxOccurs="unbounded"
+            >
               <xs:complexType>
                 <xs:all>
                   <!-- Candidate Key: Code + ZoneType + Description -->
@@ -837,21 +1095,57 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="HasAirport" minOccurs="0" type="xs:boolean" />
-                  <xs:element name="HasSeaport" minOccurs="0" type="xs:boolean" />
+                  <xs:element
+                    name="HasAirport"
+                    minOccurs="0"
+                    type="xs:boolean"
+                  />
+                  <xs:element
+                    name="HasSeaport"
+                    minOccurs="0"
+                    type="xs:boolean"
+                  />
                   <xs:element name="HasRail" minOccurs="0" type="xs:boolean" />
                   <xs:element name="HasRoad" minOccurs="0" type="xs:boolean" />
                   <xs:element name="HasPost" minOccurs="0" type="xs:boolean" />
-                  <xs:element name="HasCustomsLodge" minOccurs="0" type="xs:boolean" />
-                  <xs:element name="HasUnload" minOccurs="0" type="xs:boolean" />
+                  <xs:element
+                    name="HasCustomsLodge"
+                    minOccurs="0"
+                    type="xs:boolean"
+                  />
+                  <xs:element
+                    name="HasUnload"
+                    minOccurs="0"
+                    type="xs:boolean"
+                  />
                   <xs:element name="HasStore" minOccurs="0" type="xs:boolean" />
-                  <xs:element name="HasTerminal" minOccurs="0" type="xs:boolean" />
-                  <xs:element name="HasDischarge" minOccurs="0" type="xs:boolean" />
-                  <xs:element name="HasOutport" minOccurs="0" type="xs:boolean" />
-                  <xs:element name="HasBorderCrossing" minOccurs="0" type="xs:boolean" />
+                  <xs:element
+                    name="HasTerminal"
+                    minOccurs="0"
+                    type="xs:boolean"
+                  />
+                  <xs:element
+                    name="HasDischarge"
+                    minOccurs="0"
+                    type="xs:boolean"
+                  />
+                  <xs:element
+                    name="HasOutport"
+                    minOccurs="0"
+                    type="xs:boolean"
+                  />
+                  <xs:element
+                    name="HasBorderCrossing"
+                    minOccurs="0"
+                    type="xs:boolean"
+                  />
                   <xs:element name="IsActive" minOccurs="0" type="xs:boolean" />
                   <xs:element name="IsSystem" minOccurs="0" type="xs:boolean" />
-                  <xs:element name="IsUpdatable" minOccurs="0" type="xs:boolean" />
+                  <xs:element
+                    name="IsUpdatable"
+                    minOccurs="0"
+                    type="xs:boolean"
+                  />
                   <xs:element name="Code" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -888,7 +1182,11 @@
                         <xs:element name="StandardZone" minOccurs="0">
                           <xs:complexType>
                             <xs:all>
-                              <xs:element name="PK" minOccurs="0" type="xs:string" />
+                              <xs:element
+                                name="PK"
+                                minOccurs="0"
+                                type="xs:string"
+                              />
                             </xs:all>
                             <xs:attribute name="Action" type="Action" />
                             <xs:attribute name="TableName" type="xs:string" />
@@ -897,7 +1195,11 @@
                         <xs:element name="DaylightSavingZone" minOccurs="0">
                           <xs:complexType>
                             <xs:all>
-                              <xs:element name="PK" minOccurs="0" type="xs:string" />
+                              <xs:element
+                                name="PK"
+                                minOccurs="0"
+                                type="xs:string"
+                              />
                             </xs:all>
                             <xs:attribute name="Action" type="Action" />
                             <xs:attribute name="TableName" type="xs:string" />
@@ -935,7 +1237,11 @@
                                   </xs:restriction>
                                 </xs:simpleType>
                               </xs:element>
-                              <xs:element name="PK" minOccurs="0" type="xs:string" />
+                              <xs:element
+                                name="PK"
+                                minOccurs="0"
+                                type="xs:string"
+                              />
                             </xs:all>
                             <xs:attribute name="Action" type="Action" />
                             <xs:attribute name="TableName" type="xs:string" />

@@ -5,14 +5,20 @@
    - This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
-<xs:schema targetNamespace="http://www.freighttrust.com/Schemas/Universal/2020/09" version="1.1" elementFormDefault="qualified" xmlns="http://www.freighttrust.com/Schemas/Universal/2020/09" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema
+  targetNamespace="http://www.freighttrust.com/Schemas/Universal/2020/09"
+  version="1.1"
+  elementFormDefault="qualified"
+  xmlns="http://www.freighttrust.com/Schemas/Universal/2020/09"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
   <xs:include schemaLocation="UniversalCommon.xsd" />
 
   <xs:element name="UniversalActivity" type="UniversalActivityData" />
 
   <xs:complexType name="UniversalActivityData">
     <xs:all>
-      <xs:element name="Activity" type="Activity"/>
+      <xs:element name="Activity" type="Activity" />
     </xs:all>
     <xs:attribute name="version" type="xs:token" />
   </xs:complexType>
@@ -41,19 +47,48 @@
         </xs:simpleType>
       </xs:element>
       <xs:element name="JobCosting" minOccurs="0" type="JobCosting" />
-      <xs:element name="Location" minOccurs="0" type="CodeDescriptionPair5Char" />
+      <xs:element
+        name="Location"
+        minOccurs="0"
+        type="CodeDescriptionPair5Char"
+      />
       <xs:element name="ProjectManager" minOccurs="0" type="Staff" />
-      <xs:element name="SelectionCriterion1" minOccurs="0" type="CodeDescriptionPair" />
-      <xs:element name="SelectionCriterion2" minOccurs="0" type="CodeDescriptionPair" />
-      <xs:element name="SelectionCriterion3" minOccurs="0" type="CodeDescriptionPair" />
-      <xs:element name="SelectionCriterion4" minOccurs="0" type="CodeDescriptionPair" />
-      <xs:element name="SelectionCriterion5" minOccurs="0" type="CodeDescriptionPair" />
+      <xs:element
+        name="SelectionCriterion1"
+        minOccurs="0"
+        type="CodeDescriptionPair"
+      />
+      <xs:element
+        name="SelectionCriterion2"
+        minOccurs="0"
+        type="CodeDescriptionPair"
+      />
+      <xs:element
+        name="SelectionCriterion3"
+        minOccurs="0"
+        type="CodeDescriptionPair"
+      />
+      <xs:element
+        name="SelectionCriterion4"
+        minOccurs="0"
+        type="CodeDescriptionPair"
+      />
+      <xs:element
+        name="SelectionCriterion5"
+        minOccurs="0"
+        type="CodeDescriptionPair"
+      />
       <xs:element name="Status" minOccurs="0" type="CodeDescriptionPair" />
 
       <xs:element name="CustomizedFieldCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="CustomizedField" minOccurs="0" maxOccurs="unbounded" type="CustomizedField" />
+            <xs:element
+              name="CustomizedField"
+              minOccurs="0"
+              maxOccurs="unbounded"
+              type="CustomizedField"
+            />
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -61,7 +96,12 @@
       <xs:element name="MilestoneCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="Milestone" minOccurs="0" maxOccurs="unbounded" type="Milestone" />
+            <xs:element
+              name="Milestone"
+              minOccurs="0"
+              maxOccurs="unbounded"
+              type="Milestone"
+            />
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -69,7 +109,12 @@
       <xs:element name="NoteCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="Note" minOccurs="0" maxOccurs="unbounded" type="Note" />
+            <xs:element
+              name="Note"
+              minOccurs="0"
+              maxOccurs="unbounded"
+              type="Note"
+            />
           </xs:sequence>
           <xs:attribute name="Content" type="CollectionContent" />
         </xs:complexType>
@@ -78,7 +123,12 @@
       <xs:element name="OrganizationAddressCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="OrganizationAddress" minOccurs="0" maxOccurs="unbounded" type="OrganizationAddress" />
+            <xs:element
+              name="OrganizationAddress"
+              minOccurs="0"
+              maxOccurs="unbounded"
+              type="OrganizationAddress"
+            />
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -86,7 +136,12 @@
       <xs:element name="RelatedActivityCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="RelatedActivity" minOccurs="0" maxOccurs="unbounded" type="Activity" />
+            <xs:element
+              name="RelatedActivity"
+              minOccurs="0"
+              maxOccurs="unbounded"
+              type="Activity"
+            />
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -94,7 +149,12 @@
       <xs:element name="TaskSetCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="TaskSet" minOccurs="0" maxOccurs="unbounded" type="TaskSet" />
+            <xs:element
+              name="TaskSet"
+              minOccurs="0"
+              maxOccurs="unbounded"
+              type="TaskSet"
+            />
           </xs:sequence>
         </xs:complexType>
       </xs:element>

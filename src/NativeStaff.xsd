@@ -5,7 +5,13 @@
    - This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
-<xs:schema targetNamespace="http://www.freighttrust.com/Schemas/Native/2020/09" version="2.0" elementFormDefault="qualified" xmlns="http://www.freighttrust.com/Schemas/Native/2020/09" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema
+  targetNamespace="http://www.freighttrust.com/Schemas/Native/2020/09"
+  version="2.0"
+  elementFormDefault="qualified"
+  xmlns="http://www.freighttrust.com/Schemas/Native/2020/09"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
   <xs:include schemaLocation="Native.xsd" />
   <xs:element name="Staff" type="StaffData" />
   <xs:complexType name="StaffData">
@@ -222,7 +228,11 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="EmploymentDate" minOccurs="0" type="emptiableDateTime" />
+      <xs:element
+        name="EmploymentDate"
+        minOccurs="0"
+        type="emptiableDateTime"
+      />
       <xs:element name="DepartureDate" minOccurs="0" type="emptiableDateTime" />
       <xs:element name="UserSignature" minOccurs="0" type="xs:base64Binary" />
       <xs:element name="DueBack" minOccurs="0" type="emptiableDateTime" />
@@ -275,9 +285,21 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="LastPasswordChangeDate" minOccurs="0" type="emptiableDateTime" />
-      <xs:element name="LockoutDateTime" minOccurs="0" type="emptiableDateTime" />
-      <xs:element name="NextReviewDate" minOccurs="0" type="emptiableDateTime" />
+      <xs:element
+        name="LastPasswordChangeDate"
+        minOccurs="0"
+        type="emptiableDateTime"
+      />
+      <xs:element
+        name="LockoutDateTime"
+        minOccurs="0"
+        type="emptiableDateTime"
+      />
+      <xs:element
+        name="NextReviewDate"
+        minOccurs="0"
+        type="emptiableDateTime"
+      />
       <xs:element name="WorkingLanguage" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -306,7 +328,11 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="LastActivityDate" minOccurs="0" type="emptiableDateTime" />
+      <xs:element
+        name="LastActivityDate"
+        minOccurs="0"
+        type="emptiableDateTime"
+      />
       <xs:element name="CommissionBasis" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -314,9 +340,21 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="NewClientCommissionRate" minOccurs="0" type="xs:decimal" />
-      <xs:element name="EstablishedClientCommissionRate" minOccurs="0" type="xs:decimal" />
-      <xs:element name="CommissionMinimumEarning" minOccurs="0" type="xs:decimal" />
+      <xs:element
+        name="NewClientCommissionRate"
+        minOccurs="0"
+        type="xs:decimal"
+      />
+      <xs:element
+        name="EstablishedClientCommissionRate"
+        minOccurs="0"
+        type="xs:decimal"
+      />
+      <xs:element
+        name="CommissionMinimumEarning"
+        minOccurs="0"
+        type="xs:decimal"
+      />
       <xs:element name="NextOfKinRelationship" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -331,14 +369,34 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="LastPasswordAttemptDateTime_UTC" minOccurs="0" type="emptiableDateTime" />
-      <xs:element name="LockoutDateTime_UTC" minOccurs="0" type="emptiableDateTime" />
+      <xs:element
+        name="LastPasswordAttemptDateTime_UTC"
+        minOccurs="0"
+        type="emptiableDateTime"
+      />
+      <xs:element
+        name="LockoutDateTime_UTC"
+        minOccurs="0"
+        type="emptiableDateTime"
+      />
       <xs:element name="ProfilePhoto" minOccurs="0" type="xs:base64Binary" />
       <xs:element name="IsActivityLogged" minOccurs="0" type="xs:boolean" />
       <xs:element name="Gender" minOccurs="0" type="xs:boolean" />
-      <xs:element name="ActiveDirectoryObjectGuid" minOccurs="0" type="xs:string" />
-      <xs:element name="SystemCreateTimeUtc" minOccurs="0" type="emptiableDateTime" />
-      <xs:element name="SystemLastEditTimeUtc" minOccurs="0" type="emptiableDateTime" />
+      <xs:element
+        name="ActiveDirectoryObjectGuid"
+        minOccurs="0"
+        type="xs:string"
+      />
+      <xs:element
+        name="SystemCreateTimeUtc"
+        minOccurs="0"
+        type="emptiableDateTime"
+      />
+      <xs:element
+        name="SystemLastEditTimeUtc"
+        minOccurs="0"
+        type="emptiableDateTime"
+      />
       <xs:element name="IsSalesRep" minOccurs="0" type="xs:boolean" />
       <xs:element name="IsController" minOccurs="0" type="xs:boolean" />
       <xs:element name="IsSystemAccount" minOccurs="0" type="xs:boolean" />
@@ -355,7 +413,11 @@
       <xs:element name="EftWages" minOccurs="0" type="xs:boolean" />
       <xs:element name="IsResource" minOccurs="0" type="xs:boolean" />
       <xs:element name="IsInTrainingMode" minOccurs="0" type="xs:boolean" />
-      <xs:element name="ChangePasswordAtNextLogin" minOccurs="0" type="xs:boolean" />
+      <xs:element
+        name="ChangePasswordAtNextLogin"
+        minOccurs="0"
+        type="xs:boolean"
+      />
       <xs:element name="PasswordNeverChanges" minOccurs="0" type="xs:boolean" />
       <xs:element name="Code" minOccurs="0">
         <xs:simpleType>
@@ -381,7 +443,11 @@
       <xs:element name="IsDevice" minOccurs="0" type="xs:boolean" />
       <xs:element name="IsDatabaseDeveloper" minOccurs="0" type="xs:boolean" />
       <xs:element name="IsOperational" minOccurs="0" type="xs:boolean" />
-      <xs:element name="IsTwoFactorAuthenticationEnabled" minOccurs="0" type="xs:boolean" />
+      <xs:element
+        name="IsTwoFactorAuthenticationEnabled"
+        minOccurs="0"
+        type="xs:boolean"
+      />
       <xs:element name="CanLogin" minOccurs="0" type="xs:boolean" />
       <xs:element name="AddressMap" minOccurs="0">
         <xs:simpleType>
@@ -530,7 +596,11 @@
       <xs:element name="GlbStaffLanguageCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="GlbStaffLanguage" minOccurs="0" maxOccurs="unbounded">
+            <xs:element
+              name="GlbStaffLanguage"
+              minOccurs="0"
+              maxOccurs="unbounded"
+            >
               <xs:complexType>
                 <xs:all>
                   <xs:element name="PK" minOccurs="0" type="xs:string" />
@@ -558,7 +628,11 @@
       <xs:element name="GlbCertificatesCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="GlbCertificates" minOccurs="0" maxOccurs="unbounded">
+            <xs:element
+              name="GlbCertificates"
+              minOccurs="0"
+              maxOccurs="unbounded"
+            >
               <xs:complexType>
                 <xs:all>
                   <xs:element name="PK" minOccurs="0" type="xs:string" />
@@ -576,7 +650,11 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="LicenseExpiry" minOccurs="0" type="emptiableDateTime" />
+                  <xs:element
+                    name="LicenseExpiry"
+                    minOccurs="0"
+                    type="emptiableDateTime"
+                  />
                   <xs:element name="LicenseType" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -594,7 +672,11 @@
       <xs:element name="GlbStaffHolidayCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="GlbStaffHoliday" minOccurs="0" maxOccurs="unbounded">
+            <xs:element
+              name="GlbStaffHoliday"
+              minOccurs="0"
+              maxOccurs="unbounded"
+            >
               <xs:complexType>
                 <xs:all>
                   <xs:element name="PK" minOccurs="0" type="xs:string" />
@@ -612,9 +694,21 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="StartTime" minOccurs="0" type="emptiableDateTime" />
-                  <xs:element name="EndTime" minOccurs="0" type="emptiableDateTime" />
-                  <xs:element name="DaysLeaveTaken" minOccurs="0" type="xs:decimal" />
+                  <xs:element
+                    name="StartTime"
+                    minOccurs="0"
+                    type="emptiableDateTime"
+                  />
+                  <xs:element
+                    name="EndTime"
+                    minOccurs="0"
+                    type="emptiableDateTime"
+                  />
+                  <xs:element
+                    name="DaysLeaveTaken"
+                    minOccurs="0"
+                    type="xs:decimal"
+                  />
                   <xs:element name="RecordType" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -622,8 +716,16 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="IsWorkingAway" minOccurs="0" type="xs:boolean" />
-                  <xs:element name="AvailabilityPercentage" minOccurs="0" type="xs:short" />
+                  <xs:element
+                    name="IsWorkingAway"
+                    minOccurs="0"
+                    type="xs:boolean"
+                  />
+                  <xs:element
+                    name="AvailabilityPercentage"
+                    minOccurs="0"
+                    type="xs:short"
+                  />
                   <xs:element name="LeaveComment" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -631,8 +733,16 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="SystemCreateTimeUtc" minOccurs="0" type="emptiableDateTime" />
-                  <xs:element name="SystemLastEditTimeUtc" minOccurs="0" type="emptiableDateTime" />
+                  <xs:element
+                    name="SystemCreateTimeUtc"
+                    minOccurs="0"
+                    type="emptiableDateTime"
+                  />
+                  <xs:element
+                    name="SystemLastEditTimeUtc"
+                    minOccurs="0"
+                    type="emptiableDateTime"
+                  />
                 </xs:all>
                 <xs:attribute name="Action" type="Action" />
               </xs:complexType>
@@ -656,7 +766,11 @@
                     </xs:simpleType>
                   </xs:element>
                   <xs:element name="SkillLevel" minOccurs="0" type="xs:short" />
-                  <xs:element name="CapacityLimitPercent" minOccurs="0" type="xs:short" />
+                  <xs:element
+                    name="CapacityLimitPercent"
+                    minOccurs="0"
+                    type="xs:short"
+                  />
                   <xs:element name="GlbGroup" minOccurs="0">
                     <xs:complexType>
                       <xs:all>
@@ -683,7 +797,11 @@
       <xs:element name="GenRegCertAccredMaintListCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="GenRegCertAccredMaintList" minOccurs="0" maxOccurs="unbounded">
+            <xs:element
+              name="GenRegCertAccredMaintList"
+              minOccurs="0"
+              maxOccurs="unbounded"
+            >
               <xs:complexType>
                 <xs:all>
                   <xs:element name="PK" minOccurs="0" type="xs:string" />
@@ -694,7 +812,11 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="ExpiryOrDueDate" minOccurs="0" type="emptiableDateTime" />
+                  <xs:element
+                    name="ExpiryOrDueDate"
+                    minOccurs="0"
+                    type="emptiableDateTime"
+                  />
                   <xs:element name="StateOrProvinceOfIssuance" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -702,7 +824,11 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="IssueDate" minOccurs="0" type="emptiableDateTime" />
+                  <xs:element
+                    name="IssueDate"
+                    minOccurs="0"
+                    type="emptiableDateTime"
+                  />
                   <xs:element name="Type" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">

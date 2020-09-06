@@ -5,8 +5,18 @@
    - This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
-<xs:schema targetNamespace="http://www.freighttrust.com/Schemas/Native/2020/09" version="2.0" elementFormDefault="qualified" xmlns="http://www.freighttrust.com/Schemas/Native/2020/09" xmlns:uv="http://www.freighttrust.com/Schemas/Universal/2020/09" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="UniversalCommon.xsd" namespace="http://www.freighttrust.com/Schemas/Universal/2020/09" />
+<xs:schema
+  targetNamespace="http://www.freighttrust.com/Schemas/Native/2020/09"
+  version="2.0"
+  elementFormDefault="qualified"
+  xmlns="http://www.freighttrust.com/Schemas/Native/2020/09"
+  xmlns:uv="http://www.freighttrust.com/Schemas/Universal/2020/09"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:import
+    schemaLocation="UniversalCommon.xsd"
+    namespace="http://www.freighttrust.com/Schemas/Universal/2020/09"
+  />
   <xs:element name="Native">
     <xs:complexType>
       <xs:sequence>
@@ -14,15 +24,27 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element name="OwnerCode" type="xs:string" minOccurs="0" />
-              <xs:element name="EnableCodeMapping" type="xs:boolean" minOccurs="0" />
-              <xs:element name="DataContext" type="uv:DataContext" minOccurs="0" />
+              <xs:element
+                name="EnableCodeMapping"
+                type="xs:boolean"
+                minOccurs="0"
+              />
+              <xs:element
+                name="DataContext"
+                type="uv:DataContext"
+                minOccurs="0"
+              />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
         <xs:element name="Body">
           <xs:complexType>
             <xs:sequence>
-              <xs:any minOccurs="1" maxOccurs="unbounded" processContents="skip" />
+              <xs:any
+                minOccurs="1"
+                maxOccurs="unbounded"
+                processContents="skip"
+              />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -156,7 +178,11 @@
       <xs:element name="RegistrationNumberCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="RegistrationNumber" minOccurs="0" maxOccurs="unbounded">
+            <xs:element
+              name="RegistrationNumber"
+              minOccurs="0"
+              maxOccurs="unbounded"
+            >
               <xs:complexType>
                 <xs:all>
                   <xs:element name="Type" minOccurs="1">
