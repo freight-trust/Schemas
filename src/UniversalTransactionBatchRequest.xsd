@@ -5,14 +5,26 @@
    - This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
-<xs:schema targetNamespace="http://www.freighttrust.com/Schemas/Universal/2020/09" version="1.1" elementFormDefault="qualified" xmlns="http://www.freighttrust.com/Schemas/Universal/2020/09" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema
+  targetNamespace="http://www.freighttrust.com/Schemas/Universal/2020/09"
+  version="1.1"
+  elementFormDefault="qualified"
+  xmlns="http://www.freighttrust.com/Schemas/Universal/2020/09"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
   <xs:include schemaLocation="UniversalCommon.xsd" />
 
-  <xs:element name="UniversalTransactionBatchRequest" type="UniversalTransactionBatchRequestData" />
+  <xs:element
+    name="UniversalTransactionBatchRequest"
+    type="UniversalTransactionBatchRequestData"
+  />
 
   <xs:complexType name="UniversalTransactionBatchRequestData">
     <xs:all>
-      <xs:element name="TransactionBatchRequest" type="TransactionBatchRequest"/>
+      <xs:element
+        name="TransactionBatchRequest"
+        type="TransactionBatchRequest"
+      />
     </xs:all>
     <xs:attribute name="version" type="xs:token" />
   </xs:complexType>

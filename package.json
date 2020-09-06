@@ -1,0 +1,39 @@
+{
+  "name": "freight-trust-xml",
+  "version": "1.0.0",
+  "description": "XSD schemas for XML messages for supply chain and logistics companies utilizing AS2/MQ",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fmt": "./node_modules/.bin/prettier --write '**/*.xml'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freight-trust/base-schemas.git"
+  },
+  "keywords": [
+    "xml",
+    "xsd",
+    "supply",
+    "chain",
+    "logistics",
+    "as2",
+    "as2",
+    "protocol",
+    "edi",
+    "edi",
+    "x12",
+    "edifact"
+  ],
+  "author": "sam bacha <sam@freighttrust.com>",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/freight-trust/base-schemas/issues"
+  },
+  "homepage": "https://github.com/freight-trust/base-schemas#readme",
+  "devDependencies": {},
+  "dependencies": {}
+}

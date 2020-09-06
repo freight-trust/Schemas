@@ -5,7 +5,13 @@
    - This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
-<xs:schema targetNamespace="http://www.freighttrust.com/Schemas/Universal/2020/09" version="1.1" elementFormDefault="qualified" xmlns="http://www.freighttrust.com/Schemas/Universal/2020/09" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema
+  targetNamespace="http://www.freighttrust.com/Schemas/Universal/2020/09"
+  version="1.1"
+  elementFormDefault="qualified"
+  xmlns="http://www.freighttrust.com/Schemas/Universal/2020/09"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
   <xs:include schemaLocation="UniversalCommon.xsd" />
   <xs:include schemaLocation="UniversalShipment.xsd" />
 
@@ -13,7 +19,7 @@
 
   <xs:complexType name="UniversalTransactionData">
     <xs:all>
-      <xs:element name="TransactionInfo" type="TransactionInfo"/>
+      <xs:element name="TransactionInfo" type="TransactionInfo" />
     </xs:all>
     <xs:attribute name="version" type="xs:token" />
   </xs:complexType>
@@ -29,8 +35,16 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="APAccountGroup" minOccurs="0" type="CodeDescriptionPair" />
-      <xs:element name="ARAccountGroup" minOccurs="0" type="CodeDescriptionPair" />
+      <xs:element
+        name="APAccountGroup"
+        minOccurs="0"
+        type="CodeDescriptionPair"
+      />
+      <xs:element
+        name="ARAccountGroup"
+        minOccurs="0"
+        type="CodeDescriptionPair"
+      />
       <xs:element name="BankAccount" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -39,7 +53,11 @@
         </xs:simpleType>
       </xs:element>
       <xs:element name="Branch" minOccurs="0" type="Branch" />
-      <xs:element name="BranchAddress" minOccurs="0" type="OrganizationAddress" />
+      <xs:element
+        name="BranchAddress"
+        minOccurs="0"
+        type="OrganizationAddress"
+      />
       <xs:element name="Category" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -70,7 +88,11 @@
       </xs:element>
       <xs:element name="CreateTime" minOccurs="0" type="emptiable_dateTime" />
       <xs:element name="CreateUser" minOccurs="0" type="StaffUsingAttributes" />
-      <xs:element name="DateClearedInCashBook" minOccurs="0" type="emptiable_dateTime" />
+      <xs:element
+        name="DateClearedInCashBook"
+        minOccurs="0"
+        type="emptiable_dateTime"
+      />
       <xs:element name="Department" minOccurs="0" type="Department" />
       <xs:element name="Description" minOccurs="0">
         <xs:simpleType>
@@ -116,7 +138,11 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="FullyPaidDate" minOccurs="0" type="emptiable_dateTime" />
+      <xs:element
+        name="FullyPaidDate"
+        minOccurs="0"
+        type="emptiable_dateTime"
+      />
       <xs:element name="InvoiceTerm" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -135,7 +161,11 @@
       </xs:element>
       <xs:element name="InvoiceTermDays" minOccurs="0" type="xs:int" />
       <xs:element name="IsCancelled" minOccurs="0" type="xs:boolean" />
-      <xs:element name="IsCreatedByMatchingProcess" minOccurs="0" type="xs:boolean" />
+      <xs:element
+        name="IsCreatedByMatchingProcess"
+        minOccurs="0"
+        type="xs:boolean"
+      />
       <xs:element name="IsPrinted" minOccurs="0" type="xs:boolean" />
       <xs:element name="Job" minOccurs="0" type="EntityReference" />
       <xs:element name="JobInvoiceNumber" minOccurs="0">
@@ -146,7 +176,11 @@
         </xs:simpleType>
       </xs:element>
       <xs:element name="LastEditTime" minOccurs="0" type="emptiable_dateTime" />
-      <xs:element name="LastEditUser" minOccurs="0" type="StaffUsingAttributes" />
+      <xs:element
+        name="LastEditUser"
+        minOccurs="0"
+        type="StaffUsingAttributes"
+      />
       <xs:element name="Ledger" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -166,10 +200,26 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="NumberOfSupportingDocuments" minOccurs="0" type="xs:int" />
-      <xs:element name="OrderCollectionDate" minOccurs="0" type="emptiable_dateTime" />
-      <xs:element name="OrganizationAddress" minOccurs="0" type="OrganizationAddress" />
-      <xs:element name="OriginalReference" minOccurs="0" type="OriginalReference" />
+      <xs:element
+        name="NumberOfSupportingDocuments"
+        minOccurs="0"
+        type="xs:int"
+      />
+      <xs:element
+        name="OrderCollectionDate"
+        minOccurs="0"
+        type="emptiable_dateTime"
+      />
+      <xs:element
+        name="OrganizationAddress"
+        minOccurs="0"
+        type="OrganizationAddress"
+      />
+      <xs:element
+        name="OriginalReference"
+        minOccurs="0"
+        type="OriginalReference"
+      />
       <xs:element name="OSCurrency" minOccurs="0" type="Currency" />
       <xs:element name="OSExGSTVATAmount" minOccurs="0" type="xs:decimal" />
       <xs:element name="OSGSTVATAmount" minOccurs="0" type="xs:decimal" />
@@ -221,7 +271,11 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="RequisitionDate" minOccurs="0" type="emptiable_dateTime" />
+      <xs:element
+        name="RequisitionDate"
+        minOccurs="0"
+        type="emptiable_dateTime"
+      />
       <xs:element name="RequisitionStatus" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -229,8 +283,16 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="SettlementMethod" minOccurs="0" type="SettlementMethod" />
-      <xs:element name="TransactionDate" minOccurs="0" type="emptiable_dateTime" />
+      <xs:element
+        name="SettlementMethod"
+        minOccurs="0"
+        type="SettlementMethod"
+      />
+      <xs:element
+        name="TransactionDate"
+        minOccurs="0"
+        type="emptiable_dateTime"
+      />
       <xs:element name="TransactionReference" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -271,7 +333,12 @@
       <xs:element name="PostingJournalCollection" minOccurs="1">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="PostingJournal" minOccurs="1" maxOccurs="unbounded" type="PostingJournal" />
+            <xs:element
+              name="PostingJournal"
+              minOccurs="1"
+              maxOccurs="unbounded"
+              type="PostingJournal"
+            />
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -279,7 +346,12 @@
       <xs:element name="AttachedDocumentCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="AttachedDocument" minOccurs="0" maxOccurs="unbounded" type="AttachedDocument" />
+            <xs:element
+              name="AttachedDocument"
+              minOccurs="0"
+              maxOccurs="unbounded"
+              type="AttachedDocument"
+            />
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -287,7 +359,12 @@
       <xs:element name="BankAccountCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="BankAccount" minOccurs="0" maxOccurs="unbounded" type="BankAccount" />
+            <xs:element
+              name="BankAccount"
+              minOccurs="0"
+              maxOccurs="unbounded"
+              type="BankAccount"
+            />
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -295,7 +372,12 @@
       <xs:element name="InvoiceRemittanceCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="InvoiceRemittance" minOccurs="0" maxOccurs="unbounded" type="InvoiceRemittance" />
+            <xs:element
+              name="InvoiceRemittance"
+              minOccurs="0"
+              maxOccurs="unbounded"
+              type="InvoiceRemittance"
+            />
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -303,7 +385,12 @@
       <xs:element name="OrganizationDocumentTrackingCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="OrganizationDocumentTracking" minOccurs="0" maxOccurs="unbounded" type="DocumentTracking" />
+            <xs:element
+              name="OrganizationDocumentTracking"
+              minOccurs="0"
+              maxOccurs="unbounded"
+              type="DocumentTracking"
+            />
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -311,7 +398,12 @@
       <xs:element name="ShipmentCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="Shipment" minOccurs="0" maxOccurs="unbounded" type="Shipment" />
+            <xs:element
+              name="Shipment"
+              minOccurs="0"
+              maxOccurs="unbounded"
+              type="Shipment"
+            />
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -375,7 +467,11 @@
       <xs:element name="ChargeCurrency" minOccurs="0" type="Currency" />
       <xs:element name="ChargeExchangeRate" minOccurs="0" type="xs:decimal" />
       <xs:element name="ChargeTotalAmount" minOccurs="0" type="xs:decimal" />
-      <xs:element name="ChargeTotalExVATAmount" minOccurs="0" type="xs:decimal" />
+      <xs:element
+        name="ChargeTotalExVATAmount"
+        minOccurs="0"
+        type="xs:decimal"
+      />
       <xs:element name="ChargeTotalVATAmount" minOccurs="0" type="xs:decimal" />
       <xs:element name="CostSource" minOccurs="0" type="EntityReference" />
       <xs:element name="Department" minOccurs="0" type="Department" />
@@ -398,7 +494,11 @@
       <xs:element name="GSTVATBasis" minOccurs="0" type="CodeDescriptionPair" />
       <xs:element name="IsFinalCharge" minOccurs="0" type="xs:boolean" />
       <xs:element name="Job" minOccurs="0" type="EntityReference" />
-      <xs:element name="JobRecognitionDate" minOccurs="0" type="emptiable_dateTime" />
+      <xs:element
+        name="JobRecognitionDate"
+        minOccurs="0"
+        type="emptiable_dateTime"
+      />
       <xs:element name="LocalAmount" minOccurs="0" type="xs:decimal" />
       <xs:element name="LocalCurrency" minOccurs="0" type="Currency" />
       <xs:element name="LocalExtraVATAmount" minOccurs="0" type="xs:decimal" />
@@ -412,7 +512,11 @@
       <xs:element name="LocalGSTVATAmount" minOccurs="0" type="xs:decimal" />
       <xs:element name="LocalTotalAmount" minOccurs="0" type="xs:decimal" />
       <xs:element name="LocalWHTAmount" minOccurs="0" type="xs:decimal" />
-      <xs:element name="Organization" minOccurs="0" type="OrganizationReference" />
+      <xs:element
+        name="Organization"
+        minOccurs="0"
+        type="OrganizationReference"
+      />
       <xs:element name="OriginalBatchNumber" minOccurs="0" type="xs:int" />
       <xs:element name="OriginalBatchSequence" minOccurs="0" type="xs:int" />
       <xs:element name="OSAmount" minOccurs="0" type="xs:decimal" />
@@ -422,7 +526,11 @@
       <xs:element name="OSTotalAmount" minOccurs="0" type="xs:decimal" />
       <xs:element name="OSWHTAmount" minOccurs="0" type="xs:decimal" />
       <xs:element name="PlaceOfSupply" minOccurs="0" type="PlaceOfSupply" />
-      <xs:element name="RecoverableGSTVATPercentage" minOccurs="0" type="xs:decimal" />
+      <xs:element
+        name="RecoverableGSTVATPercentage"
+        minOccurs="0"
+        type="xs:decimal"
+      />
       <xs:element name="RevenueRecognitionType" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -503,15 +611,43 @@
       <xs:element name="PostingJournalDetailCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="PostingJournalDetail" minOccurs="0" maxOccurs="unbounded">
+            <xs:element
+              name="PostingJournalDetail"
+              minOccurs="0"
+              maxOccurs="unbounded"
+            >
               <xs:complexType>
                 <xs:all>
-                  <xs:element name="CreditGLAccount" minOccurs="0" type="GLAccount" />
-                  <xs:element name="DebitGLAccount" minOccurs="0" type="GLAccount" />
-                  <xs:element name="PostingAmount" minOccurs="0" type="xs:decimal" />
-                  <xs:element name="PostingCurrency" minOccurs="0" type="Currency" />
-                  <xs:element name="PostingDate" minOccurs="0" type="emptiable_dateTime" />
-                  <xs:element name="PostingPeriod" minOccurs="0" type="xs:int" />
+                  <xs:element
+                    name="CreditGLAccount"
+                    minOccurs="0"
+                    type="GLAccount"
+                  />
+                  <xs:element
+                    name="DebitGLAccount"
+                    minOccurs="0"
+                    type="GLAccount"
+                  />
+                  <xs:element
+                    name="PostingAmount"
+                    minOccurs="0"
+                    type="xs:decimal"
+                  />
+                  <xs:element
+                    name="PostingCurrency"
+                    minOccurs="0"
+                    type="Currency"
+                  />
+                  <xs:element
+                    name="PostingDate"
+                    minOccurs="0"
+                    type="emptiable_dateTime"
+                  />
+                  <xs:element
+                    name="PostingPeriod"
+                    minOccurs="0"
+                    type="xs:int"
+                  />
                 </xs:all>
               </xs:complexType>
             </xs:element>
@@ -522,7 +658,12 @@
       <xs:element name="RatingBasisCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element name="RatingBasis" minOccurs="0" maxOccurs="unbounded" type="RatingBasis" />
+            <xs:element
+              name="RatingBasis"
+              minOccurs="0"
+              maxOccurs="unbounded"
+              type="RatingBasis"
+            />
           </xs:sequence>
         </xs:complexType>
       </xs:element>

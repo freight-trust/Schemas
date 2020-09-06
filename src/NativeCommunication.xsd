@@ -5,7 +5,13 @@
    - This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
-<xs:schema targetNamespace="http://www.freighttrust.com/Schemas/Native/2020/09" version="2.0" elementFormDefault="qualified" xmlns="http://www.freighttrust.com/Schemas/Native/2020/09" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema
+  targetNamespace="http://www.freighttrust.com/Schemas/Native/2020/09"
+  version="2.0"
+  elementFormDefault="qualified"
+  xmlns="http://www.freighttrust.com/Schemas/Native/2020/09"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
   <xs:include schemaLocation="Native.xsd" />
   <xs:element name="Communication" type="CommunicationData" />
   <xs:complexType name="CommunicationData">
@@ -22,8 +28,16 @@
       <xs:element name="NextCall" minOccurs="0" type="emptiableDateTime" />
       <xs:element name="SalesCallNotes" minOccurs="0" type="xs:base64Binary" />
       <xs:element name="FollowupNotes" minOccurs="0" type="xs:base64Binary" />
-      <xs:element name="SystemCreateTimeUtc" minOccurs="0" type="emptiableDateTime" />
-      <xs:element name="SystemLastEditTimeUtc" minOccurs="0" type="emptiableDateTime" />
+      <xs:element
+        name="SystemCreateTimeUtc"
+        minOccurs="0"
+        type="emptiableDateTime"
+      />
+      <xs:element
+        name="SystemLastEditTimeUtc"
+        minOccurs="0"
+        type="emptiableDateTime"
+      />
       <xs:element name="CommunicationID" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -67,7 +81,11 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="IsReminderClientFacing" minOccurs="0" type="xs:boolean" />
+      <xs:element
+        name="IsReminderClientFacing"
+        minOccurs="0"
+        type="xs:boolean"
+      />
       <xs:element name="CallSummary" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">

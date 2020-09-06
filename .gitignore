@@ -3,3 +3,4 @@
 *.zip
 *.tar
 node_modules
+.DS_Store
