@@ -1,0 +1,13 @@
+{
+    "namespace": "freighttrust.eda.kc.order",
+    "name": "orderStatus",
+    "type": "enum",
+    "symbols" : [
+        "pending",
+        "assigned",
+        "rejected",
+        "spoilt",
+        "cancelled",
+        "toBeCreated"
+    ]
+ }
