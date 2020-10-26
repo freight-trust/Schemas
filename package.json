@@ -1,18 +1,17 @@
 {
-  "name": "freight-trust-xml",
+  "name": "interchange-schema-registry",
   "version": "1.0.0",
-  "description": "XSD schemas for XML messages for supply chain and logistics companies utilizing AS2/MQ",
+  "description": "A Global Schema Registry for Data Interchange formats",
   "main": "index.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "fmt": "./node_modules/.bin/prettier --write '**/*.xml'"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/freight-trust/base-schemas.git"
+    "url": "git+https://github.com/freight-trust/schemas.git"
   },
   "keywords": [
     "xml",
@@ -29,11 +28,19 @@
     "edifact"
   ],
   "author": "sam bacha <sam@freighttrust.com>",
-  "license": "MPL-2.0",
+  "license": "SEE LICENSE IN DOCS/LICENSE",
   "bugs": {
-    "url": "https://github.com/freight-trust/base-schemas/issues"
+    "url": "https://github.com/freight-trust/schemas/issues"
   },
-  "homepage": "https://github.com/freight-trust/base-schemas#readme",
-  "devDependencies": {},
-  "dependencies": {}
+  "homepage": "https://github.com/freight-trust/schemas#readme",
+  "devDependencies": {
+    "@etclabscore/dl-github-releases": "^1.2.1",
+    "@json-schema-tools/dereferencer": "^1.2.6",
+    "@json-schema-tools/semantic-release-transpiler": "1.4.5",
+    "@qiwi/semantic-release-gh-pages-plugin": "^5.0.0",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "@exodus/schemasafe": "^1.0.0-rc.3"
+  }
 }
