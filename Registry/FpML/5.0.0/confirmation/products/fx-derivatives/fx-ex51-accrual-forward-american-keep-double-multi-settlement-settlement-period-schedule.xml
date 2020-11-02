@@ -1,14 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--View is confirmation--><!--Version is 5-10--><!--NS is http://www.fpml.org/FpML-5/confirmation--><!--
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--View is confirmation-->
+<!--Version is 5-10-->
+<!--NS is http://www.fpml.org/FpML-5/confirmation-->
+<!--
   == Copyright (c) 2014-2018 All rights reserved.
   == Financial Products Markup Language is subject to the FpML public license.
   == A copy of this license is available at http://www.fpml.org/license/license.html
-  --><!--
+  -->
+<!--
 see template: fx-ex54-fx-american-keep-double-accrual-forward-multi-settlement.pdf
---><executionNotification xmlns="http://www.fpml.org/FpML-5/confirmation"
-                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                       fpmlVersion="5-10"
-                       xsi:schemaLocation="http://www.fpml.org/FpML-5/confirmation ../../fpml-main-5-10.xsd http://www.w3.org/2000/09/xmldsig# ../../xmldsig-core-schema.xsd">
+-->
+<executionNotification
+    xmlns="http://www.fpml.org/FpML-5/confirmation"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    fpmlVersion="5-10"
+    xsi:schemaLocation="http://www.fpml.org/FpML-5/confirmation ../../fpml-main-5-10.xsd http://www.w3.org/2000/09/xmldsig# ../../xmldsig-core-schema.xsd"
+>
     <header>
         <messageId messageIdScheme="http://www.executionnotificationservice.com/coding-scheme/messageId">FX456a789b</messageId>
         <sentBy messageAddressScheme="http://www.executionnotificationservice.com/partyId">EXECSRV</sentBy>
@@ -19,7 +26,7 @@ see template: fx-ex54-fx-american-keep-double-accrual-forward-multi-settlement.p
     <trade>
         <tradeHeader>
             <partyTradeIdentifier>
-                <partyReference href="partyA"/>
+                <partyReference href="partyA" />
                 <tradeId tradeIdScheme="#partyA">12345</tradeId>
             </partyTradeIdentifier>
             <tradeDate>2014-07-01</tradeDate>
@@ -55,7 +62,7 @@ see template: fx-ex54-fx-american-keep-double-accrual-forward-multi-settlement.p
                 <!--"Accrual Days 1" means a Fixing Day during the relevant Accrual Period where GBPmat fixes at or above the Forward Rate, 
                     and where GBPspot trades below the Knock Out Rate at all times from the Trade Time on the Trade Date to 02:15pm Frankfurt Time on that Euro Settlement Date -->
                 <accrualRegion>
-                    <observableReference href="ob1"/>
+                    <observableReference href="ob1" />
                     <lowerBound>
                         <condition>AtOrAbove</condition>
                         <!--Forward Rate-->
@@ -69,7 +76,7 @@ see template: fx-ex54-fx-american-keep-double-accrual-forward-multi-settlement.p
                 <!--"Accrual Days 2" means a Fixing Day during the relevant Accrual Period where GBPmat fixes below the Forward Rate, 
                     and where GBPspot trades below the Knock Out Rate at all times from the Trade Time on the Trade Date to 02:15pm Frankfurt Time on that Euro Settlement Date.-->
                 <accrualRegion>
-                    <observableReference href="ob1"/>
+                    <observableReference href="ob1" />
                     <upperBound>
                         <condition>Below</condition>
                         <!--Forward Rate-->
@@ -141,13 +148,13 @@ see template: fx-ex54-fx-american-keep-double-accrual-forward-multi-settlement.p
             </settlementSchedule>
             <linearPayoffRegion>
                 <exchangedCurrency1>
-                    <payerPartyReference href="partyA"/>
-                    <receiverPartyReference href="partyB"/>
+                    <payerPartyReference href="partyA" />
+                    <receiverPartyReference href="partyB" />
                     <currency>GBP</currency>
                 </exchangedCurrency1>
                 <exchangedCurrency2>
-                    <payerPartyReference href="partyB"/>
-                    <receiverPartyReference href="partyA"/>
+                    <payerPartyReference href="partyB" />
+                    <receiverPartyReference href="partyA" />
                     <currency>USD</currency>
                 </exchangedCurrency2>
                 <strike id="str">
@@ -182,8 +189,8 @@ see template: fx-ex54-fx-american-keep-double-accrual-forward-multi-settlement.p
                 </quotedCurrencyPair>
             </barrier>
             <additionalPayment>
-                <payerPartyReference href="partyA"/>
-                <receiverPartyReference href="partyB"/>
+                <payerPartyReference href="partyA" />
+                <receiverPartyReference href="partyB" />
                 <paymentAmount>
                     <currency>GBP</currency>
                     <amount>14000.00</amount>
@@ -360,7 +367,7 @@ see template: fx-ex54-fx-american-keep-double-accrual-forward-multi-settlement.p
             </settlementPeriodSchedule>
         </fxAccrualForward>
         <calculationAgent>
-            <calculationAgentPartyReference href="partyA"/>
+            <calculationAgentPartyReference href="partyA" />
         </calculationAgent>
     </trade>
     <party id="partyA">

@@ -6,11 +6,11 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
 <xs:schema
-  targetNamespace="http://www.freighttrust.com/Schemas/Native/2020/09"
-  version="2.0"
-  elementFormDefault="qualified"
-  xmlns="http://www.freighttrust.com/Schemas/Native/2020/09"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.freighttrust.com/Schemas/Native/2020/09"
+    version="2.0"
+    elementFormDefault="qualified"
+    xmlns="http://www.freighttrust.com/Schemas/Native/2020/09"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
 >
   <xs:include schemaLocation="Native.xsd" />
   <xs:element name="CommodityCode" type="CommodityCodeData" />
@@ -41,11 +41,7 @@
       <xs:element name="ExpiryDate" minOccurs="0" type="emptiableDateTime" />
       <xs:element name="ReeferMinTemperature" minOccurs="0" type="xs:decimal" />
       <xs:element name="ReeferMaxTemperature" minOccurs="0" type="xs:decimal" />
-      <xs:element
-        name="ContainerVentRequired"
-        minOccurs="0"
-        type="xs:boolean"
-      />
+      <xs:element name="ContainerVentRequired" minOccurs="0" type="xs:boolean" />
       <xs:element name="IsActive" minOccurs="0" type="xs:boolean" />
       <xs:element name="IsTimber" minOccurs="0" type="xs:boolean" />
       <xs:element name="IsPerishable" minOccurs="0" type="xs:boolean" />

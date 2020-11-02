@@ -6,11 +6,11 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
 <xs:schema
-  targetNamespace="http://www.freighttrust.com/Schemas/Native/2020/09"
-  version="2.0"
-  elementFormDefault="qualified"
-  xmlns="http://www.freighttrust.com/Schemas/Native/2020/09"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.freighttrust.com/Schemas/Native/2020/09"
+    version="2.0"
+    elementFormDefault="qualified"
+    xmlns="http://www.freighttrust.com/Schemas/Native/2020/09"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
 >
   <xs:include schemaLocation="Native.xsd" />
   <xs:element name="Tag" type="TagData" />
@@ -89,16 +89,8 @@
                       <xs:restriction base="xs:string" />
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element
-                    name="RuleRunSequence"
-                    minOccurs="0"
-                    type="xs:int"
-                  />
-                  <xs:element
-                    name="SystemCreateTimeUtc"
-                    minOccurs="0"
-                    type="emptiableDateTime"
-                  />
+                  <xs:element name="RuleRunSequence" minOccurs="0" type="xs:int" />
+                  <xs:element name="SystemCreateTimeUtc" minOccurs="0" type="emptiableDateTime" />
                   <xs:element name="OwnerGroup" minOccurs="0">
                     <xs:complexType>
                       <xs:all>
@@ -130,11 +122,7 @@
               <xs:complexType>
                 <xs:all>
                   <xs:element name="PK" minOccurs="0" type="xs:string" />
-                  <xs:element
-                    name="NoteData"
-                    minOccurs="0"
-                    type="xs:base64Binary"
-                  />
+                  <xs:element name="NoteData" minOccurs="0" type="xs:base64Binary" />
                   <xs:element name="NoteText" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string" />
@@ -154,16 +142,8 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element
-                    name="IsCustomDescription"
-                    minOccurs="0"
-                    type="xs:boolean"
-                  />
-                  <xs:element
-                    name="ForceRead"
-                    minOccurs="0"
-                    type="xs:boolean"
-                  />
+                  <xs:element name="IsCustomDescription" minOccurs="0" type="xs:boolean" />
+                  <xs:element name="ForceRead" minOccurs="0" type="xs:boolean" />
                   <xs:element name="Description" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">

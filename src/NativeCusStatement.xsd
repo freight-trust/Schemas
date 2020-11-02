@@ -6,11 +6,11 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
 <xs:schema
-  targetNamespace="http://www.freighttrust.com/Schemas/Native/2020/09"
-  version="2.0"
-  elementFormDefault="qualified"
-  xmlns="http://www.freighttrust.com/Schemas/Native/2020/09"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.freighttrust.com/Schemas/Native/2020/09"
+    version="2.0"
+    elementFormDefault="qualified"
+    xmlns="http://www.freighttrust.com/Schemas/Native/2020/09"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
 >
   <xs:include schemaLocation="Native.xsd" />
   <xs:element name="CusStatement" type="CusStatementData" />
@@ -75,11 +75,7 @@
         </xs:simpleType>
       </xs:element>
       <xs:element name="DueDate" minOccurs="0" type="emptiableDateTime" />
-      <xs:element
-        name="PaymentAuthorizationDate"
-        minOccurs="0"
-        type="emptiableDateTime"
-      />
+      <xs:element name="PaymentAuthorizationDate" minOccurs="0" type="emptiableDateTime" />
       <xs:element name="PreparerDistrictPort" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -169,11 +165,7 @@
       <xs:element name="DailyStatementHeaderCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element
-              name="DailyStatementHeader"
-              minOccurs="0"
-              maxOccurs="unbounded"
-            >
+            <xs:element name="DailyStatementHeader" minOccurs="0" maxOccurs="unbounded">
               <xs:complexType>
                 <xs:all>
                   <xs:element name="PK" minOccurs="0" type="xs:string" />
@@ -184,16 +176,8 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element
-                    name="PrintDate"
-                    minOccurs="0"
-                    type="emptiableDateTime"
-                  />
-                  <xs:element
-                    name="ProcessDate"
-                    minOccurs="0"
-                    type="emptiableDateTime"
-                  />
+                  <xs:element name="PrintDate" minOccurs="0" type="emptiableDateTime" />
+                  <xs:element name="ProcessDate" minOccurs="0" type="emptiableDateTime" />
                   <xs:element name="Status" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -236,16 +220,8 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element
-                    name="DueDate"
-                    minOccurs="0"
-                    type="emptiableDateTime"
-                  />
-                  <xs:element
-                    name="PaymentAuthorizationDate"
-                    minOccurs="0"
-                    type="emptiableDateTime"
-                  />
+                  <xs:element name="DueDate" minOccurs="0" type="emptiableDateTime" />
+                  <xs:element name="PaymentAuthorizationDate" minOccurs="0" type="emptiableDateTime" />
                   <xs:element name="PreparerDistrictPort" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -274,11 +250,7 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element
-                    name="StatementAmount"
-                    minOccurs="0"
-                    type="xs:decimal"
-                  />
+                  <xs:element name="StatementAmount" minOccurs="0" type="xs:decimal" />
                   <xs:element name="CheckNo" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -286,11 +258,7 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element
-                    name="IsMonthlyStatement"
-                    minOccurs="0"
-                    type="xs:boolean"
-                  />
+                  <xs:element name="IsMonthlyStatement" minOccurs="0" type="xs:boolean" />
                   <xs:element name="RMNumber" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -305,16 +273,8 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element
-                    name="PaidAmount"
-                    minOccurs="0"
-                    type="xs:decimal"
-                  />
-                  <xs:element
-                    name="RefundAmount"
-                    minOccurs="0"
-                    type="xs:decimal"
-                  />
+                  <xs:element name="PaidAmount" minOccurs="0" type="xs:decimal" />
+                  <xs:element name="RefundAmount" minOccurs="0" type="xs:decimal" />
                   <xs:element name="Importer" minOccurs="0">
                     <xs:complexType>
                       <xs:all>
@@ -348,24 +308,13 @@
                       <xs:attribute name="Action" type="Action" />
                     </xs:complexType>
                   </xs:element>
-                  <xs:element
-                    name="JobRequiredDocumentCollection"
-                    minOccurs="0"
-                  >
+                  <xs:element name="JobRequiredDocumentCollection" minOccurs="0">
                     <xs:complexType>
                       <xs:sequence>
-                        <xs:element
-                          name="JobRequiredDocument"
-                          minOccurs="0"
-                          maxOccurs="unbounded"
-                        >
+                        <xs:element name="JobRequiredDocument" minOccurs="0" maxOccurs="unbounded">
                           <xs:complexType>
                             <xs:all>
-                              <xs:element
-                                name="PK"
-                                minOccurs="0"
-                                type="xs:string"
-                              />
+                              <xs:element name="PK" minOccurs="0" type="xs:string" />
                               <xs:element name="DocType" minOccurs="0">
                                 <xs:simpleType>
                                   <xs:restriction base="xs:string">
@@ -394,26 +343,10 @@
                                   </xs:restriction>
                                 </xs:simpleType>
                               </xs:element>
-                              <xs:element
-                                name="DateReceived"
-                                minOccurs="0"
-                                type="emptiableDateTime"
-                              />
-                              <xs:element
-                                name="RcvFromCustomsBroker"
-                                minOccurs="0"
-                                type="emptiableDateTime"
-                              />
-                              <xs:element
-                                name="ReturnToShipper"
-                                minOccurs="0"
-                                type="emptiableDateTime"
-                              />
-                              <xs:element
-                                name="SntToCustomsBroker"
-                                minOccurs="0"
-                                type="emptiableDateTime"
-                              />
+                              <xs:element name="DateReceived" minOccurs="0" type="emptiableDateTime" />
+                              <xs:element name="RcvFromCustomsBroker" minOccurs="0" type="emptiableDateTime" />
+                              <xs:element name="ReturnToShipper" minOccurs="0" type="emptiableDateTime" />
+                              <xs:element name="SntToCustomsBroker" minOccurs="0" type="emptiableDateTime" />
                               <xs:element name="DocPeriod" minOccurs="0">
                                 <xs:simpleType>
                                   <xs:restriction base="xs:string">
@@ -421,15 +354,8 @@
                                   </xs:restriction>
                                 </xs:simpleType>
                               </xs:element>
-                              <xs:element
-                                name="ValidToDate"
-                                minOccurs="0"
-                                type="emptiableDateTime"
-                              />
-                              <xs:element
-                                name="TemplateTransportMode"
-                                minOccurs="0"
-                              >
+                              <xs:element name="ValidToDate" minOccurs="0" type="emptiableDateTime" />
+                              <xs:element name="TemplateTransportMode" minOccurs="0">
                                 <xs:simpleType>
                                   <xs:restriction base="xs:string">
                                     <xs:maxLength value="3" />
@@ -443,16 +369,8 @@
                                   </xs:restriction>
                                 </xs:simpleType>
                               </xs:element>
-                              <xs:element
-                                name="OriginalDocRequired"
-                                minOccurs="0"
-                                type="xs:boolean"
-                              />
-                              <xs:element
-                                name="CreditControlDoc"
-                                minOccurs="0"
-                                type="xs:boolean"
-                              />
+                              <xs:element name="OriginalDocRequired" minOccurs="0" type="xs:boolean" />
+                              <xs:element name="CreditControlDoc" minOccurs="0" type="xs:boolean" />
                               <xs:element name="DocumentNotes" minOccurs="0">
                                 <xs:simpleType>
                                   <xs:restriction base="xs:string">
@@ -471,17 +389,10 @@
                                         </xs:restriction>
                                       </xs:simpleType>
                                     </xs:element>
-                                    <xs:element
-                                      name="PK"
-                                      minOccurs="0"
-                                      type="xs:string"
-                                    />
+                                    <xs:element name="PK" minOccurs="0" type="xs:string" />
                                   </xs:all>
                                   <xs:attribute name="Action" type="Action" />
-                                  <xs:attribute
-                                    name="TableName"
-                                    type="xs:string"
-                                  />
+                                  <xs:attribute name="TableName" type="xs:string" />
                                 </xs:complexType>
                               </xs:element>
                               <xs:element name="RelatedCountry" minOccurs="0">
@@ -495,17 +406,10 @@
                                         </xs:restriction>
                                       </xs:simpleType>
                                     </xs:element>
-                                    <xs:element
-                                      name="PK"
-                                      minOccurs="0"
-                                      type="xs:string"
-                                    />
+                                    <xs:element name="PK" minOccurs="0" type="xs:string" />
                                   </xs:all>
                                   <xs:attribute name="Action" type="Action" />
-                                  <xs:attribute
-                                    name="TableName"
-                                    type="xs:string"
-                                  />
+                                  <xs:attribute name="TableName" type="xs:string" />
                                 </xs:complexType>
                               </xs:element>
                             </xs:all>
@@ -518,18 +422,10 @@
                   <xs:element name="CusStatementLineCollection" minOccurs="0">
                     <xs:complexType>
                       <xs:sequence>
-                        <xs:element
-                          name="CusStatementLine"
-                          minOccurs="0"
-                          maxOccurs="unbounded"
-                        >
+                        <xs:element name="CusStatementLine" minOccurs="0" maxOccurs="unbounded">
                           <xs:complexType>
                             <xs:all>
-                              <xs:element
-                                name="PK"
-                                minOccurs="0"
-                                type="xs:string"
-                              />
+                              <xs:element name="PK" minOccurs="0" type="xs:string" />
                               <xs:element name="EntryNum" minOccurs="0">
                                 <xs:simpleType>
                                   <xs:restriction base="xs:string">
@@ -572,11 +468,7 @@
                                   </xs:restriction>
                                 </xs:simpleType>
                               </xs:element>
-                              <xs:element
-                                name="CustomsFeesTotal"
-                                minOccurs="0"
-                                type="xs:decimal"
-                              />
+                              <xs:element name="CustomsFeesTotal" minOccurs="0" type="xs:decimal" />
                               <xs:element name="BrokerReference" minOccurs="0">
                                 <xs:simpleType>
                                   <xs:restriction base="xs:string">
@@ -619,73 +511,33 @@
                                   </xs:restriction>
                                 </xs:simpleType>
                               </xs:element>
-                              <xs:element
-                                name="CreditNoteDate"
-                                minOccurs="0"
-                                type="emptiableDateTime"
-                              />
-                              <xs:element
-                                name="DueDate"
-                                minOccurs="0"
-                                type="emptiableDateTime"
-                              />
-                              <xs:element
-                                name="EntryDate"
-                                minOccurs="0"
-                                type="emptiableDateTime"
-                              />
-                              <xs:element
-                                name="ImporterCustomsID"
-                                minOccurs="0"
-                              >
+                              <xs:element name="CreditNoteDate" minOccurs="0" type="emptiableDateTime" />
+                              <xs:element name="DueDate" minOccurs="0" type="emptiableDateTime" />
+                              <xs:element name="EntryDate" minOccurs="0" type="emptiableDateTime" />
+                              <xs:element name="ImporterCustomsID" minOccurs="0">
                                 <xs:simpleType>
                                   <xs:restriction base="xs:string">
                                     <xs:maxLength value="15" />
                                   </xs:restriction>
                                 </xs:simpleType>
                               </xs:element>
-                              <xs:element
-                                name="ScheduledProcessDate"
-                                minOccurs="0"
-                                type="emptiableDateTime"
-                              />
-                              <xs:element
-                                name="CusStatementLineChargeCollection"
-                                minOccurs="0"
-                              >
+                              <xs:element name="ScheduledProcessDate" minOccurs="0" type="emptiableDateTime" />
+                              <xs:element name="CusStatementLineChargeCollection" minOccurs="0">
                                 <xs:complexType>
                                   <xs:sequence>
-                                    <xs:element
-                                      name="CusStatementLineCharge"
-                                      minOccurs="0"
-                                      maxOccurs="unbounded"
-                                    >
+                                    <xs:element name="CusStatementLineCharge" minOccurs="0" maxOccurs="unbounded">
                                       <xs:complexType>
                                         <xs:all>
-                                          <xs:element
-                                            name="PK"
-                                            minOccurs="0"
-                                            type="xs:string"
-                                          />
-                                          <xs:element
-                                            name="ChargeType"
-                                            minOccurs="0"
-                                          >
+                                          <xs:element name="PK" minOccurs="0" type="xs:string" />
+                                          <xs:element name="ChargeType" minOccurs="0">
                                             <xs:simpleType>
                                               <xs:restriction base="xs:string">
                                                 <xs:maxLength value="3" />
                                               </xs:restriction>
                                             </xs:simpleType>
                                           </xs:element>
-                                          <xs:element
-                                            name="ChargeAmount"
-                                            minOccurs="0"
-                                            type="xs:decimal"
-                                          />
-                                          <xs:element
-                                            name="PaymentParty"
-                                            minOccurs="0"
-                                          >
+                                          <xs:element name="ChargeAmount" minOccurs="0" type="xs:decimal" />
+                                          <xs:element name="PaymentParty" minOccurs="0">
                                             <xs:simpleType>
                                               <xs:restriction base="xs:string">
                                                 <xs:maxLength value="3" />
@@ -693,10 +545,7 @@
                                             </xs:simpleType>
                                           </xs:element>
                                         </xs:all>
-                                        <xs:attribute
-                                          name="Action"
-                                          type="Action"
-                                        />
+                                        <xs:attribute name="Action" type="Action" />
                                       </xs:complexType>
                                     </xs:element>
                                   </xs:sequence>
@@ -709,28 +558,14 @@
                       </xs:sequence>
                     </xs:complexType>
                   </xs:element>
-                  <xs:element
-                    name="CusStatementLineGroupCollection"
-                    minOccurs="0"
-                  >
+                  <xs:element name="CusStatementLineGroupCollection" minOccurs="0">
                     <xs:complexType>
                       <xs:sequence>
-                        <xs:element
-                          name="CusStatementLineGroup"
-                          minOccurs="0"
-                          maxOccurs="unbounded"
-                        >
+                        <xs:element name="CusStatementLineGroup" minOccurs="0" maxOccurs="unbounded">
                           <xs:complexType>
                             <xs:all>
-                              <xs:element
-                                name="PK"
-                                minOccurs="0"
-                                type="xs:string"
-                              />
-                              <xs:element
-                                name="ImporterCustomsID"
-                                minOccurs="0"
-                              >
+                              <xs:element name="PK" minOccurs="0" type="xs:string" />
+                              <xs:element name="ImporterCustomsID" minOccurs="0">
                                 <xs:simpleType>
                                   <xs:restriction base="xs:string">
                                     <xs:maxLength value="15" />
@@ -748,37 +583,19 @@
                                         </xs:restriction>
                                       </xs:simpleType>
                                     </xs:element>
-                                    <xs:element
-                                      name="PK"
-                                      minOccurs="0"
-                                      type="xs:string"
-                                    />
+                                    <xs:element name="PK" minOccurs="0" type="xs:string" />
                                   </xs:all>
                                   <xs:attribute name="Action" type="Action" />
-                                  <xs:attribute
-                                    name="TableName"
-                                    type="xs:string"
-                                  />
+                                  <xs:attribute name="TableName" type="xs:string" />
                                 </xs:complexType>
                               </xs:element>
-                              <xs:element
-                                name="CusStatementLineGroupFinancialDetailCollection"
-                                minOccurs="0"
-                              >
+                              <xs:element name="CusStatementLineGroupFinancialDetailCollection" minOccurs="0">
                                 <xs:complexType>
                                   <xs:sequence>
-                                    <xs:element
-                                      name="CusStatementLineGroupFinancialDetail"
-                                      minOccurs="0"
-                                      maxOccurs="unbounded"
-                                    >
+                                    <xs:element name="CusStatementLineGroupFinancialDetail" minOccurs="0" maxOccurs="unbounded">
                                       <xs:complexType>
                                         <xs:all>
-                                          <xs:element
-                                            name="PK"
-                                            minOccurs="0"
-                                            type="xs:string"
-                                          />
+                                          <xs:element name="PK" minOccurs="0" type="xs:string" />
                                           <xs:element name="Type" minOccurs="0">
                                             <xs:simpleType>
                                               <xs:restriction base="xs:string">
@@ -786,16 +603,9 @@
                                               </xs:restriction>
                                             </xs:simpleType>
                                           </xs:element>
-                                          <xs:element
-                                            name="Amount"
-                                            minOccurs="0"
-                                            type="xs:decimal"
-                                          />
+                                          <xs:element name="Amount" minOccurs="0" type="xs:decimal" />
                                         </xs:all>
-                                        <xs:attribute
-                                          name="Action"
-                                          type="Action"
-                                        />
+                                        <xs:attribute name="Action" type="Action" />
                                       </xs:complexType>
                                     </xs:element>
                                   </xs:sequence>
@@ -819,11 +629,7 @@
       <xs:element name="JobRequiredDocumentCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element
-              name="JobRequiredDocument"
-              minOccurs="0"
-              maxOccurs="unbounded"
-            >
+            <xs:element name="JobRequiredDocument" minOccurs="0" maxOccurs="unbounded">
               <xs:complexType>
                 <xs:all>
                   <xs:element name="PK" minOccurs="0" type="xs:string" />
@@ -855,26 +661,10 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element
-                    name="DateReceived"
-                    minOccurs="0"
-                    type="emptiableDateTime"
-                  />
-                  <xs:element
-                    name="RcvFromCustomsBroker"
-                    minOccurs="0"
-                    type="emptiableDateTime"
-                  />
-                  <xs:element
-                    name="ReturnToShipper"
-                    minOccurs="0"
-                    type="emptiableDateTime"
-                  />
-                  <xs:element
-                    name="SntToCustomsBroker"
-                    minOccurs="0"
-                    type="emptiableDateTime"
-                  />
+                  <xs:element name="DateReceived" minOccurs="0" type="emptiableDateTime" />
+                  <xs:element name="RcvFromCustomsBroker" minOccurs="0" type="emptiableDateTime" />
+                  <xs:element name="ReturnToShipper" minOccurs="0" type="emptiableDateTime" />
+                  <xs:element name="SntToCustomsBroker" minOccurs="0" type="emptiableDateTime" />
                   <xs:element name="DocPeriod" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -882,11 +672,7 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element
-                    name="ValidToDate"
-                    minOccurs="0"
-                    type="emptiableDateTime"
-                  />
+                  <xs:element name="ValidToDate" minOccurs="0" type="emptiableDateTime" />
                   <xs:element name="TemplateTransportMode" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -901,16 +687,8 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element
-                    name="OriginalDocRequired"
-                    minOccurs="0"
-                    type="xs:boolean"
-                  />
-                  <xs:element
-                    name="CreditControlDoc"
-                    minOccurs="0"
-                    type="xs:boolean"
-                  />
+                  <xs:element name="OriginalDocRequired" minOccurs="0" type="xs:boolean" />
+                  <xs:element name="CreditControlDoc" minOccurs="0" type="xs:boolean" />
                   <xs:element name="DocumentNotes" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -962,11 +740,7 @@
       <xs:element name="CusStatementLineCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element
-              name="CusStatementLine"
-              minOccurs="0"
-              maxOccurs="unbounded"
-            >
+            <xs:element name="CusStatementLine" minOccurs="0" maxOccurs="unbounded">
               <xs:complexType>
                 <xs:all>
                   <xs:element name="PK" minOccurs="0" type="xs:string" />
@@ -1012,11 +786,7 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element
-                    name="CustomsFeesTotal"
-                    minOccurs="0"
-                    type="xs:decimal"
-                  />
+                  <xs:element name="CustomsFeesTotal" minOccurs="0" type="xs:decimal" />
                   <xs:element name="BrokerReference" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -1059,21 +829,9 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element
-                    name="CreditNoteDate"
-                    minOccurs="0"
-                    type="emptiableDateTime"
-                  />
-                  <xs:element
-                    name="DueDate"
-                    minOccurs="0"
-                    type="emptiableDateTime"
-                  />
-                  <xs:element
-                    name="EntryDate"
-                    minOccurs="0"
-                    type="emptiableDateTime"
-                  />
+                  <xs:element name="CreditNoteDate" minOccurs="0" type="emptiableDateTime" />
+                  <xs:element name="DueDate" minOccurs="0" type="emptiableDateTime" />
+                  <xs:element name="EntryDate" minOccurs="0" type="emptiableDateTime" />
                   <xs:element name="ImporterCustomsID" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -1081,29 +839,14 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element
-                    name="ScheduledProcessDate"
-                    minOccurs="0"
-                    type="emptiableDateTime"
-                  />
-                  <xs:element
-                    name="CusStatementLineChargeCollection"
-                    minOccurs="0"
-                  >
+                  <xs:element name="ScheduledProcessDate" minOccurs="0" type="emptiableDateTime" />
+                  <xs:element name="CusStatementLineChargeCollection" minOccurs="0">
                     <xs:complexType>
                       <xs:sequence>
-                        <xs:element
-                          name="CusStatementLineCharge"
-                          minOccurs="0"
-                          maxOccurs="unbounded"
-                        >
+                        <xs:element name="CusStatementLineCharge" minOccurs="0" maxOccurs="unbounded">
                           <xs:complexType>
                             <xs:all>
-                              <xs:element
-                                name="PK"
-                                minOccurs="0"
-                                type="xs:string"
-                              />
+                              <xs:element name="PK" minOccurs="0" type="xs:string" />
                               <xs:element name="ChargeType" minOccurs="0">
                                 <xs:simpleType>
                                   <xs:restriction base="xs:string">
@@ -1111,11 +854,7 @@
                                   </xs:restriction>
                                 </xs:simpleType>
                               </xs:element>
-                              <xs:element
-                                name="ChargeAmount"
-                                minOccurs="0"
-                                type="xs:decimal"
-                              />
+                              <xs:element name="ChargeAmount" minOccurs="0" type="xs:decimal" />
                               <xs:element name="PaymentParty" minOccurs="0">
                                 <xs:simpleType>
                                   <xs:restriction base="xs:string">
@@ -1140,11 +879,7 @@
       <xs:element name="CusStatementLineGroupCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element
-              name="CusStatementLineGroup"
-              minOccurs="0"
-              maxOccurs="unbounded"
-            >
+            <xs:element name="CusStatementLineGroup" minOccurs="0" maxOccurs="unbounded">
               <xs:complexType>
                 <xs:all>
                   <xs:element name="PK" minOccurs="0" type="xs:string" />
@@ -1172,24 +907,13 @@
                       <xs:attribute name="TableName" type="xs:string" />
                     </xs:complexType>
                   </xs:element>
-                  <xs:element
-                    name="CusStatementLineGroupFinancialDetailCollection"
-                    minOccurs="0"
-                  >
+                  <xs:element name="CusStatementLineGroupFinancialDetailCollection" minOccurs="0">
                     <xs:complexType>
                       <xs:sequence>
-                        <xs:element
-                          name="CusStatementLineGroupFinancialDetail"
-                          minOccurs="0"
-                          maxOccurs="unbounded"
-                        >
+                        <xs:element name="CusStatementLineGroupFinancialDetail" minOccurs="0" maxOccurs="unbounded">
                           <xs:complexType>
                             <xs:all>
-                              <xs:element
-                                name="PK"
-                                minOccurs="0"
-                                type="xs:string"
-                              />
+                              <xs:element name="PK" minOccurs="0" type="xs:string" />
                               <xs:element name="Type" minOccurs="0">
                                 <xs:simpleType>
                                   <xs:restriction base="xs:string">
@@ -1197,11 +921,7 @@
                                   </xs:restriction>
                                 </xs:simpleType>
                               </xs:element>
-                              <xs:element
-                                name="Amount"
-                                minOccurs="0"
-                                type="xs:decimal"
-                              />
+                              <xs:element name="Amount" minOccurs="0" type="xs:decimal" />
                             </xs:all>
                             <xs:attribute name="Action" type="Action" />
                           </xs:complexType>

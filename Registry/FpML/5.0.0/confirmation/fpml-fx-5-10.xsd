@@ -1,10 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- 
   == Copyright (c) 2002-2018 All rights reserved. 
   == Financial Products Markup Language is subject to the FpML public license. 
   == A copy of this license is available at http://www.fpml.org/license/license.html
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/confirmation" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/confirmation" ecore:documentRoot="FpML" ecore:nsPrefix="conf" ecore:package="org.fpml.confirmation" version="$Revision: 13171 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xsd:schema
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns="http://www.fpml.org/FpML-5/confirmation"
+    xmlns:fpml-annotation="http://www.fpml.org/annotation"
+    targetNamespace="http://www.fpml.org/FpML-5/confirmation"
+    ecore:documentRoot="FpML"
+    ecore:nsPrefix="conf"
+    ecore:package="org.fpml.confirmation"
+    version="$Revision: 13171 $"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+>
   <xsd:include schemaLocation="fpml-option-shared-5-10.xsd" />
   <xsd:simpleType name="PointValue">
     <xsd:annotation>
@@ -30,12 +42,16 @@
           <xsd:sequence minOccurs="0">
             <xsd:element name="spotRate" type="PositiveDecimal">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">An optional element used for FX forwards and certain types of FX OTC options. For deals consumated in the FX Forwards Market, this represents the current market rate for a particular currency pair.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >An optional element used for FX forwards and certain types of FX OTC options. For deals consumated in the FX Forwards Market, this represents the current market rate for a particular currency pair.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
             <xsd:element name="forwardPoints" type="xsd:decimal" minOccurs="0">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">An optional element used for deals consumated in the FX Forwards market. Forward points represent the interest rate differential between the two currencies traded and are quoted as a preminum or a discount. Forward points are added to, or subtracted from, the spot rate to create the rate of the forward trade.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >An optional element used for deals consumated in the FX Forwards market. Forward points represent the interest rate differential between the two currencies traded and are quoted as a preminum or a discount. Forward points are added to, or subtracted from, the spot rate to create the rate of the forward trade.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
           </xsd:sequence>
@@ -45,7 +61,9 @@
   </xsd:complexType>
   <xsd:complexType name="CutName">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">Allows for an option expiry cut time to be described by name, as per established market convention. Note: the FX Working Group has resolved not to extend the cutNameScheme coding scheme. The expiryTime element should be used in preference to cutName as the formal definition of FX option expiry time.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >Allows for an option expiry cut time to be described by name, as per established market convention. Note: the FX Working Group has resolved not to extend the cutNameScheme coding scheme. The expiryTime element should be used in preference to cutName as the formal definition of FX option expiry time.</xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
       <xsd:extension base="Scheme">
@@ -60,12 +78,16 @@
     <xsd:sequence>
       <xsd:element name="currency" type="Currency">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The Alternate currency i.e. the currency in which the deposit will be redeemed in the event that the spot rate fixes below the strike rate at the specified fixing date and time.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The Alternate currency i.e. the currency in which the deposit will be redeemed in the event that the spot rate fixes below the strike rate at the specified fixing date and time.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="fixingDate" type="xsd:date">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The date on which the fx spot rate is compared against the strike rate, in order to determine the delivery currency. This is the expiry date of a put option on the Deposit/Alternate currency couple. Also known as "valuation date" or "reference date".</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The date on which the fx spot rate is compared against the strike rate, in order to determine the delivery currency. This is the expiry date of a put option on the Deposit/Alternate currency couple. Also known as "valuation date" or "reference date".</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="fixingTime" type="BusinessCenterTime" minOccurs="0">
@@ -75,7 +97,9 @@
       </xsd:element>
       <xsd:element name="strike" type="DualCurrencyStrikePrice">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The rate at which the deposit will be converted to the Alternate currency, in the event that the spot rate is strictly lower than the strike rate at the specified fixing date and time.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The rate at which the deposit will be converted to the Alternate currency, in the event that the spot rate is strictly lower than the strike rate at the specified fixing date and time.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="spotRate" type="xsd:decimal" minOccurs="0">
@@ -85,7 +109,9 @@
       </xsd:element>
       <xsd:element name="interestAtRisk" type="xsd:boolean">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Specifies whether the interest component of the redemption amount is subject to conversion to the Alternate currency, in the event that the spot rate is strictly lower than the strike rate at the specified fixing date and time.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Specifies whether the interest component of the redemption amount is subject to conversion to the Alternate currency, in the event that the spot rate is strictly lower than the strike rate at the specified fixing date and time.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -125,25 +151,33 @@
       <xsd:sequence minOccurs="0">
         <xsd:element name="spotRate" type="PositiveDecimal">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">An element used for FX forwards and certain types of FX OTC options. For deals consumated in the FX Forwards Market, this represents the current market rate for a particular currency pair. For barrier and digital/binary options, it can be useful to include the spot rate at the time the option was executed to make it easier to know whether the option needs to move "up" or "down" to be triggered.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >An element used for FX forwards and certain types of FX OTC options. For deals consumated in the FX Forwards Market, this represents the current market rate for a particular currency pair. For barrier and digital/binary options, it can be useful to include the spot rate at the time the option was executed to make it easier to know whether the option needs to move "up" or "down" to be triggered.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
         <xsd:sequence minOccurs="0">
           <xsd:element name="forwardPoints" type="xsd:decimal">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">An optional element used for deals consumated in the FX Forwards market. Forward points represent the interest rate differential between the two currencies traded and are quoted as a preminum or a discount. Forward points are added to, or subtracted from, the spot rate to create the rate of the forward trade.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >An optional element used for deals consumated in the FX Forwards market. Forward points represent the interest rate differential between the two currencies traded and are quoted as a preminum or a discount. Forward points are added to, or subtracted from, the spot rate to create the rate of the forward trade.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="pointValue" type="PointValue" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">An optional element that documents the size of point (pip) in which a rate was quoted (or in this case, forwardPoints are calculated). Point (pip) size varies by currency pair: major currencies are all traded in points of 0.0001, with the exception of JPY which has a point size of 0.01.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >An optional element that documents the size of point (pip) in which a rate was quoted (or in this case, forwardPoints are calculated). Point (pip) size varies by currency pair: major currencies are all traded in points of 0.0001, with the exception of JPY which has a point size of 0.01.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
       </xsd:sequence>
       <xsd:element name="crossRate" type="CrossRate" minOccurs="0" maxOccurs="unbounded">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">An optional element that allow for definition of the currency exchange rates used to cross between the traded currencies for non-base currency FX contracts.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >An optional element that allow for definition of the currency exchange rates used to cross between the traded currencies for non-base currency FX contracts.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -181,7 +215,9 @@
       </xsd:element>
       <xsd:element name="fixingTime" type="BusinessCenterTime">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The time at which the spot currency exchange rate will be observed. It is specified as a time in a business day calendar location, e.g. 11:00am London time.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The time at which the spot currency exchange rate will be observed. It is specified as a time in a business day calendar location, e.g. 11:00am London time.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:choice>
@@ -202,7 +238,9 @@
       </xsd:element>
       <xsd:element name="precision" type="xsd:nonNegativeInteger" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Specifies the rounding precision in terms of a number of decimal places. Note how a percentage rate rounding of 5 decimal places is expressed as a rounding precision of 7 in the FpML document since the percentage is expressed as a decimal, e.g. 9.876543% (or 0.09876543) being rounded to the nearest 5 decimal places is 9.87654% (or 0.0987654).</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Specifies the rounding precision in terms of a number of decimal places. Note how a percentage rate rounding of 5 decimal places is expressed as a rounding precision of 7 in the FpML document since the percentage is expressed as a decimal, e.g. 9.876543% (or 0.09876543) being rounded to the nearest 5 decimal places is 9.87654% (or 0.0987654).</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -219,19 +257,25 @@
       </xsd:element>
       <xsd:element name="averageRateWeightingFactor" type="xsd:decimal">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">An optional factor that can be used for weighting certain observation dates. Typically, firms will weight each date with a factor of 1 if there are standard, unweighted adjustments.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >An optional factor that can be used for weighting certain observation dates. Typically, firms will weight each date with a factor of 1 if there are standard, unweighted adjustments.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="rate" type="NonNegativeDecimal" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The observed rate of exchange between the two option currencies. In the absence of rateObservationQuoteBasis, the rate is assumed to be quoted as per option strike/strikeQuoteBasis.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The observed rate of exchange between the two option currencies. In the absence of rateObservationQuoteBasis, the rate is assumed to be quoted as per option strike/strikeQuoteBasis.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="FxAverageRateObservationSchedule">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A type that describes average rate options rate observations. This is used to describe a parametric frequency of rate observations against a particular rate. Typical frequencies might include daily, every Friday, etc.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A type that describes average rate options rate observations. This is used to describe a parametric frequency of rate observations against a particular rate. Typical frequencies might include daily, every Friday, etc.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="startDate" type="xsd:date">
@@ -263,7 +307,9 @@
       </xsd:element>
       <xsd:element name="direction" type="FxBarrierDirectionEnum" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">This specifies whether the barrier direction is "Up" or "Down"; that is, that a barrier event occurs if the spot rate is at or above the trigger rate, or at or below the trigger rate during the period of observation of an american barrier, or at the times of observation of a discrete or european barrier.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >This specifies whether the barrier direction is "Up" or "Down"; that is, that a barrier event occurs if the spot rate is at or above the trigger rate, or at or below the trigger rate during the period of observation of an american barrier, or at the times of observation of a discrete or european barrier.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="quotedCurrencyPair" type="QuotedCurrencyPair">
@@ -273,7 +319,9 @@
       </xsd:element>
       <xsd:element name="triggerRate" type="PositiveDecimal">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The market rate is observed relative to the trigger rate, and if it is found to be on the predefined side of (above or below) the trigger rate, a trigger event is deemed to have occurred.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The market rate is observed relative to the trigger rate, and if it is found to be on the predefined side of (above or below) the trigger rate, a trigger event is deemed to have occurred.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="informationSource" type="InformationSource" maxOccurs="unbounded">
@@ -286,31 +334,41 @@
           <xsd:sequence>
             <xsd:element name="observationStartDate" type="xsd:date">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">The date on which the observation period for an american barrier starts. If the start date is not present, then the date and time of the start of the period is deemed to be the date and time the transaction was entered into.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >The date on which the observation period for an american barrier starts. If the start date is not present, then the date and time of the start of the period is deemed to be the date and time the transaction was entered into.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
             <xsd:element name="observationStartTime" type="BusinessCenterTime" minOccurs="0">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">The time on the start date at which the observation period for an american barrier starts. If the time is not present and the start date is equivalent to the transaction date, the time is deemed to be the time the transaction was entered into. If the time is not present and the start date is other than the transaction date, then the time is deemed to be the same as the expiration time.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >The time on the start date at which the observation period for an american barrier starts. If the time is not present and the start date is equivalent to the transaction date, the time is deemed to be the time the transaction was entered into. If the time is not present and the start date is other than the transaction date, then the time is deemed to be the same as the expiration time.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
           </xsd:sequence>
           <xsd:sequence minOccurs="0">
             <xsd:element name="observationEndDate" type="xsd:date">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">The date on which the observation period for an american barrier ends. If the end date is not present, then the date and time of the end of the period is deemed to be the date and time of expiration.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >The date on which the observation period for an american barrier ends. If the end date is not present, then the date and time of the end of the period is deemed to be the date and time of expiration.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
             <xsd:element name="observationEndTime" type="BusinessCenterTime" minOccurs="0">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">The time on the end date at which the observation period for an american barrier ends. If the time is not present, then the time is deemed to be the same as the expiration time.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >The time on the end date at which the observation period for an american barrier ends. If the time is not present, then the time is deemed to be the same as the expiration time.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
           </xsd:sequence>
         </xsd:sequence>
         <xsd:element name="observationPoint" type="FxBusinessCenterDateTime" maxOccurs="unbounded">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">The dates and times at which rate observations are made to determine whether a barrier event has occurred for a discrete or european barrier. If the time is not present then the time is deemed to be the same as the expiration time.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >The dates and times at which rate observations are made to determine whether a barrier event has occurred for a discrete or european barrier. If the time is not present then the time is deemed to be the same as the expiration time.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
       </xsd:choice>
@@ -341,12 +399,16 @@
           </xsd:element>
           <xsd:element name="expiryTime" type="BusinessCenterTime" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Time at which the option expires on the expiry date, at the specified business center. This component represents the formal definition of option expiry time.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >Time at which the option expires on the expiry date, at the specified business center. This component represents the formal definition of option expiry time.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="cutName" type="CutName" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">A code by which the expiry time is known in the market. This element is available to supplement the formal definition of expiry time, and must not be used in absence of the expiryTime element.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >A code by which the expiry time is known in the market. This element is available to supplement the formal definition of expiry time, and must not be used in absence of the expiryTime element.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="latestValueDate" type="xsd:date">
@@ -432,7 +494,9 @@
     <xsd:sequence>
       <xsd:element name="baseCurrency" type="Currency">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The base currency in the exchange rate monitored for disruption events. Typically this will be the settlement currency, but coud be an intermediate currency, in the case where disruption provisions are defined for components of a cross rate.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The base currency in the exchange rate monitored for disruption events. Typically this will be the settlement currency, but coud be an intermediate currency, in the case where disruption provisions are defined for components of a cross rate.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="referenceCurrency" type="Currency">
@@ -509,12 +573,16 @@
           </xsd:element>
           <xsd:element name="expiryTime" type="BusinessCenterTime" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Time at which the option expires on the expiry date, at the specified business center. This component represents the formal definition of option expiry time.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >Time at which the option expires on the expiry date, at the specified business center. This component represents the formal definition of option expiry time.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="cutName" type="CutName" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">A code by which the expiry time is known in the market. This element is available to supplement the formal definition of expiry time, and must not be used in absence of the expiryTime element.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >A code by which the expiry time is known in the market. This element is available to supplement the formal definition of expiry time, and must not be used in absence of the expiryTime element.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="valueDate" type="xsd:date">
@@ -546,7 +614,9 @@
       <xsd:sequence>
         <xsd:choice>
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">A choice of both startDate and endDate or endDate. A parametric schedule of rate observations that describes a single continuous observation period.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >A choice of both startDate and endDate or endDate. A parametric schedule of rate observations that describes a single continuous observation period.</xsd:documentation>
           </xsd:annotation>
           <xsd:sequence>
             <xsd:element name="startDate" type="xsd:date">
@@ -586,7 +656,9 @@
   </xsd:complexType>
   <xsd:complexType name="FxFlexibleForward">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">Product model for a flexible-term fx forward (also known as callable forward, window forward). This is a term forward transaction over a specific period, allowing the client full flexibility on the timing of the transactional flow(s). The product allows for (full or partial) execution at a predetermined forward rate, at any time between the start date and the expiry date. Although, the product is an outright, it has some option-like characteristics, leading to the use of option components in the model: (i) the BuyerSeller model expresses the roles of the parties in the overall transaction - the client "buys" the product (ii) the PutCallCurrency model expresses the buyer's perspective on the exchanged currencies i.e. the client may buy (call) or sell (put) the notional currency for the alternative currency.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >Product model for a flexible-term fx forward (also known as callable forward, window forward). This is a term forward transaction over a specific period, allowing the client full flexibility on the timing of the transactional flow(s). The product allows for (full or partial) execution at a predetermined forward rate, at any time between the start date and the expiry date. Although, the product is an outright, it has some option-like characteristics, leading to the use of option components in the model: (i) the BuyerSeller model expresses the roles of the parties in the overall transaction - the client "buys" the product (ii) the PutCallCurrency model expresses the buyer's perspective on the exchanged currencies i.e. the client may buy (call) or sell (put) the notional currency for the alternative currency.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="Product">
@@ -600,7 +672,9 @@
           <xsd:sequence>
             <xsd:element name="notionalAmount" type="PositiveMoney">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">The aggregate notional amount which will be exchanged, possibly as multiple partial executions, during the course of the execution period. Any residual notional which remains unexchanged at the expiry date will automatically be executed at the applicable exchange rate (strike).</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >The aggregate notional amount which will be exchanged, possibly as multiple partial executions, during the course of the execution period. Any residual notional which remains unexchanged at the expiry date will automatically be executed at the applicable exchange rate (strike).</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
             <xsd:element name="minimumExecutionAmount" type="PositiveMoney" minOccurs="0">
@@ -610,13 +684,17 @@
             </xsd:element>
             <xsd:element name="settlementAmount" type="NonNegativeMoney" minOccurs="0">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">The total amount of settlement currency that will be paid over the life of the trade if calculable. The Settlement Amount element is a synonym for Contra Amount.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >The total amount of settlement currency that will be paid over the life of the trade if calculable. The Settlement Amount element is a synonym for Contra Amount.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
           </xsd:sequence>
           <xsd:element name="executionPeriodDates" type="FxFlexibleForwardExecutionPeriod">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">The period during which the client has the right to execute a transaction, on any business day defined by reference to the specified business centers, subject to the constraints of the minimum execution amount and aggregate total notional amount. * Period dates are inclusive i.e. the expiry date is the final date on which execution may occur.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >The period during which the client has the right to execute a transaction, on any business day defined by reference to the specified business centers, subject to the constraints of the minimum execution amount and aggregate total notional amount. * Period dates are inclusive i.e. the expiry date is the final date on which execution may occur.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:sequence minOccurs="0">
@@ -633,12 +711,16 @@
           </xsd:sequence>
           <xsd:element name="settlementDateOffset" type="RelativeDateOffset" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">The date on which delivery of the transacted currency amounts will occur, expressed as an offset from the execution date. * This property is optional in the schema, allowing it to be omitted by systems which do not support it; however this information would be expected in contractual documentation (e.g. termsheet, confirmation).</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >The date on which delivery of the transacted currency amounts will occur, expressed as an offset from the execution date. * This property is optional in the schema, allowing it to be omitted by systems which do not support it; however this information would be expected in contractual documentation (e.g. termsheet, confirmation).</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="finalSettlementDate" type="xsd:date" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">The final date for settlement. This is the date on which any residual exchange amount will be delivered. * This is an adjusted date i.e. a good business day for delivery in the location(s) specified in executionPeriodDates /businessCenters</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >The final date for settlement. This is the date on which any residual exchange amount will be delivered. * This is an adjusted date i.e. a good business day for delivery in the location(s) specified in executionPeriodDates /businessCenters</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="forwardRate" type="FxFlexibleForwardRate">
@@ -697,7 +779,9 @@
   </xsd:complexType>
   <xsd:complexType name="FxForwardVolatilityAgreement">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">Describes a contract on future levels of implied volatility. The main characteristic of this product is that the underlying is a straddle (underlying options) with a specific tenor starting from the fixing (effective or pricing) date, and are priced on that fixing date using a level of volatility that is agreed at the time of execution of the volatility agreement.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >Describes a contract on future levels of implied volatility. The main characteristic of this product is that the underlying is a straddle (underlying options) with a specific tenor starting from the fixing (effective or pricing) date, and are priced on that fixing date using a level of volatility that is agreed at the time of execution of the volatility agreement.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="Product">
@@ -714,12 +798,16 @@
           </xsd:element>
           <xsd:element name="fixingDate" type="xsd:date">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">The date when the underlying options are priced using the agreed forwardVolatilityStrikePrice and other market factors as agreed by the parties. Also known as "Effective Date" or "Reference Date".</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >The date when the underlying options are priced using the agreed forwardVolatilityStrikePrice and other market factors as agreed by the parties. Also known as "Effective Date" or "Reference Date".</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="fixingTime" type="BusinessCenterTime" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">The time of the fixing date when the underlying options are priced using the agreed forwardVolatilityStrikePrice and other market factors as agreed by the parties.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >The time of the fixing date when the underlying options are priced using the agreed forwardVolatilityStrikePrice and other market factors as agreed by the parties.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="forwardVolatilityStrikePrice" type="PositiveDecimal">
@@ -825,7 +913,9 @@
             </xsd:element>
             <xsd:element name="spotRate" type="PositiveDecimal" minOccurs="0">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">An optional element used for FX forwards and certain types of FX OTC options. For deals consumated in the FX Forwards Market, this represents the current market rate for a particular currency pair. For barrier and digital/binary options, it can be useful to include the spot rate at the time the option was executed to make it easier to know whether the option needs to move "up" or "down" to be triggered.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >An optional element used for FX forwards and certain types of FX OTC options. For deals consumated in the FX Forwards Market, this represents the current market rate for a particular currency pair. For barrier and digital/binary options, it can be useful to include the spot rate at the time the option was executed to make it easier to know whether the option needs to move "up" or "down" to be triggered.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
           </xsd:sequence>
@@ -841,7 +931,9 @@
           </xsd:element>
           <xsd:element name="cashSettlement" type="FxCashSettlement" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Specifies the currency and fixing details for cash settlement. This optional element is produced only where it has been specified at execution time that the option wlll be settled into a single cash payment - for example, in the case of a non-deliverable option (although note that an Fx option may be contractually cash settled, without necessarily being non-deliverable).</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >Specifies the currency and fixing details for cash settlement. This optional element is produced only where it has been specified at execution time that the option wlll be settled into a single cash payment - for example, in the case of a non-deliverable option (although note that an Fx option may be contractually cash settled, without necessarily being non-deliverable).</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
@@ -862,14 +954,18 @@
   </xsd:complexType>
   <xsd:complexType name="FxOptionPayout">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A type that contains full details of a predefined fixed payout which may occur (or not) in a Barrier Option or Digital Option when a trigger event occurs (or not).</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A type that contains full details of a predefined fixed payout which may occur (or not) in a Barrier Option or Digital Option when a trigger event occurs (or not).</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="NonNegativeMoney">
         <xsd:sequence>
           <xsd:element name="payoutStyle" type="PayoutEnum">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">The trigger event and payout may be asynchonous. A payout may become due on the trigger event, or the payout may (by agreeement at initiation) be deferred (for example) to the maturity date.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >The trigger event and payout may be asynchonous. A payout may become due on the trigger event, or the payout may (by agreeement at initiation) be deferred (for example) to the maturity date.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="settlementInformation" type="SettlementInformation" minOccurs="0">
@@ -911,7 +1007,9 @@
         <xsd:sequence>
           <xsd:element name="fixedRate" type="PositiveDecimal">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Fixed Rate means a rate, expressed as a decimal, equal to the per annum rate specified as such in the Confirmation for the Non-Deliverable Swap FX Transaction or that party (i.e., a per annum rate of 15.10% as specified in a Confirmation shall be expressed as 0.1510 for calculation purposes).</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >Fixed Rate means a rate, expressed as a decimal, equal to the per annum rate specified as such in the Confirmation for the Non-Deliverable Swap FX Transaction or that party (i.e., a per annum rate of 15.10% as specified in a Confirmation shall be expressed as 0.1510 for calculation purposes).</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
@@ -933,12 +1031,16 @@
     <xsd:sequence>
       <xsd:group ref="Payer.model">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">A pointer style reference to a servicingParty or accountBeneficiary identifier defined elsewhere in the document. Floating FX Rate Payer means in respect of an Non-Deliverable Swap FX Transaction, the party specified as such in the related Confirmation.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >A pointer style reference to a servicingParty or accountBeneficiary identifier defined elsewhere in the document. Floating FX Rate Payer means in respect of an Non-Deliverable Swap FX Transaction, the party specified as such in the related Confirmation.</xsd:documentation>
         </xsd:annotation>
       </xsd:group>
       <xsd:group ref="Receiver.model" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">A pointer style reference to a servicingParty or accountBeneficiary identifier defined elsewhere in the document. Floating FX Rate Receiver means in respect of an Non-Deliverable Swap FX Transaction, the party specified as such in the related Confirmation.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >A pointer style reference to a servicingParty or accountBeneficiary identifier defined elsewhere in the document. Floating FX Rate Receiver means in respect of an Non-Deliverable Swap FX Transaction, the party specified as such in the related Confirmation.</xsd:documentation>
         </xsd:annotation>
       </xsd:group>
     </xsd:sequence>
@@ -962,17 +1064,23 @@
           </xsd:element>
           <xsd:element name="notional" type="NonNegativeMoney" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Notional Amount means, in the case of Transaction Type Variance Swap, the currency and amount specified as such in the related Confirmation or an amount calculated in accordance with the following: Notional Amount = Vega Notional Amount / (0.02 x Fixed FX Rate). This element must be produced in case of Variance Swap transaction.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >Notional Amount means, in the case of Transaction Type Variance Swap, the currency and amount specified as such in the related Confirmation or an amount calculated in accordance with the following: Notional Amount = Vega Notional Amount / (0.02 x Fixed FX Rate). This element must be produced in case of Variance Swap transaction.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="fixedLeg" type="FxPerformanceFixedLeg">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Fixed FX Rate component describes the Fixed FX Rate and Fixed FX Rate Payer as such in the Confirmation for the Non-Deliverable Swap FX Transaction.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >Fixed FX Rate component describes the Fixed FX Rate and Fixed FX Rate Payer as such in the Confirmation for the Non-Deliverable Swap FX Transaction.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="floatingLeg" type="FxPerformanceFloatingLeg">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Floating FX Rate component describes the Floating FX Rate Payer of the rate determined in accordance with the Floating FX Rate Option specified in the Definitions.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >Floating FX Rate component describes the Floating FX Rate Payer of the rate determined in accordance with the Floating FX Rate Option specified in the Definitions.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="fixingInformationSource" type="FxSpotRateSource">
@@ -987,7 +1095,9 @@
           </xsd:element>
           <xsd:choice minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Valuation Date is the rate calculation date. Unless otherwise specified in the related Confirmation, the Valuation Date will be, in respect of a Non-Deliverable Swap FX Transaction, the Final Observation Date. The valuation date can be: [date] [Final Observation Date][The first Business Day following the Final Observation Date].</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >Valuation Date is the rate calculation date. Unless otherwise specified in the related Confirmation, the Valuation Date will be, in respect of a Non-Deliverable Swap FX Transaction, the Final Observation Date. The valuation date can be: [date] [Final Observation Date][The first Business Day following the Final Observation Date].</xsd:documentation>
             </xsd:annotation>
             <xsd:element name="valuationDate" type="xsd:date">
               <xsd:annotation>
@@ -996,7 +1106,9 @@
             </xsd:element>
             <xsd:element name="valuationDateOffset" type="FxValuationDateOffset">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">Valuation date offset relative to the Final Observation Date and can be: [Final Observation Date][The first Business Day following the Final Observation Date].</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >Valuation date offset relative to the Final Observation Date and can be: [Final Observation Date][The first Business Day following the Final Observation Date].</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
           </xsd:choice>
@@ -1007,7 +1119,9 @@
           </xsd:element>
           <xsd:element name="annualizationFactor" type="xsd:decimal">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">This specifies the numerator of an annualization factor. Frequently this number is equal to the number of rate observations in a year e.g. Daily Observations: 252.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >This specifies the numerator of an annualization factor. Frequently this number is equal to the number of rate observations in a year e.g. Daily Observations: 252.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="meanAdjustment" type="xsd:boolean">
@@ -1017,17 +1131,23 @@
           </xsd:element>
           <xsd:element name="numberOfReturns" type="xsd:nonNegativeInteger" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Number of Returns is the number of Observation Dates in the Observation Period, excluding the Initial Observation Date (where the Observation Rate on the Initial Observation Date shall equal S0).</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >Number of Returns is the number of Observation Dates in the Observation Period, excluding the Initial Observation Date (where the Observation Rate on the Initial Observation Date shall equal S0).</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="additionalPayment" type="Payment" minOccurs="0" maxOccurs="unbounded">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Additional Payment means, in respect of an FX Transaction, where such fee is required, and a Transaction Fee Payment Date, the amount, if any, that is specified or otherwise determined as provided in the related Confirmation and, subject to any applicable condition precedent, is payable by one party to the other as further specified or otherwise determined as provided in the related Confirmation on the Transaction Fee Payment Date or on each Transaction Fee Payment Date if more than one is specified, for value on such date.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >Additional Payment means, in respect of an FX Transaction, where such fee is required, and a Transaction Fee Payment Date, the amount, if any, that is specified or otherwise determined as provided in the related Confirmation and, subject to any applicable condition precedent, is payable by one party to the other as further specified or otherwise determined as provided in the related Confirmation on the Transaction Fee Payment Date or on each Transaction Fee Payment Date if more than one is specified, for value on such date.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="cashSettlement" type="FxCashSettlementSimple" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Specifies the Settlement currency and fixing details for cash settlement. The FX Volatility and FX Variance Swaps are inherently cash settled, but into the notional currency. The optional cashSettlement block is provided for the case where the Settlement Currency differs from that of the Notional.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >Specifies the Settlement currency and fixing details for cash settlement. The FX Volatility and FX Variance Swaps are inherently cash settled, but into the notional currency. The optional cashSettlement block is provided for the case where the Settlement Currency differs from that of the Notional.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
@@ -1087,7 +1207,9 @@
         </xsd:element>
         <xsd:element name="counterCurrency" type="Currency">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">The counter currency and amount for the FxStraddle. The Counter Currency Amount is determined using the notional and the Strike Price (which is determined at the fixingTime on the fixingDate).</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >The counter currency and amount for the FxStraddle. The Counter Currency Amount is determined using the notional and the Strike Price (which is determined at the fixingTime on the fixingDate).</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
       </xsd:sequence>
@@ -1096,21 +1218,33 @@
           <xsd:documentation xml:lang="en">Defines the FX Straddle premium amount, payer and dates. This amount is also determined at the fixingTime on the fixingDate.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element name="settlementDate" type="AdjustableOrAdjustedDate" minOccurs="0" fpml-annotation:deprecated="true" fpml-annotation:deprecatedReason="The settlement date is already expressed by europeanExercise/valueDate">
+      <xsd:element
+                name="settlementDate"
+                type="AdjustableOrAdjustedDate"
+                minOccurs="0"
+                fpml-annotation:deprecated="true"
+                fpml-annotation:deprecatedReason="The settlement date is already expressed by europeanExercise/valueDate"
+            >
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">DEPRECATED. The settlement date is already expressed by europeanExercise/valueDate. The Settlement Date for the FxStraddle (if exercised at the expiryTime on the expiry Date).</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >DEPRECATED. The settlement date is already expressed by europeanExercise/valueDate. The Settlement Date for the FxStraddle (if exercised at the expiryTime on the expiry Date).</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="cashSettlement" type="FxCashSettlementSimple" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Specifies the settlement type for the FxStraddle. If deliverable then this element is removed. If non-deliverable, then the In-The-Money amount of the relevant option within the FxStraddle is paid by the Seller to the Buyer. The In-The-Money amount is calculated using the parameters within this element.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Specifies the settlement type for the FxStraddle. If deliverable then this element is removed. If non-deliverable, then the In-The-Money amount of the relevant option within the FxStraddle is paid by the Seller to the Buyer. The In-The-Money amount is calculated using the parameters within this element.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="FxStraddlePremium">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">The Currency and Amount to be paid by the Buyer to the Seller. The straddle premium is calculated on the Fixing Date using the Forward Volatility Agreement parameters.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >The Currency and Amount to be paid by the Buyer to the Seller. The straddle premium is calculated on the Fixing Date using the Forward Volatility Agreement parameters.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="PaymentBaseExtended">
@@ -1176,7 +1310,9 @@
         <xsd:sequence>
           <xsd:element name="tradeIdentifierReference" type="PartyTradeIdentifierReference" minOccurs="0" maxOccurs="unbounded">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">A reference to a party trade ID. This is provided in case the message creator wishes to record that the swap leg is assocatiated with a particular trade identifier; typically this is used for identifying a USI assocatied wih the leg.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >A reference to a party trade ID. This is provided in case the message creator wishes to record that the swap leg is assocatiated with a particular trade identifier; typically this is used for identifying a USI assocatied wih the leg.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:group ref="FxCoreDetails.model" />
@@ -1206,7 +1342,9 @@
       </xsd:element>
       <xsd:element name="direction" type="TriggerConditionEnum" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">This specifies whether the trigger direction is "AtOrAbove" or "AtOrBelow; that is, that a barrier event occurs if the spot rate is at or above the trigger rate, or at or below the trigger rate during the period of observation of an american trigger, or at the times of observation of a discrete trigger. DEPRECATE: Values "Above" and "Below" are deprecated.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >This specifies whether the trigger direction is "AtOrAbove" or "AtOrBelow; that is, that a barrier event occurs if the spot rate is at or above the trigger rate, or at or below the trigger rate during the period of observation of an american trigger, or at the times of observation of a discrete trigger. DEPRECATE: Values "Above" and "Below" are deprecated.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="quotedCurrencyPair" type="QuotedCurrencyPair">
@@ -1216,12 +1354,16 @@
       </xsd:element>
       <xsd:element name="triggerRate" type="PositiveDecimal">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The market rate is observed relative to the trigger rate, and if it is found to be on the predefined side of (above or below) the trigger rate, a barrier event is deemed to have occurred.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The market rate is observed relative to the trigger rate, and if it is found to be on the predefined side of (above or below) the trigger rate, a barrier event is deemed to have occurred.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="spotRate" type="PositiveDecimal" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">An optional element used for FX forwards and certain types of FX OTC options. For deals consumated in the FX Forwards Market, this represents the current market rate for a particular currency pair. For barrier and digital/binary options, it can be useful to include the spot rate at the time the option was executed to make it easier to know whether the market rate needs to move "up" or "down" to trigger a barrier event.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >An optional element used for FX forwards and certain types of FX OTC options. For deals consumated in the FX Forwards Market, this represents the current market rate for a particular currency pair. For barrier and digital/binary options, it can be useful to include the spot rate at the time the option was executed to make it easier to know whether the market rate needs to move "up" or "down" to trigger a barrier event.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="informationSource" type="InformationSource" maxOccurs="unbounded">
@@ -1234,31 +1376,41 @@
           <xsd:sequence>
             <xsd:element name="observationStartDate" type="xsd:date">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">The date on which the observation period for an american trigger starts. If the start date is not present, then the date and time of the start of the period is deemed to be the date and time the transaction was entered into.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >The date on which the observation period for an american trigger starts. If the start date is not present, then the date and time of the start of the period is deemed to be the date and time the transaction was entered into.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
             <xsd:element name="observationStartTime" type="BusinessCenterTime" minOccurs="0">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">The time on the start date at which the observation period for an american trigger starts. If the time is not present and the start date is equivalent to the transaction date, the time is deemed to be the time the transaction was entered into. If the time is not present and the start date is other than the transaction date, then the time is deemed to be the same as the expiration time.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >The time on the start date at which the observation period for an american trigger starts. If the time is not present and the start date is equivalent to the transaction date, the time is deemed to be the time the transaction was entered into. If the time is not present and the start date is other than the transaction date, then the time is deemed to be the same as the expiration time.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
           </xsd:sequence>
           <xsd:sequence minOccurs="0">
             <xsd:element name="observationEndDate" type="xsd:date">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">The date on which the observation period for an american trigger ends. If the end date is not present, then the date and time of the end of the period is deemed to be the date and time of expiration.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >The date on which the observation period for an american trigger ends. If the end date is not present, then the date and time of the end of the period is deemed to be the date and time of expiration.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
             <xsd:element name="observationEndTime" type="BusinessCenterTime" minOccurs="0">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">The time on the end date at which the observation period for an american trigger ends. If the time is not present, then the time is deemed to be the same as the expiration time.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >The time on the end date at which the observation period for an american trigger ends. If the time is not present, then the time is deemed to be the same as the expiration time.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
           </xsd:sequence>
         </xsd:sequence>
         <xsd:element name="observationPoint" type="FxBusinessCenterDateTime" minOccurs="2" maxOccurs="unbounded">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">The dates and times at which rate observations are made to determine whether a barrier event has occurred for a discrete trigger. If the time is not present then the time is deemed to be the same as the expiration time.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >The dates and times at which rate observations are made to determine whether a barrier event has occurred for a discrete trigger. If the time is not present then the time is deemed to be the same as the expiration time.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
       </xsd:choice>
@@ -1287,7 +1439,9 @@
     <xsd:sequence>
       <xsd:element name="triggerCondition" type="TriggerConditionEnum">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The condition that applies to a european trigger applied to an FX digital option. It determines where the rate at expiry date and time at must be relative to the triggerRate for the option to be exercisable. The allowed values are "AtOrAbove" and "AtOrBelow". DEPRECATE: Values "Above" and "Below" are deprecated.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The condition that applies to a european trigger applied to an FX digital option. It determines where the rate at expiry date and time at must be relative to the triggerRate for the option to be exercisable. The allowed values are "AtOrAbove" and "AtOrBelow". DEPRECATE: Values "Above" and "Below" are deprecated.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="quotedCurrencyPair" type="QuotedCurrencyPair">
@@ -1297,24 +1451,30 @@
       </xsd:element>
       <xsd:element name="triggerRate" type="PositiveDecimal">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The market rate is observed relative to the trigger rate, and if it is found to be on the predefined side of (above or below) the trigger rate, a barrier event is deemed to have occurred.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The market rate is observed relative to the trigger rate, and if it is found to be on the predefined side of (above or below) the trigger rate, a barrier event is deemed to have occurred.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="spotRate" type="PositiveDecimal" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">An optional element used for FX forwards and certain types of FX OTC options. For deals consumated in the FX Forwards Market, this represents the current market rate for a particular currency pair. For barrier and digital/binary options, it can be useful to include the spot rate at the time the option was executed to make it easier to know whether the market rate needs to move "up" or "down" to trigger a barrier event.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >An optional element used for FX forwards and certain types of FX OTC options. For deals consumated in the FX Forwards Market, this represents the current market rate for a particular currency pair. For barrier and digital/binary options, it can be useful to include the spot rate at the time the option was executed to make it easier to know whether the market rate needs to move "up" or "down" to trigger a barrier event.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="FxValuationDateOffset">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">Valuation date offset is used in FX Variance Swap and Volatility Swap to always relate the Final Observation Date and can be: [Final Observation Date][The first Business Day following the Final Observation Date]</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >Valuation date offset is used in FX Variance Swap and Volatility Swap to always relate the Final Observation Date and can be: [Final Observation Date][The first Business Day following the Final Observation Date]</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="Offset">
         <xsd:sequence>
-          <xsd:group ref="BusinessCentersOrReference.model" minOccurs="0"></xsd:group>
+          <xsd:group ref="BusinessCentersOrReference.model" minOccurs="0" />
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
@@ -1390,7 +1550,9 @@
         <xsd:sequence>
           <xsd:group ref="PayerReceiver.model">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">A pointer style reference to a servicingParty or accountBeneficiary identifier defined elsewhere in the document. The payer party (depositor) is paying the initial principal for the term deposit on the start date from a contractual point of view. The receiver party (deposit taker) is a receiver of the initial principal of the deposit on the start date.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >A pointer style reference to a servicingParty or accountBeneficiary identifier defined elsewhere in the document. The payer party (depositor) is paying the initial principal for the term deposit on the start date from a contractual point of view. The receiver party (deposit taker) is a receiver of the initial principal of the deposit on the start date.</xsd:documentation>
             </xsd:annotation>
           </xsd:group>
           <xsd:element name="startDate" type="xsd:date">
@@ -1490,12 +1652,16 @@
   </xsd:element>
   <xsd:element name="calculationAgentDetermination" type="FxDisruptionFallback" substitutionGroup="fxDisruptionFallback">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">Indicates that the Calculation Agent shall determine the Spot Rate (or a method for determining the Spot Rate) taking into consideration all available information that it reasonably and in good faith deems relevent.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >Indicates that the Calculation Agent shall determine the Spot Rate (or a method for determining the Spot Rate) taking into consideration all available information that it reasonably and in good faith deems relevent.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="dualExchangeRate" type="FxDisruptionEvent" substitutionGroup="fxDisruptionEvent">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">If present indicates that the event is considered to have occured if two or more numeric values of currency exchange rate specified in the Settllement Option are applicable to the transaction.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >If present indicates that the event is considered to have occured if two or more numeric values of currency exchange rate specified in the Settllement Option are applicable to the transaction.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="exchangeRestrictions" type="FxDisruptionEvent" substitutionGroup="fxDisruptionEvent">
@@ -1525,12 +1691,16 @@
   </xsd:element>
   <xsd:element name="nonDeliverableSubstitute" type="NonDeliverableSubstitute" substitutionGroup="fxDisruptionFallback">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">If present indicates that the obligation to pay the In-the-Money amount of foreign currency is replaced with an obligation to pay an equivalent amount in another currency.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >If present indicates that the obligation to pay the In-the-Money amount of foreign currency is replaced with an obligation to pay an equivalent amount in another currency.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="priceSourceDisruption" type="FxDisruptionEvent" substitutionGroup="fxDisruptionEvent">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">If present indicates that the event is considered to have occurred if it is impossible to obtain information about the Spot Rate for a Valuation Date from the price source specified in the Settlement Rate Option that hass been agreed by the parties.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >If present indicates that the event is considered to have occurred if it is impossible to obtain information about the Spot Rate for a Valuation Date from the price source specified in the Settlement Rate Option that hass been agreed by the parties.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="priceMateriality" type="PriceMateriality" substitutionGroup="fxDisruptionEvent">
@@ -1540,12 +1710,16 @@
   </xsd:element>
   <xsd:element name="settlementPostponement" type="Postponement" substitutionGroup="fxDisruptionFallback">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">Indicates that the Settlement Date for the tranaction shall be deemed to be the first Business Day following the day on which the applicable Disruption Event ceases to exist, unless the events continues to exists for more than a maximum number of days.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >Indicates that the Settlement Date for the tranaction shall be deemed to be the first Business Day following the day on which the applicable Disruption Event ceases to exist, unless the events continues to exists for more than a maximum number of days.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="valuationPostponement" type="Postponement" substitutionGroup="fxDisruptionFallback">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">Indicates that the Valuation Date for the tranaction shall be deemed to be the first Business Day following the day on which the applicable Disruption Event ceases to exist, unless the events continues to exists for more than a maximum number of days.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >Indicates that the Valuation Date for the tranaction shall be deemed to be the first Business Day following the day on which the applicable Disruption Event ceases to exist, unless the events continues to exists for more than a maximum number of days.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:group name="FxCoreDetails.model">
@@ -1568,7 +1742,7 @@
           <xsd:documentation xml:lang="en">Indicates which currency was dealt.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:group ref="FxTenor.model" minOccurs="0"></xsd:group>
+      <xsd:group ref="FxTenor.model" minOccurs="0" />
       <xsd:choice>
         <xsd:element name="valueDate" type="xsd:date">
           <xsd:annotation>
@@ -1617,7 +1791,9 @@
       </xsd:element>
       <xsd:element name="rateObservationQuoteBasis" type="StrikeQuoteBasisEnum" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The method by which observed rate values are quoted, in terms of the option put/call currencies. In the absence of this element, rate observations are assumed to be quoted as per the option strikeQuoteBasis.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The method by which observed rate values are quoted, in terms of the option put/call currencies. In the absence of this element, rate observations are assumed to be quoted as per the option strikeQuoteBasis.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -1660,4 +1836,3 @@
     </xsd:sequence>
   </xsd:group>
 </xsd:schema>
-

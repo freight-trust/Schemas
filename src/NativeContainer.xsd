@@ -6,11 +6,11 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
 <xs:schema
-  targetNamespace="http://www.freighttrust.com/Schemas/Native/2020/09"
-  version="2.0"
-  elementFormDefault="qualified"
-  xmlns="http://www.freighttrust.com/Schemas/Native/2020/09"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.freighttrust.com/Schemas/Native/2020/09"
+    version="2.0"
+    elementFormDefault="qualified"
+    xmlns="http://www.freighttrust.com/Schemas/Native/2020/09"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
 >
   <xs:include schemaLocation="Native.xsd" />
   <xs:element name="Container" type="ContainerData" />
@@ -184,21 +184,9 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element
-                    name="CapacityInTEU"
-                    minOccurs="0"
-                    type="xs:short"
-                  />
-                  <xs:element
-                    name="WeightCapacity"
-                    minOccurs="0"
-                    type="xs:decimal"
-                  />
-                  <xs:element
-                    name="TareWeight"
-                    minOccurs="0"
-                    type="xs:decimal"
-                  />
+                  <xs:element name="CapacityInTEU" minOccurs="0" type="xs:short" />
+                  <xs:element name="WeightCapacity" minOccurs="0" type="xs:decimal" />
+                  <xs:element name="TareWeight" minOccurs="0" type="xs:decimal" />
                   <xs:element name="WeightUnit" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -206,11 +194,7 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element
-                    name="CubicCapacity"
-                    minOccurs="0"
-                    type="xs:decimal"
-                  />
+                  <xs:element name="CubicCapacity" minOccurs="0" type="xs:decimal" />
                   <xs:element name="CubicUnit" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -226,21 +210,9 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element
-                    name="PurchaseDate"
-                    minOccurs="0"
-                    type="emptiableDateTime"
-                  />
-                  <xs:element
-                    name="DisposalDate"
-                    minOccurs="0"
-                    type="emptiableDateTime"
-                  />
-                  <xs:element
-                    name="RegExpiry"
-                    minOccurs="0"
-                    type="emptiableDateTime"
-                  />
+                  <xs:element name="PurchaseDate" minOccurs="0" type="emptiableDateTime" />
+                  <xs:element name="DisposalDate" minOccurs="0" type="emptiableDateTime" />
+                  <xs:element name="RegExpiry" minOccurs="0" type="emptiableDateTime" />
                   <xs:element name="RegState" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -284,17 +256,9 @@
                     </xs:simpleType>
                   </xs:element>
                   <xs:element name="AddFlag1" minOccurs="0" type="xs:boolean" />
-                  <xs:element
-                    name="AddCheckBox1"
-                    minOccurs="0"
-                    type="xs:boolean"
-                  />
+                  <xs:element name="AddCheckBox1" minOccurs="0" type="xs:boolean" />
                   <xs:element name="IsActive" minOccurs="0" type="xs:boolean" />
-                  <xs:element
-                    name="IsVehicle"
-                    minOccurs="0"
-                    type="xs:boolean"
-                  />
+                  <xs:element name="IsVehicle" minOccurs="0" type="xs:boolean" />
                   <xs:element name="Registration" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -394,11 +358,7 @@
       <xs:element name="RefContainerStockCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element
-              name="RefContainerStock"
-              minOccurs="0"
-              maxOccurs="unbounded"
-            >
+            <xs:element name="RefContainerStock" minOccurs="0" maxOccurs="unbounded">
               <xs:complexType>
                 <xs:all>
                   <!-- Candidate Key: ContainerNum -->
@@ -444,11 +404,7 @@
       <xs:element name="RefContainerCodeMapCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element
-              name="RefContainerCodeMap"
-              minOccurs="0"
-              maxOccurs="unbounded"
-            >
+            <xs:element name="RefContainerCodeMap" minOccurs="0" maxOccurs="unbounded">
               <xs:complexType>
                 <xs:all>
                   <!-- Candidate Key: RefCountry.Code + Usage + RefContainer.PK -->

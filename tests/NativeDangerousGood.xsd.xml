@@ -5,11 +5,7 @@
    - This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
-<ns:Native
-  version="token"
-  xmlns:ns="http://www.freighttrust.com/Schemas/Native/2020/09"
-  xmlns:ns1="http://www.freighttrust.com/Schemas/Universal/2020/09"
->
+<ns:Native version="token" xmlns:ns="http://www.freighttrust.com/Schemas/Native/2020/09" xmlns:ns1="http://www.freighttrust.com/Schemas/Universal/2020/09">
   <ns:Header>
     <!--Optional:-->
     <ns:OwnerCode>string</ns:OwnerCode>
@@ -116,8 +112,7 @@
           <ns1:Owner>
             <ns1:AddressType>string</ns1:AddressType>
             <!--Optional:-->
-            <ns1:AdditionalAddressInformation
-            >string</ns1:AdditionalAddressInformation>
+            <ns1:AdditionalAddressInformation>string</ns1:AdditionalAddressInformation>
             <!--Optional:-->
             <ns1:Address1>string</ns1:Address1>
             <!--Optional:-->
@@ -175,8 +170,7 @@
             <!--Optional:-->
             <ns1:State>string</ns1:State>
             <!--Optional:-->
-            <ns1:SuppressAddressValidationError
-            >true</ns1:SuppressAddressValidationError>
+            <ns1:SuppressAddressValidationError>true</ns1:SuppressAddressValidationError>
             <!--Optional:-->
             <ns1:UniversalNettingCode>string</ns1:UniversalNettingCode>
             <!--Optional:-->

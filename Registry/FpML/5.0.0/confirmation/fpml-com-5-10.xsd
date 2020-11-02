@@ -1,10 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- 
   == Copyright (c) 2002-2018 All rights reserved. 
   == Financial Products Markup Language is subject to the FpML public license. 
   == A copy of this license is available at http://www.fpml.org/license/license.html
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/confirmation" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/confirmation" ecore:documentRoot="FpML" ecore:nsPrefix="conf" ecore:package="org.fpml.confirmation" version="$Revision: 13171 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xsd:schema
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns="http://www.fpml.org/FpML-5/confirmation"
+    xmlns:fpml-annotation="http://www.fpml.org/annotation"
+    targetNamespace="http://www.fpml.org/FpML-5/confirmation"
+    ecore:documentRoot="FpML"
+    ecore:nsPrefix="conf"
+    ecore:package="org.fpml.confirmation"
+    version="$Revision: 13171 $"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+>
   <xsd:include schemaLocation="fpml-option-shared-5-10.xsd" />
   <xsd:complexType name="AbsoluteTolerance">
     <xsd:annotation>
@@ -54,7 +66,9 @@
           </xsd:element>
           <xsd:element name="pricingStartDate" type="AdjustableDate">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Defines the Start of the Pricing period. PricingStartDate is optional when discrete pricingDates are supplied and is not recommended to be included. Should they coexist, pricingStartDate is expected to be the same as the earliest pricing date or earlier for a Term deal as the discrete dates will take precedence.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >Defines the Start of the Pricing period. PricingStartDate is optional when discrete pricingDates are supplied and is not recommended to be included. Should they coexist, pricingStartDate is expected to be the same as the earliest pricing date or earlier for a Term deal as the discrete dates will take precedence.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="calculation" type="FloatingLegCalculation">
@@ -106,7 +120,9 @@
   </xsd:complexType>
   <xsd:complexType name="CalculationPeriodsDatesReference">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A pointer style reference to single-day-duration calculation periods defined elsewhere - note that this schedule consists of a parameterised schedule in a calculationPeriodsSchedule container.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A pointer style reference to single-day-duration calculation periods defined elsewhere - note that this schedule consists of a parameterised schedule in a calculationPeriodsSchedule container.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="Reference">
@@ -116,7 +132,9 @@
   </xsd:complexType>
   <xsd:complexType name="CalculationPeriodsReference">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A pointer style reference to a calculation periods schedule defined elsewhere - note that this schedule consists of a series of actual dates in a calculationPeriods container.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A pointer style reference to a calculation periods schedule defined elsewhere - note that this schedule consists of a series of actual dates in a calculationPeriods container.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="Reference">
@@ -126,7 +144,9 @@
   </xsd:complexType>
   <xsd:complexType name="CalculationPeriodsScheduleReference">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A pointer style reference to a calculation periods schedule defined elsewhere - note that this schedule consists of a parameterised schedule in a calculationPeriodsSchedule container.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A pointer style reference to a calculation periods schedule defined elsewhere - note that this schedule consists of a parameterised schedule in a calculationPeriodsSchedule container.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="Reference">
@@ -199,7 +219,9 @@
         </xsd:element>
         <xsd:element name="deliveryAtSource" type="xsd:boolean">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">The point at which the Coal Product as a reference to the Source of the Coal Product. This should be a reference to the source element within product.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >The point at which the Coal Product as a reference to the Source of the Coal Product. This should be a reference to the source element within product.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
       </xsd:choice>
@@ -259,7 +281,9 @@
       <xsd:choice>
         <xsd:element name="type" type="CoalProductType">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">The type of coal product to be delivered by reference to a pre-defined specification. For contracts under SCoTA terms this is the quality specification code (e.g. "DES ARA")</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >The type of coal product to be delivered by reference to a pre-defined specification. For contracts under SCoTA terms this is the quality specification code (e.g. "DES ARA")</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="coalProductSpecifications" type="CoalProductSpecifications">
@@ -270,7 +294,9 @@
       </xsd:choice>
       <xsd:element name="source" type="CoalProductSource" maxOccurs="unbounded">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The SCoTA cargo origin, mining region, mine(s), mining complex(es), loadout(s) or river dock(s) or other point(s) of origin that Seller and Buyer agree are acceptable origins for the Coal Product. For International Coal transactions, this is the Origin of the Coal Product.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The SCoTA cargo origin, mining region, mine(s), mining complex(es), loadout(s) or river dock(s) or other point(s) of origin that Seller and Buyer agree are acceptable origins for the Coal Product. For International Coal transactions, this is the Origin of the Coal Product.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="sCoTASpecifications" type="xsd:boolean" minOccurs="0">
@@ -386,7 +412,9 @@
             </xsd:annotation>
             <xsd:element name="latestExerciseTime" type="BusinessCenterTime">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">For a Bermuda or American style option, the latest time on an exercise business day (excluding the expiration date) within the exercise period that notice can be given by the buyer to the seller or seller's agent. Notice of exercise given after this time will be deemed to have been given on the next exercise business day.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >For a Bermuda or American style option, the latest time on an exercise business day (excluding the expiration date) within the exercise period that notice can be given by the buyer to the seller or seller's agent. Notice of exercise given after this time will be deemed to have been given on the next exercise business day.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
             <xsd:element name="latestExerciseTimeDetermination" type="DeterminationMethod">
@@ -411,7 +439,9 @@
   </xsd:complexType>
   <xsd:complexType name="CommodityBarrier">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">The specification of how a barrier option will trigger (that is, knock-in or knock-out) or expire based on the position of the spot rate relative to trigger level.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >The specification of how a barrier option will trigger (that is, knock-in or knock-out) or expire based on the position of the spot rate relative to trigger level.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:sequence>
@@ -422,7 +452,9 @@
         </xsd:element>
         <xsd:element name="featurePaymentAmount" type="PositiveMoney" minOccurs="0">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">In the case of barrier options where the option automatically expires and the barrier is breached in such a way to to result in a "knock-out" vent, this amount is paid to the the option holder so as to refund or rebate a portion of any premium paid.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >In the case of barrier options where the option automatically expires and the barrier is breached in such a way to to result in a "knock-out" vent, this amount is paid to the the option holder so as to refund or rebate a portion of any premium paid.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
       </xsd:sequence>
@@ -510,7 +542,7 @@
               <xsd:documentation xml:lang="en">The option premium payable by the buyer to the seller.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-          <xsd:group ref="CommodityContent.model" minOccurs="0"></xsd:group>
+          <xsd:group ref="CommodityContent.model" minOccurs="0" />
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
@@ -524,7 +556,9 @@
       </xsd:element>
       <xsd:element name="commodity" type="Commodity">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Specifies the underlying component. At the time of the initial schema design, only underlyers of type Commodity are supported; the choice group in the future could offer the possibility of adding other types later.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Specifies the underlying component. At the time of the initial schema design, only underlyers of type Commodity are supported; the choice group in the future could offer the possibility of adding other types later.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="pricingDates" type="CommodityPricingDates" minOccurs="0">
@@ -551,7 +585,9 @@
           </xsd:element>
           <xsd:element name="conversionFactor" type="xsd:decimal" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">If the Notional Quantity is specified in a unit that does not match the unit in which the Commodity Reference Price is quoted, the scaling or conversion factor used to convert the Commodity Reference Price unit into the Notional Quantity unit should be stated here. If there is no conversion, this element is not intended to be used.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >If the Notional Quantity is specified in a unit that does not match the unit in which the Commodity Reference Price is quoted, the scaling or conversion factor used to convert the Commodity Reference Price unit into the Notional Quantity unit should be stated here. If there is no conversion, this element is not intended to be used.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:group ref="CommodityNotionalQuantity.model" />
@@ -565,7 +601,9 @@
         <xsd:sequence>
           <xsd:element name="constituentWeight" type="NonNegativeDecimal" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">If the Notional Quantity is specified in a unit that does not match the unit in which the Commodity Reference Price is quoted, the scaling or conversion factor used to convert the Commodity Reference Price unit into the Notional Quantity unit should be stated here. If there is no conversion, this element is not intended to be used.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >If the Notional Quantity is specified in a unit that does not match the unit in which the Commodity Reference Price is quoted, the scaling or conversion factor used to convert the Commodity Reference Price unit into the Notional Quantity unit should be stated here. If there is no conversion, this element is not intended to be used.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
@@ -574,14 +612,18 @@
   </xsd:complexType>
   <xsd:complexType name="CommodityCalculationPeriodsSchedule">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A parametric representation of the Calculation Periods for on Asian option or a leg of a swap. In case the calculation frequency is of value T (term), the period is defined by the commoditySwap\effectiveDate and the commoditySwap\terminationDate.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A parametric representation of the Calculation Periods for on Asian option or a leg of a swap. In case the calculation frequency is of value T (term), the period is defined by the commoditySwap\effectiveDate and the commoditySwap\terminationDate.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="Frequency">
         <xsd:sequence>
           <xsd:element name="balanceOfFirstPeriod" type="xsd:boolean">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">If true, indicates that that the first Calculation Period should run from the Effective Date to the end of the calendar period in which the Effective Date falls, e.g. Jan 15 - Jan 31 if the calculation periods are one month long and Effective Date is Jan 15. If false, the first Calculation Period should run from the Effective Date for one whole period, e.g. Jan 15 to Feb 14 if the calculation periods are one month long and Effective Date is Jan 15.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >If true, indicates that that the first Calculation Period should run from the Effective Date to the end of the calendar period in which the Effective Date falls, e.g. Jan 15 - Jan 31 if the calculation periods are one month long and Effective Date is Jan 15. If false, the first Calculation Period should run from the Effective Date for one whole period, e.g. Jan 15 to Feb 14 if the calculation periods are one month long and Effective Date is Jan 15.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
@@ -595,17 +637,23 @@
     <xsd:choice>
       <xsd:element name="periods" type="AdjustableDates">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The Delivery Periods for this leg of the swap. This type is only intended to be used if the Delivery Periods differ from the Calculation Periods on the fixed or floating leg. If DeliveryPeriods mirror another leg, then the calculationPeriodsReference element should be used to point to the Calculation Periods on that leg - or the calculationPeriodsScheduleReference can be used to point to the Calculation Periods Schedule for that leg.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The Delivery Periods for this leg of the swap. This type is only intended to be used if the Delivery Periods differ from the Calculation Periods on the fixed or floating leg. If DeliveryPeriods mirror another leg, then the calculationPeriodsReference element should be used to point to the Calculation Periods on that leg - or the calculationPeriodsScheduleReference can be used to point to the Calculation Periods Schedule for that leg.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="periodsSchedule" type="CommodityCalculationPeriodsSchedule">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The Delivery Periods for this leg of the swap. This type is only intended to be used if the Delivery Periods differ from the Calculation Periods on the fixed or floating leg. If DeliveryPeriods mirror another leg, then the calculationPeriodsReference element should be used to point to the Calculation Periods on that leg - or the calculationPeriodsScheduleReference can be used to point to the Calculation Periods Schedule for that leg.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The Delivery Periods for this leg of the swap. This type is only intended to be used if the Delivery Periods differ from the Calculation Periods on the fixed or floating leg. If DeliveryPeriods mirror another leg, then the calculationPeriodsReference element should be used to point to the Calculation Periods on that leg - or the calculationPeriodsScheduleReference can be used to point to the Calculation Periods Schedule for that leg.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:group ref="CommodityCalculationPeriodsPointer.model">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Enables users to reference a Calculation Periods schedule in the form of a series of actual dates in a calculationPeriods container or in the form of a parameterised schedule in a calculationPeriodsSchedule container.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Enables users to reference a Calculation Periods schedule in the form of a series of actual dates in a calculationPeriods container or in the form of a parameterised schedule in a calculationPeriodsSchedule container.</xsd:documentation>
         </xsd:annotation>
       </xsd:group>
     </xsd:choice>
@@ -623,7 +671,9 @@
   </xsd:complexType>
   <xsd:complexType name="CommodityDeliveryRisk">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A scheme identifying how the parties to the trade aportion responsibility for the delivery of the commodity product (for example Free On Board, Cost, Insurance, Freight)</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A scheme identifying how the parties to the trade aportion responsibility for the delivery of the commodity product (for example Free On Board, Cost, Insurance, Freight)</xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
       <xsd:extension base="Scheme">
@@ -646,7 +696,9 @@
   </xsd:complexType>
   <xsd:complexType name="CommodityDigitalExercise">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">The parameters for defining how the commodity digital option can be exercised. It differs from the CommodityExercise type in that it lacks a specification of Settlement Currency. The Settlement Currency is specified in the 'featurePayment' element.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >The parameters for defining how the commodity digital option can be exercised. It differs from the CommodityExercise type in that it lacks a specification of Settlement Currency. The Settlement Currency is specified in the 'featurePayment' element.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:choice>
@@ -657,7 +709,9 @@
         </xsd:element>
         <xsd:element name="europeanExercise" type="CommodityEuropeanExercise">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">The parameters for defining the expiration date and time for a European or Asian style option. For an Asian style option the expiration date is equivalent to the termination date.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >The parameters for defining the expiration date and time for a European or Asian style option. For an Asian style option the expiration date is equivalent to the termination date.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
       </xsd:choice>
@@ -676,7 +730,9 @@
   </xsd:complexType>
   <xsd:complexType name="CommodityDigitalOption">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">Defines the digital commodity option product type. Digital options exercise when a barrier is breached and are financially settled. The 'commodityDigitalOption' type is an extension of the 'commodityOption' product.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >Defines the digital commodity option product type. Digital options exercise when a barrier is breached and are financially settled. The 'commodityDigitalOption' type is an extension of the 'commodityOption' product.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="Option">
@@ -688,7 +744,9 @@
           </xsd:element>
           <xsd:element name="commodity" type="Commodity">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Specifies the underlying instrument. Usual content is an ISDA Commodity Reference Price Name. The 'commodity' underlyer component is specified using a reference to the 'commodity' asset (see description above at the Commodity Underlyer section).</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >Specifies the underlying instrument. Usual content is an ISDA Commodity Reference Price Name. The 'commodity' underlyer component is specified using a reference to the 'commodity' asset (see description above at the Commodity Underlyer section).</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:group ref="CommodityDigitalOptionFeatures.model">
@@ -721,7 +779,7 @@
               <xsd:documentation xml:lang="en">The option premium payable by the buyer to the seller.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-          <xsd:group ref="CommodityContent.model" minOccurs="0"></xsd:group>
+          <xsd:group ref="CommodityContent.model" minOccurs="0" />
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
@@ -735,7 +793,9 @@
         <xsd:sequence>
           <xsd:element name="expirationDate" type="AdjustableOrRelativeDate">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">The last day within an exercise period for an American style option. For a European style option it is the only day within the exercise period. For an averaging option this is equivalent to the Termination Date.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >The last day within an exercise period for an American style option. For a European style option it is the only day within the exercise period. For an averaging option this is equivalent to the Termination Date.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:sequence minOccurs="0">
@@ -744,7 +804,9 @@
             </xsd:annotation>
             <xsd:element name="expirationDate" type="AdjustableOrRelativeDate" maxOccurs="unbounded">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">The last day within an exercise period for an American style option. For a European style option it is the only day within the exercise period. For an averaging option this is equivalent to the Termination Date.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >The last day within an exercise period for an American style option. For a European style option it is the only day within the exercise period. For an averaging option this is equivalent to the Termination Date.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
             <xsd:element name="exerciseFrequency" type="Frequency" minOccurs="0">
@@ -775,7 +837,9 @@
         </xsd:element>
         <xsd:element name="europeanExercise" type="CommodityEuropeanExercise">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">The parameters for defining the expiration date and time for a European or Asian style option. For an Asian style option the expiration date is equivalent to the termination date.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >The parameters for defining the expiration date and time for a European or Asian style option. For an Asian style option the expiration date is equivalent to the termination date.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
       </xsd:choice>
@@ -791,7 +855,9 @@
       </xsd:element>
       <xsd:element name="settlementCurrency" type="IdentifiedCurrency">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The currency into which the Commodity Option Transaction will settle. If this is not the same as the currency in which the Commodity Reference Price is quoted, then an FX determination method should also be specified.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The currency into which the Commodity Option Transaction will settle. If this is not the same as the currency in which the Commodity Reference Price is quoted, then an FX determination method should also be specified.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="fx" type="CommodityFx" minOccurs="0">
@@ -801,7 +867,9 @@
       </xsd:element>
       <xsd:element name="conversionFactor" type="xsd:decimal" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">If the Notional Quantity is specified in a unit that does not match the unit in which the Commodity Reference Price is quoted, the scaling or conversion factor used to convert the Commodity Reference Price unit into the Notional Quantity unit should be stated here. If there is no conversion, this element is not intended to be used.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >If the Notional Quantity is specified in a unit that does not match the unit in which the Commodity Reference Price is quoted, the scaling or conversion factor used to convert the Commodity Reference Price unit into the Notional Quantity unit should be stated here. If there is no conversion, this element is not intended to be used.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:group ref="CommodityPaymentDates.model" />
@@ -815,12 +883,16 @@
       <xsd:choice>
         <xsd:element name="americanExercise" type="CommodityAmericanExercise">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">The parameters for defining the exercise period for an American style option together with the rules governing the quantity of the commodity that can be exercised on any given exercise date.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >The parameters for defining the exercise period for an American style option together with the rules governing the quantity of the commodity that can be exercised on any given exercise date.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="europeanExercise" type="CommodityEuropeanExercise">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">The parameters for defining the expiration date and time for a European or Asian style option. For an Asian style option the expiration date is equivalent to the termination date.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >The parameters for defining the expiration date and time for a European or Asian style option. For an Asian style option the expiration date is equivalent to the termination date.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
       </xsd:choice>
@@ -836,7 +908,9 @@
       </xsd:element>
       <xsd:element name="settlementCurrency" type="IdentifiedCurrency">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The currency into which the Commodity Option Transaction will settle. If this is not the same as the currency in which the Commodity Reference Price is quoted, then an FX determination method should also be specified.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The currency into which the Commodity Option Transaction will settle. If this is not the same as the currency in which the Commodity Reference Price is quoted, then an FX determination method should also be specified.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:group ref="CommodityPaymentDates.model" />
@@ -870,46 +944,62 @@
     <xsd:sequence>
       <xsd:element name="fixedRate" type="IdentifiedRate">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The calculation period fixed rate or "fee" rate. A per annum rate, expressed as a decimal. A fixed rate of 5% would be represented as 0.05. When multiplied by the Notional Amount and the number of calendar days in the Calculation Period divided by the calendar days basis, is the fixed amount payed per Calculation Period.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The calculation period fixed rate or "fee" rate. A per annum rate, expressed as a decimal. A fixed rate of 5% would be represented as 0.05. When multiplied by the Notional Amount and the number of calendar days in the Calculation Period divided by the calendar days basis, is the fixed amount payed per Calculation Period.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="dayCountFraction" type="DayCountFraction">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Specifies the basis for the adjustment of a rate from an annual rate to a rate appropriate for the Calculation Period: e.g. the number of calendar days in the Calculation Period divided by the calendar days basis e.g. actual number of days in the Calculation Period divided by 365.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Specifies the basis for the adjustment of a rate from an annual rate to a rate appropriate for the Calculation Period: e.g. the number of calendar days in the Calculation Period divided by the calendar days basis e.g. actual number of days in the Calculation Period divided by 365.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="CommodityFixedPriceSchedule">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">The Fixed Price for a given Calculation Period during the life of the trade. There must be a Fixed Price step specified for each Calculation Period, regardless of whether the Fixed Price changes or remains the same between periods.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >The Fixed Price for a given Calculation Period during the life of the trade. There must be a Fixed Price step specified for each Calculation Period, regardless of whether the Fixed Price changes or remains the same between periods.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:choice>
         <xsd:element name="fixedPriceStep" type="FixedPrice" maxOccurs="unbounded">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">The Fixed Price for a given Calculation Period during the life of the trade. There must be a Fixed Price step specified for each Calculation Period, regardless of whether the Fixed Price changes or remains the same between periods.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >The Fixed Price for a given Calculation Period during the life of the trade. There must be a Fixed Price step specified for each Calculation Period, regardless of whether the Fixed Price changes or remains the same between periods.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="worldscaleRateStep" type="xsd:decimal" maxOccurs="unbounded">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">For a Wet Voyager Charter Freight Swap, the number of Worldscale Points for purposes of the calculation of a Fixed Amount for a given Calculation Period during the life of the trade. There must be Worldscale Rate Step specified for each Calculation Period, regardless of whether the Worldscale Rate Step changes or remains the same between periods.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >For a Wet Voyager Charter Freight Swap, the number of Worldscale Points for purposes of the calculation of a Fixed Amount for a given Calculation Period during the life of the trade. There must be Worldscale Rate Step specified for each Calculation Period, regardless of whether the Worldscale Rate Step changes or remains the same between periods.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="contractRateStep" type="NonNegativeMoney" maxOccurs="unbounded">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">For a DRY Voyage Charter or Time Charter Freight Swap, the price per relevant unit for pruposes of the calculation of a Fixed Amount for a given Calculation Period during the life of the trade. There must be Worldscale Rate Step specified for each Calculation Period, regardless of whether the Worldscale Rate Step changes or remains the same between periods.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >For a DRY Voyage Charter or Time Charter Freight Swap, the price per relevant unit for pruposes of the calculation of a Fixed Amount for a given Calculation Period during the life of the trade. There must be Worldscale Rate Step specified for each Calculation Period, regardless of whether the Worldscale Rate Step changes or remains the same between periods.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="settlementPeriodsPriceSchedule" type="CommoditySettlementPeriodsPriceSchedule" maxOccurs="unbounded">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">For an electricity transaction, the fixed price schedule for one or more groups of Settlement Periods on which fixed payments are based. if the schedule differs for different groups of Settlement Periods, this element should be repeated.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >For an electricity transaction, the fixed price schedule for one or more groups of Settlement Periods on which fixed payments are based. if the schedule differs for different groups of Settlement Periods, this element should be repeated.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
       </xsd:choice>
       <xsd:group ref="CommodityCalculationPeriodsPointer.model">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Enables users to reference a Calculation Periods schedule in the form of a series of actual dates in a calculationPeriods container or in the form of a parameterised schedule in a calculationPeriodsSchedule container.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Enables users to reference a Calculation Periods schedule in the form of a series of actual dates in a calculationPeriods container or in the form of a parameterised schedule in a calculationPeriodsSchedule container.</xsd:documentation>
         </xsd:annotation>
       </xsd:group>
     </xsd:sequence>
@@ -939,7 +1029,7 @@
             </xsd:element>
           </xsd:choice>
           <xsd:element ref="commodityForwardLeg" />
-          <xsd:group ref="CommodityContent.model" minOccurs="0"></xsd:group>
+          <xsd:group ref="CommodityContent.model" minOccurs="0" />
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
@@ -964,7 +1054,9 @@
   </xsd:complexType>
   <xsd:complexType name="CommodityFx">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A type defining the FX observations to be used to convert the observed Commodity Reference Price to the Settlement Currency. The rate source must be specified. Additionally, a time for the spot price to be observed on that source may be specified, or else an averaging schedule for trades priced using an average FX rate.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A type defining the FX observations to be used to convert the observed Commodity Reference Price to the Settlement Currency. The rate source must be specified. Additionally, a time for the spot price to be observed on that source may be specified, or else an averaging schedule for trades priced using an average FX rate.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="primaryRateSource" type="InformationSource">
@@ -979,7 +1071,9 @@
       </xsd:element>
       <xsd:element name="fxType" type="CommodityFxType" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">A type to identify how the FX rate will be applied. This is intended to differentiate between the various methods for applying FX to the floating price such as a daily calculation, or averaging the FX and applying the average at the end of each CalculationPeriod.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >A type to identify how the FX rate will be applied. This is intended to differentiate between the various methods for applying FX to the floating price such as a daily calculation, or averaging the FX and applying the average at the end of each CalculationPeriod.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="averagingMethod" type="AveragingMethodEnum" minOccurs="0">
@@ -990,7 +1084,9 @@
       <xsd:choice minOccurs="0">
         <xsd:element name="fixingTime" type="BusinessCenterTime">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">The time at which the spot currency exchange rate will be observed. It is specified as a time in a specific business center, e.g. 11:00am London time.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >The time at which the spot currency exchange rate will be observed. It is specified as a time in a specific business center, e.g. 11:00am London time.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
         <xsd:sequence>
@@ -1011,14 +1107,18 @@
               </xsd:sequence>
               <xsd:group ref="CommodityCalculationPeriodsPointer.model">
                 <xsd:annotation>
-                  <xsd:documentation xml:lang="en">Enables users to reference a Calculation Periods schedule in the form of a series of actual dates in a calculationPeriods container or in the form of a parameterised schedule in a calculationPeriodsSchedule container.</xsd:documentation>
+                  <xsd:documentation
+                                        xml:lang="en"
+                                    >Enables users to reference a Calculation Periods schedule in the form of a series of actual dates in a calculationPeriods container or in the form of a parameterised schedule in a calculationPeriodsSchedule container.</xsd:documentation>
                 </xsd:annotation>
               </xsd:group>
             </xsd:sequence>
           </xsd:choice>
           <xsd:element name="fixingTime" type="BusinessCenterTime" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">The time at which the spot currency exchange rate will be observed. It is specified as a time in a specific business center, e.g. 11:00am London time.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >The time at which the spot currency exchange rate will be observed. It is specified as a time in a specific business center, e.g. 11:00am London time.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
@@ -1027,7 +1127,9 @@
   </xsd:complexType>
   <xsd:complexType name="CommodityFxType">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">Identifes how the FX rate will be applied. This is intended to differentiate between the various methods for applying FX to the floating price such as a daily calculation, or averaging the FX and applying the average at the end of each CalculationPeriod.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >Identifes how the FX rate will be applied. This is intended to differentiate between the various methods for applying FX to the floating price such as a daily calculation, or averaging the FX and applying the average at the end of each CalculationPeriod.</xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
       <xsd:extension base="Scheme">
@@ -1066,7 +1168,9 @@
           <xsd:choice>
             <xsd:element name="notionalAmount" type="CommodityNotionalAmount">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">Specifies the notional amount of a commodity performance type swap. It is a currency-denominated value (i.e. price-times-quantity). In confirmations is also referred to as the Notional Quantity (sic, expressed in currency units), Notional Amount, Equity Notional Amount and, in the case of reinvesting swaps, Initial Notional Amount.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >Specifies the notional amount of a commodity performance type swap. It is a currency-denominated value (i.e. price-times-quantity). In confirmations is also referred to as the Notional Quantity (sic, expressed in currency units), Notional Amount, Equity Notional Amount and, in the case of reinvesting swaps, Initial Notional Amount.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
             <xsd:element name="notionalAmountReference" type="CommodityNotionalAmountReference">
@@ -1077,7 +1181,9 @@
           </xsd:choice>
           <xsd:element name="commodityFixedInterestCalculation" type="CommodityFixedInterestCalculation">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Specifies the interest payment amount on a return swap. This amount may be referred to as the interest amount or the fee amount. Used when the interest (a.k.a. "Fee") is calculated very simply: notional amount * (rate * (number of days in Calculation Period / number of days assumed in the the year)).</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >Specifies the interest payment amount on a return swap. This amount may be referred to as the interest amount or the fee amount. Used when the interest (a.k.a. "Fee") is calculated very simply: notional amount * (rate * (number of days in Calculation Period / number of days assumed in the the year)).</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
@@ -1093,18 +1199,24 @@
         <xsd:sequence>
           <xsd:element name="marketDisruptionEvents" type="MarketDisruptionEventsEnum">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">If Market disruption Events are stated to be Applicable then the default Market Disruption Events of Section 7.4(d)(i) of the ISDA Commodity Definitions shall apply unless specific Market Disruption Events are stated hereunder, in which case these shall override the ISDA defaults. If Market Disruption Events are stated to be Not Applicable, Market Disruption Events are not applicable to the trade at all. It is also possible to reference the Market Disruption Events set out in the relevant Master Agreement governing the trade.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >If Market disruption Events are stated to be Applicable then the default Market Disruption Events of Section 7.4(d)(i) of the ISDA Commodity Definitions shall apply unless specific Market Disruption Events are stated hereunder, in which case these shall override the ISDA defaults. If Market Disruption Events are stated to be Not Applicable, Market Disruption Events are not applicable to the trade at all. It is also possible to reference the Market Disruption Events set out in the relevant Master Agreement governing the trade.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="additionalMarketDisruptionEvent" type="MarketDisruptionEvent" minOccurs="0" maxOccurs="unbounded">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">To be used when marketDisruptionEvents is set to "Applicable" and additional market disruption events(s) apply to the default market disruption events of Section 7.4(d)(i) of the ISDA Commodity Definitions.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >To be used when marketDisruptionEvents is set to "Applicable" and additional market disruption events(s) apply to the default market disruption events of Section 7.4(d)(i) of the ISDA Commodity Definitions.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
         <xsd:element name="marketDisruptionEvent" type="MarketDisruptionEvent" maxOccurs="unbounded">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">Market disruption event(s) that apply. Note that these should only be specified if the default market disruption events of Section 7.4(d)(i) of the ISDA Commodity Definitions are to be overridden.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >Market disruption event(s) that apply. Note that these should only be specified if the default market disruption events of Section 7.4(d)(i) of the ISDA Commodity Definitions are to be overridden.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
       </xsd:choice>
@@ -1121,7 +1233,9 @@
       </xsd:choice>
       <xsd:element name="fallbackReferencePrice" type="Underlyer" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">A fallback commodity reference price for use when relying on Disruption Fallbacks in Section 7.5(d)(i) of the ISDA Commodity Definitions or have selected "Fallback Reference Price" as a disruptionFallback.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >A fallback commodity reference price for use when relying on Disruption Fallbacks in Section 7.5(d)(i) of the ISDA Commodity Definitions or have selected "Fallback Reference Price" as a disruptionFallback.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="maximumNumberOfDaysOfDisruption" type="xsd:nonNegativeInteger" minOccurs="0">
@@ -1131,12 +1245,16 @@
       </xsd:element>
       <xsd:element name="priceMaterialityPercentage" type="xsd:decimal" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">2005 Commodity Definitions only. To be used where a price materiality percentage applies to the "Price Source Disruption" event and this event has been specified by setting marketDisruption to true or including it in additionalMarketDisruptionEvent</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >2005 Commodity Definitions only. To be used where a price materiality percentage applies to the "Price Source Disruption" event and this event has been specified by setting marketDisruption to true or including it in additionalMarketDisruptionEvent</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="minimumFuturesContracts" type="xsd:positiveInteger" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">1993 Commodity Definitions only. Specifies the Mimum Futures Contracts level that dictates whether or not a "De Minimis Trading" event has occurred. Only relevant if 'De Minimis Trading' has been specified in marketDisruptionEvent or additionalMarketDisruptionEvent.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >1993 Commodity Definitions only. Specifies the Mimum Futures Contracts level that dictates whether or not a "De Minimis Trading" event has occurred. Only relevant if 'De Minimis Trading' has been specified in marketDisruptionEvent or additionalMarketDisruptionEvent.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -1194,7 +1312,9 @@
     <xsd:sequence>
       <xsd:element name="integralMultipleQuantity" type="CommodityNotionalQuantity" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The integral multiple quantity defines a lower limit of the Notional Quantity that can be exercised and also defines a unit multiple of the Notional Quantity that can be exercised, i.e. only integer multiples of this Notional Quantity can be exercised.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The integral multiple quantity defines a lower limit of the Notional Quantity that can be exercised and also defines a unit multiple of the Notional Quantity that can be exercised, i.e. only integer multiples of this Notional Quantity can be exercised.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="minimumNotionalQuantity" type="CommodityNotionalQuantity">
@@ -1213,7 +1333,9 @@
         <xsd:sequence>
           <xsd:element name="reinvestmentFeature" type="xsd:boolean">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">This element indicates whether the notional amount (or equivalent) is constant across each Calculation Period or whether the notional amount in each Calculation Period ("false") is the notional amount in the previous period multiplied by 1 + commodity index return in the current period ("true"). In cases where reinstementFeature = true the 'amount' element is the Initial Notional Amount (or equivalent).</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >This element indicates whether the notional amount (or equivalent) is constant across each Calculation Period or whether the notional amount in each Calculation Period ("false") is the notional amount in the previous period multiplied by 1 + commodity index return in the current period ("true"). In cases where reinstementFeature = true the 'amount' element is the Initial Notional Amount (or equivalent).</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
@@ -1255,24 +1377,32 @@
   </xsd:complexType>
   <xsd:complexType name="CommodityNotionalQuantitySchedule">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">The Notional Quantity per Calculation Period. There must be a Notional Quantity step specified for each Calculation Period, regardless of whether the Notional Quantity changes or remains the same between periods.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >The Notional Quantity per Calculation Period. There must be a Notional Quantity step specified for each Calculation Period, regardless of whether the Notional Quantity changes or remains the same between periods.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:choice>
         <xsd:element name="notionalStep" type="CommodityNotionalQuantity" maxOccurs="unbounded">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">The Notional Quantity per Calculation Period. There must be a Notional Quantity specified for each Calculation Period, regardless of whether the quantity changes or remains the same between periods.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >The Notional Quantity per Calculation Period. There must be a Notional Quantity specified for each Calculation Period, regardless of whether the quantity changes or remains the same between periods.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="settlementPeriodsNotionalQuantitySchedule" type="CommoditySettlementPeriodsNotionalQuantitySchedule" maxOccurs="unbounded">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">For an electricity transaction, the Notional Quantity schedule for a one or more groups of Settlement Periods to which the Notional Quantity is based. If the schedule differs for different groups of Settlement Periods, this element should be repeated.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >For an electricity transaction, the Notional Quantity schedule for a one or more groups of Settlement Periods to which the Notional Quantity is based. If the schedule differs for different groups of Settlement Periods, this element should be repeated.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
       </xsd:choice>
       <xsd:group ref="CommodityCalculationPeriodsPointer.model">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Enables users to reference a Calculation Periods schedule in the form of a series of actual dates in a calculationPeriods container or in the form of a parameterised schedule in a calculationPeriodsSchedule container.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Enables users to reference a Calculation Periods schedule in the form of a series of actual dates in a calculationPeriods container or in the form of a parameterised schedule in a calculationPeriodsSchedule container.</xsd:documentation>
         </xsd:annotation>
       </xsd:group>
     </xsd:sequence>
@@ -1280,7 +1410,9 @@
   </xsd:complexType>
   <xsd:complexType name="CommodityOption">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">Defines a commodity option product type. The product support for financially-settled exercises or exercise into physical forward contracts written on precious and non-precious metals. options in FpML is based on the creation of a 'commodityOption' product. The product references the 'commodity' underlyer in order to support the underlying asset of the option.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >Defines a commodity option product type. The product support for financially-settled exercises or exercise into physical forward contracts written on precious and non-precious metals. options in FpML is based on the creation of a 'commodityOption' product. The product references the 'commodity' underlyer in order to support the underlying asset of the option.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="Product">
@@ -1308,7 +1440,9 @@
             </xsd:group>
             <xsd:group ref="CommodityWeatherOption.model">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">Described Weather Index Option component. Weather Index Option transactions are OTC derivative transactions which settle financially based on an index calculated from observations of temperature and precipitation at weather stations throughout the world. Sub-Annex C of the 2005 ISDA Commodity Definitions provides definitions and terms for a number of types of weather indices. These indices include: HDD (heating degree days), CDD (cooling degree days), CPD (critical precipitation days). Weather Index Option Transactions results in a cash flow to the buyer depending on the relationship between the Settlement Level to the Weather Index Strike Level.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >Described Weather Index Option component. Weather Index Option transactions are OTC derivative transactions which settle financially based on an index calculated from observations of temperature and precipitation at weather stations throughout the world. Sub-Annex C of the 2005 ISDA Commodity Definitions provides definitions and terms for a number of types of weather indices. These indices include: HDD (heating degree days), CDD (cooling degree days), CPD (critical precipitation days). Weather Index Option Transactions results in a cash flow to the buyer depending on the relationship between the Settlement Level to the Weather Index Strike Level.</xsd:documentation>
               </xsd:annotation>
             </xsd:group>
           </xsd:choice>
@@ -1317,7 +1451,7 @@
               <xsd:documentation xml:lang="en">The option premium payable by the buyer to the seller.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-          <xsd:group ref="CommodityContent.model" minOccurs="0"></xsd:group>
+          <xsd:group ref="CommodityContent.model" minOccurs="0" />
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
@@ -1334,7 +1468,9 @@
   </xsd:complexType>
   <xsd:complexType name="CommodityPerformanceSwap">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A type describing a commodity performance swap in which one leg pays out based on the return on a reference commodity index or commodity reference price.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A type describing a commodity performance swap in which one leg pays out based on the return on a reference commodity index or commodity reference price.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="CommodityPerformanceSwapBase">
@@ -1357,7 +1493,9 @@
         <xsd:sequence>
           <xsd:element name="effectiveDate" type="AdjustableOrRelativeDate" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Specifies the Eeffective Date of the swap. It is an optional element because not all confirmations of total return swaps specify an Effective Date. In these cases the Term of the contract begins on the Trade Date.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >Specifies the Eeffective Date of the swap. It is an optional element because not all confirmations of total return swaps specify an Effective Date. In these cases the Term of the contract begins on the Trade Date.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="terminationDate" type="AdjustableOrRelativeDate">
@@ -1367,7 +1505,9 @@
           </xsd:element>
           <xsd:element name="settlementCurrency" type="IdentifiedCurrency" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">The currency in which the commodity performance swap transaction will settle. It is an optional element because not all confirmations of performance swaps specify a Settlement Currency.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >The currency in which the commodity performance swap transaction will settle. It is an optional element because not all confirmations of performance swaps specify a Settlement Currency.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element ref="commodityPerformanceSwapLeg" maxOccurs="2">
@@ -1375,7 +1515,7 @@
               <xsd:documentation xml:lang="en">An placeholder for the actual performance swap leg definitions.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-          <xsd:group ref="CommodityContent.model" minOccurs="0"></xsd:group>
+          <xsd:group ref="CommodityContent.model" minOccurs="0" />
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
@@ -1437,7 +1577,9 @@
           </xsd:choice>
           <xsd:element name="latestExerciseTime" type="PrevailingTime" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">For a Bermuda or American style option, the latest time on an exercise business day (excluding the expiration date) within the exercise period that notice can be given by the buyer to the seller or seller's agent. Notice of exercise given after this time will be deemed to have been given on the next exercise business day.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >For a Bermuda or American style option, the latest time on an exercise business day (excluding the expiration date) within the exercise period that notice can be given by the buyer to the seller or seller's agent. Notice of exercise given after this time will be deemed to have been given on the next exercise business day.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="expirationTime" type="PrevailingTime" minOccurs="0">
@@ -1536,12 +1678,16 @@
   </xsd:complexType>
   <xsd:complexType name="CommodityPhysicalQuantitySchedule">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">The Quantity per Delivery Period. There must be a Quantity step specified for each Delivery Period, regardless of whether the Quantity changes or remains the same between periods.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >The Quantity per Delivery Period. There must be a Quantity step specified for each Delivery Period, regardless of whether the Quantity changes or remains the same between periods.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="quantityStep" type="CommodityNotionalQuantity" maxOccurs="unbounded">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The quantity per Calculation Period. There must be a quantity specified for each Calculation Period, regardless of whether the quantity changes or remains the same between periods.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The quantity per Calculation Period. There must be a quantity specified for each Calculation Period, regardless of whether the quantity changes or remains the same between periods.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:group ref="CommodityDeliveryPeriodsPointer.model" />
@@ -1607,13 +1753,17 @@
               </xsd:element>
               <xsd:element name="calendarSource" type="CalendarSourceEnum" minOccurs="0">
                 <xsd:annotation>
-                  <xsd:documentation xml:lang="en">Used in conjunction with an exchange-based pricing source. Identifies a date source calendar from which the pricing dates and thus roll to the next contract will be based off (e.g. pricing is based on the NYMEX WTI First Nearby Futures Contract, if “Future” is chosen, the pricing will roll to the next futures contract on expiration, if “ListedOption” is chosen, the pricing will roll to the next futures contract on the Option expiration date which is three business days before the expiration of the NYMEX WTI futures contract.) Omitting this element will result in the default behavior expected with the pricing source described within the commodity element.</xsd:documentation>
+                  <xsd:documentation
+                                        xml:lang="en"
+                                    >Used in conjunction with an exchange-based pricing source. Identifies a date source calendar from which the pricing dates and thus roll to the next contract will be based off (e.g. pricing is based on the NYMEX WTI First Nearby Futures Contract, if “Future” is chosen, the pricing will roll to the next futures contract on expiration, if “ListedOption” is chosen, the pricing will roll to the next futures contract on the Option expiration date which is three business days before the expiration of the NYMEX WTI futures contract.) Omitting this element will result in the default behavior expected with the pricing source described within the commodity element.</xsd:documentation>
                 </xsd:annotation>
               </xsd:element>
             </xsd:sequence>
             <xsd:element name="settlementPeriods" type="SettlementPeriods" maxOccurs="unbounded">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">Specifies a set of Settlement Periods associated with an Electricity Transaction for delivery on an Applicable Day or for a series of Applicable Days.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >Specifies a set of Settlement Periods associated with an Electricity Transaction for delivery on an Applicable Day or for a series of Applicable Days.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
             <xsd:element name="settlementPeriodsReference" type="SettlementPeriodsReference" maxOccurs="unbounded">
@@ -1679,7 +1829,9 @@
       <xsd:choice>
         <xsd:element name="payRelativeTo" type="CommodityPayRelativeToEnum">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">Specifies whether the payment(s) occur relative to a date such as the end of each Calculation Period or the last Pricing Date in each Calculation Period.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >Specifies whether the payment(s) occur relative to a date such as the end of each Calculation Period or the last Pricing Date in each Calculation Period.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="payRelativeToEvent" type="CommodityPayRelativeToEvent">
@@ -1691,7 +1843,9 @@
       <xsd:group ref="CommodityCalculationPeriodsPointer.model" />
       <xsd:element name="paymentDaysOffset" type="DateOffset">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Specifies any offset from the adjusted Calculation Period start date, adjusted Calculation Period end date or Calculation Date applicable to each Payment Date.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Specifies any offset from the adjusted Calculation Period start date, adjusted Calculation Period end date or Calculation Date applicable to each Payment Date.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:group ref="BusinessCentersOrReference.model" minOccurs="0" />
@@ -1717,7 +1871,9 @@
       </xsd:element>
       <xsd:element minOccurs="0" name="initialPrice" type="xsd:decimal">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">If specified in the confirmation, the price or index level at the beginning of the initial Calculation Period. For example, if the return calculation is [(Index End / Index Begin) - 1] and Index Begin is defined as equal to Index End for the immediately preceeding Calculation Period, then the value of Index Begin in the very first Calculation Period is not defined and is usually specified in the confirmation.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >If specified in the confirmation, the price or index level at the beginning of the initial Calculation Period. For example, if the return calculation is [(Index End / Index Begin) - 1] and Index Begin is defined as equal to Index End for the immediately preceeding Calculation Period, then the value of Index Begin in the very first Calculation Period is not defined and is usually specified in the confirmation.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -1739,7 +1895,9 @@
           <xsd:choice>
             <xsd:element name="notionalAmount" type="CommodityNotionalAmount">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">Specifies the notional amount of a commodity performance type swap. It is a currency-denominated value (i.e. price-times-quantity). In confirmations is also referred to as the Notional Quantity (sic, expressed in currency units), Notional Amount, Equity Notional Amount and, in the case of reinvesting swaps, Initial Notional Amount.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >Specifies the notional amount of a commodity performance type swap. It is a currency-denominated value (i.e. price-times-quantity). In confirmations is also referred to as the Notional Quantity (sic, expressed in currency units), Notional Amount, Equity Notional Amount and, in the case of reinvesting swaps, Initial Notional Amount.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
             <xsd:element name="notionalAmountReference" type="CommodityNotionalAmountReference">
@@ -1750,7 +1908,9 @@
           </xsd:choice>
           <xsd:element name="commodityReturnCalculation" type="CommodityReturnCalculation">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Specifies, in relation to each Payment Date, the return percentage which, when multiplied times the notional amount is the amount to which the Payment Date relates.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >Specifies, in relation to each Payment Date, the return percentage which, when multiplied times the notional amount is the amount to which the Payment Date relates.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
@@ -1780,7 +1940,9 @@
     <xsd:sequence>
       <xsd:element name="settlementPeriodsNotionalQuantityStep" type="CommodityNotionalQuantity" maxOccurs="unbounded">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">For an electricity transaction, the Notional Quantity for a given Calculation Period during the life of the trade which applies to the range(s) of Settlement Periods referenced by settlementPeriodsReference. There must be a settlementPeriodsNotionalQuantityStep specified for each Calculation Period, regardless of whether the NotionalQuantity changes or remains the same between periods.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >For an electricity transaction, the Notional Quantity for a given Calculation Period during the life of the trade which applies to the range(s) of Settlement Periods referenced by settlementPeriodsReference. There must be a settlementPeriodsNotionalQuantityStep specified for each Calculation Period, regardless of whether the NotionalQuantity changes or remains the same between periods.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="settlementPeriodsReference" type="SettlementPeriodsReference" maxOccurs="unbounded">
@@ -1797,7 +1959,9 @@
     <xsd:sequence>
       <xsd:element name="settlementPeriodsPriceStep" type="FixedPrice" maxOccurs="unbounded">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">For an electricity transaction, the Fixed Price for a given Calculation Period during the life of the trade which applies to the range(s) of Settlement Periods referenced by settlementPeriods Reference. There must be a Fixed Price step specified for each Calculation Period, regardless of whether the Fixed Price changes or remains the same between periods.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >For an electricity transaction, the Fixed Price for a given Calculation Period during the life of the trade which applies to the range(s) of Settlement Periods referenced by settlementPeriods Reference. There must be a Fixed Price step specified for each Calculation Period, regardless of whether the Fixed Price changes or remains the same between periods.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="settlementPeriodsReference" type="SettlementPeriodsReference" maxOccurs="unbounded">
@@ -1813,12 +1977,16 @@
         <xsd:sequence>
           <xsd:element name="spreadConversionFactor" type="xsd:decimal" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">spreadConversionFactor should be used when the unit of measure of the Commodity Reference Price and the unit of measure in which the spread is quoted are different. The value of spreadConversionFactor is the number of units of measure in which the spread is quoted per unit of measure of the Commodity Reference Price.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >spreadConversionFactor should be used when the unit of measure of the Commodity Reference Price and the unit of measure in which the spread is quoted are different. The value of spreadConversionFactor is the number of units of measure in which the spread is quoted per unit of measure of the Commodity Reference Price.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="spreadUnit" type="QuantityUnit" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">spreadUnit should be used when the unit of measure of the Commodity Reference Price and the unit of measure in which the spread is quoted are different. The value of spreadUnit is the unit of measure in which the spread is quoted.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >spreadUnit should be used when the unit of measure of the Commodity Reference Price and the unit of measure in which the spread is quoted are different. The value of spreadUnit is the unit of measure in which the spread is quoted.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
@@ -1827,12 +1995,16 @@
   </xsd:complexType>
   <xsd:complexType name="CommoditySpreadSchedule">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">The Spread per Calculation Period. There must be a Spread specified for each Calculation Period, regardless of whether the Spread changes or remains the same between periods.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >The Spread per Calculation Period. There must be a Spread specified for each Calculation Period, regardless of whether the Spread changes or remains the same between periods.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="spreadStep" type="CommoditySpread" maxOccurs="unbounded">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The spread per Calculation Period. There must be a spread step specified for each Calculation Period, regardless of whether the spread changes or remains the same between periods.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The spread per Calculation Period. There must be a spread step specified for each Calculation Period, regardless of whether the spread changes or remains the same between periods.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:group ref="CommodityCalculationPeriodsPointer.model" />
@@ -1857,12 +2029,16 @@
   </xsd:complexType>
   <xsd:complexType name="CommodityStrikeSchedule">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">The Strike Price per Unit per Calculation Period. There must be a Strike Price per Unit step specified for each Calculation Period, regardless of whether the Strike changes or remains the same between periods.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >The Strike Price per Unit per Calculation Period. There must be a Strike Price per Unit step specified for each Calculation Period, regardless of whether the Strike changes or remains the same between periods.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="strikePricePerUnitStep" type="NonNegativeMoney" maxOccurs="unbounded">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The strike price per unit per Calculation Period. There must be a strike price per unit specified for each Calculation Period, regardless of whether the price changes or remains the same between periods.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The strike price per unit per Calculation Period. There must be a strike price per unit specified for each Calculation Period, regardless of whether the price changes or remains the same between periods.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:group ref="CommodityCalculationPeriodsPointer.model" />
@@ -1870,7 +2046,9 @@
   </xsd:complexType>
   <xsd:complexType name="CommoditySwap">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">The commodity swap product model is designed to support fixed-float swaps, float-float swaps, fixed vs. physical swaps, float vs. physical swaps as well as, weather specific swaps. Its design is fully compatible with other FpML products and the product reuses standard common types.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >The commodity swap product model is designed to support fixed-float swaps, float-float swaps, fixed vs. physical swaps, float vs. physical swaps as well as, weather specific swaps. Its design is fully compatible with other FpML products and the product reuses standard common types.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="Product">
@@ -1920,7 +2098,7 @@
               <xsd:documentation xml:lang="en">The option premium payable by the buyer to the seller.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-          <xsd:group ref="CommodityContent.model" minOccurs="0"></xsd:group>
+          <xsd:group ref="CommodityContent.model" minOccurs="0" />
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
@@ -1939,7 +2117,9 @@
         <xsd:sequence>
           <xsd:element name="levelQuantity" type="xsd:decimal">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">The amount used the specify the barrier in terms of an quantity of commodity or a change in the quantity of commodity. In confirmations this is often described as the "Strike Volume" or "Strike Quantity".</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >The amount used the specify the barrier in terms of an quantity of commodity or a change in the quantity of commodity. In confirmations this is often described as the "Strike Volume" or "Strike Quantity".</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="levelUnit" type="QuantityUnit">
@@ -1961,7 +2141,9 @@
       </xsd:choice>
       <xsd:element name="triggerType" type="TriggerTypeEnum">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">For barrier options: the specification of how an option will trigger or expire based on the position of the spot rate relative to the trigger level. For trades with selectable notionals: the specification of the conditions where one of the alternative notional values would apply.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >For barrier options: the specification of how an option will trigger or expire based on the position of the spot rate relative to the trigger level. For trades with selectable notionals: the specification of the conditions where one of the alternative notional values would apply.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -1989,13 +2171,17 @@
               </xsd:element>
               <xsd:element name="calendarSource" type="CalendarSourceEnum" minOccurs="0">
                 <xsd:annotation>
-                  <xsd:documentation xml:lang="en">Used in conjunction with an exchange-based pricing source. Identifies a date source calendar from which the pricing dates and thus roll to the next contract will be based off (e.g. pricing is based on the NYMEX WTI First Nearby Futures Contract, if “Future” is chosen, the pricing will roll to the next futures contract on expiration, if “ListedOption” is chosen, the pricing will roll to the next futures contract on the Option expiration date which is three business days before the expiration of the NYMEX WTI futures contract.) Omitting this element will result in the default behavior expected with the pricing source described within the commodity element.</xsd:documentation>
+                  <xsd:documentation
+                                        xml:lang="en"
+                                    >Used in conjunction with an exchange-based pricing source. Identifies a date source calendar from which the pricing dates and thus roll to the next contract will be based off (e.g. pricing is based on the NYMEX WTI First Nearby Futures Contract, if “Future” is chosen, the pricing will roll to the next futures contract on expiration, if “ListedOption” is chosen, the pricing will roll to the next futures contract on the Option expiration date which is three business days before the expiration of the NYMEX WTI futures contract.) Omitting this element will result in the default behavior expected with the pricing source described within the commodity element.</xsd:documentation>
                 </xsd:annotation>
               </xsd:element>
             </xsd:sequence>
             <xsd:element name="settlementPeriods" type="SettlementPeriods" maxOccurs="unbounded">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">Specifies a set of Settlement Periods associated with an Electricity Transaction for delivery on an Applicable Day or for a series of Applicable Days.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >Specifies a set of Settlement Periods associated with an Electricity Transaction for delivery on an Applicable Day or for a series of Applicable Days.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
             <xsd:element name="settlementPeriodsReference" type="SettlementPeriodsReference" maxOccurs="unbounded">
@@ -2031,7 +2217,9 @@
           <xsd:choice>
             <xsd:element name="notionalAmount" type="CommodityNotionalAmount">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">Specifies the notional amount of a commodity performance type swap. It is a currency-denominated value (i.e. price-times-quantity). In confirmations is also referred to as the Notional Quantity (sic, expressed in currency units), Notional Amount, Equity Notional Amount and, in the case of reinvesting swaps, Initial Notional Amount.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >Specifies the notional amount of a commodity performance type swap. It is a currency-denominated value (i.e. price-times-quantity). In confirmations is also referred to as the Notional Quantity (sic, expressed in currency units), Notional Amount, Equity Notional Amount and, in the case of reinvesting swaps, Initial Notional Amount.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
             <xsd:element name="notionalAmountReference" type="CommodityNotionalAmountReference">
@@ -2043,18 +2231,24 @@
           <xsd:choice>
             <xsd:element name="varianceStrikePrice" type="xsd:decimal">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">Specifies the variance strike price when this strike is expressed in variance units. Payments on the variance leg are equal to the national amount multiplied by the realized variance minus this variance strike price: notional amount * (realized variance - variance strike price).</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >Specifies the variance strike price when this strike is expressed in variance units. Payments on the variance leg are equal to the national amount multiplied by the realized variance minus this variance strike price: notional amount * (realized variance - variance strike price).</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
             <xsd:element name="volatilityStrikePrice" type="xsd:decimal">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">Specifies the volatility strike price when this strike is expressed in standard deviation units. Payments on the variance leg are equal to the national amount multiplied by the realized volatility squared minus the volatility strike price squared. Notional amount * (realized volatility^2 - volatility strike^2). Squaring the volatility strike price converts the volatility strike price into a variance strike price. Squaring the realized volatility converts realized volatility to realized variance.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >Specifies the volatility strike price when this strike is expressed in standard deviation units. Payments on the variance leg are equal to the national amount multiplied by the realized volatility squared minus the volatility strike price squared. Notional amount * (realized volatility^2 - volatility strike^2). Squaring the volatility strike price converts the volatility strike price into a variance strike price. Squaring the realized volatility converts realized volatility to realized variance.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
           </xsd:choice>
           <xsd:element name="varianceCalculation" type="CommodityVarianceCalculation">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Specifies, in relation to each Payment Date, the variance percentage which, when multiplied times the notional amount is the amount to which the Payment Date relates. For purposes of this representation the realized variance is: (annualizationFactor / N) * signma from i = 1 to N (ln (S sub (i+1)) / (S sub i)), where: ln is the natural logarithm, N is the number of pricing dates, S sub i is the relevant price on the observation date i. If nAdjustment is 'true' then the denominator of the annualization factor is (N - 1) rather than N. If realized volatility is the performance metric in a variance swap rather than realized variance then the square root of the formula above will appear in the confirmation.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >Specifies, in relation to each Payment Date, the variance percentage which, when multiplied times the notional amount is the amount to which the Payment Date relates. For purposes of this representation the realized variance is: (annualizationFactor / N) * signma from i = 1 to N (ln (S sub (i+1)) / (S sub i)), where: ln is the natural logarithm, N is the number of pricing dates, S sub i is the relevant price on the observation date i. If nAdjustment is 'true' then the denominator of the annualization factor is (N - 1) rather than N. If realized volatility is the performance metric in a variance swap rather than realized variance then the square root of the formula above will appear in the confirmation.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
@@ -2075,7 +2269,9 @@
       </xsd:element>
       <xsd:element name="annualizationFactor" type="xsd:decimal">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">This specifies the numerator of an annualization factor. Frequently this number is equal to the number of observations of prices in a year e.g. 252.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >This specifies the numerator of an annualization factor. Frequently this number is equal to the number of observations of prices in a year e.g. 252.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="nAdjustment" type="xsd:boolean">
@@ -2087,7 +2283,9 @@
   </xsd:complexType>
   <xsd:complexType name="DataProvider">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">Specify as applicable. Parties may wish to refer to the state meteorological authority in a particular location or to an exchange or other third party data provider. Parties may find the definitions in the Commodity Definitions useful as a means of identifying potential Data Providers.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >Specify as applicable. Parties may wish to refer to the state meteorological authority in a particular location or to an exchange or other third party data provider. Parties may find the definitions in the Commodity Definitions useful as a means of identifying potential Data Providers.</xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
       <xsd:extension base="Scheme">
@@ -2113,7 +2311,9 @@
     <xsd:sequence>
       <xsd:element name="eEPApplicable" type="xsd:boolean">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">If Excess Emission Penalty is specified to be applicable in the Confirmation then the Excess Emission Penalty will be determined in the manner specified in the Confirmation (see other EEP parameters)</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >If Excess Emission Penalty is specified to be applicable in the Confirmation then the Excess Emission Penalty will be determined in the manner specified in the Confirmation (see other EEP parameters)</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="riskPeriod" type="EEPRiskPeriod">
@@ -2160,7 +2360,9 @@
         </xsd:element>
         <xsd:element name="transmissionContingency" type="ElectricityTransmissionContingency" minOccurs="0">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">Indicates that the performance of the buyer or seller shall be excused (under the conditions specified) if transmission of the elctricity is unavailable or interrupted.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >Indicates that the performance of the buyer or seller shall be excused (under the conditions specified) if transmission of the elctricity is unavailable or interrupted.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="interconnectionPoint" type="InterconnectionPoint" minOccurs="0">
@@ -2180,7 +2382,9 @@
         </xsd:element>
         <xsd:element name="electingPartyReference" type="PartyReference" minOccurs="0">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">Indicates the party able to decide which delivery point within the deliveryPoint is used for delivery. For EEI transactions, this should reference the seller of the electricity.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >Indicates the party able to decide which delivery point within the deliveryPoint is used for delivery. For EEI transactions, this should reference the seller of the electricity.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
       </xsd:sequence>
@@ -2193,7 +2397,9 @@
     <xsd:sequence>
       <xsd:element name="forceMajeure" type="xsd:boolean">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">If true, indicates that the buyer and seller should be excused of their delivery obligations when such performance is prevented by Force Majeure. For EEI transactions, this would indicate "Firm (LD)" If false, indicates that the buyer and seller should not be excused of their delivery obligations when such performance is prevented by Force Majeure. For EEI transactions, this would indicate "Firm (No Force Majeure)"</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >If true, indicates that the buyer and seller should be excused of their delivery obligations when such performance is prevented by Force Majeure. For EEI transactions, this would indicate "Firm (LD)" If false, indicates that the buyer and seller should not be excused of their delivery obligations when such performance is prevented by Force Majeure. For EEI transactions, this would indicate "Firm (No Force Majeure)"</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -2230,12 +2436,16 @@
       </xsd:element>
       <xsd:element name="nonFirm" type="xsd:boolean">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">If present and set to true, indicates that delivery or receipt of the electricity may be interrupted for any reason or for no reason, without liability on the part of either Party. This element should never have a value of false.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >If present and set to true, indicates that delivery or receipt of the electricity may be interrupted for any reason or for no reason, without liability on the part of either Party. This element should never have a value of false.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="systemFirm" type="ElectricityDeliverySystemFirm">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Indicates that the electricity is intended to be supplied from the owned or controlled generation or pre-existing purchased power assets of the system specified.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Indicates that the electricity is intended to be supplied from the owned or controlled generation or pre-existing purchased power assets of the system specified.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="unitFirm" type="ElectricityDeliveryUnitFirm">
@@ -2299,22 +2509,30 @@
         <xsd:sequence>
           <xsd:element name="deliveryPeriods" type="CommodityDeliveryPeriods">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">The different options for specifying the Delivery or Supply Periods. Unless the quantity or price is to vary periodically during the trade or physical delivery occurs on a periodic basis, periodsSchedule should be used and set to 1T.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >The different options for specifying the Delivery or Supply Periods. Unless the quantity or price is to vary periodically during the trade or physical delivery occurs on a periodic basis, periodsSchedule should be used and set to 1T.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="settlementPeriods" type="SettlementPeriods" maxOccurs="unbounded">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">The specification of the Settlement Periods in which the electricity will be delivered. The Settlement Periods will apply from and including the Effective Date up to and including the Termination Date. If more than one settlementPeriods element is present this indicates multiple ranges of Settlement Periods apply to the entire trade - for example off-peak weekdays and all day weekends. Settlement Period ranges should not overlap.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >The specification of the Settlement Periods in which the electricity will be delivered. The Settlement Periods will apply from and including the Effective Date up to and including the Termination Date. If more than one settlementPeriods element is present this indicates multiple ranges of Settlement Periods apply to the entire trade - for example off-peak weekdays and all day weekends. Settlement Period ranges should not overlap.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="settlementPeriodsSchedule" type="SettlementPeriodsSchedule" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">The specification of the Settlement Periods in which the electricity will be delivered for a "shaped" trade i.e. where different Settlement Period ranges will apply to different periods of the trade.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >The specification of the Settlement Periods in which the electricity will be delivered for a "shaped" trade i.e. where different Settlement Period ranges will apply to different periods of the trade.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="loadType" type="LoadTypeEnum" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">LoadType is a summary of the full description of the settlement periods with respect to the region. Used for describing Electricity delivery schedules (e.g. Base, Peak, Off-Peak, Custom).</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >LoadType is a summary of the full description of the settlement periods with respect to the region. Used for describing Electricity delivery schedules (e.g. Base, Peak, Off-Peak, Custom).</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="electricity" type="ElectricityProduct">
@@ -2351,7 +2569,9 @@
             </xsd:element>
             <xsd:element name="physicalQuantitySchedule" type="ElectricityPhysicalDeliveryQuantitySchedule" maxOccurs="unbounded">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">Allows the documentation of a shaped quantity trade where the quantity changes over the life of the transaction. Note that if the range of Settlement Periods also varies over the life of the transaction this element should not be used. Instead, physicalQuantity should be repeated for each range of Settlement Periods that apply at any point during the trade.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >Allows the documentation of a shaped quantity trade where the quantity changes over the life of the transaction. Note that if the range of Settlement Periods also varies over the life of the transaction this element should not be used. Instead, physicalQuantity should be repeated for each range of Settlement Periods that apply at any point during the trade.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
           </xsd:choice>
@@ -2412,7 +2632,9 @@
     <xsd:complexContent>
       <xsd:extension base="PhysicalSwapLeg">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The environmental physical leg describes the nature of the physical underlying, quantities and delivery conditions relating to environmental allowances and certificates such as EU emissions allowances, water pollution credits and the like.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The environmental physical leg describes the nature of the physical underlying, quantities and delivery conditions relating to environmental allowances and certificates such as EU emissions allowances, water pollution credits and the like.</xsd:documentation>
         </xsd:annotation>
         <xsd:sequence>
           <xsd:element name="numberOfAllowances" type="UnitQuantity">
@@ -2441,7 +2663,9 @@
           </xsd:sequence>
           <xsd:element name="failureToDeliverApplicable" type="xsd:boolean" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Applies to EU Emissions Allowance Transactions. Holds the Failure to Deliver (Alternative Method) election. Used to determine how provisions in Part [7] Page 7 (B) Failure to Deliver Not Remedied are to be applied.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >Applies to EU Emissions Allowance Transactions. Holds the Failure to Deliver (Alternative Method) election. Used to determine how provisions in Part [7] Page 7 (B) Failure to Deliver Not Remedied are to be applied.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="eEPParameters" type="EEPParameters" minOccurs="0">
@@ -2455,12 +2679,16 @@
   </xsd:complexType>
   <xsd:complexType name="EnvironmentalProduct">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A type defining the characteristics of the environmental allowance or credit being traded. Settlement of environmental transactions is classified as physical because settlement is accomplished through the exchange of one or more certificates (despite the fact that this exchange is almost always executed through electronic book entry transfer between the parties allowance accounts).</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A type defining the characteristics of the environmental allowance or credit being traded. Settlement of environmental transactions is classified as physical because settlement is accomplished through the exchange of one or more certificates (despite the fact that this exchange is almost always executed through electronic book entry transfer between the parties allowance accounts).</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="productType" type="EnvironmentalProductTypeEnum">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Specifies the type of environmental allowance or credit. Examples include allowances or credit issued by the European Union (E.U.) or by the State of California in the Unites States.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Specifies the type of environmental allowance or credit. Examples include allowances or credit issued by the European Union (E.U.) or by the State of California in the Unites States.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="compliancePeriod" type="EnvironmentalProductComplaincePeriod" minOccurs="0">
@@ -2475,12 +2703,16 @@
       </xsd:element>
       <xsd:element name="applicableLaw" type="EnvironmentalProductApplicableLaw" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Applies to U.S. Emissions Allowance Transactions. Used to specify the Applicable Emissions Law when this is not defined in Emissions Product Definitions Exhibit.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Applies to U.S. Emissions Allowance Transactions. Used to specify the Applicable Emissions Law when this is not defined in Emissions Product Definitions Exhibit.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="trackingSystem" type="EnvironmentalTrackingSystem" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Applies to U.S. Emissions Allowance Transactions. Used to specify the Tracking System when this is not defined in Emissions Product Definitions Exhibit.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Applies to U.S. Emissions Allowance Transactions. Used to specify the Tracking System when this is not defined in Emissions Product Definitions Exhibit.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -2556,7 +2788,7 @@
           <xsd:group ref="CommodityFixedPrice.model" />
           <xsd:group ref="CommodityNotionalQuantity.model" />
           <xsd:group ref="CommodityPaymentDates.model" />
-          <xsd:group ref="CommodityFreightFlatRate.model" minOccurs="0"></xsd:group>
+          <xsd:group ref="CommodityFreightFlatRate.model" minOccurs="0" />
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
@@ -2578,7 +2810,9 @@
       </xsd:element>
       <xsd:element name="conversionFactor" type="xsd:decimal" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">If the Notional Quantity is specified in units that do not match the units in which the Commodity Reference Price is quoted, the scaling or conversion factor used to convert the Commodity Reference Price units into the Notional Quantity units should be stated here. If there is no conversion, this element is not intended to be used.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >If the Notional Quantity is specified in units that do not match the units in which the Commodity Reference Price is quoted, the scaling or conversion factor used to convert the Commodity Reference Price units into the Notional Quantity units should be stated here. If there is no conversion, this element is not intended to be used.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="rounding" type="Rounding" minOccurs="0">
@@ -2605,14 +2839,18 @@
       </xsd:choice>
       <xsd:element name="fx" type="CommodityFx" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Defines how observations of FX prices are to be used to calculate a factor with which to convert the observed Commodity Reference Price to the Settlement Currency.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Defines how observations of FX prices are to be used to calculate a factor with which to convert the observed Commodity Reference Price to the Settlement Currency.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="FloatingPriceLeg">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">Floating Price Leg of a Commodity Swap. Each 'floatingLeg' defines a series of financial payments for a commodity the value of which is derived from a floating price such as an exchange or an index publication.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >Floating Price Leg of a Commodity Swap. Each 'floatingLeg' defines a series of financial payments for a commodity the value of which is derived from a floating price such as an exchange or an index publication.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="FinancialSwapLeg">
@@ -2630,7 +2868,7 @@
             </xsd:annotation>
           </xsd:element>
           <xsd:group ref="CommodityPaymentDates.model" />
-          <xsd:group ref="CommodityFreightFlatRate.model" minOccurs="0"></xsd:group>
+          <xsd:group ref="CommodityFreightFlatRate.model" minOccurs="0" />
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
@@ -2714,7 +2952,9 @@
         <xsd:sequence>
           <xsd:element name="deliveryPeriods" type="GasDeliveryPeriods">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">The different options for specifying the Delivery or Supply Periods. Unless the quantity or price is to vary periodically during the trade or physical delivery occurs on a periodic basis, periodsSchedule should be used and set to 1T.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >The different options for specifying the Delivery or Supply Periods. Unless the quantity or price is to vary periodically during the trade or physical delivery occurs on a periodic basis, periodsSchedule should be used and set to 1T.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="gas" type="GasProduct">
@@ -2729,7 +2969,9 @@
           </xsd:element>
           <xsd:element name="deliveryQuantity" type="GasPhysicalQuantity">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">The different options for specifying the quantity. For Fixed trades where the quantity is known at the time of confirmation, a single quantity or a quantity per Delivery Period may be specified. For Variable trades minimum and maximum trades may be specified.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >The different options for specifying the quantity. For Fixed trades where the quantity is known at the time of confirmation, a single quantity or a quantity per Delivery Period may be specified. For Variable trades minimum and maximum trades may be specified.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
@@ -2754,12 +2996,16 @@
             </xsd:annotation>
             <xsd:element name="minPhysicalQuantity" type="CommodityNotionalQuantity" maxOccurs="unbounded">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">The minimum quantity to be delivered. If separate minimums need to be specified for different periods (e.g. a minimum per day and a minimum per month) this element should be repeated.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >The minimum quantity to be delivered. If separate minimums need to be specified for different periods (e.g. a minimum per day and a minimum per month) this element should be repeated.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
             <xsd:element name="maxPhysicalQuantity" type="CommodityNotionalQuantity" maxOccurs="unbounded">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">The maximum quantity to be delivered. If separate minimums need to be specified for different periods (e.g. a minimum per day and a minimum per month) this element should be repeated.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >The maximum quantity to be delivered. If separate minimums need to be specified for different periods (e.g. a minimum per day and a minimum per month) this element should be repeated.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
             <xsd:element name="electingParty" type="PartyReference" minOccurs="0">
@@ -2808,7 +3054,9 @@
   </xsd:complexType>
   <xsd:complexType name="InterconnectionPoint">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">Identification of the border(s) or border point(s) of a transportation contract. Use the list of EIC codes for timelines for electricity (T Codes) or the list of EIC codes for measurement points for gas (Z Codes).</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >Identification of the border(s) or border point(s) of a transportation contract. Use the list of EIC codes for timelines for electricity (T Codes) or the list of EIC codes for measurement points for gas (Z Codes).</xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
       <xsd:extension base="Scheme">
@@ -2823,7 +3071,9 @@
     <xsd:sequence>
       <xsd:element name="lagDuration" type="Period">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The period during which observations will be made. If a firstObservationDateOffset is specified, the observation period will start the specified interval prior to each Calculation Period - i.e. if the firstObservationDateOffset is 4 months and the lagDuration is 3 months, observations will be taken in months 4,3 and 2 (but not 1) prior to each Calculation Period. If no firstObservationDate is specified, the observation period will end immediately preceding each Calculation Period.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The period during which observations will be made. If a firstObservationDateOffset is specified, the observation period will start the specified interval prior to each Calculation Period - i.e. if the firstObservationDateOffset is 4 months and the lagDuration is 3 months, observations will be taken in months 4,3 and 2 (but not 1) prior to each Calculation Period. If no firstObservationDate is specified, the observation period will end immediately preceding each Calculation Period.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="firstObservationDateOffset" type="Period" minOccurs="0">
@@ -2954,7 +3204,9 @@
           <xsd:group ref="CommodityFixedPhysicalQuantity.model" />
           <xsd:element name="conversionFactor" type="xsd:decimal" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">If the Notional Quantity is specified in a unit that does not match the unit in which the Commodity Reference Price is quoted, the scaling or conversion factor used to convert the Commodity Reference Price unit into the Notional Quantity unit should be stated here. If there is no conversion, this element is not intended to be used.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >If the Notional Quantity is specified in a unit that does not match the unit in which the Commodity Reference Price is quoted, the scaling or conversion factor used to convert the Commodity Reference Price unit into the Notional Quantity unit should be stated here. If there is no conversion, this element is not intended to be used.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
@@ -2963,7 +3215,9 @@
   </xsd:complexType>
   <xsd:complexType name="NonPeriodicFixedPriceLeg">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">The details of a fixed payment. Can be used for a forward transaction or as the base for a more complex fixed leg component such as the fixed leg of a swap.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >The details of a fixed payment. Can be used for a forward transaction or as the base for a more complex fixed leg component such as the fixed leg of a swap.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="CommoditySwapLeg">
@@ -3012,7 +3266,9 @@
       </xsd:choice>
       <xsd:element name="importerOfRecord" type="PartyReference" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Specifies which party is the Importer of Record for the purposes of paying customs duties and applicable taxes or costs related to the import of the oil product.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Specifies which party is the Importer of Record for the purposes of paying customs duties and applicable taxes or costs related to the import of the oil product.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:choice minOccurs="0">
@@ -3038,7 +3294,9 @@
         <xsd:sequence>
           <xsd:element name="deliveryPeriods" type="CommodityDeliveryPeriods">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">The different options for specifying the Delivery or Supply Periods. Unless the quantity or price is to vary periodically during the trade or physical delivery occurs on a periodic basis, periodsSchedule should be used and set to 1T.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >The different options for specifying the Delivery or Supply Periods. Unless the quantity or price is to vary periodically during the trade or physical delivery occurs on a periodic basis, periodsSchedule should be used and set to 1T.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="oil" type="OilProduct">
@@ -3082,12 +3340,16 @@
       </xsd:element>
       <xsd:element name="deliverableByBarge" type="xsd:boolean">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Whether or not the delivery can go to barge. For trades documented under the ISDA Master Agreement and Oil Annex, this should always be set to 'false'.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Whether or not the delivery can go to barge. For trades documented under the ISDA Master Agreement and Oil Annex, this should always be set to 'false'.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="risk" type="CommodityDeliveryRisk" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Specifies how the risk associated with the delivery is assigned. For trades documented under the ISDA Master Agreement and Oil Annex, this presence of this element indicates that the provisions of clause (b)(i) of the ISDA Oil Annex are being varied.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Specifies how the risk associated with the delivery is assigned. For trades documented under the ISDA Master Agreement and Oil Annex, this presence of this element indicates that the provisions of clause (b)(i) of the ISDA Oil Annex are being varied.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="cycle" type="CommodityPipelineCycle" minOccurs="0" maxOccurs="unbounded">
@@ -3242,7 +3504,9 @@
       </xsd:element>
       <xsd:element name="applicableDay" type="DayOfWeekExtEnum" minOccurs="0" maxOccurs="7">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Specifies the Applicable Day with respect to a range of Settlement Periods. This element can only be omitted if includesHolidays is present, in which case this range of Settlement Periods will apply to days that are holidays only.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Specifies the Applicable Day with respect to a range of Settlement Periods. This element can only be omitted if includesHolidays is present, in which case this range of Settlement Periods will apply to days that are holidays only.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:sequence>
@@ -3253,7 +3517,9 @@
         </xsd:element>
         <xsd:element name="endTime" type="OffsetPrevailingTime">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">Specifies the hour-ending End Time with respect to a range of Settlement Periods. If neither startTime nor endTime contain an offset element and endTime is earlier than startTime, this indicates that the time period "wraps around" midnight. For example, if startTime is 23:00 and endTime is 01:00 then Settlement Periods apply from 22:00 to 23:00 and 23:00 to 00:00 and 00:00 to 01:00 on each included day.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >Specifies the hour-ending End Time with respect to a range of Settlement Periods. If neither startTime nor endTime contain an offset element and endTime is earlier than startTime, this indicates that the time period "wraps around" midnight. For example, if startTime is 23:00 and endTime is 01:00 then Settlement Periods apply from 22:00 to 23:00 and 23:00 to 00:00 and 00:00 to 01:00 on each included day.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="timeDuration" type="xsd:time" minOccurs="0">
@@ -3265,12 +3531,16 @@
       <xsd:choice minOccurs="0">
         <xsd:element name="excludeHolidays" type="CommodityBusinessCalendar">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">Indicates that days that are holidays according to the referenced commodity business calendar should be excluded from this range of Settlement Periods, even if such day is an applicable day.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >Indicates that days that are holidays according to the referenced commodity business calendar should be excluded from this range of Settlement Periods, even if such day is an applicable day.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="includeHolidays" type="CommodityBusinessCalendar">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">Indicates that days that are holidays according to the referenced commodity business calendar should be included in this range of Settlement Periods, even if such day is not an applicable day.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >Indicates that days that are holidays according to the referenced commodity business calendar should be included in this range of Settlement Periods, even if such day is not an applicable day.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
       </xsd:choice>
@@ -3301,12 +3571,16 @@
   </xsd:complexType>
   <xsd:complexType name="SettlementPeriodsSchedule">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">The specification of the Settlement Periods in which the electricity will be delivered for a "shaped" trade i.e. where different Settlement Period ranges will apply to different periods of the trade.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >The specification of the Settlement Periods in which the electricity will be delivered for a "shaped" trade i.e. where different Settlement Period ranges will apply to different periods of the trade.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="settlementPeriodsStep" type="SettlementPeriodsStep" maxOccurs="unbounded">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The range of Settlement Periods per Calculation Period. There must be a range of Settlement Periods specified for each Calculation Period, regardless of whether the range of Settlement Periods changes or stays the same between periods.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The range of Settlement Periods per Calculation Period. There must be a range of Settlement Periods specified for each Calculation Period, regardless of whether the range of Settlement Periods changes or stays the same between periods.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:group ref="CommodityDeliveryPeriodsPointer.model" />
@@ -3319,7 +3593,9 @@
     <xsd:sequence>
       <xsd:element name="settlementPeriodsReference" type="SettlementPeriodsReference" maxOccurs="unbounded">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The specification of the Settlement Periods in which the electricity will be delivered. The Settlement Periods will apply for the duration of the appliable period. If more than one settlementPeriods element is present this indicates multiple ranges of Settlement Periods apply for the duration of the applicable period.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The specification of the Settlement Periods in which the electricity will be delivered. The Settlement Periods will apply for the duration of the appliable period. If more than one settlementPeriods element is present this indicates multiple ranges of Settlement Periods apply for the duration of the applicable period.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -3364,7 +3640,9 @@
   </xsd:complexType>
   <xsd:complexType name="WeatherCalculationPeriod">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">The schedule of Calculation Period First Days and Lasts Days. If there is only one First Day - Last Day pair then the First is equal to the Effective Date and the Last Day is equal to the Termination Date.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >The schedule of Calculation Period First Days and Lasts Days. If there is only one First Day - Last Day pair then the First is equal to the Effective Date and the Last Day is equal to the Termination Date.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="calculationPeriodFirstDay" type="IdentifiedDate" />
@@ -3373,7 +3651,9 @@
   </xsd:complexType>
   <xsd:complexType name="WeatherCalculationPeriods">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">The schedule of Calculation Period First Days and Lasts Days. If there is only one First Day - Last Day pair then the First is equal to the Effective Date and the Last Day is equal to the Termination Date.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >The schedule of Calculation Period First Days and Lasts Days. If there is only one First Day - Last Day pair then the First is equal to the Effective Date and the Last Day is equal to the Termination Date.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="calculationPeriod" type="WeatherCalculationPeriod" maxOccurs="unbounded" />
@@ -3387,12 +3667,16 @@
     <xsd:sequence>
       <xsd:element name="quantity" type="xsd:decimal">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">This is the Reference Level. The CDD, HDD or HDD Reference Level is specified as the number of (amount of) Weather Index Units specified by the parties in the related Confirmation.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >This is the Reference Level. The CDD, HDD or HDD Reference Level is specified as the number of (amount of) Weather Index Units specified by the parties in the related Confirmation.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="unit" type="QuantityUnit">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Weather Index Unit derived from one of the following variable methods of determination: Cooling Degree Day (CDD), Heating Degree Day (HDD), Critical Precipitation Day (CPD) as defined in Section 11.15 of the 2005 ISDA Commodity Definitions and User Guide.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Weather Index Unit derived from one of the following variable methods of determination: Cooling Degree Day (CDD), Heating Degree Day (HDD), Critical Precipitation Day (CPD) as defined in Section 11.15 of the 2005 ISDA Commodity Definitions and User Guide.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -3402,7 +3686,9 @@
     <xsd:sequence>
       <xsd:element name="referenceLevel" type="ReferenceLevel">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Reference level is the number of degree-days (in the case of HDD and CDD) or inches/millimeters (in the case of CPD) on which the differential is calculated. In the case of HDD it is the number of degree-days below this reference level. In the case of CDD it is the number of degree days above this reference level. In the case of CPD it is number of inches/millimeters above this reference level.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Reference level is the number of degree-days (in the case of HDD and CDD) or inches/millimeters (in the case of CPD) on which the differential is calculated. In the case of HDD it is the number of degree-days below this reference level. In the case of CDD it is the number of degree days above this reference level. In the case of CPD it is number of inches/millimeters above this reference level.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="dataProvider" type="DataProvider">
@@ -3412,54 +3698,74 @@
       </xsd:element>
       <xsd:element name="finalEditedData" type="xsd:boolean">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">If specified by the parties to apply in the related Confirmation, Final Edited Data means that the parties will have recourse to Primary Disruption Fallbacks even if relevant data is available from the Data Provider, so long as such data is not published in its final edited form. Otherwise the parties will have recourse to Primary Disruption Fallbacks only if relevant data is unavailable from the Data Provider on a relevant day.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >If specified by the parties to apply in the related Confirmation, Final Edited Data means that the parties will have recourse to Primary Disruption Fallbacks even if relevant data is available from the Data Provider, so long as such data is not published in its final edited form. Otherwise the parties will have recourse to Primary Disruption Fallbacks only if relevant data is unavailable from the Data Provider on a relevant day.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="weatherStation" type="WeatherStation">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The source or sources of weather index data specified by the parties in the related Confirmation. Examples include: AU-CBM (the Commonwealth Bureau of Meteorology in Australia) and CM-SMI (the Swiss Meteorological Institute).</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The source or sources of weather index data specified by the parties in the related Confirmation. Examples include: AU-CBM (the Commonwealth Bureau of Meteorology in Australia) and CM-SMI (the Swiss Meteorological Institute).</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="weatherStationFallback" type="WeatherStation">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">If weather index data is not available for the weather station specified by the parties in the related Confirmation, the first alternative Weather Index Station.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >If weather index data is not available for the weather station specified by the parties in the related Confirmation, the first alternative Weather Index Station.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="weatherStationSecondFallback" type="WeatherStation">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">If weather index data is neither available for the weather station specified by the parties in the related Confirmation nor the first alternative Weather Index Station, the second alternative Weather Index Station.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >If weather index data is neither available for the weather station specified by the parties in the related Confirmation nor the first alternative Weather Index Station, the second alternative Weather Index Station.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="alternativeDataProvider" type="xsd:boolean">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">A provider of either temperature data or precipitation data specified by the parties in the related Confirmation. If the parties fail to specify an Alternative Data Provider, the "Fallback Data" Disruption Fallback will not apply.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >A provider of either temperature data or precipitation data specified by the parties in the related Confirmation. If the parties fail to specify an Alternative Data Provider, the "Fallback Data" Disruption Fallback will not apply.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="synopticDataFallback" type="xsd:boolean">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">If the parties specify "Not Applicable", the "Synoptic Data" Disruption Fallback will not apply. Synoptic Data means that maximum and/or minimum temperature or daily precipitation at the location for the Missing Data Day will be the maxium and/or minimum temperature or daily precipitation for that day at the Location (Weather Index Station) which has not been subject to ultimate quality control, integrity or verification process.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >If the parties specify "Not Applicable", the "Synoptic Data" Disruption Fallback will not apply. Synoptic Data means that maximum and/or minimum temperature or daily precipitation at the location for the Missing Data Day will be the maxium and/or minimum temperature or daily precipitation for that day at the Location (Weather Index Station) which has not been subject to ultimate quality control, integrity or verification process.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="adjustmentToFallbackWeatherStation" type="xsd:boolean" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The Weather Index Station from which data with which to apply the "Adjustement to Fallback Station Data" terms. See Section 11.20 of the 2005 ISDA Commodity Definitions.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The Weather Index Station from which data with which to apply the "Adjustement to Fallback Station Data" terms. See Section 11.20 of the 2005 ISDA Commodity Definitions.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="primaryDisruptionFallbacks" type="DisruptionFallback" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">A list of actions available to the parties should a Primary Disruption Event occur. A Primary Disruption Event means if maximum or minimum temperature or precipitation data for a Missing Data Day is required to determine a Payment Amount then the maximum and/or minimum temperature or the daily precipitation for that day will be determined in accordance with the first applicable Primary Disruption Fallback.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >A list of actions available to the parties should a Primary Disruption Event occur. A Primary Disruption Event means if maximum or minimum temperature or precipitation data for a Missing Data Day is required to determine a Payment Amount then the maximum and/or minimum temperature or the daily precipitation for that day will be determined in accordance with the first applicable Primary Disruption Fallback.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="secondaryDisruptionFallbacks" type="DisruptionFallback" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">A list of actions available to the parties should a Secondary Disruption Event occur. A Primary Disruption Event means if maximum or minimum temperature or precipitation data for a Missing Data Day is required to determine a Payment Amount then the maximum and/or minimum temperature or the daily precipitation for that day will be determined in accordance with the first applicable Secondary Disruption Fallback.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >A list of actions available to the parties should a Secondary Disruption Event occur. A Primary Disruption Event means if maximum or minimum temperature or precipitation data for a Missing Data Day is required to determine a Payment Amount then the maximum and/or minimum temperature or the daily precipitation for that day will be determined in accordance with the first applicable Secondary Disruption Fallback.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="WeatherLeg">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A weather leg of a Commodity Swap defines Weather Index Swap transactions. Weather Index Swap transactions are OTC derivative transactions which settle financially based on an index calculated from observations of temperature, precipitation and other weather-related measurements at weather stations throughout the world. Sub-Annex C of the 2005 ISDA Commodity Definitions provides definitions and terms for a number of types of weather indices. These indices include: HDD (heating degree days), CDD (cooling degree days), CPD (critical precipitation days). Weather Index Swap transactions result in a cash flow to one of the two counterparties each Calculation Period depending on the relationship between the Settlement Level and the Weather Index Level. A Weather Index swap transaction always consists of a commodity swap element as a parent to two weatherLeg elements.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A weather leg of a Commodity Swap defines Weather Index Swap transactions. Weather Index Swap transactions are OTC derivative transactions which settle financially based on an index calculated from observations of temperature, precipitation and other weather-related measurements at weather stations throughout the world. Sub-Annex C of the 2005 ISDA Commodity Definitions provides definitions and terms for a number of types of weather indices. These indices include: HDD (heating degree days), CDD (cooling degree days), CPD (critical precipitation days). Weather Index Swap transactions result in a cash flow to one of the two counterparties each Calculation Period depending on the relationship between the Settlement Level and the Weather Index Level. A Weather Index swap transaction always consists of a commodity swap element as a parent to two weatherLeg elements.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="FinancialSwapLeg">
@@ -3487,7 +3793,9 @@
           </xsd:element>
           <xsd:element name="weatherIndexData" type="WeatherIndexData">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Specifies where the data (e.g. CPD) have been collected, an actual physical reference point (weather station) and various fall back arrangements.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >Specifies where the data (e.g. CPD) have been collected, an actual physical reference point (weather station) and various fall back arrangements.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
@@ -3501,22 +3809,30 @@
     <xsd:sequence>
       <xsd:element name="settlementLevel" type="WeatherSettlementLevelEnum">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The Settlement Level means either the cumulative number of Weather Index Units for each day in the Calculation Period (Cumulative) or the cumulative number of Weather Index Units for each day in the Calculation Period divided by the number of days in the Calculation Period (Average) or the maximum number of Weather Index Units for any day in the Calculation Period (Maximum) or the minimum number of Weather Index Units for any day in the Calculation Period.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The Settlement Level means either the cumulative number of Weather Index Units for each day in the Calculation Period (Cumulative) or the cumulative number of Weather Index Units for each day in the Calculation Period divided by the number of days in the Calculation Period (Average) or the maximum number of Weather Index Units for any day in the Calculation Period (Maximum) or the minimum number of Weather Index Units for any day in the Calculation Period.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="referenceLevelEqualsZero" type="xsd:boolean">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">If Reference Level Equals Zero is specified to be applicable then CPD means, for any day during the Calculation Period, (A) 1 if the Daily Precipitation for that day is greater than or equal to the CPD Reference Level or (B) zero if the the Daily Precipitation for that day is less than the CPD Reference Level. If Reference Level Equals Zero is specified not to be applicable then CPD means, for any day during the Calculation Period, (A) 1 if the Daily Precipitation for that day is greater than the CPD Reference Level or 0 if the Daily Precipitation for that day is less than or equal to the CPD Reference Level.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >If Reference Level Equals Zero is specified to be applicable then CPD means, for any day during the Calculation Period, (A) 1 if the Daily Precipitation for that day is greater than or equal to the CPD Reference Level or (B) zero if the the Daily Precipitation for that day is less than the CPD Reference Level. If Reference Level Equals Zero is specified not to be applicable then CPD means, for any day during the Calculation Period, (A) 1 if the Daily Precipitation for that day is greater than the CPD Reference Level or 0 if the Daily Precipitation for that day is less than or equal to the CPD Reference Level.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="calculationDate" type="Period">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The number of days following the final day of the Calculation Period specified in the Confirmation on which is is practicable to provide the notice that the Calculation Agent is required to give for that Settlement Date or Payment Date.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The number of days following the final day of the Calculation Period specified in the Confirmation on which is is practicable to provide the notice that the Calculation Agent is required to give for that Settlement Date or Payment Date.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="businessDays" type="BusinessCenter">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">A day on which commmercial banks settle payments and are open for general business in the place(s) specified in the Confirmation. See Section 1.3 of the ISDA 2005 Commodity Definitions.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >A day on which commmercial banks settle payments and are open for general business in the place(s) specified in the Confirmation. See Section 1.3 of the ISDA 2005 Commodity Definitions.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="dataCorrection" type="xsd:boolean">
@@ -3629,12 +3945,16 @@
   </xsd:element>
   <xsd:element name="commodityOption" type="CommodityOption" substitutionGroup="product">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">Defines a commodity option product. The product support for financially-settled exercises or exercise into physical forward contracts written on precious and non-precious metals. options in FpML is based on the creation of a 'commodityOption' product. The product references the 'commodity' underlyer in order to support the underlying asset of the option.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >Defines a commodity option product. The product support for financially-settled exercises or exercise into physical forward contracts written on precious and non-precious metals. options in FpML is based on the creation of a 'commodityOption' product. The product references the 'commodity' underlyer in order to support the underlying asset of the option.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="commodityPerformanceSwap" type="CommodityPerformanceSwap" substitutionGroup="product">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A swap the payoff of which is linked to the performance of the underlying asset. Examples of potential performance features are return, correlation, covariance, variance and volatility.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A swap the payoff of which is linked to the performance of the underlying asset. Examples of potential performance features are return, correlation, covariance, variance and volatility.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="commodityPerformanceSwapLeg" type="CommodityPerformanceSwapLeg" abstract="true">
@@ -3644,7 +3964,9 @@
   </xsd:element>
   <xsd:element name="commodityReturnLeg" type="CommodityReturnLeg" substitutionGroup="commodityPerformanceSwapLeg">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">Specifies the return payments of a commodity return swap. There can be one or two return legs. In simple return swaps there is a return leg and an interest (a.k.a. 'fee') leg. In the case of a outperformance swap there are two return legs: the return performance of two commodity underlyers are swapped. In the case of a fully-funded return swap there is no financing component and, therefore, only a single return leg is specified.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >Specifies the return payments of a commodity return swap. There can be one or two return legs. In simple return swaps there is a return leg and an interest (a.k.a. 'fee') leg. In the case of a outperformance swap there are two return legs: the return performance of two commodity underlyers are swapped. In the case of a fully-funded return swap there is no financing component and, therefore, only a single return leg is specified.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="commoditySwap" type="CommoditySwap" substitutionGroup="product">
@@ -3744,12 +4066,16 @@
     <xsd:sequence>
       <xsd:element name="effectiveDate" type="AdjustableOrRelativeDate">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The effective date of the Commodity Option Transaction. Note that the Termination/Expiration Date should be specified in expirationDate within the CommodityAmericanExercise type or the CommodityEuropeanExercise type, as applicable.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The effective date of the Commodity Option Transaction. Note that the Termination/Expiration Date should be specified in expirationDate within the CommodityAmericanExercise type or the CommodityEuropeanExercise type, as applicable.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="terminationDate" type="AdjustableOrRelativeDate" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Specifies the termination date of the Commodity Option Transaction. In some confirmations this will be indicated as the second date in "Option Term" or "Term". Note: If provided, terminationDate should not be before specified expirationDate within the CommodityAmericanExercise type or the CommodityEuropeanExercise type.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Specifies the termination date of the Commodity Option Transaction. In some confirmations this will be indicated as the second date in "Option Term" or "Term". Note: If provided, terminationDate should not be before specified expirationDate within the CommodityAmericanExercise type or the CommodityEuropeanExercise type.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:choice>
@@ -3773,29 +4099,39 @@
     <xsd:choice>
       <xsd:element name="calculationDates" type="AdjustableDates">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The Calculation Period dates for this leg of the trade where the Calculation Periods are all one day long. Only dates explicitly included determine the Calculation Periods and there is a Calculation Period for each date specified. As such one-day Calculation Period are typical a physically-settled emissions or metals trades it is expected that this element will not be used in performance swaps.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The Calculation Period dates for this leg of the trade where the Calculation Periods are all one day long. Only dates explicitly included determine the Calculation Periods and there is a Calculation Period for each date specified. As such one-day Calculation Period are typical a physically-settled emissions or metals trades it is expected that this element will not be used in performance swaps.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="calculationPeriods" type="AdjustableDates">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The Calculation Period start dates for this leg of the swap. This type is only intended to be used if the Calculation Periods differ on each leg. If Calculation Periods mirror another leg, then the calculationPeriodsReference element should be used to point to the Calculation Periods on that leg - or the calculationPeriodsScheduleReference can be used to point to the Calculation Periods Schedule for that leg.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The Calculation Period start dates for this leg of the swap. This type is only intended to be used if the Calculation Periods differ on each leg. If Calculation Periods mirror another leg, then the calculationPeriodsReference element should be used to point to the Calculation Periods on that leg - or the calculationPeriodsScheduleReference can be used to point to the Calculation Periods Schedule for that leg.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="calculationPeriodsSchedule" type="CommodityCalculationPeriodsSchedule">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The Calculation Periods for this leg of the swap. This type is only intended to be used if the Calculation Periods differ on each leg. If Calculation Periods mirror another leg, then the calculationPeriodsReference element should be used to point to the Calculation Periods on the other leg - or the calculationPeriodsScheduleReference can be used to point to the Calculation Periods Schedule for that leg.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The Calculation Periods for this leg of the swap. This type is only intended to be used if the Calculation Periods differ on each leg. If Calculation Periods mirror another leg, then the calculationPeriodsReference element should be used to point to the Calculation Periods on the other leg - or the calculationPeriodsScheduleReference can be used to point to the Calculation Periods Schedule for that leg.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:group ref="CommodityCalculationPeriodsPointer.model">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Enables users to reference a Calculation Periods schedule in the form of a series of actual dates in a calculationPeriods container or in the form of a parameterised schedule in a calculationPeriodsSchedule container.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Enables users to reference a Calculation Periods schedule in the form of a series of actual dates in a calculationPeriods container or in the form of a parameterised schedule in a calculationPeriodsSchedule container.</xsd:documentation>
         </xsd:annotation>
       </xsd:group>
     </xsd:choice>
   </xsd:group>
   <xsd:group name="CommodityCalculationPeriodsPointer.model">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">Model group enables users to reference a Calculation Periods schedule in the form of a series of actual dates in a calculationPeriods container or in the form of a parameterized schedule in a calculationPeriodsSchedule container.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >Model group enables users to reference a Calculation Periods schedule in the form of a series of actual dates in a calculationPeriods container or in the form of a parameterized schedule in a calculationPeriodsSchedule container.</xsd:documentation>
     </xsd:annotation>
     <xsd:choice>
       <xsd:element name="calculationPeriodsReference" type="CalculationPeriodsReference">
@@ -3870,7 +4206,9 @@
       </xsd:element>
       <xsd:element name="ashFusionTemperature" type="CoalAttributeDecimal" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The temperature at which the ash form of the coal product fuses completely in accordance with the ASTM International D1857 Standard Test Methodology.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The temperature at which the ash form of the coal product fuses completely in accordance with the ASTM International D1857 Standard Test Methodology.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -3909,7 +4247,9 @@
     <xsd:sequence>
       <xsd:element name="commonPricing" type="xsd:boolean" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">If Common Pricing is elected (“true”) for a Transaction with referencing more than one Commodity Reference Price then no date will be a Pricing Date unless such a date is a day on which all Commodity Reference Prices are scheduled to be published.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >If Common Pricing is elected (“true”) for a Transaction with referencing more than one Commodity Reference Price then no date will be a Pricing Date unless such a date is a day on which all Commodity Reference Prices are scheduled to be published.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="marketDisruption" type="CommodityMarketDisruption" minOccurs="0">
@@ -3931,7 +4271,9 @@
   </xsd:group>
   <xsd:group name="CommodityDeliveryPeriodsPointer.model">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">Model group to enable users to reference a Delivery Periods schedule in the form of a series of actual dates in a deliveryPeriods container or in the form of a parameterised schedule in a deliveryPeriodsSchedule container.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >Model group to enable users to reference a Delivery Periods schedule in the form of a series of actual dates in a deliveryPeriods container or in the form of a parameterised schedule in a deliveryPeriodsSchedule container.</xsd:documentation>
     </xsd:annotation>
     <xsd:choice>
       <xsd:element name="deliveryPeriodsReference" type="CalculationPeriodsReference">
@@ -3977,12 +4319,16 @@
     <xsd:sequence>
       <xsd:element name="effectiveDate" type="AdjustableOrRelativeDate" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The effective date of the Commodity Option Transaction. Note that the Termination/Expiration Date should be specified in expirationDate within the CommodityAmericanExercise type or the CommodityEuropeanExercise type, as applicable.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The effective date of the Commodity Option Transaction. Note that the Termination/Expiration Date should be specified in expirationDate within the CommodityAmericanExercise type or the CommodityEuropeanExercise type, as applicable.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="terminationDate" type="AdjustableOrRelativeDate" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Specifies the termination date of the Commodity Option Transaction. In some confirmations this will be indicated as the second date in "Option Term" or "Term". Note: If provided, terminationDate should not be before specified expirationDate within the CommodityAmericanExercise type or the CommodityEuropeanExercise type.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Specifies the termination date of the Commodity Option Transaction. In some confirmations this will be indicated as the second date in "Option Term" or "Term". Note: If provided, terminationDate should not be before specified expirationDate within the CommodityAmericanExercise type or the CommodityEuropeanExercise type.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:sequence>
@@ -4002,7 +4348,9 @@
     <xsd:sequence>
       <xsd:element name="commodity" type="Commodity">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Specifies the underlying instrument. Usual content is an ISDA Commodity Reference Price Name. The 'commodity' underlyer component is specified using a reference to the 'commodity' asset (see description above at the Commodity Underlyer section).</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Specifies the underlying instrument. Usual content is an ISDA Commodity Reference Price Name. The 'commodity' underlyer component is specified using a reference to the 'commodity' asset (see description above at the Commodity Underlyer section).</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:group ref="CommodityOptionFeatures.model" minOccurs="0">
@@ -4079,7 +4427,9 @@
           </xsd:element>
           <xsd:element name="settlementPeriodsPrice" type="SettlementPeriodsFixedPrice" maxOccurs="unbounded">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">For an electricity transaction, the fixed price for one or more groups of Settlement Periods on which fixed payments are based. If the fixed price differs for different groups of Settlement Periods, this element should be repeated.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >For an electricity transaction, the fixed price for one or more groups of Settlement Periods on which fixed payments are based. If the fixed price differs for different groups of Settlement Periods, this element should be repeated.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:choice>
@@ -4093,7 +4443,9 @@
   </xsd:group>
   <xsd:group name="CommodityFloatingStrikePrice.model">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">The different options for specifying the average strike price per unit. These options are to specify a single average strike price per unit or to specify a schedule of average strike prices.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >The different options for specifying the average strike price per unit. These options are to specify a single average strike price per unit or to specify a schedule of average strike prices.</xsd:documentation>
     </xsd:annotation>
     <xsd:choice>
       <xsd:element name="floatingStrikePricePerUnit" type="FloatingStrikePrice">
@@ -4111,7 +4463,9 @@
     <xsd:sequence>
       <xsd:element name="flatRate" type="FlatRateEnum">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Whether the Flat Rate is the New Worldwide Tanker Nominal Freight Scale for the Freight Index Route taken at the Trade Date of the transaction or taken on each Pricing Date.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Whether the Flat Rate is the New Worldwide Tanker Nominal Freight Scale for the Freight Index Route taken at the Trade Date of the transaction or taken on each Pricing Date.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="flatRateAmount" type="NonNegativeMoney" minOccurs="0">
@@ -4140,7 +4494,9 @@
   </xsd:group>
   <xsd:group name="CommodityNotionalQuantity.model">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">The different options for specifying the Notional Quantity. A flat notional for the term of the contract may be specified, or else the Notional Quantity per Calculation Period. In the latter case, there must be a notional quantity step specified for each Calculation Period, regardless of whether the Notional Quantity changes or remains the same between periods.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >The different options for specifying the Notional Quantity. A flat notional for the term of the contract may be specified, or else the Notional Quantity per Calculation Period. In the latter case, there must be a notional quantity step specified for each Calculation Period, regardless of whether the Notional Quantity changes or remains the same between periods.</xsd:documentation>
     </xsd:annotation>
     <xsd:choice>
       <xsd:sequence>
@@ -4157,7 +4513,9 @@
           </xsd:element>
           <xsd:element name="settlementPeriodsNotionalQuantity" type="CommoditySettlementPeriodsNotionalQuantity" maxOccurs="unbounded">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">For an electricity transaction, the Notional Quantity for a one or more groups of Settlement Periods to which the Notional Quantity is based. If the schedule differs for different groups of Settlement Periods, this element should be repeated.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >For an electricity transaction, the Notional Quantity for a one or more groups of Settlement Periods to which the Notional Quantity is based. If the schedule differs for different groups of Settlement Periods, this element should be repeated.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:choice>
@@ -4181,12 +4539,16 @@
     <xsd:sequence>
       <xsd:element name="effectiveDate" type="AdjustableOrRelativeDate">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The effective date of the Commodity Option Transaction. Note that the Termination/Expiration Date should be specified in expirationDate within the CommodityAmericanExercise type or the CommodityEuropeanExercise type, as applicable.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The effective date of the Commodity Option Transaction. Note that the Termination/Expiration Date should be specified in expirationDate within the CommodityAmericanExercise type or the CommodityEuropeanExercise type, as applicable.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="terminationDate" type="AdjustableOrRelativeDate" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Specifies the termination date of the Commodity Option Transaction. In some confirmations this will be indicated as the second date in "Option Term" or "Term". Note: If provided, terminationDate should not be before specified expirationDate within the CommodityAmericanExercise type or the CommodityEuropeanExercise type.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Specifies the termination date of the Commodity Option Transaction. In some confirmations this will be indicated as the second date in "Option Term" or "Term". Note: If provided, terminationDate should not be before specified expirationDate within the CommodityAmericanExercise type or the CommodityEuropeanExercise type.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:choice minOccurs="0">
@@ -4225,7 +4587,11 @@
     </xsd:annotation>
     <xsd:sequence>
       <xsd:choice>
-        <xsd:element ref="commoditySwap" fpml-annotation:deprecated="true" fpml-annotation:deprecatedReason="The model could not provide support for a cash settled commodity. Only physically exercised option could be expressed. Instead, commoditySwaption product, should be used.">
+        <xsd:element
+                    ref="commoditySwap"
+                    fpml-annotation:deprecated="true"
+                    fpml-annotation:deprecatedReason="The model could not provide support for a cash settled commodity. Only physically exercised option could be expressed. Instead, commoditySwaption product, should be used."
+                >
           <xsd:annotation>
             <xsd:documentation xml:lang="en">DEPRECATED. Defines a commodity swap product.</xsd:documentation>
           </xsd:annotation>
@@ -4256,28 +4622,36 @@
     <xsd:sequence>
       <xsd:element name="effectiveDate" type="AdjustableOrRelativeDate">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Specifies the effective date of this leg of the swap. When defined in relation to a date specified somewhere else in the document (through the relativeDate component), this element will typically point to the effective date of the other leg of the swap.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Specifies the effective date of this leg of the swap. When defined in relation to a date specified somewhere else in the document (through the relativeDate component), this element will typically point to the effective date of the other leg of the swap.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="terminationDate" type="AdjustableOrRelativeDate">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Specifies the termination date of this leg of the swap. When defined in relation to a date specified somewhere else in the document (through the relativeDate component), this element will typically point to the termination date of the other leg of the swap.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Specifies the termination date of this leg of the swap. When defined in relation to a date specified somewhere else in the document (through the relativeDate component), this element will typically point to the termination date of the other leg of the swap.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="settlementCurrency" type="IdentifiedCurrency">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The currency into which the Commodity Swap Transaction will settle. If this is not the same as the currency in which the Commodity Reference Price is quoted on a given floating leg of the Commodity Swap Transaction, then an FX rate should also be specified for that leg.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The currency into which the Commodity Swap Transaction will settle. If this is not the same as the currency in which the Commodity Reference Price is quoted on a given floating leg of the Commodity Swap Transaction, then an FX rate should also be specified for that leg.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:choice>
         <xsd:element ref="commoditySwapLeg" maxOccurs="unbounded" />
         <xsd:element name="weatherLeg" type="WeatherLeg" minOccurs="2" maxOccurs="2">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">A weather leg element of a Commodity Swap defines Weather Index Swap transactions. Weather Index Swap transactions are OTC derivative transactions which settle financially based on an index calculated from observations of temperature, precipitation and other weather-related measurements at weather stations throughout the world. Sub-Annex C of the 2005 ISDA Commodity Definitions provides definitions and terms for a number of types of weather indices. These indices include: HDD (heating degree days), CDD (cooling degree days), CPD (critical precipitation days). Weather Index Swap transactions result in a cash flow to one of the two counterparties each Calculation Period depending on the relationship between the Settlement Level and the Weather Index Level. A Weather Index swap transaction always consists of a commodity swap element as a parent to two weatherLeg elements.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >A weather leg element of a Commodity Swap defines Weather Index Swap transactions. Weather Index Swap transactions are OTC derivative transactions which settle financially based on an index calculated from observations of temperature, precipitation and other weather-related measurements at weather stations throughout the world. Sub-Annex C of the 2005 ISDA Commodity Definitions provides definitions and terms for a number of types of weather indices. These indices include: HDD (heating degree days), CDD (cooling degree days), CPD (critical precipitation days). Weather Index Swap transactions result in a cash flow to one of the two counterparties each Calculation Period depending on the relationship between the Settlement Level and the Weather Index Level. A Weather Index swap transaction always consists of a commodity swap element as a parent to two weatherLeg elements.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
       </xsd:choice>
-      <xsd:group ref="CommodityContent.model" minOccurs="0"></xsd:group>
+      <xsd:group ref="CommodityContent.model" minOccurs="0" />
     </xsd:sequence>
   </xsd:group>
   <xsd:group name="CommodityUnderlyerChoice.model">
@@ -4338,7 +4712,9 @@
   </xsd:group>
   <xsd:group name="CommodityWeatherOption.model">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">Described Weather Index Option component. Weather Index Option transactions are OTC derivative transactions which settle financially based on an index calculated from observations of temperature and precipitation at weather stations throughout the world. Sub-Annex C of the 2005 ISDA Commodity Definitions provides definitions and terms for a number of types of weather indices. These indices include: HDD (heating degree days), CDD (cooling degree days), CPD (critical precipitation days). Weather Index Option Transactions results in a cash flow to the buyer depending on the relationship between the Settlement Level to the Weather Index Strike Level.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >Described Weather Index Option component. Weather Index Option transactions are OTC derivative transactions which settle financially based on an index calculated from observations of temperature and precipitation at weather stations throughout the world. Sub-Annex C of the 2005 ISDA Commodity Definitions provides definitions and terms for a number of types of weather indices. These indices include: HDD (heating degree days), CDD (cooling degree days), CPD (critical precipitation days). Weather Index Option Transactions results in a cash flow to the buyer depending on the relationship between the Settlement Level to the Weather Index Strike Level.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="effectiveDate" type="AdjustableOrRelativeDate">
@@ -4368,7 +4744,9 @@
   </xsd:group>
   <xsd:group name="Days.model">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">The different options for specifying which days are pricing days within a pricing period. Unless a lag element is present, the pricing period will be contained within the calculation period.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >The different options for specifying which days are pricing days within a pricing period. Unless a lag element is present, the pricing period will be contained within the calculation period.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="dayType" type="CommodityDayTypeEnum">
@@ -4397,7 +4775,9 @@
           </xsd:element>
           <xsd:element name="dayNumber" type="xsd:integer" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">The occurrence of the dayOfWeek within the pricing period on which pricing will take place, e.g. the 3rd Friday within each Calculation Period. If omitted, every dayOfWeek will be a pricing day.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >The occurrence of the dayOfWeek within the pricing period on which pricing will take place, e.g. the 3rd Friday within each Calculation Period. If omitted, every dayOfWeek will be a pricing day.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
@@ -4453,4 +4833,3 @@
     </xsd:choice>
   </xsd:group>
 </xsd:schema>
-

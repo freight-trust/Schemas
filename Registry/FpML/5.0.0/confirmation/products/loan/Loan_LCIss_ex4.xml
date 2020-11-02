@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!--View is confirmation-->
 <!--Version is 5-10-->
 <!--NS is http://www.fpml.org/FpML-5/confirmation-->
@@ -13,7 +13,12 @@ The agent bank also acts as a conduit between the issuing bank and lenders.
 
 This example represents issuance of a standby letter of credit (fx).
 -->
-<lcNotification xmlns="http://www.fpml.org/FpML-5/confirmation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" fpmlVersion="5-10" xsi:schemaLocation="http://www.fpml.org/FpML-5/confirmation ../../fpml-main-5-10.xsd http://www.w3.org/2000/09/xmldsig# ../../xmldsig-core-schema.xsd">
+<lcNotification
+    xmlns="http://www.fpml.org/FpML-5/confirmation"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    fpmlVersion="5-10"
+    xsi:schemaLocation="http://www.fpml.org/FpML-5/confirmation ../../fpml-main-5-10.xsd http://www.w3.org/2000/09/xmldsig# ../../xmldsig-core-schema.xsd"
+>
   <header>
 <!-- No message id in the original notice -->
     <messageId messageIdScheme="http://www.bankofagentsna.com/messaging/messageids">727445</messageId>
@@ -109,4 +114,3 @@ This example represents issuance of a standby letter of credit (fx).
     <partyName partyNameScheme="http://www.loanmarketdirectory.com/external/schemes">Beneficiary Inc.</partyName>
   </party>
 </lcNotification>
-

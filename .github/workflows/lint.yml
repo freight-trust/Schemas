@@ -3,15 +3,15 @@ name: Lint
 on: [push]
 
 jobs:
-  xml-linters:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@master
-      - name: Download schema
-        run: wget https://apps.nextcloud.com/schema/apps/info.xsd
-      - name: Lint info.xml
-        uses: ChristophWurst/xmllint-action@v1
-        with:
-          xml-file: ./tests/Native.xsd.xml
-          xml-schema-file: ./src/Native.xsd
+    xml-linters:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@master
+            - name: Download schema
+              run: wget https://apps.nextcloud.com/schema/apps/info.xsd
+            - name: Lint info.xml
+              uses: ChristophWurst/xmllint-action@v1
+              with:
+                  xml-file: ./tests/Native.xsd.xml
+                  xml-schema-file: ./src/Native.xsd

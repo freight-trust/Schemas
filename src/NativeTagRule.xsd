@@ -6,11 +6,11 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
 <xs:schema
-  targetNamespace="http://www.freighttrust.com/Schemas/Native/2020/09"
-  version="2.0"
-  elementFormDefault="qualified"
-  xmlns="http://www.freighttrust.com/Schemas/Native/2020/09"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.freighttrust.com/Schemas/Native/2020/09"
+    version="2.0"
+    elementFormDefault="qualified"
+    xmlns="http://www.freighttrust.com/Schemas/Native/2020/09"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
 >
   <xs:include schemaLocation="Native.xsd" />
   <xs:element name="TagRule" type="TagRuleData" />
@@ -40,26 +40,10 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element
-        name="LastPerformanceVerificationDateTimeUtc"
-        minOccurs="0"
-        type="emptiableDateTime"
-      />
-      <xs:element
-        name="RunAddQuerySingleThreaded"
-        minOccurs="0"
-        type="xs:boolean"
-      />
-      <xs:element
-        name="RunRemoveQuerySingleThreaded"
-        minOccurs="0"
-        type="xs:boolean"
-      />
-      <xs:element
-        name="RunMagnitudeQuerySingleThreaded"
-        minOccurs="0"
-        type="xs:boolean"
-      />
+      <xs:element name="LastPerformanceVerificationDateTimeUtc" minOccurs="0" type="emptiableDateTime" />
+      <xs:element name="RunAddQuerySingleThreaded" minOccurs="0" type="xs:boolean" />
+      <xs:element name="RunRemoveQuerySingleThreaded" minOccurs="0" type="xs:boolean" />
+      <xs:element name="RunMagnitudeQuerySingleThreaded" minOccurs="0" type="xs:boolean" />
       <xs:element name="Branch" minOccurs="0">
         <xs:complexType>
           <xs:all>
@@ -108,17 +92,9 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element
-                    name="Magnitude"
-                    minOccurs="0"
-                    type="xs:decimal"
-                  />
+                  <xs:element name="Magnitude" minOccurs="0" type="xs:decimal" />
                   <xs:element name="Sequence" minOccurs="0" type="xs:int" />
-                  <xs:element
-                    name="RemovedTimeUtc"
-                    minOccurs="0"
-                    type="emptiableDateTime"
-                  />
+                  <xs:element name="RemovedTimeUtc" minOccurs="0" type="emptiableDateTime" />
                   <xs:element name="ParentTableCode" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -126,11 +102,7 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element
-                    name="SystemCreateTimeUtc"
-                    minOccurs="0"
-                    type="emptiableDateTime"
-                  />
+                  <xs:element name="SystemCreateTimeUtc" minOccurs="0" type="emptiableDateTime" />
                   <xs:element name="TagMagnitude" minOccurs="0">
                     <xs:complexType>
                       <xs:all>
@@ -154,11 +126,7 @@
                                   </xs:restriction>
                                 </xs:simpleType>
                               </xs:element>
-                              <xs:element
-                                name="PK"
-                                minOccurs="0"
-                                type="xs:string"
-                              />
+                              <xs:element name="PK" minOccurs="0" type="xs:string" />
                             </xs:all>
                             <xs:attribute name="Action" type="Action" />
                             <xs:attribute name="TableName" type="xs:string" />
@@ -206,11 +174,7 @@
               <xs:complexType>
                 <xs:all>
                   <xs:element name="PK" minOccurs="0" type="xs:string" />
-                  <xs:element
-                    name="NoteData"
-                    minOccurs="0"
-                    type="xs:base64Binary"
-                  />
+                  <xs:element name="NoteData" minOccurs="0" type="xs:base64Binary" />
                   <xs:element name="NoteText" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string" />
@@ -230,16 +194,8 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element
-                    name="IsCustomDescription"
-                    minOccurs="0"
-                    type="xs:boolean"
-                  />
-                  <xs:element
-                    name="ForceRead"
-                    minOccurs="0"
-                    type="xs:boolean"
-                  />
+                  <xs:element name="IsCustomDescription" minOccurs="0" type="xs:boolean" />
+                  <xs:element name="ForceRead" minOccurs="0" type="xs:boolean" />
                   <xs:element name="Description" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
@@ -274,55 +230,19 @@
       <xs:element name="TagRuleAcceptabilityBandLinkCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element
-              name="TagRuleAcceptabilityBandLink"
-              minOccurs="0"
-              maxOccurs="unbounded"
-            >
+            <xs:element name="TagRuleAcceptabilityBandLink" minOccurs="0" maxOccurs="unbounded">
               <xs:complexType>
                 <xs:all>
                   <!-- Candidate Key: BMComponentAcceptabilityBand.PK + TagRule.PK -->
                   <xs:element name="PK" minOccurs="0" type="xs:string" />
-                  <xs:element
-                    name="PrioritySequence"
-                    minOccurs="0"
-                    type="xs:int"
-                  />
-                  <xs:element
-                    name="HighRiskLowerStatusMagnitude"
-                    minOccurs="0"
-                    type="xs:decimal"
-                  />
-                  <xs:element
-                    name="CautionLowerStatusMagnitude"
-                    minOccurs="0"
-                    type="xs:decimal"
-                  />
-                  <xs:element
-                    name="GoodLowerStatusMagnitude"
-                    minOccurs="0"
-                    type="xs:decimal"
-                  />
-                  <xs:element
-                    name="ExcellentMagnitude"
-                    minOccurs="0"
-                    type="xs:decimal"
-                  />
-                  <xs:element
-                    name="GoodUpperStatusMagnitude"
-                    minOccurs="0"
-                    type="xs:decimal"
-                  />
-                  <xs:element
-                    name="CautionUpperStatusMagnitude"
-                    minOccurs="0"
-                    type="xs:decimal"
-                  />
-                  <xs:element
-                    name="HighRiskUpperStatusMagnitude"
-                    minOccurs="0"
-                    type="xs:decimal"
-                  />
+                  <xs:element name="PrioritySequence" minOccurs="0" type="xs:int" />
+                  <xs:element name="HighRiskLowerStatusMagnitude" minOccurs="0" type="xs:decimal" />
+                  <xs:element name="CautionLowerStatusMagnitude" minOccurs="0" type="xs:decimal" />
+                  <xs:element name="GoodLowerStatusMagnitude" minOccurs="0" type="xs:decimal" />
+                  <xs:element name="ExcellentMagnitude" minOccurs="0" type="xs:decimal" />
+                  <xs:element name="GoodUpperStatusMagnitude" minOccurs="0" type="xs:decimal" />
+                  <xs:element name="CautionUpperStatusMagnitude" minOccurs="0" type="xs:decimal" />
+                  <xs:element name="HighRiskUpperStatusMagnitude" minOccurs="0" type="xs:decimal" />
                   <xs:element name="BMComponentAcceptabilityBand" minOccurs="0">
                     <xs:complexType>
                       <xs:all>
@@ -357,24 +277,12 @@
                 </xs:restriction>
               </xs:simpleType>
             </xs:element>
-            <xs:element
-              name="FilterData"
-              minOccurs="0"
-              type="xs:base64Binary"
-            />
+            <xs:element name="FilterData" minOccurs="0" type="xs:base64Binary" />
             <xs:element name="RelatedEntityID" minOccurs="0" type="xs:string" />
-            <xs:element
-              name="ColumnLayoutData"
-              minOccurs="0"
-              type="xs:base64Binary"
-            />
+            <xs:element name="ColumnLayoutData" minOccurs="0" type="xs:base64Binary" />
             <xs:element name="IsSystem" minOccurs="0" type="xs:boolean" />
             <xs:element name="IsPublished" minOccurs="0" type="xs:boolean" />
-            <xs:element
-              name="SaveColumnLayout"
-              minOccurs="0"
-              type="xs:boolean"
-            />
+            <xs:element name="SaveColumnLayout" minOccurs="0" type="xs:boolean" />
             <xs:element name="FilterName" minOccurs="0">
               <xs:simpleType>
                 <xs:restriction base="xs:string">
@@ -389,16 +297,8 @@
                 </xs:restriction>
               </xs:simpleType>
             </xs:element>
-            <xs:element
-              name="GridColourLayoutID"
-              minOccurs="0"
-              type="xs:string"
-            />
-            <xs:element
-              name="SaveGridColourLayout"
-              minOccurs="0"
-              type="xs:boolean"
-            />
+            <xs:element name="GridColourLayoutID" minOccurs="0" type="xs:string" />
+            <xs:element name="SaveGridColourLayout" minOccurs="0" type="xs:boolean" />
             <xs:element name="GlbCompany" minOccurs="0">
               <xs:complexType>
                 <xs:all>
@@ -420,16 +320,8 @@
                 <xs:all>
                   <!-- Candidate Key: RelatedEntityID + StmModuleFilter.PK -->
                   <xs:element name="PK" minOccurs="0" type="xs:string" />
-                  <xs:element
-                    name="RelatedEntityID"
-                    minOccurs="0"
-                    type="xs:string"
-                  />
-                  <xs:element
-                    name="FilterDataValues"
-                    minOccurs="0"
-                    type="xs:base64Binary"
-                  />
+                  <xs:element name="RelatedEntityID" minOccurs="0" type="xs:string" />
+                  <xs:element name="FilterDataValues" minOccurs="0" type="xs:base64Binary" />
                   <xs:element name="RelatedEntityTableCode" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">

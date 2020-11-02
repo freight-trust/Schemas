@@ -1,10 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- 
 == Copyright (c) 2002-2018 All rights reserved. 
 == Financial Products Markup Language is subject to the FpML public license. 
 == A copy of this license is available at http://www.fpml.org/license/license.html
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/confirmation" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/confirmation" ecore:documentRoot="FpML" ecore:nsPrefix="conf" ecore:package="org.fpml.confirmation" version="$Revision: 13171 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xsd:schema
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns="http://www.fpml.org/FpML-5/confirmation"
+    xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"
+    xmlns:fpml-annotation="http://www.fpml.org/annotation"
+    targetNamespace="http://www.fpml.org/FpML-5/confirmation"
+    ecore:documentRoot="FpML"
+    ecore:nsPrefix="conf"
+    ecore:package="org.fpml.confirmation"
+    version="$Revision: 13171 $"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+>
   <xsd:include schemaLocation="fpml-business-events-5-10.xsd" />
   <xsd:complexType name="AllocationApproved">
     <xsd:annotation>
@@ -172,7 +185,9 @@
             <xsd:group ref="TradingAndPostTradeEvents.model" />
             <xsd:element name="optionExercise" type="OptionExercise">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">A structure describing an option exercise event. The optionExercise event supports partial exercise (specify the number of options or amount to exercise), full exercise (use fullExercise flag), as well as the option to request options not to be exercised.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >A structure describing an option exercise event. The optionExercise event supports partial exercise (specify the number of options or amount to exercise), full exercise (use fullExercise flag), as well as the option to request options not to be exercised.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
           </xsd:choice>
@@ -202,7 +217,9 @@
               </xsd:element>
               <xsd:element name="proposedMatch" type="EventProposedMatch" minOccurs="0" maxOccurs="unbounded">
                 <xsd:annotation>
-                  <xsd:documentation xml:lang="en">"Other side's" event (trade or post-trade event) that meets the minimimum matching criteria and is proposed as match to the event that is being asserted.</xsd:documentation>
+                  <xsd:documentation
+                                        xml:lang="en"
+                                    >"Other side's" event (trade or post-trade event) that meets the minimimum matching criteria and is proposed as match to the event that is being asserted.</xsd:documentation>
                 </xsd:annotation>
               </xsd:element>
             </xsd:sequence>
@@ -236,7 +253,9 @@
           </xsd:element>
           <xsd:element name="approvingPartyReference" type="PartyReference" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">A pointer style reference to a party defined elsewhere in the document. The party referenced needs to approve the specified item (e.g. trade or allocation).</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >A pointer style reference to a party defined elsewhere in the document. The party referenced needs to approve the specified item (e.g. trade or allocation).</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="approvalId" type="ApprovalId" minOccurs="0">
@@ -271,7 +290,9 @@
           </xsd:element>
           <xsd:element name="approvingPartyReference" type="PartyReference" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">A pointer style reference to a party defined elsewhere in the document. The party referenced needs to approve the specified item (e.g. trade or allocation).</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >A pointer style reference to a party defined elsewhere in the document. The party referenced needs to approve the specified item (e.g. trade or allocation).</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:group ref="PortfolioReferenceBase.model" minOccurs="0" />
@@ -377,7 +398,9 @@
             <xsd:group ref="TradingEvents.model" />
             <xsd:element name="optionExercise" type="OptionExercise">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">A structure describing an option exercise event. The optionExercise event supports partial exercise (specify the number of options or amount to exercise), full exercise (use fullExercise flag), as well as the option to request options not to be exercised.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >A structure describing an option exercise event. The optionExercise event supports partial exercise (specify the number of options or amount to exercise), full exercise (use fullExercise flag), as well as the option to request options not to be exercised.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
           </xsd:choice>
@@ -388,7 +411,9 @@
   </xsd:complexType>
   <xsd:complexType name="MaturityNotification">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A message used to notify another party that a trade has matured. This can be used to report, for example, that a swap has passed its final payment and can be removed, or that an option has expired without being executed.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A message used to notify another party that a trade has matured. This can be used to report, for example, that a swap has passed its final payment and can be removed, or that an option has expired without being executed.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="CorrectableRequestMessage">
@@ -447,7 +472,9 @@
             <xsd:group ref="TradingEvents.model" />
             <xsd:element name="deClear" type="DeClear">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">A structure describing a declear event. The deClear event allows a firm to request that a trade be removed from clearing, or a clearing service to request consent for this, or to report that it has been done.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >A structure describing a declear event. The deClear event allows a firm to request that a trade be removed from clearing, or a clearing service to request consent for this, or to report that it has been done.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
           </xsd:choice>
@@ -468,7 +495,9 @@
             <xsd:group ref="TradingEvents.model" />
             <xsd:element name="deClear" type="DeClear">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">A structure describing a declear event. The deClear event allows a firm to request that a trade be removed from clearing, or a clearing service to request consent for this, or to report that it has been done.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >A structure describing a declear event. The deClear event allows a firm to request that a trade be removed from clearing, or a clearing service to request consent for this, or to report that it has been done.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
           </xsd:choice>
@@ -479,7 +508,9 @@
   </xsd:complexType>
   <xsd:complexType name="RequestConfirmation">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A message type defining the start of the confirmation process. The message may be used to request the confirmation of a new trade or any other event supported by FpML such as novation, terminations, amendments, etc.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A message type defining the start of the confirmation process. The message may be used to request the confirmation of a new trade or any other event supported by FpML such as novation, terminations, amendments, etc.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="CorrectableRequestMessage">
@@ -488,7 +519,9 @@
             <xsd:group ref="TradingAndPostTradeEvents.model" />
             <xsd:element name="optionExercise" type="OptionExercise">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">A structure describing an option exercise event. The optionExercise event supports partial exercise (specify the number of options or amount to exercise), full exercise (use fullExercise flag), as well as the option to request options not to be exercised.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >A structure describing an option exercise event. The optionExercise event supports partial exercise (specify the number of options or amount to exercise), full exercise (use fullExercise flag), as well as the option to request options not to be exercised.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
           </xsd:choice>
@@ -521,7 +554,9 @@
           </xsd:element>
           <xsd:element name="approvingPartyReference" type="PartyReference" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">A pointer style reference to a party defined elsewhere in the document. The party referenced needs to approve the specified item (e.g. trade or allocation).</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >A pointer style reference to a party defined elsewhere in the document. The party referenced needs to approve the specified item (e.g. trade or allocation).</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:group ref="PortfolioReference.model" minOccurs="0" />
@@ -530,7 +565,9 @@
             <xsd:group ref="TradingAndPostTradeEvents.model" />
             <xsd:element name="deClear" type="DeClear">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">A structure describing a declear event. The deClear event allows a firm to request that a trade be removed from clearing, or a clearing service to request consent for this, or to report that it has been done.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >A structure describing a declear event. The deClear event allows a firm to request that a trade be removed from clearing, or a clearing service to request consent for this, or to report that it has been done.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
           </xsd:choice>
@@ -559,14 +596,18 @@
           </xsd:element>
           <xsd:element name="approvingPartyReference" type="PartyReference" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">A pointer style reference to a party defined elsewhere in the document. The party referenced needs to approve the specified item (e.g. trade or allocation).</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >A pointer style reference to a party defined elsewhere in the document. The party referenced needs to approve the specified item (e.g. trade or allocation).</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:choice minOccurs="0">
             <xsd:group ref="TradingAndPostTradeEvents.model" />
             <xsd:element name="deClear" type="DeClear">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">A structure describing a declear event. The deClear event allows a firm to request that a trade be removed from clearing, or a clearing service to request consent for this, or to report that it has been done.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >A structure describing a declear event. The deClear event allows a firm to request that a trade be removed from clearing, or a clearing service to request consent for this, or to report that it has been done.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
           </xsd:choice>
@@ -586,7 +627,9 @@
             <xsd:group ref="TradingEvents.model" />
             <xsd:element name="optionExercise" type="OptionExercise">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">A structure describing an option exercise event. The optionExercise event supports partial exercise (specify the number of options or amount to exercise), full exercise (use fullExercise flag), as well as the option to request options not to be exercised.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >A structure describing an option exercise event. The optionExercise event supports partial exercise (specify the number of options or amount to exercise), full exercise (use fullExercise flag), as well as the option to request options not to be exercised.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
           </xsd:choice>
@@ -606,7 +649,9 @@
             <xsd:group ref="TradingEvents.model" />
             <xsd:element name="optionExercise" type="OptionExercise">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">A structure describing an option exercise event. The optionExercise event supports partial exercise (specify the number of options or amount to exercise), full exercise (use fullExercise flag), as well as the option to request options not to be exercised.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >A structure describing an option exercise event. The optionExercise event supports partial exercise (specify the number of options or amount to exercise), full exercise (use fullExercise flag), as well as the option to request options not to be exercised.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
           </xsd:choice>
@@ -617,7 +662,9 @@
   </xsd:complexType>
   <xsd:complexType name="RequestTradeReferenceInformationUpdate">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">Defines the structure for a message requesting information updates to a trade. The trade reference information should contain at least one trade identifier that the recipient is aware of.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >Defines the structure for a message requesting information updates to a trade. The trade reference information should contain at least one trade identifier that the recipient is aware of.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="CorrectableRequestMessage">
@@ -730,7 +777,9 @@
   </xsd:complexType>
   <xsd:complexType name="RequestedCollateralAllocationAction">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A type that describes the type of collateral allocation action that is requested. The purpose is to allow FCMs to specify how the allocations are to be processed.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A type that describes the type of collateral allocation action that is requested. The purpose is to allow FCMs to specify how the allocations are to be processed.</xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
       <xsd:extension base="Scheme">
@@ -759,7 +808,9 @@
       </xsd:sequence>
       <xsd:element name="deClear" type="DeClear">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">A structure describing a declear event. The deClear event allows a firm to request that a trade be removed from clearing, or a clearing service to request consent for this, or to report that it has been done.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >A structure describing a declear event. The deClear event allows a firm to request that a trade be removed from clearing, or a clearing service to request consent for this, or to report that it has been done.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="clearing" type="Clearing" />
@@ -767,7 +818,9 @@
   </xsd:group>
   <xsd:group name="EventsOrInfo.model">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">Defines a model group that allows either details of an event or information about a trade to be provided. Typically this will be used in a response to a request.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >Defines a model group that allows either details of an event or information about a trade to be provided. Typically this will be used in a response to a request.</xsd:documentation>
     </xsd:annotation>
     <xsd:choice>
       <xsd:group ref="TradingAndPostTradeEvents.model" />
@@ -814,7 +867,9 @@
 <!-- Confirmation -->
   <xsd:element name="requestConfirmation" type="RequestConfirmation">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">The confirmation process starts with the requestConfirmation message. The message may be used to request the confirmation of a new trade or any other event supported by FpML such as novation, terminations, amendments, etc.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >The confirmation process starts with the requestConfirmation message. The message may be used to request the confirmation of a new trade or any other event supported by FpML such as novation, terminations, amendments, etc.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="requestConfirmationRetracted" type="ConfirmationRetracted">
@@ -834,17 +889,23 @@
   </xsd:element>
   <xsd:element name="confirmationStatus" type="ConfirmationStatus">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">The confirmationStatus message provides the status of the matching process: matched, mismatched, unmatched, or alleged. It may also provide the best fit trade(s) or event(s) as result of the matching process.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >The confirmationStatus message provides the status of the matching process: matched, mismatched, unmatched, or alleged. It may also provide the best fit trade(s) or event(s) as result of the matching process.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="confirmationAgreed" type="ConfirmationAgreed">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">The confirmationAgreed message is sent when the matching process returns a proposed match (trade or event) and the Confirmation Requester agrees with it.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >The confirmationAgreed message is sent when the matching process returns a proposed match (trade or event) and the Confirmation Requester agrees with it.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="confirmationDisputed" type="ConfirmationDisputed">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">The confirmationDisputed message is sent when the matching process returns a proposed match (trade or event) and the Confirmation Requester disputes it.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >The confirmationDisputed message is sent when the matching process returns a proposed match (trade or event) and the Confirmation Requester disputes it.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
 <!-- Clearing -->
@@ -870,4 +931,3 @@
 <!--Option Exercise / Expiry  -->
   <xsd:element name="optionExpirationNotification" type="ExecutionNotification" />
 </xsd:schema>
-

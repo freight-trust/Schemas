@@ -6,20 +6,17 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
 <xs:schema
-  targetNamespace="http://www.freighttrust.com/Schemas/Native/2020/09"
-  version="2.0"
-  elementFormDefault="qualified"
-  xmlns="http://www.freighttrust.com/Schemas/Native/2020/09"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.freighttrust.com/Schemas/Native/2020/09"
+    version="2.0"
+    elementFormDefault="qualified"
+    xmlns="http://www.freighttrust.com/Schemas/Native/2020/09"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
 >
   <xs:include schemaLocation="Native.xsd" />
   <xs:element name="AcceptabilityBand" type="AcceptabilityBandData" />
   <xs:complexType name="AcceptabilityBandData">
     <xs:all>
-      <xs:element
-        name="BMComponentAcceptabilityBand"
-        type="NativeAcceptabilityBand"
-      />
+      <xs:element name="BMComponentAcceptabilityBand" type="NativeAcceptabilityBand" />
     </xs:all>
     <xs:attribute name="version" type="xs:token" />
   </xs:complexType>
@@ -48,27 +45,15 @@
       <xs:element name="GoodUpperBound" minOccurs="0" type="xs:int" />
       <xs:element name="CautionUpperBound" minOccurs="0" type="xs:int" />
       <xs:element name="IsGoldenRule" minOccurs="0" type="xs:boolean" />
-      <xs:element
-        name="SystemCreateTimeUtc"
-        minOccurs="0"
-        type="emptiableDateTime"
-      />
-      <xs:element
-        name="SystemLastEditTimeUtc"
-        minOccurs="0"
-        type="emptiableDateTime"
-      />
+      <xs:element name="SystemCreateTimeUtc" minOccurs="0" type="emptiableDateTime" />
+      <xs:element name="SystemLastEditTimeUtc" minOccurs="0" type="emptiableDateTime" />
       <xs:element name="IsActive" minOccurs="0" type="xs:boolean" />
       <xs:element name="SqlText" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string" />
         </xs:simpleType>
       </xs:element>
-      <xs:element
-        name="FiltersByReleaseGroup"
-        minOccurs="0"
-        type="xs:boolean"
-      />
+      <xs:element name="FiltersByReleaseGroup" minOccurs="0" type="xs:boolean" />
       <xs:element name="FiltersBySection" minOccurs="0" type="xs:boolean" />
       <xs:element name="BMComponent" minOccurs="0">
         <xs:complexType>
@@ -114,24 +99,12 @@
                 </xs:restriction>
               </xs:simpleType>
             </xs:element>
-            <xs:element
-              name="FilterData"
-              minOccurs="0"
-              type="xs:base64Binary"
-            />
+            <xs:element name="FilterData" minOccurs="0" type="xs:base64Binary" />
             <xs:element name="RelatedEntityID" minOccurs="0" type="xs:string" />
-            <xs:element
-              name="ColumnLayoutData"
-              minOccurs="0"
-              type="xs:base64Binary"
-            />
+            <xs:element name="ColumnLayoutData" minOccurs="0" type="xs:base64Binary" />
             <xs:element name="IsSystem" minOccurs="0" type="xs:boolean" />
             <xs:element name="IsPublished" minOccurs="0" type="xs:boolean" />
-            <xs:element
-              name="SaveColumnLayout"
-              minOccurs="0"
-              type="xs:boolean"
-            />
+            <xs:element name="SaveColumnLayout" minOccurs="0" type="xs:boolean" />
             <xs:element name="FilterName" minOccurs="0">
               <xs:simpleType>
                 <xs:restriction base="xs:string">
@@ -146,16 +119,8 @@
                 </xs:restriction>
               </xs:simpleType>
             </xs:element>
-            <xs:element
-              name="GridColourLayoutID"
-              minOccurs="0"
-              type="xs:string"
-            />
-            <xs:element
-              name="SaveGridColourLayout"
-              minOccurs="0"
-              type="xs:boolean"
-            />
+            <xs:element name="GridColourLayoutID" minOccurs="0" type="xs:string" />
+            <xs:element name="SaveGridColourLayout" minOccurs="0" type="xs:boolean" />
             <xs:element name="GlbCompany" minOccurs="0">
               <xs:complexType>
                 <xs:all>
@@ -177,16 +142,8 @@
                 <xs:all>
                   <!-- Candidate Key: RelatedEntityID + StmModuleFilter.PK -->
                   <xs:element name="PK" minOccurs="0" type="xs:string" />
-                  <xs:element
-                    name="RelatedEntityID"
-                    minOccurs="0"
-                    type="xs:string"
-                  />
-                  <xs:element
-                    name="FilterDataValues"
-                    minOccurs="0"
-                    type="xs:base64Binary"
-                  />
+                  <xs:element name="RelatedEntityID" minOccurs="0" type="xs:string" />
+                  <xs:element name="FilterDataValues" minOccurs="0" type="xs:base64Binary" />
                   <xs:element name="RelatedEntityTableCode" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">

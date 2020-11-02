@@ -1,10 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- 
 == Copyright (c) 2002-2018 All rights reserved. 
 == Financial Products Markup Language is subject to the FpML public license. 
 == A copy of this license is available at http://www.fpml.org/documents/license
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/confirmation" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/confirmation" ecore:documentRoot="FpML" ecore:nsPrefix="conf" ecore:package="org.fpml.confirmation" version="$Revision: 7614 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xsd:schema
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns="http://www.fpml.org/FpML-5/confirmation"
+    xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"
+    xmlns:fpml-annotation="http://www.fpml.org/annotation"
+    targetNamespace="http://www.fpml.org/FpML-5/confirmation"
+    ecore:documentRoot="FpML"
+    ecore:nsPrefix="conf"
+    ecore:package="org.fpml.confirmation"
+    version="$Revision: 7614 $"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+>
   <xsd:include schemaLocation="fpml-msg-5-10.xsd" />
   <xsd:include schemaLocation="fpml-business-events-5-10.xsd" />
   <xsd:annotation>
@@ -12,7 +25,9 @@
   </xsd:annotation>
   <xsd:complexType name="AbstractApplicablePartyProfileObjects" abstract="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">An abstract base type that combines objects applicable to the description of a party profile (e.g. applicable assets and cash evets to specific contacts or settlement instructions).</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >An abstract base type that combines objects applicable to the description of a party profile (e.g. applicable assets and cash evets to specific contacts or settlement instructions).</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="identifier" type="AssociationToAssetIdentifier" />
@@ -32,7 +47,9 @@
   </xsd:complexType>
   <xsd:complexType name="AbstractContractNotification" abstract="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">An extension of the AbstractServicingNotification which includes a reference to the facility and the loan contract to which embedded loan events apply. This abtract type should be used to 'wrap' contract-level business events.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >An extension of the AbstractServicingNotification which includes a reference to the facility and the loan contract to which embedded loan events apply. This abtract type should be used to 'wrap' contract-level business events.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="AbstractServicingNotification">
@@ -86,7 +103,9 @@
           </xsd:group>
           <xsd:element name="multiCurrency" type="MultiCurrency" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">A container to denote whether funds may be drawn in multiple currency denominations, in addition to the base (facility) currency. The current commitment amount defines the base currency associated with the facility.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >A container to denote whether funds may be drawn in multiple currency denominations, in addition to the base (facility) currency. The current commitment amount defines the base currency associated with the facility.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
@@ -112,7 +131,9 @@
   </xsd:complexType>
   <xsd:complexType name="AbstractFacilityNotification" abstract="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">An extension of the AbstractServicingNotification which includes a reference to the facility to which embedded loan events apply. This abtract type should be used to 'wrap' facility-level business events.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >An extension of the AbstractServicingNotification which includes a reference to the facility to which embedded loan events apply. This abtract type should be used to 'wrap' facility-level business events.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="AbstractServicingNotification">
@@ -144,7 +165,9 @@
           <xsd:element name="parentEventIdentifier" type="BusinessEventIdentifier" minOccurs="0" />
           <xsd:element name="correctedEventIdentifier" type="BusinessEventIdentifier" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">A unique id associated with a previous inaccurate event. Population of this identifier reflects the fact that this new event is being used to apply a 'corrective measure' to the referenced event (rather than this being an actual real-life event). The net result (across both events) ensures accurate accounting.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >A unique id associated with a previous inaccurate event. Population of this identifier reflects the fact that this new event is being used to apply a 'corrective measure' to the referenced event (rather than this being an actual real-life event). The net result (across both events) ensures accurate accounting.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:group ref="LenderAndCashDetails.model" minOccurs="0">
@@ -179,7 +202,9 @@
   </xsd:complexType>
   <xsd:complexType name="AbstractLoanAllocationPaymentNotification" abstract="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">An underlying abstract structure for all syndicated loan servicing notifications; the wrapper for loan events which occur through the life-cycle of a deal.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >An underlying abstract structure for all syndicated loan servicing notifications; the wrapper for loan events which occur through the life-cycle of a deal.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="AbstractLoanTradingNotification">
@@ -254,7 +279,8 @@
         </xsd:element>
         <xsd:element name="correctedTaskIdentifier" type="TaskIdentifier" minOccurs="0">
           <xsd:annotation>
-            <xsd:documentation>A unique identifier associated with a previous ‘inaccurate task.’ Population of this identifier represents that this task is a ‘corrective measure’ to a previous task, rather than being a stand-alone task.</xsd:documentation>
+            <xsd:documentation
+                        >A unique identifier associated with a previous ‘inaccurate task.’ Population of this identifier represents that this task is a ‘corrective measure’ to a previous task, rather than being a stand-alone task.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
         <xsd:sequence>
@@ -284,7 +310,9 @@
   </xsd:complexType>
   <xsd:complexType name="AbstractLoanTradePaymentNotification" abstract="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">An underlying abstract structure for all syndicated loan servicing notifications; the wrapper for payment events which occur through the life-cycle of a loan trade.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >An underlying abstract structure for all syndicated loan servicing notifications; the wrapper for payment events which occur through the life-cycle of a loan trade.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="AbstractLoanTradingNotification">
@@ -300,7 +328,9 @@
   </xsd:complexType>
   <xsd:complexType name="AbstractLoanTradingNotification" abstract="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">An underlying abstract structure for all syndicated loan servicing notifications; the wrapper for events which occur through the life-cycle of a loan trade.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >An underlying abstract structure for all syndicated loan servicing notifications; the wrapper for events which occur through the life-cycle of a loan trade.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="CorrectableRequestMessage">
@@ -353,7 +383,9 @@
             </xsd:element>
             <xsd:element name="whenIssuedFlag" type="xsd:boolean">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">A flag to indicate the dependency of a secondary market loan trade upon the closing of a primary market loan structuring and syndication process.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >A flag to indicate the dependency of a secondary market loan trade upon the closing of a primary market loan structuring and syndication process.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
           </xsd:sequence>
@@ -425,7 +457,9 @@
   </xsd:complexType>
   <xsd:complexType name="AbstractLoanServicingEvent" abstract="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">An abstract base type defining common features of a syndicated loan servicing business event. Such events are originated by the borrower and are required to be communicated to the lender syndicate by agents.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >An abstract base type defining common features of a syndicated loan servicing business event. Such events are originated by the borrower and are required to be communicated to the lender syndicate by agents.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="AbstractLoanEvent">
@@ -446,7 +480,9 @@
   </xsd:complexType>
   <xsd:complexType name="AbstractLoanStatement" abstract="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">An abstract base type for all syndicated loan statement notifications; the wrapper for deal/facility/contract definitions and facility/contract positions at a particular point in time (snapshot).</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >An abstract base type for all syndicated loan statement notifications; the wrapper for deal/facility/contract definitions and facility/contract positions at a particular point in time (snapshot).</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="CorrectableRequestMessage">
@@ -497,7 +533,9 @@
             </xsd:element>
             <xsd:element name="relatedParty" type="RelatedParty" minOccurs="0" maxOccurs="unbounded">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">Other parties that may be related to the receiver party. Examples: custodian or trustee; or, to convey company hierarchy (for use in the context of 'blacklists').</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >Other parties that may be related to the receiver party. Examples: custodian or trustee; or, to convey company hierarchy (for use in the context of 'blacklists').</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
             <xsd:element name="documentation" type="PartyProfileDocumentation" minOccurs="0">
@@ -581,7 +619,9 @@
   </xsd:complexType>
   <xsd:complexType name="AccrualOptionChangeNotification">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A loan servicing notification used to update an accrual option within a single facility. Embedded business events simply re-state the given accrual option.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A loan servicing notification used to update an accrual option within a single facility. Embedded business events simply re-state the given accrual option.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="AbstractContractNotification">
@@ -674,7 +714,9 @@
   </xsd:complexType>
   <xsd:complexType name="AccruingFeeChangeNotification">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A loan servicing notification used to communicate a change in an accruing fee option. These options define the rates/calculations associated with facility-level accruing fees.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A loan servicing notification used to communicate a change in an accruing fee option. These options define the rates/calculations associated with facility-level accruing fees.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="AbstractFacilityNotification">
@@ -886,7 +928,9 @@
   </xsd:complexType>
   <xsd:complexType name="AmendmentFeePayment">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A fee charged to the borrower for an amendment being made to the originally agreed credit agreement. The fee is based on a rate (as stated in the agreement) applied to the current commitment level. Calculated as a percentage of the unutilized portion of the facility.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A fee charged to the borrower for an amendment being made to the originally agreed credit agreement. The fee is based on a rate (as stated in the agreement) applied to the current commitment level. Calculated as a percentage of the unutilized portion of the facility.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="NonRecurringFeePayment" />
@@ -995,7 +1039,9 @@
     <xsd:sequence>
       <xsd:group ref="PartyAndAccountReferences.model">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">A pointer style reference to a party identifier and optionally an account identifier defined elsewhere in the document. The party referenced has allocated the trade identifier.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >A pointer style reference to a party identifier and optionally an account identifier defined elsewhere in the document. The party referenced has allocated the trade identifier.</xsd:documentation>
         </xsd:annotation>
       </xsd:group>
       <xsd:element name="associationtId" type="AssociationToAssetId" />
@@ -1033,7 +1079,9 @@
           <xsd:element name="amount" type="MoneyWithParticipantShare" />
           <xsd:element name="conditionsPrecedentMet" type="ConditionsPrecedentMetEnum" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">An enumeration which describes whether the condition precent have been met, not met or been waived. Please note: this field in not required since conditions precedent may not be applicable in certain scenarios.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >An enumeration which describes whether the condition precent have been met, not met or been waived. Please note: this field in not required since conditions precedent may not be applicable in certain scenarios.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
@@ -1059,13 +1107,17 @@
   </xsd:complexType>
   <xsd:complexType name="CashPayable">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A structure taht represents payable cash, together with reference to any withholding tax being applied. This is used as a generic cash flow container across all loan business events (within the event header).</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A structure taht represents payable cash, together with reference to any withholding tax being applied. This is used as a generic cash flow container across all loan business events (within the event header).</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:group ref="PayerReceiver.model" />
       <xsd:element name="netAmount" type="NonNegativeMoney">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The cash amount payable, net of all tax withholding. This amount represents the funds to be wired from 'payer' to 'receiver' as a result of the underlying business event.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The cash amount payable, net of all tax withholding. This amount represents the funds to be wired from 'payer' to 'receiver' as a result of the underlying business event.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="taxWithholding" type="TaxWithholding" minOccurs="0" maxOccurs="unbounded">
@@ -1214,7 +1266,9 @@
           </xsd:group>
           <xsd:element name="creditAgreementDate" type="xsd:date">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">The credit agreement date is also known as the 'closing date' (the date on which the agreement was signed). Funding of the facilities occurs either on or after (in the case of a Delayed Draw) the Credit Agreement date.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >The credit agreement date is also known as the 'closing date' (the date on which the agreement was signed). Funding of the facilities occurs either on or after (in the case of a Delayed Draw) the Credit Agreement date.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:choice minOccurs="0">
@@ -1303,7 +1357,8 @@
         </xsd:element>
         <xsd:element name="settlementDetails" type="SettlementDetails" maxOccurs="unbounded">
           <xsd:annotation>
-            <xsd:documentation>Settlement account details to describe the acount to which cash should be sent, for payments received by the party sending the Lender Event Settlement Notification.</xsd:documentation>
+            <xsd:documentation
+                        >Settlement account details to describe the acount to which cash should be sent, for payments received by the party sending the Lender Event Settlement Notification.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
       </xsd:sequence>
@@ -1328,7 +1383,9 @@
   </xsd:complexType>
   <xsd:complexType name="FacilityCommitment">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A structure that represents the commitment amount against a facility or facility portion. Also shows the utilization levels against the total commitment amount (in facility currency).</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A structure that represents the commitment amount against a facility or facility portion. Also shows the utilization levels against the total commitment amount (in facility currency).</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="totalCommitmentAmount" type="MoneyWithParticipantShare">
@@ -1411,7 +1468,9 @@
         <xsd:sequence>
           <xsd:element name="outstandingsPosition" type="OutstandingsPosition" minOccurs="0" maxOccurs="unbounded">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">A structure used to define all positions held by the lender at the loan contract level. This structure is design to hold either some or all loan contracts.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >A structure used to define all positions held by the lender at the loan contract level. This structure is design to hold either some or all loan contracts.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
@@ -1420,14 +1479,18 @@
   </xsd:complexType>
   <xsd:complexType name="FacilityOutstandingsPositionStatement">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A structure that represents position details (including outstandings) for a single facility. Positions can be stated at the global and (optionally) at the lender-specific level.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A structure that represents position details (including outstandings) for a single facility. Positions can be stated at the global and (optionally) at the lender-specific level.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="AbstractLoanStatement">
         <xsd:sequence>
           <xsd:element name="facilityOutstandingsPosition" type="FacilityOutstandingsPosition">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Commitment and outstanding position details for a single facility. Positions can be stated at the global and (optionally) at the lender-specific level.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >Commitment and outstanding position details for a single facility. Positions can be stated at the global and (optionally) at the lender-specific level.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="positionPartyReference" type="PartyReference" minOccurs="0">
@@ -1460,7 +1523,9 @@
       </xsd:element>
       <xsd:group ref="CurrentPriorCommitment.model">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The global and share amount of principal commitment. This model can be used to determine commitment balances before and after any associated business event.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The global and share amount of principal commitment. This model can be used to determine commitment balances before and after any associated business event.</xsd:documentation>
         </xsd:annotation>
       </xsd:group>
     </xsd:sequence>
@@ -1602,7 +1667,9 @@
   </xsd:complexType>
   <xsd:complexType name="FixedRateAccrual">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A full definition of the fixed rate accrual characteristics of a loan contract. This structure defines both the underlying base rate as well as any additional margins and costs associated with the loan contract.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A full definition of the fixed rate accrual characteristics of a loan contract. This structure defines both the underlying base rate as well as any additional margins and costs associated with the loan contract.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="FixedRateOptionBase">
@@ -1630,7 +1697,9 @@
             </xsd:element>
             <xsd:element name="allInRate" type="xsd:decimal">
               <xsd:annotation>
-                <xsd:documentation xml:lang="en">The actual percentage rate charged to the borrower. (Base Rate + Spread + Default Rate + Penalty Rate + Mandatory Cost Rate) = All In Rate. This rate NEVER includes PIK.</xsd:documentation>
+                <xsd:documentation
+                                    xml:lang="en"
+                                >The actual percentage rate charged to the borrower. (Base Rate + Spread + Default Rate + Penalty Rate + Mandatory Cost Rate) = All In Rate. This rate NEVER includes PIK.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
           </xsd:sequence>
@@ -1714,7 +1783,9 @@
   </xsd:complexType>
   <xsd:complexType name="FloatingRateAccrual">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A full definition of the accrual characteristics of a loan contract. This structure defines both the underlying base rate as well as any additional margins and costs associated with the loan contract.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A full definition of the accrual characteristics of a loan contract. This structure defines both the underlying base rate as well as any additional margins and costs associated with the loan contract.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="FloatingRateOptionBase">
@@ -1728,7 +1799,9 @@
             <xsd:sequence>
               <xsd:element name="rateFixingDate" type="xsd:date">
                 <xsd:annotation>
-                  <xsd:documentation xml:lang="en">The date on which the underlying interest rate is fixed. It is an actual (adjusted) date. Note: This should default to the effective date of the loan contract in the case of a PRIME base rate.</xsd:documentation>
+                  <xsd:documentation
+                                        xml:lang="en"
+                                    >The date on which the underlying interest rate is fixed. It is an actual (adjusted) date. Note: This should default to the effective date of the loan contract in the case of a PRIME base rate.</xsd:documentation>
                 </xsd:annotation>
               </xsd:element>
               <xsd:element name="baseRate" type="xsd:decimal" minOccurs="0">
@@ -1755,7 +1828,9 @@
               </xsd:element>
               <xsd:element name="allInRate" type="xsd:decimal">
                 <xsd:annotation>
-                  <xsd:documentation xml:lang="en">The actual percentage rate charged to the borrower. (Base Rate + Spread + Default Rate + Penalty Rate + Mandatory Cost Rate) = All In Rate. This rate NEVER includes PIK.</xsd:documentation>
+                  <xsd:documentation
+                                        xml:lang="en"
+                                    >The actual percentage rate charged to the borrower. (Base Rate + Spread + Default Rate + Penalty Rate + Mandatory Cost Rate) = All In Rate. This rate NEVER includes PIK.</xsd:documentation>
                 </xsd:annotation>
               </xsd:element>
             </xsd:sequence>
@@ -1842,7 +1917,9 @@
   </xsd:complexType>
   <xsd:complexType name="FloatingRateOptionChange">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">An event describing a change in a floating rate accrual option. In real terms - an example of this would be a margin rate change associated with the 3-Month LIBOR accrual option.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >An event describing a change in a floating rate accrual option. In real terms - an example of this would be a margin rate change associated with the 3-Month LIBOR accrual option.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="AbstractFacilityEvent">
@@ -1894,7 +1971,9 @@
           </xsd:group>
           <xsd:element name="calculationMethod" type="InterestCalculationMethodEnum">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Defines the way in which the agent bank is allocating cash/PIK interest - can be (i) pro-rata at the time of the interest payment/PIK or (ii) based on the loan contract share throughout the interest period (which is the preferred method).</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >Defines the way in which the agent bank is allocating cash/PIK interest - can be (i) pro-rata at the time of the interest payment/PIK or (ii) based on the loan contract share throughout the interest period (which is the preferred method).</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="amount" type="MoneyWithParticipantShare" />
@@ -1916,14 +1995,18 @@
   </xsd:complexType>
   <xsd:complexType name="LcAccrual">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A full definition of the accrual characteristics of a letter of credit. This structure defines both the underlying letter of credit issuance fee rate as well as any FX rates applied.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A full definition of the accrual characteristics of a letter of credit. This structure defines both the underlying letter of credit issuance fee rate as well as any FX rates applied.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="FeeRateOptionBase">
         <xsd:sequence minOccurs="0">
           <xsd:element name="currency" type="Currency">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">The currency in which the letter of credit accrual is denominated. This field should ONLY be populated when the accrual currency is different to the base letter of credit currency.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >The currency in which the letter of credit accrual is denominated. This field should ONLY be populated when the accrual currency is different to the base letter of credit currency.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="lcFxRate" type="FxTerms">
@@ -1954,7 +2037,9 @@
           </xsd:element>
           <xsd:element name="relatedBorrowing" type="xsd:boolean">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Set to false for a normal increase or decrease in the letter of credit amount. If set to true, it signifies that a loan borrowing will take place in conjunction with this business event.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >Set to false for a normal increase or decrease in the letter of credit amount. If set to true, it signifies that a loan borrowing will take place in conjunction with this business event.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
@@ -2294,7 +2379,9 @@
   </xsd:complexType>
   <xsd:complexType name="LoanAllocationConfirmationNotification">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A loan servicing notification used to communicate confirmation of trade allocation details, from counterparty to counterparty, or admin agent to counterparty.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A loan servicing notification used to communicate confirmation of trade allocation details, from counterparty to counterparty, or admin agent to counterparty.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="AbstractLoanTradingNotification">
@@ -2384,7 +2471,8 @@
         <xsd:sequence>
           <xsd:element name="allocationEvent" type="LoanAllocationEvent">
             <xsd:annotation>
-              <xsd:documentation>A structure to establish the loan trade allocation event. This structure contains an event identifier for the allocation event as well as a reference to the details of the loan trade alloocation, contained in an element in the message.</xsd:documentation>
+              <xsd:documentation
+                            >A structure to establish the loan trade allocation event. This structure contains an event identifier for the allocation event as well as a reference to the details of the loan trade alloocation, contained in an element in the message.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="allocation" type="LoanAllocation" maxOccurs="unbounded">
@@ -2496,7 +2584,9 @@
   </xsd:complexType>
   <xsd:complexType name="LoanAllocationSettlementDateAvailabilityNotification">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A loan servicing notification used to communicate trade settlement date coordination (i.e. availability) details, between admin agent and counterparties.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A loan servicing notification used to communicate trade settlement date coordination (i.e. availability) details, between admin agent and counterparties.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="AbstractLoanTradingNotification">
@@ -2571,7 +2661,9 @@
   </xsd:complexType>
   <xsd:complexType name="LoanAllocationSettlementTaskNotification">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A loan servicing notification used to communicate allocation-level tasks and their statuses, the completion of which are deemed by the sender of the notification to be prerequisites to the settlement of a trade or allocation.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A loan servicing notification used to communicate allocation-level tasks and their statuses, the completion of which are deemed by the sender of the notification to be prerequisites to the settlement of a trade or allocation.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="AbstractLoanTradingNotification">
@@ -2690,7 +2782,8 @@
         <xsd:sequence>
           <xsd:choice minOccurs="2" maxOccurs="unbounded">
             <xsd:annotation>
-              <xsd:documentation>This section is used to specify the cash generating events that are part of this 'bulk' notification. Bulk messages are to be used when communicating 2 or more events.</xsd:documentation>
+              <xsd:documentation
+                            >This section is used to specify the cash generating events that are part of this 'bulk' notification. Bulk messages are to be used when communicating 2 or more events.</xsd:documentation>
             </xsd:annotation>
             <xsd:element ref="facilityFeePaymentGroup" />
             <xsd:element ref="facilityEventGroup" />
@@ -2748,7 +2841,9 @@
           </xsd:choice>
           <xsd:element name="facilityFxRate" type="FxTerms" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Defines a single (current) FX rate used to calculate utilization in the facility currency. Used in the case where the loan contract currency is different to the facility currency.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >Defines a single (current) FX rate used to calculate utilization in the facility currency. Used in the case where the loan contract currency is different to the facility currency.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
@@ -2757,7 +2852,9 @@
   </xsd:complexType>
   <xsd:complexType name="LoanContractAdjustment">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">An event representing adjustment in the notional amount of a loan contract that has no cash flow effect. E.g. an amount adjustment due to a defaulted loan.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >An event representing adjustment in the notional amount of a loan contract that has no cash flow effect. E.g. an amount adjustment due to a defaulted loan.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="AbstractLoanContractEvent">
@@ -2781,7 +2878,9 @@
         <xsd:sequence>
           <xsd:element name="fixingDate" type="xsd:date">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">The date on which the underlying interest rate is fixed. It is an actual (adjusted) date. Note: This should default to the effective date of the loan contract in the case of a PRIME base rate.</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >The date on which the underlying interest rate is fixed. It is an actual (adjusted) date. Note: This should default to the effective date of the loan contract in the case of a PRIME base rate.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="rate" type="xsd:decimal" />
@@ -2885,7 +2984,9 @@
           </xsd:group>
           <xsd:element name="calculationMethod" type="InterestCalculationMethodEnum">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">Defines whether the agent bank is making an interest payment based on the lender pro-rata share at the end of the period (snapshot) or based on the lender position throughout the period (which is the default).</xsd:documentation>
+              <xsd:documentation
+                                xml:lang="en"
+                            >Defines whether the agent bank is making an interest payment based on the lender pro-rata share at the end of the period (snapshot) or based on the lender position throughout the period (which is the default).</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="amount" type="MoneyWithParticipantShare" />
@@ -2965,7 +3066,9 @@
   </xsd:complexType>
   <xsd:complexType name="LoanPartyProfileNotification">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A profile generated and communicated by parties containing their relevant contact and payment details. This is communicated by parties to anyone who wishes to initiate payments and/or communicate with them.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A profile generated and communicated by parties containing their relevant contact and payment details. This is communicated by parties to anyone who wishes to initiate payments and/or communicate with them.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="AbstractLoanPartyProfileNotification">
@@ -3105,7 +3208,9 @@
   </xsd:complexType>
   <xsd:complexType name="LoanTradeEvent" abstract="false">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">An event structure defining counterparty-to-counterparty loan trade information. This structure contains the main (e.g. fund manager/main counterparty) trade details.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >An event structure defining counterparty-to-counterparty loan trade information. This structure contains the main (e.g. fund manager/main counterparty) trade details.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="AbstractLoanTradeEvent" />
@@ -3120,12 +3225,14 @@
         <xsd:sequence>
           <xsd:element name="tradeEvent" type="LoanTradeEvent">
             <xsd:annotation>
-              <xsd:documentation>A structure to establish the loan trade event. This structure contains an event identifier for the trade as well as a reference to the details of the trade, contained in an element in the message.</xsd:documentation>
+              <xsd:documentation
+                            >A structure to establish the loan trade event. This structure contains an event identifier for the trade as well as a reference to the details of the trade, contained in an element in the message.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="trade" type="LoanTrade">
             <xsd:annotation>
-              <xsd:documentation>A structure defining counterparty-to-counterparty loan trade information. This structure contains the main (e.g. fund manager/main counterparty) trade details.</xsd:documentation>
+              <xsd:documentation
+                            >A structure defining counterparty-to-counterparty loan trade information. This structure contains the main (e.g. fund manager/main counterparty) trade details.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:sequence>
@@ -3146,7 +3253,9 @@
   </xsd:complexType>
   <xsd:complexType name="LoanTradeSettlementTaskNotification">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A loan servicing notification used to communicate master trade-level tasks and their statuses, the completion of which are deemed by the sender of the notification to be prerequisites to the settlement of a trade or allocation.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A loan servicing notification used to communicate master trade-level tasks and their statuses, the completion of which are deemed by the sender of the notification to be prerequisites to the settlement of a trade or allocation.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="AbstractLoanTradingNotification">
@@ -3291,7 +3400,9 @@
   </xsd:complexType>
   <xsd:complexType name="LoanTrade" abstract="false">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A structure that defines counterparty-to-counterparty loan trade information. This structure contains the main (e.g. fund manager/main counterparty) trade details.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A structure that defines counterparty-to-counterparty loan trade information. This structure contains the main (e.g. fund manager/main counterparty) trade details.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="AbstractLoanTrade">
@@ -3413,24 +3524,32 @@
     <xsd:sequence>
       <xsd:element name="amount" type="Money">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The amount of cost of carry accrued for the given loan contract. Funded Amount * Price + (100-Price) * Unfunded - (100-Price) * Paydown - Non-Recurring Fees.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The amount of cost of carry accrued for the given loan contract. Funded Amount * Price + (100-Price) * Unfunded - (100-Price) * Paydown - Non-Recurring Fees.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="accrual" type="LoanTradingCostOfCarryAccrual" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Details of the accrual schedule in support of the cost of carry amount: The commencement amount is the calculated 'value' of the asset being purchased/sold, as of the end of the REGULAR settlement period (e.g. at T+7 for Par). This amount takes into account ALL potential adjustments, price and utilized/unutilized balances as of the regular settlement date. Hence, the reference amount will be the commencement amount and the rate will be the average LIBOR (between T+7 and actual settlement date). If however, the settlement amount at the END of the delay period has changed by more than 25 percent as compared to the commencement amount, then the (calculated) settlement amount for each applicable day within the delay period must be calculated and used to accrue the cost of carry. The average LIBOR will still be the applicable rate.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Details of the accrual schedule in support of the cost of carry amount: The commencement amount is the calculated 'value' of the asset being purchased/sold, as of the end of the REGULAR settlement period (e.g. at T+7 for Par). This amount takes into account ALL potential adjustments, price and utilized/unutilized balances as of the regular settlement date. Hence, the reference amount will be the commencement amount and the rate will be the average LIBOR (between T+7 and actual settlement date). If however, the settlement amount at the END of the delay period has changed by more than 25 percent as compared to the commencement amount, then the (calculated) settlement amount for each applicable day within the delay period must be calculated and used to accrue the cost of carry. The average LIBOR will still be the applicable rate.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="LoanTradingCostOfCarryAccrual">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A schedule that incorporates all sub-periods of an accrual calculation for the purposes of determining the cost of carry in the case of a trade with delayed settlement.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A schedule that incorporates all sub-periods of an accrual calculation for the purposes of determining the cost of carry in the case of a trade with delayed settlement.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="utilizationPeriod" type="UtilizationPeriod" maxOccurs="unbounded">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The funded and unfunded utilization details. These figures together with the commitment adjustment and non-recurring fees would be used to calculate the trade amount on a daily basis. If using the commencement amount, as of regular settlement date, then it is only necessary to define the utilization as of that single date. If using the settlement amount calculation (for each day through the settlement period), then it will be necessary to provide a schedule of utilized/unutilized balances throught the entire period.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The funded and unfunded utilization details. These figures together with the commitment adjustment and non-recurring fees would be used to calculate the trade amount on a daily basis. If using the commencement amount, as of regular settlement date, then it is only necessary to define the utilization as of that single date. If using the settlement amount calculation (for each day through the settlement period), then it will be necessary to provide a schedule of utilized/unutilized balances throught the entire period.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:choice>
@@ -3565,7 +3684,9 @@
   </xsd:complexType>
   <xsd:complexType name="LoanTradingPartyRole">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A type that describes a role played by a party in a trading transaction. Examples include roles such as guarantor, custodian, confirmation service provider, etc. This can be extended to provide custom roles.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A type that describes a role played by a party in a trading transaction. Examples include roles such as guarantor, custodian, confirmation service provider, etc. This can be extended to provide custom roles.</xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
       <xsd:extension base="Scheme">
@@ -3651,12 +3772,14 @@
         <xsd:sequence>
           <xsd:element name="transferEvent" type="LoanTradeEvent">
             <xsd:annotation>
-              <xsd:documentation>A structure to establish the loan transfer event. This structure contains an event identifier for the trade as well as a reference to the details of the trade, contained in an element in the message.</xsd:documentation>
+              <xsd:documentation
+                            >A structure to establish the loan transfer event. This structure contains an event identifier for the trade as well as a reference to the details of the trade, contained in an element in the message.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="transfer" type="LoanTransfer">
             <xsd:annotation>
-              <xsd:documentation>An event structure defining loan transfer information, sent from counterparty to agent. This structure contains the main (e.g. fund manager/main counterparty) trade details.</xsd:documentation>
+              <xsd:documentation
+                            >An event structure defining loan transfer information, sent from counterparty to agent. This structure contains the main (e.g. fund manager/main counterparty) trade details.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:sequence>
@@ -3835,7 +3958,9 @@
   </xsd:complexType>
   <xsd:complexType name="OutstandingsPosition">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A structure that represents outstanding loan contracts or outstanding letter of credit position. Both the global and lender position (current and prior) levels can be represented.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A structure that represents outstanding loan contracts or outstanding letter of credit position. Both the global and lender position (current and prior) levels can be represented.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:choice>
@@ -3856,7 +3981,9 @@
       </xsd:sequence>
       <xsd:element name="facilityFxRate" type="FxTerms" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Defines a single (current) FX rate used to calculate utilization in the facility currency. Used in the case where the loan contract currency is different to the facility currency.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Defines a single (current) FX rate used to calculate utilization in the facility currency. Used in the case where the loan contract currency is different to the facility currency.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -3878,7 +4005,9 @@
     <xsd:sequence>
       <xsd:group ref="PartyAndAccountReferences.model">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">A pointer style reference to a party identifier and optionally an account identifier defined elsewhere in the document. The party referenced has allocated the party profile identifier.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >A pointer style reference to a party identifier and optionally an account identifier defined elsewhere in the document. The party referenced has allocated the party profile identifier.</xsd:documentation>
         </xsd:annotation>
       </xsd:group>
       <xsd:element name="overrideId" type="OverrideId" />
@@ -3935,7 +4064,9 @@
     <xsd:sequence>
       <xsd:group ref="PartyAndAccountReferences.model">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">A pointer style reference to a party identifier and optionally an account identifier defined elsewhere in the document. The party referenced has allocated the party profile identifier.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >A pointer style reference to a party identifier and optionally an account identifier defined elsewhere in the document. The party referenced has allocated the party profile identifier.</xsd:documentation>
         </xsd:annotation>
       </xsd:group>
       <xsd:element name="partyProfileId" type="PartyProfileId" />
@@ -4185,7 +4316,9 @@
     <xsd:sequence>
       <xsd:group ref="PartyAndAccountReferences.model">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">A pointer style reference to a party identifier and optionally an account identifier defined elsewhere in the document. The party referenced has allocated the trade identifier.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >A pointer style reference to a party identifier and optionally an account identifier defined elsewhere in the document. The party referenced has allocated the trade identifier.</xsd:documentation>
         </xsd:annotation>
       </xsd:group>
       <xsd:element name="taskId" type="TaskId" />
@@ -4270,7 +4403,8 @@
         </xsd:choice>
         <xsd:element name="settlementDetails" type="SettlementDetails" maxOccurs="unbounded">
           <xsd:annotation>
-            <xsd:documentation>Settlement account details to describe the acount to which cash should be sent, for payments received by the party sending the Lender Event Settlement Notification.</xsd:documentation>
+            <xsd:documentation
+                        >Settlement account details to describe the acount to which cash should be sent, for payments received by the party sending the Lender Event Settlement Notification.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
       </xsd:sequence>
@@ -4310,7 +4444,9 @@
   </xsd:complexType>
   <xsd:complexType name="UpfrontFeePayment">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A structure that represents a fee, also known as Participation Fee, Arrangement Fee etc. This fee represents compensation to the members of the lending syndicate (and sometimes to institutional investors as well) in return for their commitment of capital.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A structure that represents a fee, also known as Participation Fee, Arrangement Fee etc. This fee represents compensation to the members of the lending syndicate (and sometimes to institutional investors as well) in return for their commitment of capital.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="NonRecurringFeePayment" />
@@ -4352,7 +4488,9 @@
   </xsd:complexType>
   <xsd:complexType name="WaiverFeePayment">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A fee structure that represents a payment made by the borrower to the syndicate lenders for processing and accepting a waiver request. The request is sent by the borrower to obtain approval from the syndicate lenders formally requesting waivers around particular terms of the credit agreement.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A fee structure that represents a payment made by the borrower to the syndicate lenders for processing and accepting a waiver request. The request is sent by the borrower to obtain approval from the syndicate lenders formally requesting waivers around particular terms of the credit agreement.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="NonRecurringFeePayment" />
@@ -4390,7 +4528,9 @@
   </xsd:group>
   <xsd:group name="CurrentPriorCommitment.model">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A model that represents current and prior global commitment break-down. The model requires global amounts and can optionally represent lender-specific share amounts.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A model that represents current and prior global commitment break-down. The model requires global amounts and can optionally represent lender-specific share amounts.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="commitment" type="FacilityCommitment">
@@ -4451,7 +4591,9 @@
       </xsd:element>
       <xsd:element name="proRataFacilities" type="ProRataFacilities" minOccurs="0" maxOccurs="unbounded">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Groups of facilities which must be traded on a pro-rata basis. The ratio of facility trade amounts must be equal to the ratio of their corresponding global amounts.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Groups of facilities which must be traded on a pro-rata basis. The ratio of facility trade amounts must be equal to the ratio of their corresponding global amounts.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -4586,18 +4728,24 @@
   </xsd:group>
   <xsd:group name="FacilityOptionsFeesAndRates.model">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A model that describes additional (non-static) facility rate details. These are managed separate since they can change independently during the life of the facility.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A model that describes additional (non-static) facility rate details. These are managed separate since they can change independently during the life of the facility.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:choice maxOccurs="unbounded">
         <xsd:element name="fixedRateOption" type="FixedRateOption">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">A set of default cash accrual options. Each option is usually available to any borrowers defined within the facility, but an explicitly defined set of borrower entities (within the option) or be applicable to all borrower(s) within the facility.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >A set of default cash accrual options. Each option is usually available to any borrowers defined within the facility, but an explicitly defined set of borrower entities (within the option) or be applicable to all borrower(s) within the facility.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="floatingRateOption" type="FloatingRateOption">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">A set of default cash accrual options. Each option is usually available to any borrowers defined within the facility, but an explicitly defined set of borrower entities (within the option) or be applicable to all borrower(s) within the facility.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >A set of default cash accrual options. Each option is usually available to any borrowers defined within the facility, but an explicitly defined set of borrower entities (within the option) or be applicable to all borrower(s) within the facility.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="lcOption" type="LcOption">
@@ -4630,7 +4778,9 @@
     <xsd:sequence>
       <xsd:element name="defaultRate" type="PeriodRate" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">This represents a default rate that may apply in addition to a regular margin rate (on outstanding loan contracts). This rate applied at the discretion of the agent bank, if the borrower is deemed to be in default.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >This represents a default rate that may apply in addition to a regular margin rate (on outstanding loan contracts). This rate applied at the discretion of the agent bank, if the borrower is deemed to be in default.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="mandatoryCostRate" type="PeriodRate" minOccurs="0">
@@ -4640,7 +4790,9 @@
       </xsd:element>
       <xsd:element name="penaltyRate" type="PeriodRate" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">This represents a penalty rate that may apply in addition to the regular margin rate (on outstanding loan contracts). This rate is applied at the discretion of the agent bank, if the borrower has broken terms stated within the credit agreement.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >This represents a penalty rate that may apply in addition to the regular margin rate (on outstanding loan contracts). This rate is applied at the discretion of the agent bank, if the borrower has broken terms stated within the credit agreement.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -4664,7 +4816,9 @@
       </xsd:sequence>
       <xsd:element name="agentPartyReference" type="PartyReference" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">A party reference to the agent bank. Each facility (within a single deal) can have specific/different agent banks, especially if there are jurisdictional boundaries being crossed.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >A party reference to the agent bank. Each facility (within a single deal) can have specific/different agent banks, especially if there are jurisdictional boundaries being crossed.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="lcIssuingBankPartyReference" type="PartyReference" minOccurs="0" maxOccurs="unbounded">
@@ -4979,7 +5133,9 @@
   </xsd:group>
   <xsd:group name="RepaymentType.model">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A model that establishes the flags that determine the type of repayment that is occurring and the flexibility asociated with it (from the lender's perspective).</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A model that establishes the flags that determine the type of repayment that is occurring and the flexibility asociated with it (from the lender's perspective).</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="refusalAllowed" type="xsd:boolean">
@@ -4994,7 +5150,9 @@
       </xsd:element>
       <xsd:element name="scheduledRepayment" type="xsd:boolean" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Defines whether the repayment is a scheduled repayment. This is normally the case when the repayment is defined on the amortization schedule associated with the facility (on the credit agreement).</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Defines whether the repayment is a scheduled repayment. This is normally the case when the repayment is defined on the amortization schedule associated with the facility (on the credit agreement).</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -5175,4 +5333,3 @@
   <xsd:element name="facilityPositionStatement" type="FacilityPositionStatement" />
   <xsd:element name="facilityOutstandingsPositionStatement" type="FacilityOutstandingsPositionStatement" />
 </xsd:schema>
-

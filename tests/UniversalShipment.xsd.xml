@@ -5,10 +5,7 @@
    - This Source Code Form is subject to the terms of the Mozilla Public
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
-<ns:UniversalShipment
-  version="token"
-  xmlns:ns="http://www.freighttrust.com/Schemas/Universal/2020/09"
->
+<ns:UniversalShipment version="token" xmlns:ns="http://www.freighttrust.com/Schemas/Universal/2020/09">
   <ns:Shipment>
     <!--Optional:-->
     <ns:DataContext>
@@ -111,8 +108,7 @@
           <ns:Owner>
             <ns:AddressType>string</ns:AddressType>
             <!--Optional:-->
-            <ns:AdditionalAddressInformation
-            >string</ns:AdditionalAddressInformation>
+            <ns:AdditionalAddressInformation>string</ns:AdditionalAddressInformation>
             <!--Optional:-->
             <ns:Address1>string</ns:Address1>
             <!--Optional:-->
@@ -170,8 +166,7 @@
             <!--Optional:-->
             <ns:State>string</ns:State>
             <!--Optional:-->
-            <ns:SuppressAddressValidationError
-            >false</ns:SuppressAddressValidationError>
+            <ns:SuppressAddressValidationError>false</ns:SuppressAddressValidationError>
             <!--Optional:-->
             <ns:UniversalNettingCode>string</ns:UniversalNettingCode>
             <!--Optional:-->
@@ -300,8 +295,7 @@
     <!--Optional:-->
     <ns:ChargeableRate>1000.00</ns:ChargeableRate>
     <!--Optional:-->
-    <ns:CoLoadBookingConfirmationReference
-    >string</ns:CoLoadBookingConfirmationReference>
+    <ns:CoLoadBookingConfirmationReference>string</ns:CoLoadBookingConfirmationReference>
     <!--Optional:-->
     <ns:CoLoadMasterBillNumber>string</ns:CoLoadMasterBillNumber>
     <!--Optional:-->
@@ -356,8 +350,7 @@
               <!--Optional:-->
               <ns:Reference>string</ns:Reference>
               <!--Optional:-->
-              <ns:ReferencedEntityDescription
-              >string</ns:ReferencedEntityDescription>
+              <ns:ReferencedEntityDescription>string</ns:ReferencedEntityDescription>
               <!--Optional:-->
               <ns:SubType>
                 <ns:Code>string</ns:Code>
@@ -382,8 +375,7 @@
             <ns:OrganizationAddress>
               <ns:AddressType>string</ns:AddressType>
               <!--Optional:-->
-              <ns:AdditionalAddressInformation
-              >string</ns:AdditionalAddressInformation>
+              <ns:AdditionalAddressInformation>string</ns:AdditionalAddressInformation>
               <!--Optional:-->
               <ns:Address1>string</ns:Address1>
               <!--Optional:-->
@@ -441,8 +433,7 @@
               <!--Optional:-->
               <ns:State>string</ns:State>
               <!--Optional:-->
-              <ns:SuppressAddressValidationError
-              >true</ns:SuppressAddressValidationError>
+              <ns:SuppressAddressValidationError>true</ns:SuppressAddressValidationError>
               <!--Optional:-->
               <ns:UniversalNettingCode>string</ns:UniversalNettingCode>
               <!--Optional:-->
@@ -543,8 +534,7 @@
           <!--Optional:-->
           <ns:IsNotIncludedInInvoice>true</ns:IsNotIncludedInInvoice>
           <!--Optional:-->
-          <ns:IsStatisticalValueApplicable
-          >false</ns:IsStatisticalValueApplicable>
+          <ns:IsStatisticalValueApplicable>false</ns:IsStatisticalValueApplicable>
           <!--Optional:-->
           <ns:PercentageOfLinePrice>1000.00</ns:PercentageOfLinePrice>
           <!--Optional:-->
@@ -577,8 +567,7 @@
           <ns:Buyer>
             <ns:AddressType>string</ns:AddressType>
             <!--Optional:-->
-            <ns:AdditionalAddressInformation
-            >string</ns:AdditionalAddressInformation>
+            <ns:AdditionalAddressInformation>string</ns:AdditionalAddressInformation>
             <!--Optional:-->
             <ns:Address1>string</ns:Address1>
             <!--Optional:-->
@@ -636,8 +625,7 @@
             <!--Optional:-->
             <ns:State>string</ns:State>
             <!--Optional:-->
-            <ns:SuppressAddressValidationError
-            >false</ns:SuppressAddressValidationError>
+            <ns:SuppressAddressValidationError>false</ns:SuppressAddressValidationError>
             <!--Optional:-->
             <ns:UniversalNettingCode>string</ns:UniversalNettingCode>
             <!--Optional:-->
@@ -743,8 +731,7 @@
           <ns:Supplier>
             <ns:AddressType>string</ns:AddressType>
             <!--Optional:-->
-            <ns:AdditionalAddressInformation
-            >string</ns:AdditionalAddressInformation>
+            <ns:AdditionalAddressInformation>string</ns:AdditionalAddressInformation>
             <!--Optional:-->
             <ns:Address1>string</ns:Address1>
             <!--Optional:-->
@@ -802,8 +789,7 @@
             <!--Optional:-->
             <ns:State>string</ns:State>
             <!--Optional:-->
-            <ns:SuppressAddressValidationError
-            >true</ns:SuppressAddressValidationError>
+            <ns:SuppressAddressValidationError>true</ns:SuppressAddressValidationError>
             <!--Optional:-->
             <ns:UniversalNettingCode>string</ns:UniversalNettingCode>
             <!--Optional:-->
@@ -921,8 +907,7 @@
                   <!--Optional:-->
                   <ns:Reference>string</ns:Reference>
                   <!--Optional:-->
-                  <ns:ReferencedEntityDescription
-                  >string</ns:ReferencedEntityDescription>
+                  <ns:ReferencedEntityDescription>string</ns:ReferencedEntityDescription>
                   <!--Optional:-->
                   <ns:SubType>
                     <ns:Code>string</ns:Code>
@@ -947,8 +932,7 @@
                 <ns:OrganizationAddress>
                   <ns:AddressType>string</ns:AddressType>
                   <!--Optional:-->
-                  <ns:AdditionalAddressInformation
-                  >string</ns:AdditionalAddressInformation>
+                  <ns:AdditionalAddressInformation>string</ns:AdditionalAddressInformation>
                   <!--Optional:-->
                   <ns:Address1>string</ns:Address1>
                   <!--Optional:-->
@@ -1006,8 +990,7 @@
                   <!--Optional:-->
                   <ns:State>string</ns:State>
                   <!--Optional:-->
-                  <ns:SuppressAddressValidationError
-                  >false</ns:SuppressAddressValidationError>
+                  <ns:SuppressAddressValidationError>false</ns:SuppressAddressValidationError>
                   <!--Optional:-->
                   <ns:UniversalNettingCode>string</ns:UniversalNettingCode>
                   <!--Optional:-->
@@ -1108,8 +1091,7 @@
               <!--Optional:-->
               <ns:IsNotIncludedInInvoice>false</ns:IsNotIncludedInInvoice>
               <!--Optional:-->
-              <ns:IsStatisticalValueApplicable
-              >false</ns:IsStatisticalValueApplicable>
+              <ns:IsStatisticalValueApplicable>false</ns:IsStatisticalValueApplicable>
               <!--Optional:-->
               <ns:PercentageOfLinePrice>1000.00</ns:PercentageOfLinePrice>
               <!--Optional:-->
@@ -1246,8 +1228,7 @@
                       <ns:Description>string</ns:Description>
                     </ns:MarinePollutant>
                     <!--Optional:-->
-                    <ns:PackedInLimitedQuantity
-                    >true</ns:PackedInLimitedQuantity>
+                    <ns:PackedInLimitedQuantity>true</ns:PackedInLimitedQuantity>
                     <!--Optional:-->
                     <ns:PackingGroup>str</ns:PackingGroup>
                     <!--Optional:-->
@@ -1335,8 +1316,7 @@
                 <!--Optional:-->
                 <ns:MarkUp3>1000.00</ns:MarkUp3>
                 <!--Optional:-->
-                <ns:TransportAndLogisticsCostPerUnit
-                >1000.00</ns:TransportAndLogisticsCostPerUnit>
+                <ns:TransportAndLogisticsCostPerUnit>1000.00</ns:TransportAndLogisticsCostPerUnit>
                 <!--Optional:-->
                 <ns:LandedLineCostItemCollection>
                   <!--Zero or more repetitions:-->
@@ -1475,8 +1455,7 @@
                       <!--Optional:-->
                       <ns:Reference>string</ns:Reference>
                       <!--Optional:-->
-                      <ns:ReferencedEntityDescription
-                      >string</ns:ReferencedEntityDescription>
+                      <ns:ReferencedEntityDescription>string</ns:ReferencedEntityDescription>
                       <!--Optional:-->
                       <ns:SubType>
                         <ns:Code>string</ns:Code>
@@ -1501,8 +1480,7 @@
                     <ns:OrganizationAddress>
                       <ns:AddressType>string</ns:AddressType>
                       <!--Optional:-->
-                      <ns:AdditionalAddressInformation
-                      >string</ns:AdditionalAddressInformation>
+                      <ns:AdditionalAddressInformation>string</ns:AdditionalAddressInformation>
                       <!--Optional:-->
                       <ns:Address1>string</ns:Address1>
                       <!--Optional:-->
@@ -1560,8 +1538,7 @@
                       <!--Optional:-->
                       <ns:State>string</ns:State>
                       <!--Optional:-->
-                      <ns:SuppressAddressValidationError
-                      >true</ns:SuppressAddressValidationError>
+                      <ns:SuppressAddressValidationError>true</ns:SuppressAddressValidationError>
                       <!--Optional:-->
                       <ns:UniversalNettingCode>string</ns:UniversalNettingCode>
                       <!--Optional:-->
@@ -1686,8 +1663,7 @@
                   <!--Optional:-->
                   <ns:IsNotIncludedInInvoice>false</ns:IsNotIncludedInInvoice>
                   <!--Optional:-->
-                  <ns:IsStatisticalValueApplicable
-                  >true</ns:IsStatisticalValueApplicable>
+                  <ns:IsStatisticalValueApplicable>true</ns:IsStatisticalValueApplicable>
                   <!--Optional:-->
                   <ns:PercentageOfLinePrice>1000.00</ns:PercentageOfLinePrice>
                   <!--Optional:-->
@@ -1723,8 +1699,7 @@
                   <!--Optional:-->
                   <ns:Reference>string</ns:Reference>
                   <!--Optional:-->
-                  <ns:ReferencedEntityDescription
-                  >string</ns:ReferencedEntityDescription>
+                  <ns:ReferencedEntityDescription>string</ns:ReferencedEntityDescription>
                   <!--Optional:-->
                   <ns:SubType>
                     <ns:Code>string</ns:Code>
@@ -1848,8 +1823,7 @@
                 <ns:OrganizationAddress>
                   <ns:AddressType>string</ns:AddressType>
                   <!--Optional:-->
-                  <ns:AdditionalAddressInformation
-                  >string</ns:AdditionalAddressInformation>
+                  <ns:AdditionalAddressInformation>string</ns:AdditionalAddressInformation>
                   <!--Optional:-->
                   <ns:Address1>string</ns:Address1>
                   <!--Optional:-->
@@ -1907,8 +1881,7 @@
                   <!--Optional:-->
                   <ns:State>string</ns:State>
                   <!--Optional:-->
-                  <ns:SuppressAddressValidationError
-                  >false</ns:SuppressAddressValidationError>
+                  <ns:SuppressAddressValidationError>false</ns:SuppressAddressValidationError>
                   <!--Optional:-->
                   <ns:UniversalNettingCode>string</ns:UniversalNettingCode>
                   <!--Optional:-->
@@ -2061,8 +2034,7 @@
               <!--Optional:-->
               <ns:Reference>string</ns:Reference>
               <!--Optional:-->
-              <ns:ReferencedEntityDescription
-              >string</ns:ReferencedEntityDescription>
+              <ns:ReferencedEntityDescription>string</ns:ReferencedEntityDescription>
               <!--Optional:-->
               <ns:SubType>
                 <ns:Code>string</ns:Code>

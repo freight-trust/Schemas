@@ -6,19 +6,16 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
 <xs:schema
-  targetNamespace="http://www.freighttrust.com/Schemas/Universal/2020/09"
-  version="1.1"
-  elementFormDefault="qualified"
-  xmlns="http://www.freighttrust.com/Schemas/Universal/2020/09"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.freighttrust.com/Schemas/Universal/2020/09"
+    version="1.1"
+    elementFormDefault="qualified"
+    xmlns="http://www.freighttrust.com/Schemas/Universal/2020/09"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
 >
   <xs:include schemaLocation="UniversalCommon.xsd" />
   <xs:include schemaLocation="UniversalTransaction.xsd" />
 
-  <xs:element
-    name="UniversalTransactionBatch"
-    type="UniversalTransactionBatchData"
-  />
+  <xs:element name="UniversalTransactionBatch" type="UniversalTransactionBatchData" />
 
   <xs:complexType name="UniversalTransactionBatchData">
     <xs:all>
@@ -38,12 +35,7 @@
       <xs:element name="OrganizationAddressCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element
-              name="OrganizationAddress"
-              minOccurs="0"
-              maxOccurs="unbounded"
-              type="OrganizationAddress"
-            />
+            <xs:element name="OrganizationAddress" minOccurs="0" maxOccurs="unbounded" type="OrganizationAddress" />
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -51,12 +43,7 @@
       <xs:element name="TransactionCollection" minOccurs="0">
         <xs:complexType>
           <xs:sequence>
-            <xs:element
-              name="Transaction"
-              minOccurs="0"
-              maxOccurs="unbounded"
-              type="TransactionInfo"
-            />
+            <xs:element name="Transaction" minOccurs="0" maxOccurs="unbounded" type="TransactionInfo" />
           </xs:sequence>
         </xs:complexType>
       </xs:element>

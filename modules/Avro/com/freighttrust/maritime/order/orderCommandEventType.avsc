@@ -1,0 +1,6 @@
+{
+    "namespace": "freighttrust.eda.kc.order",
+    "name": "orderCommandEventType",
+    "type": "enum",
+    "symbols": ["CreateOrderCommand", "UpdateOrderCommand", "CancelOrderCommand"]
+}

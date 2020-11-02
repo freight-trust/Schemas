@@ -6,18 +6,15 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
 <xs:schema
-  targetNamespace="http://www.freighttrust.com/Schemas/Universal/2020/09"
-  version="1.1"
-  elementFormDefault="qualified"
-  xmlns="http://www.freighttrust.com/Schemas/Universal/2020/09"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.freighttrust.com/Schemas/Universal/2020/09"
+    version="1.1"
+    elementFormDefault="qualified"
+    xmlns="http://www.freighttrust.com/Schemas/Universal/2020/09"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
 >
   <xs:include schemaLocation="UniversalCommon.xsd" />
 
-  <xs:element
-    name="UniversalActivityRequest"
-    type="UniversalActivityRequestData"
-  />
+  <xs:element name="UniversalActivityRequest" type="UniversalActivityRequestData" />
 
   <xs:complexType name="UniversalActivityRequestData">
     <xs:all>

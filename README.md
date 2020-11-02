@@ -71,7 +71,7 @@ _For further deployment templates and options see:_ [Deployment Documentation](d
 
 ## Change Log
 
-- 2020-09 Release
+-   2020-09 Release
 
 [Improvement Change Log](CHANGELOG.md)
 

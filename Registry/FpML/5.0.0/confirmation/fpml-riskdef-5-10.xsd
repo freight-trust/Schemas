@@ -1,10 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- 
 == Copyright (c) 2002-2018 All rights reserved. 
 == Financial Products Markup Language is subject to the FpML public license. 
 == A copy of this license is available at http://www.fpml.org/license/license.html
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/confirmation" targetNamespace="http://www.fpml.org/FpML-5/confirmation" ecore:documentRoot="FpML" ecore:nsPrefix="conf" ecore:package="org.fpml.confirmation" version="$Revision: 13171 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xsd:schema
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns="http://www.fpml.org/FpML-5/confirmation"
+    targetNamespace="http://www.fpml.org/FpML-5/confirmation"
+    ecore:documentRoot="FpML"
+    ecore:nsPrefix="conf"
+    ecore:package="org.fpml.confirmation"
+    version="$Revision: 13171 $"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+>
   <xsd:include schemaLocation="fpml-doc-5-10.xsd" />
   <xsd:include schemaLocation="fpml-asset-5-10.xsd" />
   <xsd:complexType name="AssetOrTermPointOrPricingStructureReference">
@@ -75,7 +86,9 @@
   </xsd:complexType>
   <xsd:complexType name="DerivativeFormula">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A formula for computing a complex derivative from partial derivatives. Its value is the sum of the terms divided by the product of the denominator terms.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A formula for computing a complex derivative from partial derivatives. Its value is the sum of the terms divided by the product of the denominator terms.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="term" type="FormulaTerm">
@@ -109,7 +122,9 @@
   </xsd:complexType>
   <xsd:complexType name="GenericDimension">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A generic (user defined) dimension, e.g. for use in a correlation surface. e.g. a currency, stock, etc. This would take values like USD, GBP, JPY, or IBM, MSFT, etc.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A generic (user defined) dimension, e.g. for use in a correlation surface. e.g. a currency, stock, etc. This would take values like USD, GBP, JPY, or IBM, MSFT, etc.</xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
       <xsd:extension base="String">
@@ -246,7 +261,9 @@
   </xsd:complexType>
   <xsd:complexType name="PricingMethod">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">For an asset (e.g. a reference/benchmark asset), the pricing structure used to price it. Used, for example, to specify that the rateIndex "USD-LIBOR-Telerate" with term = 6M is priced using the "USD-LIBOR-Close" curve.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >For an asset (e.g. a reference/benchmark asset), the pricing structure used to price it. Used, for example, to specify that the rateIndex "USD-LIBOR-Telerate" with term = 6M is priced using the "USD-LIBOR-Close" curve.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="assetReference" type="AnyAssetReference">
@@ -274,12 +291,16 @@
       <xsd:choice>
         <xsd:element name="parameterReference" type="AssetOrTermPointOrPricingStructureReference" minOccurs="0">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">A reference to the pricing input parameter to which the sensitivity is computed. If it is omitted, the derivative definition is generic, and applies to any input point in the valuation set.</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >A reference to the pricing input parameter to which the sensitivity is computed. If it is omitted, the derivative definition is generic, and applies to any input point in the valuation set.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="inputDateReference" type="ValuationReference" maxOccurs="unbounded">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">Reference(s) to the pricing input dates that are shifted when the sensitivity is computed. Depending on the time advance method used, this list could vary. Used for describing time-advance derivatives (theta, carry, etc.)</xsd:documentation>
+            <xsd:documentation
+                            xml:lang="en"
+                        >Reference(s) to the pricing input dates that are shifted when the sensitivity is computed. Depending on the time advance method used, this list could vary. Used for describing time-advance derivatives (theta, carry, etc.)</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
       </xsd:choice>
@@ -322,7 +343,9 @@
   </xsd:complexType>
   <xsd:complexType name="PricingStructureValuation">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">An abstract pricing structure valuation base type. Used as a base for values of pricing structures such as yield curves and volatility matrices. Derived from the "Valuation" type.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >An abstract pricing structure valuation base type. Used as a base for values of pricing structures such as yield curves and volatility matrices. Derived from the "Valuation" type.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="Valuation">
@@ -348,7 +371,9 @@
       </xsd:element>
       <xsd:element name="assetQuote" type="BasicAssetValuation" minOccurs="0" maxOccurs="unbounded">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">A collection of valuations (quotes) for the assets needed in the set. Normally these quotes will be for the underlying assets listed above, but they don't necesarily have to be.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >A collection of valuations (quotes) for the assets needed in the set. Normally these quotes will be for the underlying assets listed above, but they don't necesarily have to be.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -360,12 +385,16 @@
     <xsd:sequence>
       <xsd:element name="name" type="String" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The name of the derivative, e.g. first derivative, Hessian, etc. Typically not required, but may be used to explain more complex derivative calculations.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The name of the derivative, e.g. first derivative, Hessian, etc. Typically not required, but may be used to explain more complex derivative calculations.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="valuationScenarioReference" type="ValuationScenarioReference" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Reference to the valuation scenario to which this sensitivity definition applies. If the SensitivityDefinition occurs within a SensitivitySetDefinition, this is not required and normally not used. In this case, if it is supplied it overrides the valuationScenarioReference in the SensitivitySetDefinition.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Reference to the valuation scenario to which this sensitivity definition applies. If the SensitivityDefinition occurs within a SensitivitySetDefinition, this is not required and normally not used. In this case, if it is supplied it overrides the valuationScenarioReference in the SensitivitySetDefinition.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:choice>
@@ -392,7 +421,9 @@
       </xsd:element>
       <xsd:element name="valuationScenarioReference" type="ValuationScenarioReference" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Reference to the valuation scenario to which this sensitivity definition applies, e.g. a reference to the EOD valuation scenario. If not supplied, this sensitivity set definition is generic to a variety of valuation scenarios.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >Reference to the valuation scenario to which this sensitivity definition applies, e.g. a reference to the EOD valuation scenario. If not supplied, this sensitivity set definition is generic to a variety of valuation scenarios.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="pricingInputType" type="PricingInputType" minOccurs="0">
@@ -417,7 +448,9 @@
       </xsd:element>
       <xsd:element name="calculationProcedure" type="DerivativeCalculationProcedure" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The method by which each derivative is computed, e.g. analytic, numerical model, perturbation, etc., and the corresponding parameters (eg. shift amounts).</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The method by which each derivative is computed, e.g. analytic, numerical model, perturbation, etc., and the corresponding parameters (eg. shift amounts).</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -459,7 +492,9 @@
   </xsd:complexType>
   <xsd:complexType name="Valuation">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A valuation of an valuable object - an asset or a pricing input. This is an abstract type, used as a base for values of pricing structures such as yield curves as well as asset values.</xsd:documentation>
+      <xsd:documentation
+                xml:lang="en"
+            >A valuation of an valuable object - an asset or a pricing input. This is an abstract type, used as a base for values of pricing structures such as yield curves as well as asset values.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="objectReference" type="AnyAssetReference" minOccurs="0">
@@ -469,7 +504,9 @@
       </xsd:element>
       <xsd:element name="valuationScenarioReference" type="ValuationScenarioReference" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">A reference to the valuation scenario used to calculate this valuation. If the Valuation occurs within a ValuationSet, this value is optional and is defaulted from the ValuationSet. If this value occurs in both places, the lower level value (i.e. the one here) overrides that in the higher (i.e. ValuationSet).</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >A reference to the valuation scenario used to calculate this valuation. If the Valuation occurs within a ValuationSet, this value is optional and is defaulted from the ValuationSet. If this value occurs in both places, the lower level value (i.e. the one here) overrides that in the higher (i.e. ValuationSet).</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -581,7 +618,9 @@
       </xsd:element>
       <xsd:element name="formula" type="DerivativeFormula" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">A formula defining how to compute the derivative from the partial derivatives. If absent, the derivative is just the product of the partial derivatives. Normally only required for more higher-order derivatives, e.g. Hessians.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >A formula defining how to compute the derivative from the partial derivatives. If absent, the derivative is just the product of the partial derivatives. Normally only required for more higher-order derivatives, e.g. Hessians.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -608,7 +647,9 @@
       </xsd:element>
       <xsd:element name="averaged" type="xsd:boolean">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The value is calculated by perturbing by the perturbationAmount and then the negative of the perturbationAmount and then averaging the two values (i.e. the value is half of the difference between perturbing up and perturbing down).</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The value is calculated by perturbing by the perturbationAmount and then the negative of the perturbationAmount and then averaging the two values (i.e. the value is half of the difference between perturbing up and perturbing down).</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="perturbationType" type="PerturbationType" minOccurs="0">
@@ -647,12 +688,16 @@
       </xsd:element>
       <xsd:element name="spotDate" type="IdentifiedDate" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The spot settlement date for which the structure applies, normally 0-2 days after the base date. The difference between the baseDate and the spotDate is termed the settlement lag, and is sometimes called "days to spot".</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The spot settlement date for which the structure applies, normally 0-2 days after the base date. The difference between the baseDate and the spotDate is termed the settlement lag, and is sometimes called "days to spot".</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="inputDataDate" type="IdentifiedDate" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The date from which the input data used to construct the pricing input was obtained. Often the same as the baseDate, but sometimes the pricing input may be "rolled forward", in which input data from one date is used to generate a curve for a later date.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >The date from which the input data used to construct the pricing input was obtained. Often the same as the baseDate, but sometimes the pricing input may be "rolled forward", in which input data from one date is used to generate a curve for a later date.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="endDate" type="IdentifiedDate" minOccurs="0">
@@ -674,7 +719,9 @@
     <xsd:choice>
       <xsd:element name="term" type="TimeDimension">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">A time dimension that represents the term of a financial instrument, e.g. of a zero-coupon bond on a curve, or of an underlying caplet or swap for an option.</xsd:documentation>
+          <xsd:documentation
+                        xml:lang="en"
+                    >A time dimension that represents the term of a financial instrument, e.g. of a zero-coupon bond on a curve, or of an underlying caplet or swap for an option.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="expiration" type="TimeDimension">
@@ -720,4 +767,3 @@
     </xsd:sequence>
   </xsd:group>
 </xsd:schema>
-
