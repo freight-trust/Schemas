@@ -8,5 +8,16 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freight-trust/Schemas.git"
+  },
+  "bugs": {
+    "url": "https://github.com/freight-trust/Schemas/issues"
+  },
+  "homepage": "https://github.com/freight-trust/Schemas#readme"
 }
