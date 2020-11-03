@@ -1,0 +1,67 @@
+.
+├── CHANGELOG.md
+├── Catalog.xml
+│       ├── 211.X.004.010.xml
+│       └── 810.X.004.010.xml
+├── FreightTrustSchemas.iml
+├── Makefile
+├── README.md
+│       ├── APACHE-2.0
+│       └── MPL-2.0
+├── index.txt
+├── json.dhall
+│   ├── com.freighttrust.primitive.xsd
+│   ├── fpml5.confirmation.xsd
+│   ├── fpml5.schema.json
+│   ├── isda.schema.json
+│   └── org.isda.cdm.xsd
+├── package.json
+├── schema.global.json
+│   ├── Native.xsd
+│   ├── NativeAcceptabilityBand.xsd
+│   ├── NativeAirline.xsd
+│   ├── NativeBMControlCustomisation.xsd
+│   ├── NativeBMSystem.xsd
+│   ├── NativeCommodityCode.xsd
+│   ├── NativeCommunication.xsd
+│   ├── NativeCompany.xsd
+│   ├── NativeContainer.xsd
+│   ├── NativeCountry.xsd
+│   ├── NativeCurrencyExchangeRate.xsd
+│   ├── NativeCusStatement.xsd
+│   ├── NativeDangerousGood.xsd
+│   ├── NativeOrganization.xsd
+│   ├── NativeProduct.xsd
+│   ├── NativeRate.xsd
+│   ├── NativeRequest.xsd
+│   ├── NativeServiceLevel.xsd
+│   ├── NativeStaff.xsd
+│   ├── NativeTag.xsd
+│   ├── NativeTagRule.xsd
+│   ├── NativeUNLOCO.xsd
+│   ├── NativeVessel.xsd
+│   ├── NativeWorkflowTemplate.xsd
+│   ├── UniversalActivity.xsd
+│   ├── UniversalActivityRequest.xsd
+│   ├── UniversalCommon.xsd
+│   ├── UniversalDocumentRequest.xsd
+│   ├── UniversalEvent.xsd
+│   ├── UniversalInterchange.xsd
+│   ├── UniversalInterchangeRequeueRequest.xsd
+│   ├── UniversalResponse.xsd
+│   ├── UniversalSchedule.xsd
+│   ├── UniversalShipment.xsd
+│   ├── UniversalShipmentRequest.xsd
+│   ├── UniversalTransaction.xsd
+│   ├── UniversalTransactionBatch.xsd
+│   └── UniversalTransactionBatchRequest.xsd
+├── stylesheet.xml
+│   ├── Native.xsd.xml
+│   ├── NativeCountry.xsd.xml
+│   ├── NativeDangerousGood.xsd.xml
+│   ├── NativeWorkflowTemplate.xsd.xml
+│   ├── UniversalActivity.xsd.xml
+│   └── UniversalShipment.xsd.xml
+└── yarn.lock
+
+14 directories, 64 files

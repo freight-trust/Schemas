@@ -1,48 +1,23 @@
 {
-    "name": "interchange-schema-registry",
-    "version": "1.1.0",
-    "description": "A Global Schema Registry for Data Interchange formats",
-    "main": "index.js",
-    "directories": {
-        "test": "tests"
-    },
-    "scripts": {
-        "fmt": "./node_modules/.bin/prettier --write '**/*.xml'"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/freight-trust/schemas.git"
-    },
-    "keywords": [
-        "xml",
-        "xsd",
-        "supply",
-        "chain",
-        "logistics",
-        "as2",
-        "as2",
-        "protocol",
-        "edi",
-        "edi",
-        "x12",
-        "edifact"
-    ],
-    "author": "sam bacha <sam@freighttrust.com>",
-    "license": "SEE LICENSE IN DOCS/LICENSE",
-    "bugs": {
-        "url": "https://github.com/freight-trust/schemas/issues"
-    },
-    "homepage": "https://github.com/freight-trust/schemas#readme",
-    "devDependencies": {
-        "@etclabscore/dl-github-releases": "^1.2.1",
-        "@json-schema-tools/dereferencer": "^1.2.6",
-        "@json-schema-tools/semantic-release-transpiler": "1.4.5",
-        "@prettier/plugin-xml": "0.12.0",
-        "@qiwi/semantic-release-gh-pages-plugin": "^5.0.0",
-        "prettier": "2.1.2",
-        "typescript": "^4.0.3"
-    },
-    "dependencies": {
-        "@exodus/schemasafe": "^1.0.0-rc.3"
-    }
+  "name": "canonical",
+  "version": "1.0.0",
+  "description": "MOST ENUMERATED VALUES HAVE DELIBERATELY BEEN DEFINED AS XS:STRING TO AVOID CHANGE IMPACT.          ENUMERATIONS (i.e. LIST OF POSSIBLE VALUES) ARE INSTEAD SPECIFIED IN THE DIS IMPLEMENTATION GUIDE.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freight-trust/Schemas.git"
+  },
+  "bugs": {
+    "url": "https://github.com/freight-trust/Schemas/issues"
+  },
+  "homepage": "https://github.com/freight-trust/Schemas#readme"
 }

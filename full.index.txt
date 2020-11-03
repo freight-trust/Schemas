@@ -1,0 +1,1004 @@
+.
+├── [1.3K]  CHANGELOG.md
+├── [ 238]  Catalog.xml
+├── [  96]  EDISchema
+│   └── [ 128]  v4
+│       ├── [ 18K]  211.X.004.010.xml
+│       └── [ 59K]  810.X.004.010.xml
+├── [ 337]  FreightTrustSchemas.iml
+├── [ 287]  Makefile
+├── [2.4K]  README.md
+├── [ 128]  Registry
+│   └── [  96]  FpML
+│       └── [ 128]  5.0.0
+│           ├── [1.3K]  confirmation
+│           │   ├── [  98]  FpML.spp
+│           │   ├── [ 20K]  Readme.txt
+│           │   ├── [ 480]  business-processes
+│           │   │   ├── [ 192]  allocation
+│           │   │   │   ├── [5.2K]  msg-ex20-cds-request-allocation.xml
+│           │   │   │   ├── [3.0K]  msg-ex24-cds-request-allocation-retracted.xml
+│           │   │   │   ├── [5.2K]  msg-ex25-cds-request-allocation.xml
+│           │   │   │   └── [5.3K]  msg-ex26-cds-request-allocation-(multiple-allocationTradeIds).xml
+│           │   │   ├── [ 640]  clearing
+│           │   │   │   ├── [1.6K]  msg-ex01-clearing-status.xml
+│           │   │   │   ├── [2.1K]  msg-ex02-request-clearing-declear.xml
+│           │   │   │   ├── [1.8K]  msg-ex03-clearingConfirmed-declear-sample1.xml
+│           │   │   │   ├── [1.4K]  msg-ex04-clearingConfirmed-declear-sample2.xml
+│           │   │   │   ├── [4.9K]  msg-ex05-clearingConfirmed-trade-terminated-due-to-netting.xml
+│           │   │   │   ├── [4.3K]  msg-ex06-clearingConfirmed-trade-created-due-to-netting.xml
+│           │   │   │   ├── [4.6K]  msg-ex07-clearingRequested-from-sef.xml
+│           │   │   │   ├── [1.8K]  msg-ex08-clearingStatus-to-sef.xml
+│           │   │   │   ├── [1.7K]  msg-ex09-clearingStatus-to-broker.xml
+│           │   │   │   ├── [9.5K]  msg-ex10-clearingConfirmed-clearing-performed.xml
+│           │   │   │   ├── [4.0K]  msg-ex100-request-clearing-eligibility.xml
+│           │   │   │   ├── [2.1K]  msg-ex101-clearing-eligiblity.xml
+│           │   │   │   ├── [4.6K]  msg-ex11-clearingConfirmed-trade-created-due-to-netting-portfolio-msg1.xml
+│           │   │   │   ├── [4.6K]  msg-ex12-clearingConfirmed-trade-created-due-to-netting-portfolio-msg2.xml
+│           │   │   │   ├── [2.6K]  msg-ex13-clearing-status-to-sef-with-trade-ref.xml
+│           │   │   │   ├── [5.6K]  msg-ex20-clearingRequested-from-sef-with-approved-allocations.xml
+│           │   │   │   ├── [ 23K]  msg-ex50-request-clearing-trade-package.xml
+│           │   │   │   └── [6.5K]  msg-ex51-clearing-confirmed-to-sef-trade-package.xml
+│           │   │   ├── [ 224]  collateral
+│           │   │   │   ├── [4.3K]  ex-80-request-collateral-allocation-full.xml
+│           │   │   │   ├── [4.4K]  ex-81-request-collateral-allocation-margin.xml
+│           │   │   │   ├── [1.6K]  ex-82-collateral-allocation-rejected.xml
+│           │   │   │   ├── [1.4K]  ex-83-collateral-allocation-accepted.xml
+│           │   │   │   └── [1.4K]  ex-84-collateral-allocation-acknowledgement.xml
+│           │   │   ├── [ 480]  confirmation
+│           │   │   │   ├── [4.9K]  msg-ex05-eqd-cash-share-request-confirmation.xml
+│           │   │   │   ├── [4.9K]  msg-ex06-eqd-index-option-request-confirmation.xml
+│           │   │   │   ├── [4.9K]  msg-ex07-eqd-physical-share-request-confirmation.xml
+│           │   │   │   ├── [2.5K]  msg-ex12-cd-request-increase-confirmation.xml
+│           │   │   │   ├── [2.5K]  msg-ex13-cd-request-full-termination-confirmation.xml
+│           │   │   │   ├── [2.4K]  msg-ex14-cd-request-partial-termination-confirmation.xml
+│           │   │   │   ├── [4.3K]  msg-ex15-cd-request-amendment-confirmation.xml
+│           │   │   │   ├── [ 11K]  msg-ex17-two-sided-swap-roles-accounts.xml
+│           │   │   │   ├── [4.7K]  msg-ex18-cds-2003-short-us-corp-broker-role.xml
+│           │   │   │   ├── [2.9K]  msg-ex19-request-partial-term-amort-irs-confirmation.xml
+│           │   │   │   ├── [2.7K]  msg-ex20-request-partial-termination-zero-coupon-swap.xml
+│           │   │   │   ├── [2.4K]  msg-ex21-request-partial-termination-trs.xml
+│           │   │   │   └── [3.1K]  msg-ex26-cds-alleged-novation.xml
+│           │   │   ├── [ 640]  consent
+│           │   │   │   ├── [1.8K]  msg-ex04-eqd-option-increase.xml
+│           │   │   │   ├── [1.8K]  msg-ex08-eqd-option-partial-termination.xml
+│           │   │   │   ├── [1.9K]  msg-ex09-eqd-option-termination.xml
+│           │   │   │   ├── [2.4K]  msg-ex10-eqd-swap-partial-termination.xml
+│           │   │   │   ├── [4.3K]  msg-ex100-request-consent-clearing-with-quote.xml
+│           │   │   │   ├── [2.4K]  msg-ex11-eqd-swap-full-termination.xml
+│           │   │   │   ├── [4.0K]  msg-ex200-request-consent-clearing.xml
+│           │   │   │   ├── [1.9K]  msg-ex201-grant-consent.xml
+│           │   │   │   ├── [1.9K]  msg-ex202-consent-refused.xml
+│           │   │   │   ├── [4.5K]  msg-ex203-consent-refused-with-credit-limit-information.xml
+│           │   │   │   ├── [5.1K]  msg-ex27-request-consent-novation.xml
+│           │   │   │   ├── [4.2K]  msg-ex300-request-consent-clearing-portfolio-msg1.xml
+│           │   │   │   ├── [4.2K]  msg-ex301-request-consent-clearing-portfolio-msg2.xml
+│           │   │   │   ├── [1.7K]  msg-ex302-grant-consent-to-portfolio.xml
+│           │   │   │   ├── [1.5K]  msg-ex303-grant-consent-to-constituent-of-portfolio.xml
+│           │   │   │   ├── [1.7K]  msg-ex304-request-retransmission-of-constituent-of-portfolio.xml
+│           │   │   │   ├── [3.3K]  msg-ex400-request-approval-fra.xml
+│           │   │   │   └── [1.7K]  msg-ex401-approval-status-notification.xml
+│           │   │   ├── [ 704]  execution-advice
+│           │   │   │   ├── [ 94K]  Message\ Sequence\ Examples.xls
+│           │   │   │   ├── [4.6K]  msg-ex100-execution-advice-trs-partial-termination.xml
+│           │   │   │   ├── [4.9K]  msg-ex51-execution-advice-trade-initiation-C01-00.xml
+│           │   │   │   ├── [6.7K]  msg-ex52-execution-advice-trade-partial-novation-C02-00.xml
+│           │   │   │   ├── [6.7K]  msg-ex53-execution-advice-trade-partial-novation-correction-C02-10.xml
+│           │   │   │   ├── [3.7K]  msg-ex54-execution-advice-trade-partial-termination-C11-00.xml
+│           │   │   │   ├── [4.7K]  msg-ex55-execution-advice-trade-partial-termination-cancellation-C11-10.xml
+│           │   │   │   ├── [4.8K]  msg-ex56-execution-advice-trade-full-termination-C12-00.xml
+│           │   │   │   ├── [4.8K]  msg-ex57-execution-advice-trade-full-termination_correction-C12-20.xml
+│           │   │   │   ├── [4.5K]  msg-ex58-execution-advice-trade-initiation-F01-00.xml
+│           │   │   │   ├── [5.6K]  msg-ex59-execution-advice-trade-amendment-F02-00.xml
+│           │   │   │   ├── [5.6K]  msg-ex60-execution-advice-trade-amendment-correction-F02-10.xml
+│           │   │   │   ├── [5.7K]  msg-ex61-execution-advice-trade-change-F03-00.xml
+│           │   │   │   ├── [5.7K]  msg-ex62-execution-advice-trade-change-correction-F03-10.xml
+│           │   │   │   ├── [9.3K]  msg-ex63-execution-advice-trade-initiation.xml
+│           │   │   │   ├── [9.5K]  msg-ex64-execution-advice-trade-initiation-correction.xml
+│           │   │   │   ├── [5.6K]  msg-ex65-execution-advice-trade-partial-termination.xml
+│           │   │   │   ├── [5.5K]  msg-ex66-execution-advice-trade-full-termination.xml
+│           │   │   │   ├── [4.7K]  msg-ex67-execution-advice-trade-full-termination-correction.xml
+│           │   │   │   └── [5.4K]  msg-ex68-execution-advice-warrant.xml
+│           │   │   ├── [ 224]  execution-notification
+│           │   │   │   ├── [ 25K]  msg-ex19-cds-execution-allocations.xml
+│           │   │   │   ├── [ 10K]  msg-ex22-cds-execution-allocations.xml
+│           │   │   │   ├── [ 10K]  msg-ex23-cds-execution-allocation-amended.xml
+│           │   │   │   ├── [ 14K]  msg-ex24-package-execution-notification.xml
+│           │   │   │   └── [7.3K]  msg-ex90-trade-execution-date-time.xml
+│           │   │   ├── [ 192]  option-events
+│           │   │   │   ├── [1.8K]  opt-ex1-knock-in.xml
+│           │   │   │   ├── [1.8K]  opt-ex2-knock-out.xml
+│           │   │   │   ├── [2.2K]  opt-ex3-noTouch.xml
+│           │   │   │   └── [2.4K]  opt-ex4-touch.xml
+│           │   │   ├── [1.5K]  option-exercise-expiry
+│           │   │   │   ├── [2.4K]  msg-ex01-option-expiry-notification.xml
+│           │   │   │   ├── [2.4K]  msg-ex01a-option-expiry-notification-full-trade.xml
+│           │   │   │   ├── [3.1K]  msg-ex02-request-execution-1-interest-rate-swaption.xml
+│           │   │   │   ├── [2.0K]  msg-ex02-request-execution-1b-interest-rate-swaption-full.xml
+│           │   │   │   ├── [2.2K]  msg-ex02-request-execution-2-do-not-exercise.xml
+│           │   │   │   ├── [2.5K]  msg-ex03a-execution-notification-option-exercised-1-cash.xml
+│           │   │   │   ├── [2.6K]  msg-ex03a-execution-notification-option-exercised-2-physical-trade.xml
+│           │   │   │   ├── [2.7K]  msg-ex03a-execution-notification-option-exercised-3-physical-security.xml
+│           │   │   │   ├── [4.0K]  msg-ex03b-request-confirmation-physical.xml
+│           │   │   │   ├── [3.5K]  msg-ex04-execution-advice-option-exercised.xml
+│           │   │   │   ├── [1.3K]  msg-ex05-execution-exception.xml
+│           │   │   │   ├── [1.6K]  msg-ex06-maturity-notification-option-expired.xml
+│           │   │   │   ├── [1.6K]  msg-ex07-maturity-notification-trade-matured.xml
+│           │   │   │   ├── [ 10K]  msg-ex08-option-expiry-notification-with-original-trade.xml
+│           │   │   │   ├── [2.6K]  msg-ex10-request-execution-fx-option.xml
+│           │   │   │   ├── [ 11K]  msg-ex100-cleared-swaption-expiry-notification-full-trade.xml
+│           │   │   │   ├── [ 11K]  msg-ex100b-cleared-swaption-expiry-notification-autoex-intent.xml
+│           │   │   │   ├── [ 11K]  msg-ex100b-cleared-swaption-expiry-notification-exercise-intent.xml
+│           │   │   │   ├── [1.9K]  msg-ex101-request-execution-cleared-swaption-full.xml
+│           │   │   │   ├── [1.9K]  msg-ex101b-request-execution-cleared-swaption-full-on-expiry.xml
+│           │   │   │   ├── [8.9K]  msg-ex102-execution-notification-option-exercised.xml
+│           │   │   │   ├── [2.4K]  msg-ex103-clearing-confirmed-swaption-terminated.xml
+│           │   │   │   ├── [8.0K]  msg-ex104-clearing-confirmed-swap-created.xml
+│           │   │   │   ├── [ 11K]  msg-ex110-uncleared-swaption-expiry-notification-mand-clear-swap.xml
+│           │   │   │   ├── [1.9K]  msg-ex111-request-execution-uncleared-swaption-mand-clear-swap.xml
+│           │   │   │   ├── [8.8K]  msg-ex112-execution-notification-uncleared-swaption-exercised.xml
+│           │   │   │   ├── [2.4K]  msg-ex113-clearing-confirmed-uncleared-swaption-terminated.xml
+│           │   │   │   ├── [7.7K]  msg-ex114-clearing-requested-from-swaption-exercise.xml
+│           │   │   │   ├── [8.1K]  msg-ex115-clearing-confirmed-swap-trade-created-due-to-exercise.xml
+│           │   │   │   ├── [ 11K]  msg-ex120-uncleared-swaption-expiry-notification-opt-clear-swap.xml
+│           │   │   │   ├── [2.4K]  msg-ex121-request-execution-uncleared-swaption-opt-clear-swap.xml
+│           │   │   │   ├── [8.8K]  msg-ex122-execution-notification-uncleared-swaption-exercised.xml
+│           │   │   │   ├── [2.4K]  msg-ex123-clearing-confirmed-uncleared-swaption-terminated.xml
+│           │   │   │   ├── [7.7K]  msg-ex124-clearing-requested-from-swaption-exercise.xml
+│           │   │   │   ├── [7.7K]  msg-ex125-clearing-confirmed-trade-created-due-to-exercise.xml
+│           │   │   │   ├── [1.8K]  msg-ex130-request-execution-option-exercise-straddle.xml
+│           │   │   │   ├── [9.3K]  msg-ex131-execution-notification-option-exercised-straddle.xml
+│           │   │   │   ├── [5.0K]  msg-exA-confirm-otc-equity-option.xml
+│           │   │   │   ├── [1.7K]  msg-exB-expiring-otc-equity-option.xml
+│           │   │   │   ├── [1.8K]  msg-exC-request-execution-exercise-otc-equity-option.xml
+│           │   │   │   ├── [2.7K]  msg-exD-exercise-notification-otc-equity-option.xml
+│           │   │   │   ├── [4.8K]  msg-exM-confirm-bond-option.xml
+│           │   │   │   ├── [1.8K]  msg-exN-expiring-otc-bond-option.xml
+│           │   │   │   ├── [2.0K]  msg-exO-request-exercise-otc-bond-option.xml
+│           │   │   │   ├── [3.1K]  msg-exP-exercise-notification-new-trade-for-otc-bond-option.xml
+│           │   │   │   ├── [2.8K]  msg-exX-exercise-notification-fx-option.xml
+│           │   │   │   └── [8.2K]  msg-exY-exercise-notification-ir-swaption.xml
+│           │   │   ├── [ 224]  packages
+│           │   │   │   ├── [ 16K]  pkg-ex01-pkge-execution-notification.xml
+│           │   │   │   ├── [9.4K]  pkg-ex02-swap-spread-single-trade-execution-notification.xml
+│           │   │   │   ├── [ 17K]  pkg-ex55-execution-notification.xml
+│           │   │   │   ├── [ 17K]  pkg-ex60-request-clearing.xml
+│           │   │   │   └── [9.4K]  pkg-ex61-clearing-confirmed.xml
+│           │   │   ├── [ 160]  service-notification
+│           │   │   │   ├── [1.4K]  svc-ex01-advisory.xml
+│           │   │   │   ├── [1.2K]  svc-ex02-status.xml
+│           │   │   │   └── [1.4K]  svc-ex03-event.xml
+│           │   │   ├── [ 256]  trade-change-advice
+│           │   │   │   ├── [ 11K]  msg-ex500-trade-change-corporate-action.xml
+│           │   │   │   ├── [ 11K]  msg-ex501-trade-change-corporate-action-cancel-and-replace.xml
+│           │   │   │   ├── [ 11K]  msg-ex502-trade-change-corporate-action-corrected.xml
+│           │   │   │   ├── [ 11K]  msg-ex503-trade-change-corporate-action-retracted.xml
+│           │   │   │   ├── [7.0K]  msg-ex61-execution-advice-trade-change-F03-00.xml
+│           │   │   │   └── [7.0K]  msg-ex62-execution-advice-trade-change-correction-F03-10.xml
+│           │   │   └── [  96]  trade-info-update
+│           │   │       └── [1.9K]  trade-info-ex01-request-info-update.xml
+│           │   ├── [166K]  changes.pdf
+│           │   ├── [2.5K]  example-extension-5-10.xsd
+│           │   ├── [ 94K]  fpml-asset-5-10.xsd
+│           │   ├── [5.4K]  fpml-bond-option-5-10.xsd
+│           │   ├── [ 96K]  fpml-business-events-5-10.xsd
+│           │   ├── [103K]  fpml-cd-5-10.xsd
+│           │   ├── [4.5K]  fpml-clearing-processes-5-10.xsd
+│           │   ├── [268K]  fpml-com-5-10.xsd
+│           │   ├── [ 47K]  fpml-confirmation-processes-5-10.xsd
+│           │   ├── [3.3K]  fpml-correlation-swaps-5-10.xsd
+│           │   ├── [6.9K]  fpml-credit-event-notification-5-10.xsd
+│           │   ├── [ 10K]  fpml-dividend-swaps-5-10.xsd
+│           │   ├── [112K]  fpml-doc-5-10.xsd
+│           │   ├── [239K]  fpml-enum-5-10.xsd
+│           │   ├── [ 98K]  fpml-eq-shared-5-10.xsd
+│           │   ├── [ 25K]  fpml-eqd-5-10.xsd
+│           │   ├── [103K]  fpml-fx-5-10.xsd
+│           │   ├── [ 62K]  fpml-fx-accruals-5-10.xsd
+│           │   ├── [ 52K]  fpml-fx-targets-5-10.xsd
+│           │   ├── [ 27K]  fpml-generic-5-10.xsd
+│           │   ├── [122K]  fpml-ird-5-10.xsd
+│           │   ├── [265K]  fpml-loan-5-10.xsd
+│           │   ├── [3.5K]  fpml-main-5-10.xsd
+│           │   ├── [ 23K]  fpml-mktenv-5-10.xsd
+│           │   ├── [ 46K]  fpml-msg-5-10.xsd
+│           │   ├── [ 48K]  fpml-option-shared-5-10.xsd
+│           │   ├── [ 32K]  fpml-repo-5-10.xsd
+│           │   ├── [2.1K]  fpml-return-swaps-5-10.xsd
+│           │   ├── [ 40K]  fpml-riskdef-5-10.xsd
+│           │   ├── [267K]  fpml-shared-5-10.xsd
+│           │   ├── [3.7K]  fpml-standard-5-10.xsd
+│           │   ├── [8.3K]  fpml-valuation-5-10.xsd
+│           │   ├── [7.8K]  fpml-variance-swaps-5-10.xsd
+│           │   ├── [8.5K]  fpml-volatility-swaps-5-10.xsd
+│           │   ├── [ 576]  products
+│           │   │   ├── [ 160]  bond-options
+│           │   │   │   ├── [5.1K]  bond-option.xml
+│           │   │   │   ├── [5.5K]  cb-option-2.xml
+│           │   │   │   └── [5.7K]  cb-option.xml
+│           │   │   ├── [1.5K]  commodity-derivatives
+│           │   │   │   ├── [5.6K]  com-ex1-gas-swap-daily-delivery-prices-last.xml
+│           │   │   │   ├── [4.4K]  com-ex10-physical-oil-pipeline-crude-wti-floating-price.xml
+│           │   │   │   ├── [4.1K]  com-ex11-physical-oil-pipeline-heating-oil-fixed-price.xml
+│           │   │   │   ├── [3.9K]  com-ex12-physical-gas-europe-zbt-fixed-price.xml
+│           │   │   │   ├── [4.2K]  com-ex13-physical-gas-us-tw-west-texas-pool-floating-price-4-days.xml
+│           │   │   │   ├── [4.2K]  com-ex14-physical-gas-europe-ttf-fixed-price.xml
+│           │   │   │   ├── [4.2K]  com-ex15-physical-oil-pipeline-crude-wcs-fixed-price.xml
+│           │   │   │   ├── [5.7K]  com-ex16-physical-power-us-eei-floating-price.xml
+│           │   │   │   ├── [4.5K]  com-ex17-physical-power-uk-gtma-fixed-price.xml
+│           │   │   │   ├── [7.5K]  com-ex18-physical-power-us-eei-fixed-price-shaped-volume.xml
+│           │   │   │   ├── [3.6K]  com-ex19-physical-bullion-forward.xml
+│           │   │   │   ├── [5.5K]  com-ex2-gas-swap-prices-first-day.xml
+│           │   │   │   ├── [3.8K]  com-ex20-physical-coal-us-fixed-price.xml
+│           │   │   │   ├── [8.9K]  com-ex21-physical-power-us-eei-fixed-price-shaped-volume-and-price.xml
+│           │   │   │   ├── [6.5K]  com-ex22-physical-gas-option-multiple-expiration.xml
+│           │   │   │   ├── [7.7K]  com-ex23-physical-power-option-daily-expiration-efet.xml
+│           │   │   │   ├── [7.1K]  com-ex24-weather-index-swap.xml
+│           │   │   │   ├── [4.8K]  com-ex25-physical-bullion-forward-average-price.xml
+│           │   │   │   ├── [4.1K]  com-ex26-physical-metal-forward.xml
+│           │   │   │   ├── [5.7K]  com-ex27-wti-put-option-asian-listedoption-date.xml
+│           │   │   │   ├── [6.1K]  com-ex28-gas-swap-daily-delivery-prices-option-last.xml
+│           │   │   │   ├── [5.8K]  com-ex29-physical-eu-emissions-option.xml
+│           │   │   │   ├── [6.0K]  com-ex3-gas-swap-prices-last-three-days.xml
+│           │   │   │   ├── [4.3K]  com-ex30-physical-eu-emissions-forward.xml
+│           │   │   │   ├── [5.6K]  com-ex31-physical-us-emissions-option.xml
+│           │   │   │   ├── [6.3K]  com-ex32-CPD-weather-index-option.xml
+│           │   │   │   ├── [4.8K]  com-ex33-physical-bullion-forward-average-price.xml
+│           │   │   │   ├── [7.2K]  com-ex34-gas-put-option-european-floating-strike.xml
+│           │   │   │   ├── [7.0K]  com-ex35-call-option-gas-power-heat-rate-daily.xml
+│           │   │   │   ├── [7.4K]  com-ex36-gas-call-option-european-spread-negative-premium-floating-strike.xml
+│           │   │   │   ├── [ 10K]  com-ex37-gold-forward-offered-rate.xml
+│           │   │   │   ├── [9.1K]  com-ex39-basket-option-confirmation.xml
+│           │   │   │   ├── [6.0K]  com-ex4-electricity-swap-hourly-off-peak.xml
+│           │   │   │   ├── [5.7K]  com-ex40-gas-digital-option-storage-volume-trigger.xml
+│           │   │   │   ├── [7.0K]  com-ex41-oil-asian-barrier-option-strip.xml
+│           │   │   │   ├── [6.0K]  com-ex42-index-return-swap-reinvestment-feature.xml
+│           │   │   │   ├── [5.1K]  com-ex43-WTI-variance-swap.xml
+│           │   │   │   ├── [5.5K]  com-ex44-index-return-swap-fixed-notional.xml
+│           │   │   │   ├── [4.7K]  com-ex45-ag-variance-swap.xml
+│           │   │   │   ├── [5.3K]  com-ex46-simple-financial-put-option.xml
+│           │   │   │   ├── [6.3K]  com-ex47-physical-eu-emissions-option-pred-clearing.xml
+│           │   │   │   ├── [6.2K]  com-ex5-gas-v-electricity-spark-spread.xml
+│           │   │   │   ├── [5.3K]  com-ex6-gas-call-option.xml
+│           │   │   │   ├── [5.2K]  com-ex7-gas-put-option.xml
+│           │   │   │   ├── [5.7K]  com-ex8-oil-call-option-strip.xml
+│           │   │   │   └── [5.4K]  com-ex9-oil-put-option-american.xml
+│           │   │   ├── [ 192]  correlation-swaps
+│           │   │   │   ├── [5.9K]  eqcs-ex01-correlation-swap.xml
+│           │   │   │   ├── [8.1K]  eqcs-ex02-correlation-swap-confirmation.xml
+│           │   │   │   ├── [ 10K]  eqcs-ex03-correlation-swap-confirmation.xml
+│           │   │   │   └── [8.9K]  eqcs-ex04-correlation-swap-confirmation.xml
+│           │   │   ├── [1.4K]  credit-derivatives
+│           │   │   │   ├── [7.2K]  cd-ex01-long-asia-corp-fixreg.xml
+│           │   │   │   ├── [3.6K]  cd-ex02-2003-short-asia-corp-fixreg.xml
+│           │   │   │   ├── [3.6K]  cd-ex02-short-asia-corp-fixreg.xml
+│           │   │   │   ├── [7.6K]  cd-ex03-long-aussie-corp-fixreg.xml
+│           │   │   │   ├── [3.8K]  cd-ex04-short-aussie-corp-fixreg.xml
+│           │   │   │   ├── [7.5K]  cd-ex05-long-emasia-corp-fixreg.xml
+│           │   │   │   ├── [7.0K]  cd-ex06-long-emeur-sov-fixreg.xml
+│           │   │   │   ├── [7.3K]  cd-ex07-2003-long-euro-corp-fixreg.xml
+│           │   │   │   ├── [7.0K]  cd-ex07-long-euro-corp-fixreg.xml
+│           │   │   │   ├── [3.7K]  cd-ex08-2003-short-euro-corp-fixreg.xml
+│           │   │   │   ├── [3.7K]  cd-ex08-short-euro-corp-fixreg.xml
+│           │   │   │   ├── [6.8K]  cd-ex09-long-euro-sov-fixreg.xml
+│           │   │   │   ├── [6.9K]  cd-ex10-2003-long-us-corp-fixreg.xml
+│           │   │   │   ├── [7.1K]  cd-ex10-long-us-corp-fixreg.xml
+│           │   │   │   ├── [3.6K]  cd-ex11-2003-short-us-corp-fixreg.xml
+│           │   │   │   ├── [3.7K]  cd-ex11-short-us-corp-fixreg.xml
+│           │   │   │   ├── [7.3K]  cd-ex12-long-emasia-sov-fixreg.xml
+│           │   │   │   ├── [6.8K]  cd-ex13-long-asia-sov-fixreg.xml
+│           │   │   │   ├── [7.5K]  cd-ex14-long-emlatin-corp-fixreg.xml
+│           │   │   │   ├── [7.1K]  cd-ex15-long-emlatin-sov-fixreg.xml
+│           │   │   │   ├── [3.8K]  cd-ex16-short-us-corp-fixreg-recovery-factor.xml
+│           │   │   │   ├── [4.1K]  cd-ex17-short-us-corp-portfolio-compression.xml
+│           │   │   │   ├── [3.8K]  cd-ex18-standard-north-american-corp.xml
+│           │   │   │   ├── [6.6K]  cd-ex19-cdx-index-option-pred-clearing.xml
+│           │   │   │   ├── [4.1K]  cd-indamt-ex01-short-us-corp-fixreg.xml
+│           │   │   │   ├── [8.5K]  cd-swaption-1.xml
+│           │   │   │   ├── [9.9K]  cd-swaption-2.xml
+│           │   │   │   ├── [3.1K]  cdindex-ex01-cdx.xml
+│           │   │   │   ├── [2.9K]  cdindex-ex02-iTraxx.xml
+│           │   │   │   ├── [3.6K]  cdindex-ex03-iTraxx-contractual-supplement.xml
+│           │   │   │   ├── [4.1K]  cdindex-ex04-iBoxx.xml
+│           │   │   │   ├── [3.8K]  cdindex-ex05-SP.xml
+│           │   │   │   ├── [5.4K]  cds-ELCDS-ReferenceObligation.xml
+│           │   │   │   ├── [7.1K]  cds-basket-tranche.xml
+│           │   │   │   ├── [7.0K]  cds-basket.xml
+│           │   │   │   ├── [ 10K]  cds-custom-basket.xml
+│           │   │   │   ├── [3.1K]  cds-index-tranche.xml
+│           │   │   │   ├── [7.2K]  cds-loan-ReferenceObligation.xml
+│           │   │   │   ├── [7.0K]  cds-loan-SecuredList.xml
+│           │   │   │   ├── [7.0K]  cds-mortgage-CMBS.xml
+│           │   │   │   ├── [7.0K]  cds-mortgage-RMBS.xml
+│           │   │   │   ├── [6.1K]  cdx-index-option.xml
+│           │   │   │   └── [7.7K]  itraxx-index-option.xml
+│           │   │   ├── [ 256]  dividend-swaps
+│           │   │   │   ├── [5.7K]  div-ex01-dividend-swap.xml
+│           │   │   │   ├── [7.2K]  div-ex02-dividend-swap-collateral.xml
+│           │   │   │   ├── [6.2K]  div-ex03-dividend-swap-short-form-japanese-underlyer.xml
+│           │   │   │   ├── [7.3K]  div-ex04-dividend-swap-option-transaction-supplement.xml
+│           │   │   │   ├── [8.6K]  div-ex05-dividend-swap-option-gs-example.xml
+│           │   │   │   └── [8.6K]  div-ex06-dividend-swap-option-pred-clearing.xml
+│           │   │   ├── [  96]  equity-forwards
+│           │   │   │   └── [7.8K]  eqf-ex01-forward-stock-long-form.xml
+│           │   │   ├── [ 928]  equity-options
+│           │   │   │   ├── [5.5K]  eqd-ex-27-equityOptionTransactionSupplement-EMEA-interdealer.xml
+│           │   │   │   ├── [7.4K]  eqd-ex01-american-call-stock-long-form.xml
+│           │   │   │   ├── [5.6K]  eqd-ex02-calendar-spread-short-form.xml
+│           │   │   │   ├── [5.5K]  eqd-ex03-call-or-put-spread-short-form.xml
+│           │   │   │   ├── [5.9K]  eqd-ex04-european-call-index-long-form.xml
+│           │   │   │   ├── [6.7K]  eqd-ex05-asian-long-form.xml
+│           │   │   │   ├── [6.7K]  eqd-ex06-averaging-in-long-form.xml
+│           │   │   │   ├── [9.1K]  eqd-ex07-barrier-knockout-rebate-long-form.xml
+│           │   │   │   ├── [6.7K]  eqd-ex08-basket-long-form.xml
+│           │   │   │   ├── [7.1K]  eqd-ex09-bermuda-long-form.xml
+│           │   │   │   ├── [7.5K]  eqd-ex10-binary-barrier-long-form.xml
+│           │   │   │   ├── [6.9K]  eqd-ex11-quanto-long-form.xml
+│           │   │   │   ├── [5.2K]  eqd-ex12-vanilla-short-form.xml
+│           │   │   │   ├── [5.2K]  eqd-ex13-1996-american-call-stock.xml
+│           │   │   │   ├── [7.9K]  eqd-ex14-american-call-stock-passthrough-long-form.xml
+│           │   │   │   ├── [7.6K]  eqd-ex15-basket-passthrough-long-form.xml
+│           │   │   │   ├── [4.7K]  eqd-ex16-equityOptionTransactionSupplement.xml
+│           │   │   │   ├── [4.9K]  eqd-ex17-equityOptionTransactionSupplement-non-deliverable-share.xml
+│           │   │   │   ├── [5.0K]  eqd-ex18-equityOptionTransactionSupplement-non-deliverable-index.xml
+│           │   │   │   ├── [8.2K]  eqd-ex19-dividend-adjustment.xml
+│           │   │   │   ├── [8.6K]  eqd-ex20-nested-basket.xml
+│           │   │   │   ├── [8.3K]  eqd-ex21-flat-weight-basket.xml
+│           │   │   │   ├── [9.1K]  eqd-ex22-equityOptionTransactionSupplement-index-option-asian-dates.xml
+│           │   │   │   ├── [7.1K]  eqd-ex23-equityOptionTransactionSupplement-index-option-cliquet.xml
+│           │   │   │   ├── [6.9K]  eqd-ex24-equityOptionTransactionSupplement-index-option-asian-schedule.xml
+│           │   │   │   ├── [7.1K]  eqd-ex25-equityOptionTransactionSupplement-index-option-knock-in-knock-out-features.xml
+│           │   │   │   └── [9.0K]  eqd-ex26-mixed-asset-basket.xml
+│           │   │   ├── [ 800]  equity-swaps
+│           │   │   │   ├── [ 13K]  eqs-ex01-single-underlyer-execution-long-form.xml
+│           │   │   │   ├── [ 16K]  eqs-ex02-composite-basket-long-form.xml
+│           │   │   │   ├── [ 13K]  eqs-ex03-index-quanto-long-form.xml
+│           │   │   │   ├── [ 11K]  eqs-ex04-zero-strike-long-form.xml
+│           │   │   │   ├── [ 14K]  eqs-ex05-single-stock-plus-fee-long-form.xml
+│           │   │   │   ├── [ 11K]  eqs-ex06-single-index-long-form.xml
+│           │   │   │   ├── [ 17K]  eqs-ex07-long-form-with-stub.xml
+│           │   │   │   ├── [ 17K]  eqs-ex08-composite-basket-long-form-separate-spreads.xml
+│           │   │   │   ├── [7.9K]  eqs-ex09-compounding-swap.xml
+│           │   │   │   ├── [9.4K]  eqs-ex10-short-form-interestLeg-driving-schedule-dates.xml
+│           │   │   │   ├── [ 12K]  eqs-ex11-on-european-index-underlyer-short-form.xml
+│           │   │   │   ├── [ 13K]  eqs-ex12-on-european-index-underlyer-short-form.xml
+│           │   │   │   ├── [ 15K]  eqs-ex13-pan-asia-interdealer-share-swap-short-form.xml
+│           │   │   │   ├── [ 15K]  eqs-ex14-european-interdealer-share-swap-short-form.xml
+│           │   │   │   ├── [ 15K]  eqs-ex15-forward-starting-pre-european-interdealer-share-swap-short-form.xml
+│           │   │   │   ├── [ 15K]  eqs-ex16-forward-starting-post-european-interdealer-share-swap-short-form.xml
+│           │   │   │   ├── [9.3K]  eqs-ex17-cfd.xml
+│           │   │   │   ├── [ 13K]  eqs-ex18-pan-asia-interdealer-index-swap-short-form.xml
+│           │   │   │   ├── [ 13K]  eqs-ex19-european-interdealer-fair-value-share-swap-short-form.xml
+│           │   │   │   ├── [ 16K]  trs-ex01-equity-basket.xml
+│           │   │   │   ├── [ 17K]  trs-ex02-single-equity.xml
+│           │   │   │   ├── [ 14K]  trs-ex03-single-stock-execution-swap-with-fixing-and-dividend-payment-dates.xml
+│           │   │   │   └── [ 11K]  trs-ex04-index-ios.xml
+│           │   │   ├── [2.2K]  fx-derivatives
+│           │   │   │   ├── [4.5K]  dcd-ex01-dual-currency-deposit.xml
+│           │   │   │   ├── [3.2K]  fx-ex01-fx-spot.xml
+│           │   │   │   ├── [3.8K]  fx-ex02-spot-cross-w-side-rates.xml
+│           │   │   │   ├── [3.3K]  fx-ex03-fx-fwd.xml
+│           │   │   │   ├── [4.9K]  fx-ex04-fx-fwd-w-settlement.xml
+│           │   │   │   ├── [3.7K]  fx-ex05-fx-fwd-w-ssi.xml
+│           │   │   │   ├── [6.7K]  fx-ex06-fx-fwd-w-splits.xml
+│           │   │   │   ├── [4.4K]  fx-ex07-non-deliverable-forward.xml
+│           │   │   │   ├── [4.3K]  fx-ex08-fx-swap.xml
+│           │   │   │   ├── [7.2K]  fx-ex09-euro-opt.xml
+│           │   │   │   ├── [7.6K]  fx-ex10-amer-opt.xml
+│           │   │   │   ├── [6.8K]  fx-ex11-non-deliverable-option.xml
+│           │   │   │   ├── [5.3K]  fx-ex12-fx-barrier-option.xml
+│           │   │   │   ├── [6.3K]  fx-ex13-fx-dbl-barrier-option.xml
+│           │   │   │   ├── [4.0K]  fx-ex14-euro-digital-option.xml
+│           │   │   │   ├── [4.6K]  fx-ex15-euro-range-digital-option.xml
+│           │   │   │   ├── [4.9K]  fx-ex16-one-touch-option.xml
+│           │   │   │   ├── [4.9K]  fx-ex17-no-touch-option.xml
+│           │   │   │   ├── [6.1K]  fx-ex18-double-one-touch-option.xml
+│           │   │   │   ├── [6.0K]  fx-ex19-double-no-touch-option.xml
+│           │   │   │   ├── [6.1K]  fx-ex20-avg-rate-option-parametric.xml
+│           │   │   │   ├── [5.9K]  fx-ex21-avg-rate-option-parametric-plus-rate-observation.xml
+│           │   │   │   ├── [8.2K]  fx-ex22-avg-rate-option-specific.xml
+│           │   │   │   ├── [9.7K]  fx-ex23-straddle.xml
+│           │   │   │   ├── [7.6K]  fx-ex24-delta-hedge.xml
+│           │   │   │   ├── [7.0K]  fx-ex25-option-strategyComponentIdentifier.xml
+│           │   │   │   ├── [5.0K]  fx-ex26-fxswap-multiple-USIs.xml
+│           │   │   │   ├── [3.3K]  fx-ex27-flexible-term-forward.xml
+│           │   │   │   ├── [4.5K]  fx-ex28-non-deliverable-w-disruption.xml
+│           │   │   │   ├── [5.3K]  fx-ex29-fx-swap-with-multiple-identifiers.xml
+│           │   │   │   ├── [4.5K]  fx-ex30-variance-swap.xml
+│           │   │   │   ├── [4.3K]  fx-ex31-volatility-swap.xml
+│           │   │   │   ├── [7.4K]  fx-ex32-forward-volatility-agreement.xml
+│           │   │   │   ├── [7.7K]  fx-ex33-target.xml
+│           │   │   │   ├── [5.2K]  fx-ex34-target-digital.xml
+│           │   │   │   ├── [ 14K]  fx-ex35-target-pivot-settlement-period-schedule.xml
+│           │   │   │   ├── [7.2K]  fx-ex35-target-pivot.xml
+│           │   │   │   ├── [7.0K]  fx-ex36-target-leverage.xml
+│           │   │   │   ├── [6.1K]  fx-ex37-target-knockout.xml
+│           │   │   │   ├── [9.1K]  fx-ex38-target-rebate.xml
+│           │   │   │   ├── [4.5K]  fx-ex39-target-split.xml
+│           │   │   │   ├── [4.9K]  fx-ex40-target-accelerated.xml
+│           │   │   │   ├── [ 12K]  fx-ex41-target-bonus-collar-settlement-period-schedule.xml
+│           │   │   │   ├── [7.9K]  fx-ex41-target-bonus-collar.xml
+│           │   │   │   ├── [7.2K]  fx-ex42-target-eki.xml
+│           │   │   │   ├── [ 15K]  fx-ex43-target-eki-settlement-period-schedule-references.xml
+│           │   │   │   ├── [ 14K]  fx-ex43-target-eki-settlement-period-schedule.xml
+│           │   │   │   ├── [7.0K]  fx-ex43-target-eki.xml
+│           │   │   │   ├── [6.1K]  fx-ex44-accrual-forward.xml
+│           │   │   │   ├── [7.3K]  fx-ex45-accrual-forward-leverage.xml
+│           │   │   │   ├── [8.9K]  fx-ex46-accrual-forward-american-lose-boost.xml
+│           │   │   │   ├── [5.3K]  fx-ex47-accrual-forward-european-fading-forward.xml
+│           │   │   │   ├── [7.9K]  fx-ex48-accrual-option-strategy-fading-extra.xml
+│           │   │   │   ├── [ 13K]  fx-ex49-accrual-forward-boost-strip-settlement-period-schedule.xml
+│           │   │   │   ├── [ 11K]  fx-ex49-accrual-forward-boost-strip.xml
+│           │   │   │   ├── [5.4K]  fx-ex50-accrual-forward-double-accrual.xml
+│           │   │   │   ├── [ 19K]  fx-ex51-accrual-forward-american-keep-double-multi-settlement-settlement-period-schedule.xml
+│           │   │   │   ├── [ 12K]  fx-ex51-accrual-forward-american-keep-double-multi-settlement.xml
+│           │   │   │   ├── [6.8K]  fx-ex52-accrual-forward-collar.xml
+│           │   │   │   ├── [7.5K]  fx-ex53-accrual-forward-variable-strike.xml
+│           │   │   │   ├── [6.6K]  fx-ex54-accrual-option-american.xml
+│           │   │   │   ├── [6.8K]  fx-ex55-accrual-option-average-strike.xml
+│           │   │   │   ├── [7.2K]  fx-ex56-accrual-option-average-rate.xml
+│           │   │   │   ├── [7.7K]  fx-ex57-accrual-digital-option-american.xml
+│           │   │   │   ├── [6.7K]  fx-ex58-accrual-range-accrual-european.xml
+│           │   │   │   ├── [4.9K]  fx-ex59-accrual-range-accrual-european.xml
+│           │   │   │   ├── [3.1K]  td-ex01-simple-term-deposit.xml
+│           │   │   │   └── [5.4K]  td-ex02-term-deposit-w-settlement-etc.xml
+│           │   │   ├── [ 224]  inflation-swaps
+│           │   │   │   ├── [8.7K]  inflation-swap-ex01-yoy.xml
+│           │   │   │   ├── [ 11K]  inflation-swap-ex02-yoy-bond-reference.xml
+│           │   │   │   ├── [ 11K]  inflation-swap-ex03-yoy-initial-level.xml
+│           │   │   │   ├── [9.7K]  inflation-swap-ex04-yoy-interp.xml
+│           │   │   │   └── [8.1K]  inflation-swap-ex05-zc.xml
+│           │   │   ├── [1.2K]  interest-rate-derivatives
+│           │   │   │   ├── [7.5K]  ird-ex01-vanilla-swap.xml
+│           │   │   │   ├── [ 18K]  ird-ex02-stub-amort-swap.xml
+│           │   │   │   ├── [ 15K]  ird-ex03-compound-swap.xml
+│           │   │   │   ├── [8.0K]  ird-ex04-arrears-stepup-fee-swap.xml
+│           │   │   │   ├── [8.9K]  ird-ex05-long-stub-swap.xml
+│           │   │   │   ├── [ 18K]  ird-ex06-xccy-swap.xml
+│           │   │   │   ├── [7.4K]  ird-ex07-ois-swap.xml
+│           │   │   │   ├── [2.8K]  ird-ex08-fra.xml
+│           │   │   │   ├── [9.5K]  ird-ex09-euro-swaption-explicit.xml
+│           │   │   │   ├── [ 10K]  ird-ex10-euro-swaption-relative.xml
+│           │   │   │   ├── [9.7K]  ird-ex11-euro-swaption-partial-auto-ex.xml
+│           │   │   │   ├── [ 11K]  ird-ex12-euro-swaption-straddle-cash.xml
+│           │   │   │   ├── [ 21K]  ird-ex13-euro-swaption-cash-with-cfs.xml
+│           │   │   │   ├── [ 10K]  ird-ex14-berm-swaption.xml
+│           │   │   │   ├── [ 11K]  ird-ex15-amer-swaption.xml
+│           │   │   │   ├── [9.0K]  ird-ex16-mand-term-swap.xml
+│           │   │   │   ├── [ 10K]  ird-ex17-opt-euro-term-swap.xml
+│           │   │   │   ├── [ 20K]  ird-ex18-opt-berm-term-swap.xml
+│           │   │   │   ├── [ 11K]  ird-ex19-opt-amer-term-swap.xml
+│           │   │   │   ├── [8.9K]  ird-ex20-euro-cancel-swap.xml
+│           │   │   │   ├── [8.9K]  ird-ex21-euro-extend-swap.xml
+│           │   │   │   ├── [5.8K]  ird-ex22-cap.xml
+│           │   │   │   ├── [5.8K]  ird-ex23-floor.xml
+│           │   │   │   ├── [6.5K]  ird-ex24-collar.xml
+│           │   │   │   ├── [9.7K]  ird-ex25-fxnotional-swap.xml
+│           │   │   │   ├── [ 29K]  ird-ex26-fxnotional-swap-with-cfs.xml
+│           │   │   │   ├── [7.5K]  ird-ex27-inverse-floater.xml
+│           │   │   │   ├── [2.1K]  ird-ex28-bullet-payments.xml
+│           │   │   │   ├── [9.7K]  ird-ex29-non-deliverable-settlement-swap.xml
+│           │   │   │   ├── [ 21K]  ird-ex30-swap-comp-avg-relative-date.xml
+│           │   │   │   ├── [ 11K]  ird-ex31-non-deliverable-settlement-swap.xml
+│           │   │   │   ├── [9.3K]  ird-ex32-zero-coupon-swap.xml
+│           │   │   │   ├── [ 13K]  ird-ex33-BRL-CDI-swap.xml
+│           │   │   │   ├── [7.4K]  ird-ex34-MXN-swap.xml
+│           │   │   │   ├── [8.7K]  ird-ex35-inverse-floater-inverse-vs-floating.xml
+│           │   │   │   └── [ 11K]  ird-ex36-amer-swaption-pred-clearing.xml
+│           │   │   ├── [2.0K]  loan
+│           │   │   │   ├── [4.4K]  Loan_AccrFeeChng_ex1.xml
+│           │   │   │   ├── [4.2K]  Loan_AccrFeeChng_ex2.xml
+│           │   │   │   ├── [4.2K]  Loan_AccrFeeChng_ex3.xml
+│           │   │   │   ├── [6.4K]  Loan_AccrFeePay_ex1.xml
+│           │   │   │   ├── [5.4K]  Loan_AccrFeePay_ex2.xml
+│           │   │   │   ├── [8.1K]  Loan_Bulk_ex100.xml
+│           │   │   │   ├── [5.7K]  Loan_IntPay_ex1.xml
+│           │   │   │   ├── [4.6K]  Loan_LCAdj_ex1.xml
+│           │   │   │   ├── [5.1K]  Loan_LCFeePay_ex1_1.xml
+│           │   │   │   ├── [4.4K]  Loan_LCFeePay_ex1_2.xml
+│           │   │   │   ├── [5.1K]  Loan_LCFeePay_ex2.xml
+│           │   │   │   ├── [5.0K]  Loan_LCIss_ex1.xml
+│           │   │   │   ├── [5.0K]  Loan_LCIss_ex2.xml
+│           │   │   │   ├── [5.5K]  Loan_LCIss_ex3.xml
+│           │   │   │   ├── [5.4K]  Loan_LCIss_ex4.xml
+│           │   │   │   ├── [4.3K]  Loan_NonRecFeePay_ex1.xml
+│           │   │   │   ├── [8.4K]  Loan_Roll_ex1.xml
+│           │   │   │   ├── [ 22K]  Loan_Roll_ex10.xml
+│           │   │   │   ├── [ 12K]  Loan_Roll_ex11.xml
+│           │   │   │   ├── [ 13K]  Loan_Roll_ex12.xml
+│           │   │   │   ├── [ 12K]  Loan_Roll_ex13.xml
+│           │   │   │   ├── [ 13K]  Loan_Roll_ex2.xml
+│           │   │   │   ├── [9.8K]  Loan_Roll_ex3.xml
+│           │   │   │   ├── [ 15K]  Loan_Roll_ex4.xml
+│           │   │   │   ├── [ 17K]  Loan_Roll_ex5.xml
+│           │   │   │   ├── [ 16K]  Loan_Roll_ex6.xml
+│           │   │   │   ├── [ 13K]  Loan_Roll_ex7.xml
+│           │   │   │   ├── [8.8K]  Loan_Roll_ex8.xml
+│           │   │   │   ├── [ 15K]  Loan_Roll_ex9.xml
+│           │   │   │   ├── [4.7K]  loan_party_ex100.xml
+│           │   │   │   ├── [4.7K]  loan_party_ex101.xml
+│           │   │   │   ├── [7.6K]  loan_party_ex102.xml
+│           │   │   │   ├── [3.4K]  loan_trade_ex001.xml
+│           │   │   │   ├── [1.5K]  loan_trade_ex002.xml
+│           │   │   │   ├── [1.7K]  loan_trade_ex003.xml
+│           │   │   │   ├── [1.4K]  loan_trade_ex004.xml
+│           │   │   │   ├── [2.6K]  loan_trade_ex005.xml
+│           │   │   │   ├── [3.1K]  loan_trade_ex006.xml
+│           │   │   │   ├── [2.8K]  loan_trade_ex007.xml
+│           │   │   │   ├── [3.3K]  loan_trade_ex008.xml
+│           │   │   │   ├── [3.0K]  loan_trade_ex009.xml
+│           │   │   │   ├── [3.3K]  loan_trade_ex010.xml
+│           │   │   │   ├── [3.0K]  loan_trade_ex011.xml
+│           │   │   │   ├── [3.2K]  loan_trade_ex012.xml
+│           │   │   │   ├── [3.2K]  loan_trade_ex013.xml
+│           │   │   │   ├── [3.1K]  loan_trade_ex014.xml
+│           │   │   │   ├── [3.1K]  loan_trade_ex015.xml
+│           │   │   │   ├── [3.4K]  loan_trade_ex016.xml
+│           │   │   │   ├── [4.5K]  loan_trade_ex017.xml
+│           │   │   │   ├── [4.2K]  loan_trade_ex018.xml
+│           │   │   │   ├── [7.0K]  loan_trade_ex100.xml
+│           │   │   │   ├── [6.6K]  loan_trade_ex101.xml
+│           │   │   │   ├── [6.6K]  loan_trade_ex102.xml
+│           │   │   │   ├── [ 11K]  loan_trade_ex103.xml
+│           │   │   │   ├── [6.7K]  loan_trade_ex104.xml
+│           │   │   │   ├── [7.7K]  loan_trade_ex105.xml
+│           │   │   │   ├── [5.9K]  loan_trade_ex106.xml
+│           │   │   │   ├── [7.7K]  loan_trade_ex107.xml
+│           │   │   │   ├── [8.8K]  loan_trade_ex108.xml
+│           │   │   │   ├── [8.4K]  loan_trade_ex109.xml
+│           │   │   │   ├── [6.1K]  loan_trade_ex110.xml
+│           │   │   │   ├── [ 13K]  loan_trade_ex111.xml
+│           │   │   │   └── [ 13K]  loan_trade_ex112.xml
+│           │   │   ├── [ 320]  repo
+│           │   │   │   ├── [3.8K]  repo-ex01-repo-fixed-rate.xml
+│           │   │   │   ├── [2.9K]  repo-ex02-repo-open-fixed-rate.xml
+│           │   │   │   ├── [3.7K]  repo-ex03-repo-fixed-rate.xml
+│           │   │   │   ├── [3.9K]  repo-ex04-repo-floating-rate.xml
+│           │   │   │   ├── [3.7K]  repo-ex05-repo-fixed-rate.xml
+│           │   │   │   ├── [3.7K]  repo-ex06-repo-fixed-rate.xml
+│           │   │   │   ├── [3.2K]  repo-ex07-repo-triparty-float-rate.xml
+│           │   │   │   └── [3.0K]  repo-ex08-repo-triparty-fixed-rate.xml
+│           │   │   ├── [ 128]  securities
+│           │   │   │   ├── [2.3K]  sec-ex001-trade-execution-future.xml
+│           │   │   │   └── [2.4K]  sec-ex002-trade-execution-exchange-traded-option.xml
+│           │   │   ├── [ 288]  variance-swaps
+│           │   │   │   ├── [5.3K]  eqvs-ex01-variance-swap-index.xml
+│           │   │   │   ├── [5.2K]  eqvs-ex02-variance-swap-single-stock.xml
+│           │   │   │   ├── [4.9K]  eqvs-ex03-conditional-variance-swap.xml
+│           │   │   │   ├── [ 11K]  eqvs-ex04-dispersion-variance-swap.xml
+│           │   │   │   ├── [7.5K]  eqvs-ex05-dispersion-variance-swap-transaction-supplement.xml
+│           │   │   │   ├── [6.6K]  eqvs-ex06-variance-option-transaction-supplement.xml
+│           │   │   │   └── [6.9K]  eqvs-ex07-variance-option-transaction-supplement-pred-clearing.xml
+│           │   │   └── [ 128]  volatility-swaps
+│           │   │       ├── [6.0K]  eqvls-ex01-volatility-swap-index-matrix.xml
+│           │   │       └── [5.4K]  eqvls-ex02-volatility-swap-index-mca.xml
+│           │   ├── [ 128]  validation
+│           │   │   ├── [ 53K]  changes.pdf
+│           │   │   └── [9.9K]  invalid-testcases
+│           │   │       ├── [7.2K]  invalid-cd-1-01.xml
+│           │   │       ├── [7.7K]  invalid-cd-10-01.xml
+│           │   │       ├── [7.0K]  invalid-cd-11-01.xml
+│           │   │       ├── [6.9K]  invalid-cd-12-01.xml
+│           │   │       ├── [7.2K]  invalid-cd-13-01.xml
+│           │   │       ├── [6.8K]  invalid-cd-14-01.xml
+│           │   │       ├── [6.5K]  invalid-cd-15-01.xml
+│           │   │       ├── [6.5K]  invalid-cd-16-01.xml
+│           │   │       ├── [6.8K]  invalid-cd-17-01.xml
+│           │   │       ├── [6.8K]  invalid-cd-18-01.xml
+│           │   │       ├── [7.3K]  invalid-cd-19-01.xml
+│           │   │       ├── [7.3K]  invalid-cd-19-02.xml
+│           │   │       ├── [7.3K]  invalid-cd-19-03.xml
+│           │   │       ├── [7.3K]  invalid-cd-19-04.xml
+│           │   │       ├── [6.7K]  invalid-cd-19-05.xml
+│           │   │       ├── [7.0K]  invalid-cd-19-06.xml
+│           │   │       ├── [7.0K]  invalid-cd-19-07.xml
+│           │   │       ├── [6.9K]  invalid-cd-1b-01.xml
+│           │   │       ├── [7.4K]  invalid-cd-2-01.xml
+│           │   │       ├── [7.3K]  invalid-cd-20-01.xml
+│           │   │       ├── [3.8K]  invalid-cd-21-01.xml
+│           │   │       ├── [3.9K]  invalid-cd-21-02.xml
+│           │   │       ├── [3.8K]  invalid-cd-21-03.xml
+│           │   │       ├── [3.9K]  invalid-cd-21-04.xml
+│           │   │       ├── [3.8K]  invalid-cd-21-05.xml
+│           │   │       ├── [3.8K]  invalid-cd-21-06.xml
+│           │   │       ├── [3.9K]  invalid-cd-21-07.xml
+│           │   │       ├── [3.9K]  invalid-cd-21-08.xml
+│           │   │       ├── [3.9K]  invalid-cd-21-09.xml
+│           │   │       ├── [4.0K]  invalid-cd-21-10.xml
+│           │   │       ├── [3.9K]  invalid-cd-21-11.xml
+│           │   │       ├── [4.9K]  invalid-cd-21-12.xml
+│           │   │       ├── [3.3K]  invalid-cd-21b-01.xml
+│           │   │       ├── [3.4K]  invalid-cd-21b-02.xml
+│           │   │       ├── [3.3K]  invalid-cd-21b-03.xml
+│           │   │       ├── [3.4K]  invalid-cd-21b-04.xml
+│           │   │       ├── [3.3K]  invalid-cd-21b-05.xml
+│           │   │       ├── [3.3K]  invalid-cd-21b-06.xml
+│           │   │       ├── [3.3K]  invalid-cd-21b-07.xml
+│           │   │       ├── [3.3K]  invalid-cd-21b-08.xml
+│           │   │       ├── [3.3K]  invalid-cd-21b-09.xml
+│           │   │       ├── [4.5K]  invalid-cd-21b-10.xml
+│           │   │       ├── [3.4K]  invalid-cd-21b-11.xml
+│           │   │       ├── [3.8K]  invalid-cd-22-01.xml
+│           │   │       ├── [3.8K]  invalid-cd-22-02.xml
+│           │   │       ├── [3.7K]  invalid-cd-22-03.xml
+│           │   │       ├── [3.7K]  invalid-cd-22-04.xml
+│           │   │       ├── [6.2K]  invalid-cd-23-01.xml
+│           │   │       ├── [6.2K]  invalid-cd-24-01.xml
+│           │   │       ├── [6.8K]  invalid-cd-24-02.xml
+│           │   │       ├── [7.1K]  invalid-cd-24-03.xml
+│           │   │       ├── [7.2K]  invalid-cd-24-04.xml
+│           │   │       ├── [7.2K]  invalid-cd-25-01.xml
+│           │   │       ├── [7.1K]  invalid-cd-25-02.xml
+│           │   │       ├── [7.2K]  invalid-cd-25-03.xml
+│           │   │       ├── [7.2K]  invalid-cd-25-04.xml
+│           │   │       ├── [7.1K]  invalid-cd-26-01.xml
+│           │   │       ├── [7.1K]  invalid-cd-26-02.xml
+│           │   │       ├── [7.1K]  invalid-cd-27-01.xml
+│           │   │       ├── [7.1K]  invalid-cd-27-02.xml
+│           │   │       ├── [7.4K]  invalid-cd-28-01.xml
+│           │   │       ├── [7.4K]  invalid-cd-29-01.xml
+│           │   │       ├── [7.4K]  invalid-cd-30-01.xml
+│           │   │       ├── [7.4K]  invalid-cd-30-02.xml
+│           │   │       ├── [6.9K]  invalid-cd-31-01.xml
+│           │   │       ├── [6.9K]  invalid-cd-31-02.xml
+│           │   │       ├── [7.1K]  invalid-cd-32-01.xml
+│           │   │       ├── [7.2K]  invalid-cd-32-02.xml
+│           │   │       ├── [7.5K]  invalid-cd-33-01.xml
+│           │   │       ├── [7.5K]  invalid-cd-33-02.xml
+│           │   │       ├── [6.9K]  invalid-cd-34-01.xml
+│           │   │       ├── [6.3K]  invalid-cd-35-01.xml
+│           │   │       ├── [7.7K]  invalid-cd-36-01.xml
+│           │   │       ├── [6.9K]  invalid-cd-37-01.xml
+│           │   │       ├── [8.2K]  invalid-cd-38-01.xml
+│           │   │       ├── [8.2K]  invalid-cd-39-01.xml
+│           │   │       ├── [7.4K]  invalid-cd-3b-01.xml
+│           │   │       ├── [6.6K]  invalid-cd-40-01.xml
+│           │   │       ├── [7.2K]  invalid-cd-41-01.xml
+│           │   │       ├── [5.5K]  invalid-cd-42-01.xml
+│           │   │       ├── [ 10K]  invalid-cd-44-01.xml
+│           │   │       ├── [7.9K]  invalid-cd-4b-01.xml
+│           │   │       ├── [3.7K]  invalid-cd-5-01.xml
+│           │   │       ├── [3.7K]  invalid-cd-5-02.xml
+│           │   │       ├── [6.9K]  invalid-cd-6-01.xml
+│           │   │       ├── [7.1K]  invalid-cd-7-01.xml
+│           │   │       ├── [6.8K]  invalid-cd-8-01.xml
+│           │   │       ├── [3.7K]  invalid-cd-9-01.xml
+│           │   │       ├── [6.7K]  invalid-eqd-10-01.xml
+│           │   │       ├── [6.8K]  invalid-eqd-12-01.xml
+│           │   │       ├── [7.6K]  invalid-eqd-13-01.xml
+│           │   │       ├── [5.6K]  invalid-eqd-14-01.xml
+│           │   │       ├── [7.0K]  invalid-eqd-15-01.xml
+│           │   │       ├── [7.7K]  invalid-eqd-17-01.xml
+│           │   │       ├── [7.6K]  invalid-eqd-17-02.xml
+│           │   │       ├── [6.6K]  invalid-eqd-18-01.xml
+│           │   │       ├── [6.5K]  invalid-eqd-18-02.xml
+│           │   │       ├── [5.0K]  invalid-eqd-18-03.xml
+│           │   │       ├── [8.0K]  invalid-eqd-19-01.xml
+│           │   │       ├── [7.6K]  invalid-eqd-2-01.xml
+│           │   │       ├── [7.7K]  invalid-eqd-20-01.xml
+│           │   │       ├── [6.1K]  invalid-eqd-20-02.xml
+│           │   │       ├── [7.5K]  invalid-eqd-22-01.xml
+│           │   │       ├── [8.2K]  invalid-eqd-24-01.xml
+│           │   │       ├── [5.9K]  invalid-eqd-25-01.xml
+│           │   │       ├── [7.6K]  invalid-eqd-26-01.xml
+│           │   │       ├── [7.3K]  invalid-eqd-26b-01.xml
+│           │   │       ├── [7.6K]  invalid-eqd-27-01.xml
+│           │   │       ├── [7.7K]  invalid-eqd-28-01.xml
+│           │   │       ├── [7.5K]  invalid-eqd-29-01.xml
+│           │   │       ├── [7.4K]  invalid-eqd-3-01.xml
+│           │   │       ├── [8.1K]  invalid-eqd-31-01.xml
+│           │   │       ├── [6.7K]  invalid-eqd-4-01.xml
+│           │   │       ├── [6.9K]  invalid-eqd-6-01.xml
+│           │   │       ├── [6.7K]  invalid-eqd-8-01.xml
+│           │   │       ├── [6.7K]  invalid-eqd-8-02.xml
+│           │   │       ├── [7.0K]  invalid-eqd-8-03.xml
+│           │   │       ├── [6.7K]  invalid-eqd-9-01.xml
+│           │   │       ├── [6.3K]  invalid-fx-10-01.xml
+│           │   │       ├── [6.3K]  invalid-fx-10-02.xml
+│           │   │       ├── [9.4K]  invalid-fx-11-01.xml
+│           │   │       ├── [6.7K]  invalid-fx-12-01.xml
+│           │   │       ├── [5.4K]  invalid-fx-14-01.xml
+│           │   │       ├── [6.5K]  invalid-fx-14-02.xml
+│           │   │       ├── [3.9K]  invalid-fx-19-01.xml
+│           │   │       ├── [3.6K]  invalid-fx-20-01.xml
+│           │   │       ├── [4.5K]  invalid-fx-21-01.xml
+│           │   │       ├── [7.5K]  invalid-fx-22-01.xml
+│           │   │       ├── [8.4K]  invalid-fx-22-02.xml
+│           │   │       ├── [6.5K]  invalid-fx-22-03.xml
+│           │   │       ├── [7.5K]  invalid-fx-23-01.xml
+│           │   │       ├── [5.6K]  invalid-fx-23-02.xml
+│           │   │       ├── [4.3K]  invalid-fx-26-01.xml
+│           │   │       ├── [4.5K]  invalid-fx-27-01.xml
+│           │   │       ├── [4.2K]  invalid-fx-27-02.xml
+│           │   │       ├── [4.4K]  invalid-fx-3-01.xml
+│           │   │       ├── [3.6K]  invalid-fx-30-01.xml
+│           │   │       ├── [5.2K]  invalid-fx-32-01.xml
+│           │   │       ├── [3.2K]  invalid-fx-33-01.xml
+│           │   │       ├── [3.2K]  invalid-fx-33-02.xml
+│           │   │       ├── [8.8K]  invalid-fx-36-01.xml
+│           │   │       ├── [8.8K]  invalid-fx-36-02.xml
+│           │   │       ├── [4.1K]  invalid-fx-38-01.xml
+│           │   │       ├── [4.1K]  invalid-fx-38-02.xml
+│           │   │       ├── [5.1K]  invalid-fx-39-01.xml
+│           │   │       ├── [3.7K]  invalid-fx-39-02.xml
+│           │   │       ├── [4.4K]  invalid-fx-40-01.xml
+│           │   │       ├── [4.5K]  invalid-fx-40-02.xml
+│           │   │       ├── [6.3K]  invalid-fx-45-01.xml
+│           │   │       ├── [6.0K]  invalid-fx-48-01.xml
+│           │   │       ├── [4.8K]  invalid-fx-49-01.xml
+│           │   │       ├── [4.4K]  invalid-fx-50-01.xml
+│           │   │       ├── [6.8K]  invalid-fx-51-01.xml
+│           │   │       ├── [8.3K]  invalid-fx-52-01.xml
+│           │   │       ├── [5.1K]  invalid-fx-53-01.xml
+│           │   │       ├── [5.1K]  invalid-fx-8-01.xml
+│           │   │       ├── [5.1K]  invalid-fx-8-02.xml
+│           │   │       ├── [6.4K]  invalid-fx-8-03.xml
+│           │   │       ├── [6.2K]  invalid-fx-8-04.xml
+│           │   │       ├── [6.3K]  invalid-fx-9-01.xml
+│           │   │       ├── [8.2K]  invalid-ird-1-01.xml
+│           │   │       ├── [8.4K]  invalid-ird-1-02.xml
+│           │   │       ├── [ 11K]  invalid-ird-1-03.xml
+│           │   │       ├── [ 11K]  invalid-ird-1-04.xml
+│           │   │       ├── [7.6K]  invalid-ird-10-01.xml
+│           │   │       ├── [7.6K]  invalid-ird-10-02.xml
+│           │   │       ├── [9.0K]  invalid-ird-10-04.xml
+│           │   │       ├── [9.1K]  invalid-ird-10-05.xml
+│           │   │       ├── [7.7K]  invalid-ird-11-01.xml
+│           │   │       ├── [7.5K]  invalid-ird-11-02.xml
+│           │   │       ├── [7.6K]  invalid-ird-11-03.xml
+│           │   │       ├── [9.0K]  invalid-ird-11-04.xml
+│           │   │       ├── [9.0K]  invalid-ird-11-05.xml
+│           │   │       ├── [8.4K]  invalid-ird-12-01.xml
+│           │   │       ├── [8.4K]  invalid-ird-12-02.xml
+│           │   │       ├── [8.3K]  invalid-ird-12-03.xml
+│           │   │       ├── [9.4K]  invalid-ird-12-04.xml
+│           │   │       ├── [ 19K]  invalid-ird-12-05.xml
+│           │   │       ├── [9.5K]  invalid-ird-12-06.xml
+│           │   │       ├── [6.6K]  invalid-ird-14-01.xml
+│           │   │       ├── [6.6K]  invalid-ird-14-02.xml
+│           │   │       ├── [9.5K]  invalid-ird-16-01.xml
+│           │   │       ├── [9.8K]  invalid-ird-16-02.xml
+│           │   │       ├── [9.5K]  invalid-ird-17-01.xml
+│           │   │       ├── [9.5K]  invalid-ird-18-01.xml
+│           │   │       ├── [9.5K]  invalid-ird-18-02.xml
+│           │   │       ├── [6.8K]  invalid-ird-2-01.xml
+│           │   │       ├── [6.9K]  invalid-ird-2-02.xml
+│           │   │       ├── [9.7K]  invalid-ird-20-01.xml
+│           │   │       ├── [8.9K]  invalid-ird-21-01.xml
+│           │   │       ├── [8.9K]  invalid-ird-21-02.xml
+│           │   │       ├── [9.0K]  invalid-ird-22-01.xml
+│           │   │       ├── [9.0K]  invalid-ird-22-02.xml
+│           │   │       ├── [ 19K]  invalid-ird-23-01.xml
+│           │   │       ├── [9.5K]  invalid-ird-24-01.xml
+│           │   │       ├── [8.0K]  invalid-ird-25-01.xml
+│           │   │       ├── [ 10K]  invalid-ird-27-01.xml
+│           │   │       ├── [ 16K]  invalid-ird-29-01.xml
+│           │   │       ├── [8.4K]  invalid-ird-3-01.xml
+│           │   │       ├── [8.2K]  invalid-ird-3-02.xml
+│           │   │       ├── [8.4K]  invalid-ird-3-03.xml
+│           │   │       ├── [ 29K]  invalid-ird-30-01.xml
+│           │   │       ├── [ 21K]  invalid-ird-31-01.xml
+│           │   │       ├── [3.6K]  invalid-ird-33-01.xml
+│           │   │       ├── [ 21K]  invalid-ird-34-01.xml
+│           │   │       ├── [8.3K]  invalid-ird-35-01.xml
+│           │   │       ├── [8.4K]  invalid-ird-35-02.xml
+│           │   │       ├── [8.4K]  invalid-ird-36-01.xml
+│           │   │       ├── [ 21K]  invalid-ird-39-01.xml
+│           │   │       ├── [8.2K]  invalid-ird-4-01.xml
+│           │   │       ├── [8.2K]  invalid-ird-4-02.xml
+│           │   │       ├── [8.5K]  invalid-ird-4-03.xml
+│           │   │       ├── [8.4K]  invalid-ird-4-04.xml
+│           │   │       ├── [ 21K]  invalid-ird-40-01.xml
+│           │   │       ├── [ 21K]  invalid-ird-41-01.xml
+│           │   │       ├── [ 10K]  invalid-ird-42-01.xml
+│           │   │       ├── [ 10K]  invalid-ird-42-02.xml
+│           │   │       ├── [ 30K]  invalid-ird-43-01.xml
+│           │   │       ├── [ 10K]  invalid-ird-44-01.xml
+│           │   │       ├── [ 10K]  invalid-ird-44-02.xml
+│           │   │       ├── [ 10K]  invalid-ird-44-03.xml
+│           │   │       ├── [ 10K]  invalid-ird-44-04.xml
+│           │   │       ├── [ 10K]  invalid-ird-44-05.xml
+│           │   │       ├── [ 11K]  invalid-ird-46-01.xml
+│           │   │       ├── [ 10K]  invalid-ird-47-01.xml
+│           │   │       ├── [ 12K]  invalid-ird-48-01.xml
+│           │   │       ├── [8.1K]  invalid-ird-49-01.xml
+│           │   │       ├── [8.2K]  invalid-ird-49-02.xml
+│           │   │       ├── [8.1K]  invalid-ird-5-01.xml
+│           │   │       ├── [8.2K]  invalid-ird-5-02.xml
+│           │   │       ├── [ 20K]  invalid-ird-50-01.xml
+│           │   │       ├── [ 19K]  invalid-ird-50-02.xml
+│           │   │       ├── [ 19K]  invalid-ird-50-03.xml
+│           │   │       ├── [8.2K]  invalid-ird-51-01.xml
+│           │   │       ├── [8.2K]  invalid-ird-51-02.xml
+│           │   │       ├── [8.2K]  invalid-ird-51-03.xml
+│           │   │       ├── [8.4K]  invalid-ird-51-04.xml
+│           │   │       ├── [5.9K]  invalid-ird-52-01.xml
+│           │   │       ├── [6.0K]  invalid-ird-52-02.xml
+│           │   │       ├── [6.0K]  invalid-ird-52-03.xml
+│           │   │       ├── [6.1K]  invalid-ird-52-04.xml
+│           │   │       ├── [5.9K]  invalid-ird-53-01.xml
+│           │   │       ├── [6.0K]  invalid-ird-53-02.xml
+│           │   │       ├── [6.0K]  invalid-ird-53-03.xml
+│           │   │       ├── [6.1K]  invalid-ird-53-04.xml
+│           │   │       ├── [ 17K]  invalid-ird-54-01.xml
+│           │   │       ├── [ 17K]  invalid-ird-54-02.xml
+│           │   │       ├── [ 17K]  invalid-ird-54-03.xml
+│           │   │       ├── [ 17K]  invalid-ird-54-04.xml
+│           │   │       ├── [9.4K]  invalid-ird-57-01.xml
+│           │   │       ├── [7.7K]  invalid-ird-59-01.xml
+│           │   │       ├── [8.4K]  invalid-ird-6-01.xml
+│           │   │       ├── [7.5K]  invalid-ird-60-01.xml
+│           │   │       ├── [8.1K]  invalid-ird-61-01.xml
+│           │   │       ├── [ 15K]  invalid-ird-7-01.xml
+│           │   │       ├── [ 15K]  invalid-ird-7-02.xml
+│           │   │       ├── [8.1K]  invalid-ird-8-01.xml
+│           │   │       ├── [ 16K]  invalid-ird-9-01.xml
+│           │   │       ├── [7.7K]  invalid-ref-1-01.xml
+│           │   │       ├── [ 22K]  invalid-ref-10-01.xml
+│           │   │       ├── [9.8K]  invalid-ref-11-01.xml
+│           │   │       ├── [ 11K]  invalid-ref-12-01.xml
+│           │   │       ├── [8.7K]  invalid-ref-13-01.xml
+│           │   │       ├── [8.6K]  invalid-ref-2-01.xml
+│           │   │       ├── [ 12K]  invalid-ref-25-01.xml
+│           │   │       ├── [7.6K]  invalid-ref-26-01.xml
+│           │   │       ├── [7.1K]  invalid-ref-27-01.xml
+│           │   │       ├── [7.8K]  invalid-ref-28-01.xml
+│           │   │       ├── [7.6K]  invalid-ref-29-01.xml
+│           │   │       ├── [ 10K]  invalid-ref-3-01.xml
+│           │   │       ├── [ 23K]  invalid-ref-30-01.xml
+│           │   │       ├── [6.4K]  invalid-ref-32-01.xml
+│           │   │       ├── [ 15K]  invalid-ref-33-01.xml
+│           │   │       ├── [ 11K]  invalid-ref-34-01.xml
+│           │   │       ├── [ 18K]  invalid-ref-35-01.xml
+│           │   │       ├── [9.4K]  invalid-ref-38-01.xml
+│           │   │       ├── [ 11K]  invalid-ref-4-01.xml
+│           │   │       ├── [8.0K]  invalid-ref-7-01.xml
+│           │   │       ├── [7.7K]  invalid-ref-8-01.xml
+│           │   │       ├── [9.4K]  invalid-ref-9-01.xml
+│           │   │       ├── [8.2K]  invalid-shared-1-01.xml
+│           │   │       ├── [8.1K]  invalid-shared-1-02.xml
+│           │   │       ├── [8.1K]  invalid-shared-1-03.xml
+│           │   │       ├── [8.1K]  invalid-shared-1-04.xml
+│           │   │       ├── [8.1K]  invalid-shared-1-05.xml
+│           │   │       ├── [ 11K]  invalid-shared-1-06.xml
+│           │   │       ├── [ 11K]  invalid-shared-1-07.xml
+│           │   │       ├── [ 11K]  invalid-shared-1-08.xml
+│           │   │       ├── [7.5K]  invalid-shared-10-01.xml
+│           │   │       ├── [ 11K]  invalid-shared-11-01.xml
+│           │   │       ├── [9.1K]  invalid-shared-12-01.xml
+│           │   │       ├── [9.1K]  invalid-shared-13-01.xml
+│           │   │       ├── [7.3K]  invalid-shared-14-01.xml
+│           │   │       ├── [7.7K]  invalid-shared-15-01.xml
+│           │   │       ├── [7.7K]  invalid-shared-15-02.xml
+│           │   │       ├── [7.6K]  invalid-shared-15-03.xml
+│           │   │       ├── [ 15K]  invalid-shared-18-01.xml
+│           │   │       ├── [3.7K]  invalid-shared-19-01.xml
+│           │   │       ├── [ 17K]  invalid-shared-20-01.xml
+│           │   │       ├── [ 17K]  invalid-shared-21-01.xml
+│           │   │       ├── [ 15K]  invalid-shared-22-01.xml
+│           │   │       ├── [5.4K]  invalid-shared-26-01.xml
+│           │   │       ├── [3.9K]  invalid-shared-27-01.xml
+│           │   │       ├── [4.0K]  invalid-shared-28-01.xml
+│           │   │       ├── [ 22K]  invalid-shared-4-01.xml
+│           │   │       ├── [8.8K]  invalid-shared-5-01.xml
+│           │   │       ├── [ 12K]  invalid-shared-6-01.xml
+│           │   │       ├── [ 12K]  invalid-shared-6-02.xml
+│           │   │       ├── [ 21K]  invalid-shared-7-01.xml
+│           │   │       ├── [ 12K]  invalid-shared-8-01.xml
+│           │   │       ├── [ 12K]  invalid-shared-8-02.xml
+│           │   │       ├── [ 11K]  invalid-shared-8-03.xml
+│           │   │       ├── [ 12K]  invalid-shared-9-01.xml
+│           │   │       ├── [9.2K]  valid-ref-38-01.xml
+│           │   │       └── [9.3K]  valid-ref-38-02.xml
+│           │   └── [ 10K]  xmldsig-core-schema.xsd
+│           └── [  96]  metadata
+│               └── [  96]  v510
+│                   └── [4.9M]  Confirmation.json
+├── [ 128]  docs
+│   └── [ 128]  license
+│       ├── [ 11K]  APACHE-2.0
+│       └── [ 16K]  MPL-2.0
+├── [   0]  full.index.txt
+├── [2.4K]  index.txt
+├── [   0]  json.dhall
+├── [ 224]  lib
+│   ├── [1.1K]  com.freighttrust.primitive.xsd
+│   ├── [546K]  fpml5.confirmation.xsd
+│   ├── [1.2M]  fpml5.schema.json
+│   ├── [659K]  isda.schema.json
+│   └── [294K]  org.isda.cdm.xsd
+├── [ 128]  modules
+│   ├── [ 128]  Avro
+│   │   └── [  96]  com
+│   │       └── [  96]  freighttrust
+│   │           └── [ 160]  maritime
+│   │               ├── [ 512]  container
+│   │               │   ├── [ 730]  containerAddedEvent.avsc
+│   │               │   ├── [ 758]  containerAllocatedEvent.avsc
+│   │               │   ├── [ 822]  containerAnomalyDeadEvent.avsc
+│   │               │   ├── [ 738]  containerAnomalyEvent.avsc
+│   │               │   ├── [ 821]  containerAnomalyRetryEvent.avsc
+│   │               │   ├── [ 315]  containerAssignedAndAllocatedPayload.avsc
+│   │               │   ├── [ 766]  containerAssignedEvent.avsc
+│   │               │   ├── [ 743]  containerNotFoundEvent.avsc
+│   │               │   ├── [ 298]  containerNotFoundPayload.avsc
+│   │               │   ├── [ 748]  containerOffMaintenanceEvent.avsc
+│   │               │   ├── [ 746]  containerOnMaintenanceEvent.avsc
+│   │               │   ├── [ 695]  containerPayload.avsc
+│   │               │   ├── [1.5K]  containerTelemetry.avsc
+│   │               │   └── [ 463]  containerTelemetryEvent.avsc
+│   │               ├── [ 576]  order
+│   │               │   ├── [ 515]  address.avsc
+│   │               │   ├── [ 682]  errorEvent.avsc
+│   │               │   ├── [ 622]  orderCancelEvent.avsc
+│   │               │   ├── [1.2K]  orderCancelPayload.avsc
+│   │               │   ├── [ 526]  orderCommandEvent.avsc
+│   │               │   ├── [ 189]  orderCommandEventType.avsc
+│   │               │   ├── [ 624]  orderCreatedEvent.avsc
+│   │               │   ├── [ 980]  orderCreatedPayload.avsc
+│   │               │   ├── [ 970]  orderPayload.avsc
+│   │               │   ├── [ 622]  orderRejectEvent.avsc
+│   │               │   ├── [1.2K]  orderRejectPayload.avsc
+│   │               │   ├── [ 711]  orderSpoiltEvent.avsc
+│   │               │   ├── [ 293]  orderSpoiltPayload.avsc
+│   │               │   ├── [ 186]  orderStatus.avsc
+│   │               │   ├── [ 624]  orderUpdatedEvent.avsc
+│   │               │   └── [ 977]  orderUpdatedPayload.avsc
+│   │               └── [ 192]  voyage
+│   │                   ├── [ 634]  voyageAssignedEvent.avsc
+│   │                   ├── [ 294]  voyageAssignedPayload.avsc
+│   │                   ├── [ 634]  voyageNotFoundEvent.avsc
+│   │                   └── [ 292]  voyageNotFoundPayload.avsc
+│   └── [  96]  Kafka
+├── [1.3K]  package.json
+├── [1.9K]  schema.global.json
+├── [1.2K]  src
+│   ├── [9.9K]  Native.xsd
+│   ├── [7.3K]  NativeAcceptabilityBand.xsd
+│   ├── [7.7K]  NativeAirline.xsd
+│   ├── [2.3K]  NativeBMControlCustomisation.xsd
+│   ├── [ 69K]  NativeBMSystem.xsd
+│   ├── [3.5K]  NativeCommodityCode.xsd
+│   ├── [8.4K]  NativeCommunication.xsd
+│   ├── [ 29K]  NativeCompany.xsd
+│   ├── [ 20K]  NativeContainer.xsd
+│   ├── [ 49K]  NativeCountry.xsd
+│   ├── [3.5K]  NativeCurrencyExchangeRate.xsd
+│   ├── [ 47K]  NativeCusStatement.xsd
+│   ├── [ 10K]  NativeDangerousGood.xsd
+│   ├── [394K]  NativeOrganization.xsd
+│   ├── [230K]  NativeProduct.xsd
+│   ├── [ 79K]  NativeRate.xsd
+│   ├── [3.1K]  NativeRequest.xsd
+│   ├── [2.1K]  NativeServiceLevel.xsd
+│   ├── [ 33K]  NativeStaff.xsd
+│   ├── [7.7K]  NativeTag.xsd
+│   ├── [ 16K]  NativeTagRule.xsd
+│   ├── [9.0K]  NativeUNLOCO.xsd
+│   ├── [4.4K]  NativeVessel.xsd
+│   ├── [325K]  NativeWorkflowTemplate.xsd
+│   ├── [4.3K]  UniversalActivity.xsd
+│   ├── [1.1K]  UniversalActivityRequest.xsd
+│   ├── [ 64K]  UniversalCommon.xsd
+│   ├── [2.2K]  UniversalDocumentRequest.xsd
+│   ├── [9.5K]  UniversalEvent.xsd
+│   ├── [5.1K]  UniversalInterchange.xsd
+│   ├── [2.2K]  UniversalInterchangeRequeueRequest.xsd
+│   ├── [1.3K]  UniversalResponse.xsd
+│   ├── [9.6K]  UniversalSchedule.xsd
+│   ├── [224K]  UniversalShipment.xsd
+│   ├── [1.1K]  UniversalShipmentRequest.xsd
+│   ├── [ 22K]  UniversalTransaction.xsd
+│   ├── [2.1K]  UniversalTransactionBatch.xsd
+│   └── [1.3K]  UniversalTransactionBatchRequest.xsd
+├── [ 446]  stylesheet.xml
+├── [ 256]  tests
+│   ├── [8.5K]  Native.xsd.xml
+│   ├── [8.5K]  NativeCountry.xsd.xml
+│   ├── [8.5K]  NativeDangerousGood.xsd.xml
+│   ├── [8.5K]  NativeWorkflowTemplate.xsd.xml
+│   ├── [ 38K]  UniversalActivity.xsd.xml
+│   └── [ 85K]  UniversalShipment.xsd.xml
+└── [ 53K]  yarn.lock
+
+55 directories, 946 files
